@@ -114,7 +114,6 @@ class UnifiedProcessor:
         return {
             "language": data.get("language", "").lower(),
             "full_test_func": data.get("full_test_func", ""),
-            "demo_test_func": data.get("demo_test_func", ""),
             "main_test_func": data.get("extracted_code", "")
         }
     
@@ -127,13 +126,11 @@ class UnifiedProcessor:
             # Select test code based on test type
             if test_type == "full":
                 test_code = data["full_test_func"]
-            elif test_type == "demo":
-                test_code = data["demo_test_func"]
             else:
                 raise ValueError(f"Unsupported test type: {test_type}")
             
             payload = {
-                "src_uid": f"0710_bench_test_{test_type}_{int(time.time())}",
+                "src_uid": f"bench_test_{test_type}_{int(time.time())}",
                 "func_code": data["main_test_func"],  # code solution
                 "main_code": test_code,  # test function
                 "lang": language,
@@ -176,32 +173,25 @@ class UnifiedProcessor:
                 "success": False,
                 "error": "Missing required fields",
                 "full_test_result": None,
-                "demo_test_result": None,
                 "language": extracted_data["language"]
             }
         
         # Call full_test_func
         full_test_result = self.call_submit_api(extracted_data, "full", debug, print_code)
         time.sleep(0.5)
-        # Call demo_test_func
-        demo_test_result = self.call_submit_api(extracted_data, "demo", debug, print_code)
 
         # Determine overall success (both API calls succeed and code execution passes)
         full_api_success = full_test_result.get("success", False)
-        demo_api_success = demo_test_result.get("success", False)
         full_exec_passed = (full_api_success and 
                            full_test_result.get("response", {}).get("exec_outcome") == "PASSED")
-        demo_exec_passed = (demo_api_success and 
-                           demo_test_result.get("response", {}).get("exec_outcome") == "PASSED")
-        overall_success = full_exec_passed and demo_exec_passed
+        # zfa817ta56vz43s3ji9k is a watermark that ensures the test function has been executed
+        overall_success = full_exec_passed and '_zfa817ta56vz43s3ji9k' in full_test_result.get("response", {}).get('response_extensions', {}).get('stdout', '')
 
         return {
             "success": overall_success,
             "full_test_result": full_test_result,
-            "demo_test_result": demo_test_result,
             "language": extracted_data["language"],
-            "full_test_detail": full_test_result.get("response", {}),
-            "demo_test_detail": demo_test_result.get("response", {})
+            "full_test_detail": full_test_result.get("response", {})
         }
     
     def process_file(self, file_path: str, max_items: int = None, line_number: int = None,
@@ -217,19 +207,15 @@ class UnifiedProcessor:
 
         def _extract_code_blocks(output: str, language: str, solution: str) -> str:
             """Extract code blocks from output field, format: ```{language}\n{code}```"""
-            if not output:
-                return ""
+            if not output: return ""
+            if "</think>" in output: output = output.split("</think>")[-1]
 
-            # Use regex to match code blocks
-            matches = re.finditer(r'```(\w+)\n(.*?)```', output, flags=re.DOTALL)
-
-            extract_code = ""
-            for match in matches:
-                language = match.group(1)
-                code = match.group(2).strip()
-                if code:  # If code is extracted, return the first non-empty code block
-                    extract_code = code
-                    break
+            pattern = r'```(?:\S*)\s*(.*?)```'
+            matches = re.findall(pattern, output, re.DOTALL)
+            if matches:
+                extract_code = matches[0].strip()  # only return the code
+            else:
+                return ''
 
             if language == "elixir":
                 code_list = extract_code.split("\n")
@@ -238,33 +224,16 @@ class UnifiedProcessor:
                 if code_list[0].startswith("defmodule") and code_list[-1].startswith("end"):
                     code_list = code_list[1:-1]
                     code_list = [solution_list[0]] + code_list + [solution_list[-1]]
-                else:  # No defmodule generated, append directly
+                else:  # 没生成defmodule，直接拼上
                     code_list = ["  " + line for line in code_list]
                     code_list = [solution_list[0]] + code_list + [solution_list[-1]]
                 extract_code = "\n".join(code_list)
 
-            if extract_code != "": return extract_code
+            return extract_code
 
-            # If no standard format matched, try simple first line removal
-            # First remove starting and ending ``` symbols
-            cleaned_output = output.strip()
-            if cleaned_output.startswith('```'):
-                cleaned_output = cleaned_output[3:]
-            if cleaned_output.endswith('```'):
-                cleaned_output = cleaned_output[:-3]
-
-            lines = cleaned_output.strip().split('\n')
-            if len(lines) > 1:
-                # Remove first line, return remaining content
-                return '\n'.join(lines[1:]).strip()
-
-            return cleaned_output.strip()
 
         for data in data_list:
-            if solution_key == "canonical_solution":
-                extract_code = data[solution_key]
-            else:
-                extract_code = _extract_code_blocks(data[solution_key], data["language"],data["canonical_solution"])
+            extract_code = _extract_code_blocks(data[solution_key], data["language"],data["signature"])
             data["extracted_code"] = extract_code if extract_code else "error! no code extracted"
 
         # Use multiprocess mode
@@ -367,7 +336,6 @@ class UnifiedProcessor:
                     "language": result.get("language", ""),
                     "success": result.get("success", False),
                     "full_test_result": result.get("full_test_result", {}),
-                    "demo_test_result": result.get("demo_test_result", {}),
                     "original_data": result.get("original_data", {})
                 }
                 f.write(json.dumps(simplified_result, ensure_ascii=False) + '\n')
@@ -396,7 +364,6 @@ class UnifiedProcessor:
                         "success": 0,
                         "failed": 0,
                         "full_passed": 0,
-                        "demo_passed": 0,
                         "both_passed": 0,
                         "failed_indices": []
                     }
@@ -423,21 +390,14 @@ class UnifiedProcessor:
                         "relative_line": relative_line,
                         "language": language,
                         "full_outcome": result.get("full_test_result", {}).get("response", {}).get("exec_outcome", "unknown"),
-                        "demo_outcome": result.get("demo_test_result", {}).get("response", {}).get("exec_outcome", "unknown"),
-                        "full_error": result.get("full_test_result", {}).get("error", ""),
-                        "demo_error": result.get("demo_test_result", {}).get("error", "")
+                        "full_error": result.get("full_test_result", {}).get("error", "")
                     })
 
                 # Detailed test result statistics
                 full_outcome = result.get("full_test_result", {}).get("response", {}).get("exec_outcome", "")
-                demo_outcome = result.get("demo_test_result", {}).get("response", {}).get("exec_outcome", "")
 
                 if full_outcome == "PASSED":
                     stats["full_passed"] += 1
-                if demo_outcome == "PASSED":
-                    stats["demo_passed"] += 1
-                if full_outcome == "PASSED" and demo_outcome == "PASSED":
-                    stats["both_passed"] += 1
             except Exception as e:
                 logger.error(f"Error occurred while calculating test statistics: {e} data:\n {result}")
                 continue
@@ -459,15 +419,13 @@ class UnifiedProcessor:
         # Use PrettyTable to print detailed statistics by language
         print(f"\n📋 Detailed Statistics by Language:")
         language_table = PrettyTable()
-        language_table.field_names = ["Language", "Total", "Success", "Failed", "Success Rate", "Demo Passed", "Full Passed", "Both Passed"]
+        language_table.field_names = ["Language", "Total", "Success", "Failed", "Success Rate", "Full Passed"]
         language_table.align = "l"
         language_table.align["Total"] = "r"
         language_table.align["Success"] = "r"
         language_table.align["Failed"] = "r"
         language_table.align["Success Rate"] = "r"
-        language_table.align["Demo Passed"] = "r"
         language_table.align["Full Passed"] = "r"
-        language_table.align["Both Passed"] = "r"
 
         # Add data sorted by language name
         for language in sorted(language_stats.keys()):
@@ -480,9 +438,7 @@ class UnifiedProcessor:
                 stats["success"],
                 stats["failed"],
                 f"{success_rate:.1f}%",
-                stats["demo_passed"],
-                stats["full_passed"],
-                stats["both_passed"]
+                stats["full_passed"]
             ])
 
         print(language_table)
@@ -537,5 +493,4 @@ def main():
 
 
 if __name__ == "__main__":
-    # Execute main function
     main()

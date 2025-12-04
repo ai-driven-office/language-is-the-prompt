@@ -16,13 +16,24 @@
     <a href="#citation">📜 Citation</a>
 </p>
 
+
+## 📰 News
+
+- **2025.12.04** - We released ***AutoCodeBench-V2***, built on the original dataset and iteratively refined through top proprietary models and a sandbox to produce 1,000 higher-quality problems! The **leaderboard and evaluation tutorial** are available in [AutoCodeBench-V2](./AutoCodeBench-V2/)!
+- **2025.12.04** - We released ***AutoCodeInstruct***, a large-scale multilingual dataset equipped with golden answers distilled from DeepSeek-V3-0324, and filtered using Qwen2.5-Coder-7B/32B-Instruct to create two versions suitable for RL and SFT training! The dataset is available at [autocodeinstruct_v3answer_qwen32b.jsonl](https://huggingface.co/datasets/tencent/AutoCodeBenchmark/blob/main/autocodeinstruct_v3answer_qwen32b.jsonl) and [autocodeinstruct_v3answer_qwen7b.jsonl](https://huggingface.co/datasets/tencent/AutoCodeBenchmark/blob/main/autocodeinstruct_v3answer_qwen7b.jsonl). Experimental details can be found in the paper!
+- **2025.08.15** - We released AutoCodeGen, AutoCodeBench series, and Multi-lingual Sandbox!
+- **2025.08.13** - We published [arXiv paper](https://arxiv.org/abs/2411.02906)!
+
+
+
 ## Contents
 
 - [Introduction](#introduction)
+- [Data Resources](#data)
 - [AutoCodeGen](#autocodegen)
 - [AutoCodeBench](#autocodebench)
+- [AutoCodeInstruct](#autocodeinstruct)
 - [Experimental Results](#experimental-results)
-- [Dataset](#data)
 - [Quick Evaluation](#evaluation)
 - [Citation](#citation)
 - [License](#license)
@@ -31,16 +42,37 @@
 
 ## Introduction
 
-Existing code generation benchmarks typically rely on manual annotations, which are not only time-consuming but also challenging to scale across diverse programming languages and varying problem complexities. Furthermore, most existing benchmarks predominantly focus on Python, while the limited number of multilingual benchmarks suffer from insufficient difficulty levels and imbalanced language distribution. To address these limitations, we propose the following comprehensive solution:
-
 **AutoCodeGen**: An innovative automated workflow leveraging LLM-Sandbox Interaction, where *LLMs dynamically generate test inputs and obtain corresponding test outputs through the sandbox environment*, enabling the creation of high-quality, scalable code generation datasets.
 
-**AutoCodeBench**: 
+**AutoCodeBench Series**: 
 - **ACB-Full**: A comprehensive, large-scale code generation benchmark comprising 3,920 carefully curated problems, featuring balanced distribution across 20 programming languages. This benchmark is characterized by its high difficulty levels, practical relevance, and linguistic diversity.
 - **ACB-Lite**: Derived from extensive evaluation of over 40 models on ACL-Full, this refined subset contains 1,586 problems that demonstrate consistent solvability, having been successfully addressed by at least two different models.
 - **ACB-Complete**: Constructed from 1,000 selected problems from ACB-Lite, this benchmark employs 3-shot prompting to create a completion-style code generation assessment framework specifically designed to evaluate the performance capabilities of base models.
 
+
+**AutoCodeInstruct**: A training dataset derived from the same pipeline as AutoCodeBench, consisting of problems with DeepSeek-V3-0324 pass rates between 0.4-0.8, covering 20 programming languages. We further filtered out problems with pass rates above 0.6 using Qwen2.5-Coder-7B/32B-Instruct models, creating two customized versions.
+
+
+
 **MultiLanguageSandbox**: A robust, secure, and high-performance multi-language code execution sandbox service that provides comprehensive support for compilation and execution across more than 30 programming languages.
+
+
+
+
+## Data Resources
+
+<div align="center">
+
+| **Dataset** |  **Download** |
+| :------------: | :------------: |
+| AutoCodeBench-Full  | [🤗 HuggingFace](https://huggingface.co/datasets/tencent/AutoCodeBenchmark/blob/main/autocodebench.jsonl)   |
+| AutoCodeBench-Lite  | [🤗 HuggingFace](https://huggingface.co/datasets/tencent/AutoCodeBenchmark/blob/main/autocodebench_lite.jsonl)    |
+| AutoCodeBench-Complete  | [🤗 HuggingFace](https://huggingface.co/datasets/tencent/AutoCodeBenchmark/blob/main/autocodebench_completion_3shot.jsonl)    |
+
+</div>
+
+
+
 
 
 ## AutoCodeGen
@@ -58,6 +90,20 @@ Previous benchmarks mainly focused on Python, with multilingual benchmarks like 
 <div align="center">
   <img src="figures/distribution_comp.png" width="85%">
 </div>
+
+
+<div align="center">
+  <img src="figures/acb.png" width="85%">
+</div>
+
+Field Descriptions:
+- question: The programming problem.
+- canonical_solution: The code solution.
+- demo_test_func: Public test function containing a few basic test cases.
+- full_test_func: Private test function containing a large number of comprehensive test cases.
+- language: The programming language used.
+- difficulty: easy/medium/hard
+
 
 
 ## Leaderboard
@@ -79,34 +125,6 @@ Previous benchmarks mainly focused on Python, with multilingual benchmarks like 
 <div align="center">
   <img src="figures/exp_acb-comp.png" width="85%">
 </div>
-
-
-## Data
-
-<div align="center">
-
-| **Dataset** |  **Download** |
-| :------------: | :------------: |
-| AutoCodeBench-Full  | [🤗 HuggingFace](https://huggingface.co/datasets/tencent/AutoCodeBenchmark/blob/main/autocodebench.jsonl)   |
-| AutoCodeBench-Lite  | [🤗 HuggingFace](https://huggingface.co/datasets/tencent/AutoCodeBenchmark/blob/main/autocodebench_lite.jsonl)    |
-| AutoCodeBench-Complete  | [🤗 HuggingFace](https://huggingface.co/datasets/tencent/AutoCodeBenchmark/blob/main/autocodebench_completion_3shot.jsonl)    |
-
-</div>
-
-
-
-
-<div align="center">
-  <img src="figures/acb.png" width="85%">
-</div>
-
-Field Descriptions:
-- question: The programming problem.
-- canonical_solution: The code solution.
-- demo_test_func: Public test function containing a few basic test cases.
-- full_test_func: Private test function containing a large number of comprehensive test cases.
-- language: The programming language used.
-- difficulty: easy/medium/hard
 
 
 ## Evaluation
