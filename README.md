@@ -20,7 +20,7 @@
 ## 📰 News
 
 - **2025.12.04** 🚀 - We released ***AutoCodeBench-V2***, built on the original dataset and iteratively refined through top proprietary models and a sandbox to produce 1,000 higher-quality problems! The **leaderboard and evaluation tutorial** are available in [AutoCodeBench-V2](./AutoCodeBench-V2/)!
-- **2025.12.04** 📚 - We released ***AutoCodeInstruct***, a large-scale multilingual dataset equipped with golden answers distilled from DeepSeek-V3-0324, and filtered using Qwen2.5-Coder-7B/32B-Instruct to create two versions suitable for RL and SFT training! The dataset is available at [autocodeinstruct_v3answer_qwen32b.jsonl](https://huggingface.co/datasets/tencent/AutoCodeBenchmark/blob/main/autocodeinstruct_v3answer_qwen32b.jsonl) and [autocodeinstruct_v3answer_qwen7b.jsonl](https://huggingface.co/datasets/tencent/AutoCodeBenchmark/blob/main/autocodeinstruct_v3answer_qwen7b.jsonl). Experimental details can be found in the [paper](https://openreview.net/pdf?id=fN0MED2Idq).
+- **2025.12.04** 📚 - We released ***AutoCodeInstruct***, a large-scale multilingual dataset equipped with golden answers distilled from DeepSeek-V3-0324, and filtered using Qwen2.5-Coder-7B/32B-Instruct to create two versions suitable for RL and SFT training! The dataset is available at [autocodeinstruct_v3answer_qwen32b.jsonl](https://huggingface.co/datasets/tencent/AutoCodeBenchmark/blob/main/autocodeinstruct_v3answer_qwen32b.jsonl) and [autocodeinstruct_v3answer_qwen7b.jsonl](https://huggingface.co/datasets/tencent/AutoCodeBenchmark/blob/main/autocodeinstruct_v3answer_qwen7b.jsonl). Experimental results can be found in the AutoCodeInstruct section below.
 - **2025.08.15** 🎉 - We released AutoCodeGen, AutoCodeBench series, and Multi-lingual Sandbox!
 - **2025.08.13** 📄 - We published our [arXiv paper](https://arxiv.org/abs/2411.02906)!
 
@@ -29,7 +29,7 @@
 ## Contents
 
 - [Introduction](#introduction)
-- [Data Resources](#data)
+- [Data Resources](#data-resources)
 - [AutoCodeGen](#autocodegen)
 - [AutoCodeBench](#autocodebench)
 - [AutoCodeInstruct](#autocodeinstruct)
@@ -74,7 +74,6 @@
 
 
 
-
 ## AutoCodeGen
 <div align="center">
   <img src="figures/autocodegen.png" width="85%">
@@ -103,6 +102,20 @@ Field Descriptions:
 - full_test_func: Private test function containing a large number of comprehensive test cases.
 - language: The programming language used.
 - difficulty: easy/medium/hard
+
+
+
+
+
+## AutoCodeInstruct
+
+Results of two-stage GRPO and SFT with AutoCodeInstruct.
+
+<div align="center">
+  <img src="figures/aci.png" width="85%">
+</div>
+
+
 
 
 
