@@ -66,8 +66,6 @@ Given a code file or code snippet in any programming language, your task is to *
 using namespace std;
 #include <third_party_library.h> // Example: If third - party libraries are needed  
 
-// 计算给定数据列表的平均值
-// 如果列表为空，返回0.0以避免除零错误
 double calculate_average(const vector<double>& data) {
     if (data.empty()) {
         return 0.0;
@@ -87,14 +85,12 @@ double calculate_average(const vector<double>& data) {
 using namespace std;
 
 void demo_testing() {
-    // 硬编码测试输入。我们创建一个不超过2个测试用例的列表，其中每个测试用例
-    // 本身是一个用于测试calculate_average函数的数字列表。
+
     vector<vector<int>> test_cases = {
         {1, 2, 3}
     };
 
     for (const auto& input_data : test_cases) {
-        // 打印当前测试用例的输入数据
         cout << "Input: [";
         for (size_t i = 0; i < input_data.size(); ++i) {
             cout << input_data[i];
@@ -104,10 +100,8 @@ void demo_testing() {
         }
         cout << "]" << endl;
 
-        // 使用当前输入数据调用calculate_average函数
         double result = calculate_average(input_data);
 
-        // 打印当前测试用例计算的结果（平均值）
         cout << "Mean: " << result << endl;
     }
 }
@@ -125,22 +119,20 @@ int main() {
 using namespace std;
 
 void full_testing() {
-    // 硬编码测试输入。我们创建一个至少包含7个测试用例的列表，其中每个测试用例
-    // 本身是一个用于测试calculate_average函数的数字列表。
+
     vector<vector<double>> test_cases = {
         {1, 2, 3},
         {12, 45, 6, 89, 34},
-        {},  // 空向量测试用例
-        {5},  // 单元素测试用例
-        {-2, 4, -6, 8},  // 负数测试用例
+        {},  
+        {5},  
+        {-2, 4, -6, 8},  
         {0},
-        {999, 999999999, 999999999},  // 极值测试用例
-        {0.5, 9.8, -9.2, 25365423435.0}  // 小数测试用例
+        {999, 999999999, 999999999},  
+        {0.5, 9.8, -9.2, 25365423435.0}  
     };
 
 
     for (const auto& input_data : test_cases) {
-        // 打印当前测试用例的输入数据
         cout << "Input: [";
         for (size_t i = 0; i < input_data.size(); ++i) {
             cout << input_data[i];
@@ -150,10 +142,8 @@ void full_testing() {
         }
         cout << "]" << endl;
 
-        // 使用当前输入数据调用calculate_average函数
         double result = calculate_average(input_data);
 
-        // 打印当前测试用例计算的结果（平均值）
         cout << "Mean: " << result << endl << endl;
     }
 }
@@ -194,31 +184,25 @@ print(analyze_data(data))  # Output: (2.5, 1.118...)
 
 using namespace std;
 
-// 函数用于对向量进行多种统计分析
 map<string, double> analyze_data(const vector<double>& data) {
-    // 检查向量是否为空
     if (data.empty()) {
         throw invalid_argument("Error: Empty DataFrame");
     }
 
-    // 计算总和
     double sum = 0.0;
     for (double value : data) {
         sum += value;
     }
 
-    // 计算均值
     double mean = sum / data.size();
 
-    // 计算方差和标准差
     double variance = 0.0;
     for (double value : data) {
         variance += pow(value - mean, 2);
     }
-    variance /= data.size() - 1; // 无偏估计
+    variance /= data.size() - 1; 
     double std_dev = sqrt(variance);
 
-    // 计算中位数
     vector<double> sorted_data = data;
     sort(sorted_data.begin(), sorted_data.end());
     double median;
@@ -228,7 +212,6 @@ map<string, double> analyze_data(const vector<double>& data) {
         median = sorted_data[sorted_data.size()/2];
     }
 
-    // 检测离群值（超过均值2个标准差）
     vector<double> outliers;
     for (double value : data) {
         if (abs(value - mean) > 2 * std_dev) {
@@ -236,13 +219,11 @@ map<string, double> analyze_data(const vector<double>& data) {
         }
     }
 
-    // 返回结果字典
     map<string, double> results;
     results["mean"] = mean;
     results["std_dev"] = std_dev;
     results["median"] = median;
     results["variance"] = variance;
-    // 注意：C++ map要求所有值类型一致，因此outliers无法直接包含在这里
     
     return results;
 }
@@ -262,7 +243,6 @@ void demo_testing() {
     };
 
     for (const auto& input_data : test_cases) {
-        // 模拟DataFrame输出格式
         cout << "Input:" << endl;
         cout << "+---+--------+" << endl;
         cout << "|   |   0    |" << endl;
@@ -275,7 +255,6 @@ void demo_testing() {
 
         map<string, double> result = analyze_data(input_data);
 
-        // 优化结果输出格式
         cout << "Analysis Result:" << endl;
         cout << "+------------+-----------+" << endl;
         cout << "| Statistic  |   Value   |" << endl;
@@ -304,28 +283,24 @@ int main() {
 using namespace std;
 
 void full_testing() {
-    // 硬编码测试用例集合
     vector<vector<double>> test_cases = {
-        {1, 2, 3, 4},                 // 测试用例1：简单数字序列
-        {12, 45, 6, 89, 34},          // 测试用例2：更多数字
-        {5},                          // 测试用例3：单个值
-        {},                           // 测试用例4：空DataFrame
-        {1, -1, 1, -1},               // 测试用例5：正负混合
-        {0, 0, 0, 0},                 // 测试用例6：全零
-        {999999, 1000000, 1000001},  // 测试用例7：大数
-        {100, 200, 300, 400}         // 测试用例8：更大的数字集
+        {1, 2, 3, 4},                 // Test case 1: simple number sequence
+        {12, 45, 6, 89, 34},          // Test case 2: more numbers
+        {5},                          // Test case 3: single value
+        {},                           // Test case 4: empty DataFrame
+        {1, -1, 1, -1},               // Test case 5: mixture of positive and negative numbers
+        {0, 0, 0, 0},                 // Test case 6: all zeros
+        {999999, 1000000, 1000001},  // Test case 7: large numbers
+        {100, 200, 300, 400}         // Test case 8: larger number set
     };
 
-    // 设置输出精度
     cout << fixed << setprecision(6);
 
     for (size_t i = 0; i < test_cases.size(); ++i) {
         const auto& input_data = test_cases[i];
         
-        // 打印测试用例编号
         cout << "Test Case " << (i + 1) << ":" << endl;
         
-        // 模拟DataFrame输出格式
         cout << "Input:" << endl;
         cout << "+---+--------+" << endl;
         cout << "|   |   0    |" << endl;
@@ -336,10 +311,8 @@ void full_testing() {
         }
         cout << "+---+--------+" << endl;
 
-        // 调用分析函数
         map<string, double> result = analyze_data(input_data);
 
-        // 输出分析结果
         cout << "Analysis Result:" << endl;
         cout << "+------------+-----------+" << endl;
         cout << "| Statistic  |   Value   |" << endl;
@@ -348,7 +321,7 @@ void full_testing() {
             cout << "| " << left << setw(10) << pair.first 
                     << " | " << right << setw(9) << pair.second << " |" << endl;
         }
-        cout << endl; // 分隔不同测试用例
+        cout << endl;
     }
 
 }

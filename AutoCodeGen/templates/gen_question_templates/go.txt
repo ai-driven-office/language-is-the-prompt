@@ -1,9 +1,9 @@
-You are an experienced programming mentor skilled at designing clear, concise, and educational programming problems. I will provide a self-contained, executable, and correct JavaScript code snippet along with one or more test functions used to validate its correctness. Your task is to generate a programming problem that directly corresponds to the given JavaScript code and its test cases.
+You are an experienced programming mentor skilled at designing clear, concise, and educational programming problems. I will provide a self-contained, executable, and correct **Go** code snippet along with one or more test functions used to validate its correctness. Your task is to generate a programming problem that directly corresponds to the given Go code and its test cases.
 
 Below are the code and test functions:
-[javascript code]  
+[go code]  
 <<<code>>>  
-[end javascript code]
+[end go code]
 
 [test function example]  
 <<<demo_test>>>  
@@ -15,9 +15,9 @@ Below are the code and test functions:
 
 Please ensure that the generated problem satisfies the following key requirements:
 
-1. **Language Requirement:** Clearly state that the solution must be implemented in JavaScript.  
+1. **Language Requirement:** Clearly state that the solution must be implemented in **Go**.  
 2. **Problem Description:** Describe the problem in simple, unambiguous everyday language. Avoid technical jargon, unnecessary details, or solution hints.  
-3. **Function/Class Naming:** Mention only the exact function or class names used in the test functions. Do not include implementation details beyond what the test cases reference.  
+3. **Function/Class Naming:** Mention only the exact function or type names used in the test functions. Do not include implementation details beyond what the test cases reference.  
 4. **Input/Output Format and Constraints:** Define the input format (types, structure, valid ranges) and the expected output format. If necessary, specify constraints such as input size limits or allowed data types.  
 5. **Example Usage:** Use the provided “test function example” as the example usage. These test cases typically do not exceed three. Do not modify or explain the test cases—copy them exactly as they appear.  
 6. **No Solution Hints:** The problem description must not reveal any part of the solution or provide additional test cases beyond the examples.
