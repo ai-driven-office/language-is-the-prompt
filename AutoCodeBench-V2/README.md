@@ -4,10 +4,12 @@ We released **AutoCodeBench-V2** benchmark, built on the original dataset and it
 
 Additionally, we have updated the sandbox with improved performance and fixed several bugs in programming language parsing.
 
+> 2026-02-17: We have updated the v2 version of AutoCodeBench and fixed several bugs, which led to performance improvements across all models. The dataset is available in [autocodebench-v2-260217.jsonl](https://huggingface.co/datasets/tencent/AutoCodeBenchmark/blob/main/autocodebench-v2-260217.jsonl).
+
 ## Leaderboard
 
 <div align="center">
-  <img src="../figures/leaderboard_acb-v2.png" width="85%">
+  <img src="../figures/leaderboard_acb-v2-260217.png" width="85%">
 </div>
 
 ## Quick Start
