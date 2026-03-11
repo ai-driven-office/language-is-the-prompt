@@ -1,0 +1,9 @@
+cluster_count,mean_elixir_advantage,bootstrap_ci_low,bootstrap_ci_high,positive_clusters,negative_clusters,tied_clusters,sign_test_pvalue,cluster_id,title_display,elixir_success,other_language_mean_success,elixir_advantage,other_languages
+7,0.2143,-0.4286,0.7857,4,2,1,0.6875,,,,,,
+,,,,,,,,cluster_005,**Problem: Check if a String is a Palindrome**,1,0.5,0.5,"julia,python"
+,,,,,,,,cluster_007,**Problem: Construct Binary Tree from Preorder and Inorder Traversal**,1,0.0,1.0,julia
+,,,,,,,,cluster_011,**Problem: Counting Ways to Decode a Message**,0,1.0,-1.0,julia
+,,,,,,,,cluster_019,**Problem: Maximize Stock Profit**,1,0.0,1.0,racket
+,,,,,,,,cluster_020,**Problem: Merge Two Sorted Linked Lists**,0,1.0,-1.0,racket
+,,,,,,,,cluster_021,**Problem: Minimum Depth of a Binary Tree**,1,0.0,1.0,swift
+,,,,,,,,cluster_023,**Problem: Reorganize String**,1,1.0,0.0,r

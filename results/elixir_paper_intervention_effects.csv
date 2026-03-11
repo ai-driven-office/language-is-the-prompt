@@ -1,0 +1,12 @@
+suite_id,suite_title,condition,pass_rate,delta_vs_baseline,ci_low,ci_high,mcnemar_pvalue,delta_ci_low,delta_ci_high,baseline_only_wins,condition_only_wins,matched_odds_ratio,risk_ratio_vs_baseline,holm_adjusted_pvalue,holm_significant_05
+suite_a,Documentation Quality,signature_only,42.9,-41.4,36.2,49.9,0.0,-49.0,-33.8,89,7,0.084,0.509,0.0,True
+suite_a,Documentation Quality,minimal_docs,46.0,-38.4,39.2,52.9,0.0,-46.0,-30.3,85,9,0.111,0.546,0.0,True
+suite_d,Pattern Matching and Control Flow,case_with,81.3,-3.0,75.3,86.1,0.307456,-8.1,2.0,15,9,0.613,0.964,1.0,False
+suite_d,Pattern Matching and Control Flow,function_heads,82.8,-1.5,77.0,87.4,0.7201,-7.1,4.0,17,14,0.829,0.982,1.0,False
+suite_a,Documentation Quality,reference_no_examples,84.3,0.0,78.6,88.7,1.0,-4.5,4.5,10,10,1.0,1.0,1.0,False
+suite_e,Result Contracts,sentinel_helpers,83.8,0.0,78.1,88.3,1.0,-5.1,5.1,12,12,1.0,1.0,1.0,False
+suite_f,Mutability and State Style,immutable_pipeline,81.8,0.0,75.9,86.6,1.0,-5.6,6.1,17,17,1.0,1.0,1.0,False
+suite_d,Pattern Matching and Control Flow,cond_if,86.9,2.5,81.5,90.9,0.424356,-2.5,7.6,10,15,1.476,1.031,1.0,False
+suite_e,Result Contracts,tagged_tuple_helpers,86.9,3.0,81.5,90.9,0.307456,-2.0,8.1,9,15,1.632,1.037,1.0,False
+suite_f,Mutability and State Style,explicit_state_threading,86.9,5.1,81.5,90.9,0.075519,0.0,10.6,8,18,2.176,1.062,0.604152,False
+suite_f,Mutability and State Style,rebinding_stepwise,87.4,5.6,82.0,91.3,0.061428,0.5,11.1,9,20,2.158,1.068,0.552852,False

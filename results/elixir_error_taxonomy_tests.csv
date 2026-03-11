@@ -1,0 +1,9 @@
+category,comparison_basis,elixir_count,elixir_non_count,rest_count,rest_non_count,odds_ratio,fisher_pvalue,holm_adjusted_pvalue,holm_significant_05
+compile,all_rows,0,198,40,3682,0.229,0.265329,1.0,False
+compile,failure_rows,0,25,40,1767,0.8557,1.0,1.0,False
+runtime,all_rows,25,173,1680,2042,0.1786,0.0,0.0,True
+runtime,failure_rows,25,0,1680,127,3.8694,0.41209,1.0,False
+wrong_answer,all_rows,0,198,87,3635,0.1047,0.021918,0.153426,False
+wrong_answer,failure_rows,0,25,87,1720,0.3855,0.628594,1.0,False
+other,all_rows,0,198,0,3722,18.7531,1.0,1.0,False
+other,failure_rows,0,25,0,1807,70.8824,1.0,1.0,False

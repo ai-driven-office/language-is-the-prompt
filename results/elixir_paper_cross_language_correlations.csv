@@ -1,0 +1,11 @@
+metric,pearson_all,spearman_all
+docs_score,0.228,0.396
+cleanliness,-0.157,-0.044
+style_stability,-0.162,0.059
+style_entropy,0.172,0.061
+control_flow_score,0.564,0.197
+contract_score,-0.141,0.068
+mutability_burden,-0.207,-0.24
+alignment_score,-0.117,-0.143
+question_chars,0.159,0.256
+example_markers,0.098,0.108

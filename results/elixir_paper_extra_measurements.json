@@ -1,0 +1,1009 @@
+{
+  "cross_language_correlations": [
+    {
+      "metric": "docs_score",
+      "pearson_all": 0.228,
+      "spearman_all": 0.396
+    },
+    {
+      "metric": "cleanliness",
+      "pearson_all": -0.157,
+      "spearman_all": -0.044
+    },
+    {
+      "metric": "style_stability",
+      "pearson_all": -0.162,
+      "spearman_all": 0.059
+    },
+    {
+      "metric": "style_entropy",
+      "pearson_all": 0.172,
+      "spearman_all": 0.061
+    },
+    {
+      "metric": "control_flow_score",
+      "pearson_all": 0.564,
+      "spearman_all": 0.197
+    },
+    {
+      "metric": "contract_score",
+      "pearson_all": -0.141,
+      "spearman_all": 0.068
+    },
+    {
+      "metric": "mutability_burden",
+      "pearson_all": -0.207,
+      "spearman_all": -0.24
+    },
+    {
+      "metric": "alignment_score",
+      "pearson_all": -0.117,
+      "spearman_all": -0.143
+    },
+    {
+      "metric": "question_chars",
+      "pearson_all": 0.159,
+      "spearman_all": 0.256
+    },
+    {
+      "metric": "example_markers",
+      "pearson_all": 0.098,
+      "spearman_all": 0.108
+    }
+  ],
+  "explicitness_composite": [
+    {
+      "cohort": "all_languages",
+      "pearson": 0.391,
+      "spearman": 0.061
+    },
+    {
+      "cohort": "exclude_elixir",
+      "pearson": -0.034,
+      "spearman": -0.166
+    }
+  ],
+  "active_intervention_effects": [
+    {
+      "suite_id": "suite_a",
+      "suite_title": "Documentation Quality",
+      "condition": "signature_only",
+      "pass_rate": 42.9,
+      "delta_vs_baseline": -41.4,
+      "ci_low": 36.2,
+      "ci_high": 49.9,
+      "mcnemar_pvalue": 0.0,
+      "delta_ci_low": -49.0,
+      "delta_ci_high": -33.8,
+      "baseline_only_wins": 89,
+      "condition_only_wins": 7,
+      "matched_odds_ratio": 0.084,
+      "risk_ratio_vs_baseline": 0.509,
+      "holm_adjusted_pvalue": 0.0,
+      "holm_significant_05": true
+    },
+    {
+      "suite_id": "suite_a",
+      "suite_title": "Documentation Quality",
+      "condition": "minimal_docs",
+      "pass_rate": 46.0,
+      "delta_vs_baseline": -38.4,
+      "ci_low": 39.2,
+      "ci_high": 52.9,
+      "mcnemar_pvalue": 0.0,
+      "delta_ci_low": -46.0,
+      "delta_ci_high": -30.3,
+      "baseline_only_wins": 85,
+      "condition_only_wins": 9,
+      "matched_odds_ratio": 0.111,
+      "risk_ratio_vs_baseline": 0.546,
+      "holm_adjusted_pvalue": 0.0,
+      "holm_significant_05": true
+    },
+    {
+      "suite_id": "suite_d",
+      "suite_title": "Pattern Matching and Control Flow",
+      "condition": "case_with",
+      "pass_rate": 81.3,
+      "delta_vs_baseline": -3.0,
+      "ci_low": 75.3,
+      "ci_high": 86.1,
+      "mcnemar_pvalue": 0.307456,
+      "delta_ci_low": -8.1,
+      "delta_ci_high": 2.0,
+      "baseline_only_wins": 15,
+      "condition_only_wins": 9,
+      "matched_odds_ratio": 0.613,
+      "risk_ratio_vs_baseline": 0.964,
+      "holm_adjusted_pvalue": 1.0,
+      "holm_significant_05": false
+    },
+    {
+      "suite_id": "suite_d",
+      "suite_title": "Pattern Matching and Control Flow",
+      "condition": "function_heads",
+      "pass_rate": 82.8,
+      "delta_vs_baseline": -1.5,
+      "ci_low": 77.0,
+      "ci_high": 87.4,
+      "mcnemar_pvalue": 0.7201,
+      "delta_ci_low": -7.1,
+      "delta_ci_high": 4.0,
+      "baseline_only_wins": 17,
+      "condition_only_wins": 14,
+      "matched_odds_ratio": 0.829,
+      "risk_ratio_vs_baseline": 0.982,
+      "holm_adjusted_pvalue": 1.0,
+      "holm_significant_05": false
+    },
+    {
+      "suite_id": "suite_a",
+      "suite_title": "Documentation Quality",
+      "condition": "reference_no_examples",
+      "pass_rate": 84.3,
+      "delta_vs_baseline": 0.0,
+      "ci_low": 78.6,
+      "ci_high": 88.7,
+      "mcnemar_pvalue": 1.0,
+      "delta_ci_low": -4.5,
+      "delta_ci_high": 4.5,
+      "baseline_only_wins": 10,
+      "condition_only_wins": 10,
+      "matched_odds_ratio": 1.0,
+      "risk_ratio_vs_baseline": 1.0,
+      "holm_adjusted_pvalue": 1.0,
+      "holm_significant_05": false
+    },
+    {
+      "suite_id": "suite_e",
+      "suite_title": "Result Contracts",
+      "condition": "sentinel_helpers",
+      "pass_rate": 83.8,
+      "delta_vs_baseline": 0.0,
+      "ci_low": 78.1,
+      "ci_high": 88.3,
+      "mcnemar_pvalue": 1.0,
+      "delta_ci_low": -5.1,
+      "delta_ci_high": 5.1,
+      "baseline_only_wins": 12,
+      "condition_only_wins": 12,
+      "matched_odds_ratio": 1.0,
+      "risk_ratio_vs_baseline": 1.0,
+      "holm_adjusted_pvalue": 1.0,
+      "holm_significant_05": false
+    },
+    {
+      "suite_id": "suite_f",
+      "suite_title": "Mutability and State Style",
+      "condition": "immutable_pipeline",
+      "pass_rate": 81.8,
+      "delta_vs_baseline": 0.0,
+      "ci_low": 75.9,
+      "ci_high": 86.6,
+      "mcnemar_pvalue": 1.0,
+      "delta_ci_low": -5.6,
+      "delta_ci_high": 6.1,
+      "baseline_only_wins": 17,
+      "condition_only_wins": 17,
+      "matched_odds_ratio": 1.0,
+      "risk_ratio_vs_baseline": 1.0,
+      "holm_adjusted_pvalue": 1.0,
+      "holm_significant_05": false
+    },
+    {
+      "suite_id": "suite_d",
+      "suite_title": "Pattern Matching and Control Flow",
+      "condition": "cond_if",
+      "pass_rate": 86.9,
+      "delta_vs_baseline": 2.5,
+      "ci_low": 81.5,
+      "ci_high": 90.9,
+      "mcnemar_pvalue": 0.424356,
+      "delta_ci_low": -2.5,
+      "delta_ci_high": 7.6,
+      "baseline_only_wins": 10,
+      "condition_only_wins": 15,
+      "matched_odds_ratio": 1.476,
+      "risk_ratio_vs_baseline": 1.031,
+      "holm_adjusted_pvalue": 1.0,
+      "holm_significant_05": false
+    },
+    {
+      "suite_id": "suite_e",
+      "suite_title": "Result Contracts",
+      "condition": "tagged_tuple_helpers",
+      "pass_rate": 86.9,
+      "delta_vs_baseline": 3.0,
+      "ci_low": 81.5,
+      "ci_high": 90.9,
+      "mcnemar_pvalue": 0.307456,
+      "delta_ci_low": -2.0,
+      "delta_ci_high": 8.1,
+      "baseline_only_wins": 9,
+      "condition_only_wins": 15,
+      "matched_odds_ratio": 1.632,
+      "risk_ratio_vs_baseline": 1.037,
+      "holm_adjusted_pvalue": 1.0,
+      "holm_significant_05": false
+    },
+    {
+      "suite_id": "suite_f",
+      "suite_title": "Mutability and State Style",
+      "condition": "explicit_state_threading",
+      "pass_rate": 86.9,
+      "delta_vs_baseline": 5.1,
+      "ci_low": 81.5,
+      "ci_high": 90.9,
+      "mcnemar_pvalue": 0.075519,
+      "delta_ci_low": 0.0,
+      "delta_ci_high": 10.6,
+      "baseline_only_wins": 8,
+      "condition_only_wins": 18,
+      "matched_odds_ratio": 2.176,
+      "risk_ratio_vs_baseline": 1.062,
+      "holm_adjusted_pvalue": 0.604152,
+      "holm_significant_05": false
+    },
+    {
+      "suite_id": "suite_f",
+      "suite_title": "Mutability and State Style",
+      "condition": "rebinding_stepwise",
+      "pass_rate": 87.4,
+      "delta_vs_baseline": 5.6,
+      "ci_low": 82.0,
+      "ci_high": 91.3,
+      "mcnemar_pvalue": 0.061428,
+      "delta_ci_low": 0.5,
+      "delta_ci_high": 11.1,
+      "baseline_only_wins": 9,
+      "condition_only_wins": 20,
+      "matched_odds_ratio": 2.158,
+      "risk_ratio_vs_baseline": 1.068,
+      "holm_adjusted_pvalue": 0.552852,
+      "holm_significant_05": false
+    }
+  ],
+  "suite_a_docs_by_difficulty": [
+    {
+      "condition": "minimal_docs",
+      "difficulty": "easy",
+      "pass_rate": 69.2,
+      "baseline_pass_rate": 92.3,
+      "delta_vs_full_docs": -23.1,
+      "baseline_only_wins": 4,
+      "condition_only_wins": 1,
+      "same": 8,
+      "mcnemar_pvalue": 0.375
+    },
+    {
+      "condition": "minimal_docs",
+      "difficulty": "hard",
+      "pass_rate": 39.6,
+      "baseline_pass_rate": 84.2,
+      "delta_vs_full_docs": -44.6,
+      "baseline_only_wins": 67,
+      "condition_only_wins": 5,
+      "same": 67,
+      "mcnemar_pvalue": 0.0
+    },
+    {
+      "condition": "minimal_docs",
+      "difficulty": "medium",
+      "pass_rate": 58.7,
+      "baseline_pass_rate": 82.6,
+      "delta_vs_full_docs": -23.9,
+      "baseline_only_wins": 14,
+      "condition_only_wins": 3,
+      "same": 29,
+      "mcnemar_pvalue": 0.012726
+    },
+    {
+      "condition": "reference_no_examples",
+      "difficulty": "easy",
+      "pass_rate": 100.0,
+      "baseline_pass_rate": 92.3,
+      "delta_vs_full_docs": 7.7,
+      "baseline_only_wins": 0,
+      "condition_only_wins": 1,
+      "same": 12,
+      "mcnemar_pvalue": 1.0
+    },
+    {
+      "condition": "reference_no_examples",
+      "difficulty": "hard",
+      "pass_rate": 81.3,
+      "baseline_pass_rate": 84.2,
+      "delta_vs_full_docs": -2.9,
+      "baseline_only_wins": 9,
+      "condition_only_wins": 5,
+      "same": 125,
+      "mcnemar_pvalue": 0.42395
+    },
+    {
+      "condition": "reference_no_examples",
+      "difficulty": "medium",
+      "pass_rate": 89.1,
+      "baseline_pass_rate": 82.6,
+      "delta_vs_full_docs": 6.5,
+      "baseline_only_wins": 1,
+      "condition_only_wins": 4,
+      "same": 41,
+      "mcnemar_pvalue": 0.375
+    },
+    {
+      "condition": "signature_only",
+      "difficulty": "easy",
+      "pass_rate": 46.2,
+      "baseline_pass_rate": 92.3,
+      "delta_vs_full_docs": -46.1,
+      "baseline_only_wins": 7,
+      "condition_only_wins": 1,
+      "same": 5,
+      "mcnemar_pvalue": 0.070312
+    },
+    {
+      "condition": "signature_only",
+      "difficulty": "hard",
+      "pass_rate": 38.8,
+      "baseline_pass_rate": 84.2,
+      "delta_vs_full_docs": -45.4,
+      "baseline_only_wins": 68,
+      "condition_only_wins": 5,
+      "same": 66,
+      "mcnemar_pvalue": 0.0
+    },
+    {
+      "condition": "signature_only",
+      "difficulty": "medium",
+      "pass_rate": 54.3,
+      "baseline_pass_rate": 82.6,
+      "delta_vs_full_docs": -28.3,
+      "baseline_only_wins": 14,
+      "condition_only_wins": 1,
+      "same": 31,
+      "mcnemar_pvalue": 0.000977
+    }
+  ],
+  "leave_one_out_influence": [
+    {
+      "metric": "docs_score",
+      "excluded_language": "cpp",
+      "pearson_without_language": 0.281,
+      "delta_pearson": 0.053,
+      "spearman_without_language": 0.435,
+      "delta_spearman": 0.04
+    },
+    {
+      "metric": "docs_score",
+      "excluded_language": "csharp",
+      "pearson_without_language": 0.148,
+      "delta_pearson": -0.081,
+      "spearman_without_language": 0.351,
+      "delta_spearman": -0.045
+    },
+    {
+      "metric": "docs_score",
+      "excluded_language": "dart",
+      "pearson_without_language": 0.221,
+      "delta_pearson": -0.007,
+      "spearman_without_language": 0.383,
+      "delta_spearman": -0.013
+    },
+    {
+      "metric": "docs_score",
+      "excluded_language": "elixir",
+      "pearson_without_language": 0.398,
+      "delta_pearson": 0.17,
+      "spearman_without_language": 0.453,
+      "delta_spearman": 0.057
+    },
+    {
+      "metric": "docs_score",
+      "excluded_language": "go",
+      "pearson_without_language": 0.202,
+      "delta_pearson": -0.026,
+      "spearman_without_language": 0.351,
+      "delta_spearman": -0.045
+    },
+    {
+      "metric": "docs_score",
+      "excluded_language": "java",
+      "pearson_without_language": 0.271,
+      "delta_pearson": 0.043,
+      "spearman_without_language": 0.397,
+      "delta_spearman": 0.001
+    },
+    {
+      "metric": "docs_score",
+      "excluded_language": "javascript",
+      "pearson_without_language": 0.2,
+      "delta_pearson": -0.028,
+      "spearman_without_language": 0.337,
+      "delta_spearman": -0.059
+    },
+    {
+      "metric": "docs_score",
+      "excluded_language": "julia",
+      "pearson_without_language": 0.238,
+      "delta_pearson": 0.01,
+      "spearman_without_language": 0.425,
+      "delta_spearman": 0.029
+    },
+    {
+      "metric": "docs_score",
+      "excluded_language": "kotlin",
+      "pearson_without_language": 0.188,
+      "delta_pearson": -0.041,
+      "spearman_without_language": 0.397,
+      "delta_spearman": 0.001
+    },
+    {
+      "metric": "docs_score",
+      "excluded_language": "perl",
+      "pearson_without_language": 0.203,
+      "delta_pearson": -0.026,
+      "spearman_without_language": 0.358,
+      "delta_spearman": -0.038
+    },
+    {
+      "metric": "docs_score",
+      "excluded_language": "php",
+      "pearson_without_language": 0.138,
+      "delta_pearson": -0.09,
+      "spearman_without_language": 0.307,
+      "delta_spearman": -0.088
+    },
+    {
+      "metric": "docs_score",
+      "excluded_language": "python",
+      "pearson_without_language": 0.229,
+      "delta_pearson": 0.001,
+      "spearman_without_language": 0.425,
+      "delta_spearman": 0.029
+    },
+    {
+      "metric": "docs_score",
+      "excluded_language": "r",
+      "pearson_without_language": 0.233,
+      "delta_pearson": 0.004,
+      "spearman_without_language": 0.414,
+      "delta_spearman": 0.019
+    },
+    {
+      "metric": "docs_score",
+      "excluded_language": "racket",
+      "pearson_without_language": 0.225,
+      "delta_pearson": -0.003,
+      "spearman_without_language": 0.408,
+      "delta_spearman": 0.012
+    },
+    {
+      "metric": "docs_score",
+      "excluded_language": "ruby",
+      "pearson_without_language": 0.244,
+      "delta_pearson": 0.015,
+      "spearman_without_language": 0.421,
+      "delta_spearman": 0.026
+    },
+    {
+      "metric": "docs_score",
+      "excluded_language": "rust",
+      "pearson_without_language": 0.274,
+      "delta_pearson": 0.046,
+      "spearman_without_language": 0.498,
+      "delta_spearman": 0.103
+    },
+    {
+      "metric": "docs_score",
+      "excluded_language": "scala",
+      "pearson_without_language": 0.247,
+      "delta_pearson": 0.019,
+      "spearman_without_language": 0.409,
+      "delta_spearman": 0.013
+    },
+    {
+      "metric": "docs_score",
+      "excluded_language": "shell",
+      "pearson_without_language": 0.237,
+      "delta_pearson": 0.009,
+      "spearman_without_language": 0.402,
+      "delta_spearman": 0.006
+    },
+    {
+      "metric": "docs_score",
+      "excluded_language": "swift",
+      "pearson_without_language": 0.206,
+      "delta_pearson": -0.022,
+      "spearman_without_language": 0.349,
+      "delta_spearman": -0.046
+    },
+    {
+      "metric": "docs_score",
+      "excluded_language": "typescript",
+      "pearson_without_language": 0.217,
+      "delta_pearson": -0.011,
+      "spearman_without_language": 0.369,
+      "delta_spearman": -0.027
+    },
+    {
+      "metric": "control_flow_score",
+      "excluded_language": "cpp",
+      "pearson_without_language": 0.569,
+      "delta_pearson": 0.006,
+      "spearman_without_language": 0.179,
+      "delta_spearman": -0.018
+    },
+    {
+      "metric": "control_flow_score",
+      "excluded_language": "csharp",
+      "pearson_without_language": 0.622,
+      "delta_pearson": 0.058,
+      "spearman_without_language": 0.193,
+      "delta_spearman": -0.004
+    },
+    {
+      "metric": "control_flow_score",
+      "excluded_language": "dart",
+      "pearson_without_language": 0.564,
+      "delta_pearson": 0.001,
+      "spearman_without_language": 0.205,
+      "delta_spearman": 0.008
+    },
+    {
+      "metric": "control_flow_score",
+      "excluded_language": "elixir",
+      "pearson_without_language": 0.074,
+      "delta_pearson": -0.489,
+      "spearman_without_language": 0.063,
+      "delta_spearman": -0.134
+    },
+    {
+      "metric": "control_flow_score",
+      "excluded_language": "go",
+      "pearson_without_language": 0.587,
+      "delta_pearson": 0.024,
+      "spearman_without_language": 0.286,
+      "delta_spearman": 0.089
+    },
+    {
+      "metric": "control_flow_score",
+      "excluded_language": "java",
+      "pearson_without_language": 0.563,
+      "delta_pearson": -0.001,
+      "spearman_without_language": 0.219,
+      "delta_spearman": 0.022
+    },
+    {
+      "metric": "control_flow_score",
+      "excluded_language": "javascript",
+      "pearson_without_language": 0.578,
+      "delta_pearson": 0.014,
+      "spearman_without_language": 0.275,
+      "delta_spearman": 0.078
+    },
+    {
+      "metric": "control_flow_score",
+      "excluded_language": "julia",
+      "pearson_without_language": 0.586,
+      "delta_pearson": 0.022,
+      "spearman_without_language": 0.274,
+      "delta_spearman": 0.077
+    },
+    {
+      "metric": "control_flow_score",
+      "excluded_language": "kotlin",
+      "pearson_without_language": 0.653,
+      "delta_pearson": 0.089,
+      "spearman_without_language": 0.223,
+      "delta_spearman": 0.026
+    },
+    {
+      "metric": "control_flow_score",
+      "excluded_language": "perl",
+      "pearson_without_language": 0.561,
+      "delta_pearson": -0.002,
+      "spearman_without_language": 0.168,
+      "delta_spearman": -0.029
+    },
+    {
+      "metric": "control_flow_score",
+      "excluded_language": "php",
+      "pearson_without_language": 0.577,
+      "delta_pearson": 0.013,
+      "spearman_without_language": 0.207,
+      "delta_spearman": 0.01
+    },
+    {
+      "metric": "control_flow_score",
+      "excluded_language": "python",
+      "pearson_without_language": 0.553,
+      "delta_pearson": -0.011,
+      "spearman_without_language": 0.158,
+      "delta_spearman": -0.039
+    },
+    {
+      "metric": "control_flow_score",
+      "excluded_language": "r",
+      "pearson_without_language": 0.569,
+      "delta_pearson": 0.005,
+      "spearman_without_language": 0.23,
+      "delta_spearman": 0.033
+    },
+    {
+      "metric": "control_flow_score",
+      "excluded_language": "racket",
+      "pearson_without_language": 0.571,
+      "delta_pearson": 0.007,
+      "spearman_without_language": 0.19,
+      "delta_spearman": -0.008
+    },
+    {
+      "metric": "control_flow_score",
+      "excluded_language": "ruby",
+      "pearson_without_language": 0.571,
+      "delta_pearson": 0.008,
+      "spearman_without_language": 0.19,
+      "delta_spearman": -0.008
+    },
+    {
+      "metric": "control_flow_score",
+      "excluded_language": "rust",
+      "pearson_without_language": 0.538,
+      "delta_pearson": -0.025,
+      "spearman_without_language": 0.091,
+      "delta_spearman": -0.106
+    },
+    {
+      "metric": "control_flow_score",
+      "excluded_language": "scala",
+      "pearson_without_language": 0.599,
+      "delta_pearson": 0.035,
+      "spearman_without_language": 0.19,
+      "delta_spearman": -0.008
+    },
+    {
+      "metric": "control_flow_score",
+      "excluded_language": "shell",
+      "pearson_without_language": 0.566,
+      "delta_pearson": 0.002,
+      "spearman_without_language": 0.199,
+      "delta_spearman": 0.002
+    },
+    {
+      "metric": "control_flow_score",
+      "excluded_language": "swift",
+      "pearson_without_language": 0.553,
+      "delta_pearson": -0.011,
+      "spearman_without_language": 0.158,
+      "delta_spearman": -0.039
+    },
+    {
+      "metric": "control_flow_score",
+      "excluded_language": "typescript",
+      "pearson_without_language": 0.566,
+      "delta_pearson": 0.002,
+      "spearman_without_language": 0.232,
+      "delta_spearman": 0.035
+    },
+    {
+      "metric": "mutability_burden",
+      "excluded_language": "cpp",
+      "pearson_without_language": -0.217,
+      "delta_pearson": -0.009,
+      "spearman_without_language": -0.238,
+      "delta_spearman": 0.002
+    },
+    {
+      "metric": "mutability_burden",
+      "excluded_language": "csharp",
+      "pearson_without_language": -0.333,
+      "delta_pearson": -0.126,
+      "spearman_without_language": -0.355,
+      "delta_spearman": -0.115
+    },
+    {
+      "metric": "mutability_burden",
+      "excluded_language": "dart",
+      "pearson_without_language": -0.211,
+      "delta_pearson": -0.004,
+      "spearman_without_language": -0.289,
+      "delta_spearman": -0.049
+    },
+    {
+      "metric": "mutability_burden",
+      "excluded_language": "elixir",
+      "pearson_without_language": -0.03,
+      "delta_pearson": 0.177,
+      "spearman_without_language": -0.127,
+      "delta_spearman": 0.113
+    },
+    {
+      "metric": "mutability_burden",
+      "excluded_language": "go",
+      "pearson_without_language": -0.23,
+      "delta_pearson": -0.023,
+      "spearman_without_language": -0.272,
+      "delta_spearman": -0.032
+    },
+    {
+      "metric": "mutability_burden",
+      "excluded_language": "java",
+      "pearson_without_language": -0.205,
+      "delta_pearson": 0.002,
+      "spearman_without_language": -0.269,
+      "delta_spearman": -0.029
+    },
+    {
+      "metric": "mutability_burden",
+      "excluded_language": "javascript",
+      "pearson_without_language": -0.202,
+      "delta_pearson": 0.005,
+      "spearman_without_language": -0.212,
+      "delta_spearman": 0.028
+    },
+    {
+      "metric": "mutability_burden",
+      "excluded_language": "julia",
+      "pearson_without_language": -0.201,
+      "delta_pearson": 0.007,
+      "spearman_without_language": -0.21,
+      "delta_spearman": 0.03
+    },
+    {
+      "metric": "mutability_burden",
+      "excluded_language": "kotlin",
+      "pearson_without_language": -0.216,
+      "delta_pearson": -0.009,
+      "spearman_without_language": -0.256,
+      "delta_spearman": -0.016
+    },
+    {
+      "metric": "mutability_burden",
+      "excluded_language": "perl",
+      "pearson_without_language": -0.244,
+      "delta_pearson": -0.037,
+      "spearman_without_language": -0.285,
+      "delta_spearman": -0.045
+    },
+    {
+      "metric": "mutability_burden",
+      "excluded_language": "php",
+      "pearson_without_language": -0.157,
+      "delta_pearson": 0.05,
+      "spearman_without_language": -0.159,
+      "delta_spearman": 0.081
+    },
+    {
+      "metric": "mutability_burden",
+      "excluded_language": "python",
+      "pearson_without_language": -0.222,
+      "delta_pearson": -0.015,
+      "spearman_without_language": -0.27,
+      "delta_spearman": -0.03
+    },
+    {
+      "metric": "mutability_burden",
+      "excluded_language": "r",
+      "pearson_without_language": -0.208,
+      "delta_pearson": -0.0,
+      "spearman_without_language": -0.204,
+      "delta_spearman": 0.035
+    },
+    {
+      "metric": "mutability_burden",
+      "excluded_language": "racket",
+      "pearson_without_language": -0.241,
+      "delta_pearson": -0.034,
+      "spearman_without_language": -0.238,
+      "delta_spearman": 0.002
+    },
+    {
+      "metric": "mutability_burden",
+      "excluded_language": "ruby",
+      "pearson_without_language": -0.203,
+      "delta_pearson": 0.004,
+      "spearman_without_language": -0.269,
+      "delta_spearman": -0.029
+    },
+    {
+      "metric": "mutability_burden",
+      "excluded_language": "rust",
+      "pearson_without_language": -0.135,
+      "delta_pearson": 0.072,
+      "spearman_without_language": -0.131,
+      "delta_spearman": 0.109
+    },
+    {
+      "metric": "mutability_burden",
+      "excluded_language": "scala",
+      "pearson_without_language": -0.203,
+      "delta_pearson": 0.004,
+      "spearman_without_language": -0.245,
+      "delta_spearman": -0.005
+    },
+    {
+      "metric": "mutability_burden",
+      "excluded_language": "shell",
+      "pearson_without_language": -0.22,
+      "delta_pearson": -0.013,
+      "spearman_without_language": -0.247,
+      "delta_spearman": -0.007
+    },
+    {
+      "metric": "mutability_burden",
+      "excluded_language": "swift",
+      "pearson_without_language": -0.232,
+      "delta_pearson": -0.025,
+      "spearman_without_language": -0.268,
+      "delta_spearman": -0.028
+    },
+    {
+      "metric": "mutability_burden",
+      "excluded_language": "typescript",
+      "pearson_without_language": -0.208,
+      "delta_pearson": -0.001,
+      "spearman_without_language": -0.244,
+      "delta_spearman": -0.004
+    },
+    {
+      "metric": "contract_score",
+      "excluded_language": "cpp",
+      "pearson_without_language": -0.148,
+      "delta_pearson": -0.006,
+      "spearman_without_language": 0.048,
+      "delta_spearman": -0.019
+    },
+    {
+      "metric": "contract_score",
+      "excluded_language": "csharp",
+      "pearson_without_language": -0.195,
+      "delta_pearson": -0.054,
+      "spearman_without_language": 0.009,
+      "delta_spearman": -0.059
+    },
+    {
+      "metric": "contract_score",
+      "excluded_language": "dart",
+      "pearson_without_language": -0.138,
+      "delta_pearson": 0.003,
+      "spearman_without_language": 0.042,
+      "delta_spearman": -0.026
+    },
+    {
+      "metric": "contract_score",
+      "excluded_language": "elixir",
+      "pearson_without_language": -0.155,
+      "delta_pearson": -0.013,
+      "spearman_without_language": 0.021,
+      "delta_spearman": -0.047
+    },
+    {
+      "metric": "contract_score",
+      "excluded_language": "go",
+      "pearson_without_language": -0.171,
+      "delta_pearson": -0.03,
+      "spearman_without_language": 0.023,
+      "delta_spearman": -0.045
+    },
+    {
+      "metric": "contract_score",
+      "excluded_language": "java",
+      "pearson_without_language": -0.136,
+      "delta_pearson": 0.005,
+      "spearman_without_language": 0.058,
+      "delta_spearman": -0.01
+    },
+    {
+      "metric": "contract_score",
+      "excluded_language": "javascript",
+      "pearson_without_language": -0.16,
+      "delta_pearson": -0.019,
+      "spearman_without_language": 0.046,
+      "delta_spearman": -0.022
+    },
+    {
+      "metric": "contract_score",
+      "excluded_language": "julia",
+      "pearson_without_language": -0.138,
+      "delta_pearson": 0.003,
+      "spearman_without_language": 0.042,
+      "delta_spearman": -0.026
+    },
+    {
+      "metric": "contract_score",
+      "excluded_language": "kotlin",
+      "pearson_without_language": -0.127,
+      "delta_pearson": 0.014,
+      "spearman_without_language": 0.033,
+      "delta_spearman": -0.034
+    },
+    {
+      "metric": "contract_score",
+      "excluded_language": "perl",
+      "pearson_without_language": -0.171,
+      "delta_pearson": -0.029,
+      "spearman_without_language": 0.037,
+      "delta_spearman": -0.031
+    },
+    {
+      "metric": "contract_score",
+      "excluded_language": "php",
+      "pearson_without_language": -0.195,
+      "delta_pearson": -0.054,
+      "spearman_without_language": -0.003,
+      "delta_spearman": -0.07
+    },
+    {
+      "metric": "contract_score",
+      "excluded_language": "python",
+      "pearson_without_language": -0.102,
+      "delta_pearson": 0.039,
+      "spearman_without_language": 0.16,
+      "delta_spearman": 0.092
+    },
+    {
+      "metric": "contract_score",
+      "excluded_language": "r",
+      "pearson_without_language": -0.139,
+      "delta_pearson": 0.002,
+      "spearman_without_language": 0.062,
+      "delta_spearman": -0.005
+    },
+    {
+      "metric": "contract_score",
+      "excluded_language": "racket",
+      "pearson_without_language": -0.149,
+      "delta_pearson": -0.007,
+      "spearman_without_language": 0.091,
+      "delta_spearman": 0.024
+    },
+    {
+      "metric": "contract_score",
+      "excluded_language": "ruby",
+      "pearson_without_language": -0.115,
+      "delta_pearson": 0.027,
+      "spearman_without_language": 0.179,
+      "delta_spearman": 0.111
+    },
+    {
+      "metric": "contract_score",
+      "excluded_language": "rust",
+      "pearson_without_language": 0.111,
+      "delta_pearson": 0.252,
+      "spearman_without_language": 0.223,
+      "delta_spearman": 0.155
+    },
+    {
+      "metric": "contract_score",
+      "excluded_language": "scala",
+      "pearson_without_language": -0.137,
+      "delta_pearson": 0.004,
+      "spearman_without_language": 0.081,
+      "delta_spearman": 0.013
+    },
+    {
+      "metric": "contract_score",
+      "excluded_language": "shell",
+      "pearson_without_language": -0.151,
+      "delta_pearson": -0.009,
+      "spearman_without_language": 0.068,
+      "delta_spearman": 0.001
+    },
+    {
+      "metric": "contract_score",
+      "excluded_language": "swift",
+      "pearson_without_language": -0.17,
+      "delta_pearson": -0.029,
+      "spearman_without_language": 0.026,
+      "delta_spearman": -0.041
+    },
+    {
+      "metric": "contract_score",
+      "excluded_language": "typescript",
+      "pearson_without_language": -0.144,
+      "delta_pearson": -0.002,
+      "spearman_without_language": 0.1,
+      "delta_spearman": 0.032
+    }
+  ]
+}

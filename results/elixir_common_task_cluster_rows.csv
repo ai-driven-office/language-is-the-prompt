@@ -1,0 +1,60 @@
+cluster_id,title_norm,title_display,language,difficulty,success,index
+cluster_001,authentication system implementation,# Authentication System Implementation,java,hard,1,467
+cluster_001,authentication system implementation,# Authentication System Implementation,scala,hard,0,3512
+cluster_002,binary search tree validator,# Binary Search Tree Validator,java,hard,1,497
+cluster_002,binary search tree validator,# Binary Search Tree Validator,scala,hard,1,3404
+cluster_003,bit manipulation analyzer,Bit Manipulation Analyzer,cpp,easy,1,117
+cluster_003,bit manipulation analyzer,Bit Manipulation Analyzer,scala,hard,1,3440
+cluster_004,check if a linked list is a palindrome,**Problem: Check if a Linked List is a Palindrome**,python,hard,0,881
+cluster_004,check if a linked list is a palindrome,**Problem: Check if a Linked List is a Palindrome**,julia,medium,0,1819
+cluster_004,check if a linked list is a palindrome,**Problem: Check if a Linked List is a Palindrome**,swift,medium,1,3653
+cluster_005,check if a string is a palindrome,**Problem: Check if a String is a Palindrome**,python,hard,1,923
+cluster_005,check if a string is a palindrome,**Problem: Check if a String is a Palindrome**,elixir,hard,1,97
+cluster_005,check if a string is a palindrome,**Problem: Check if a String is a Palindrome**,julia,hard,0,1921
+cluster_006,connecting nodes at the same level in a binary tree,**Problem: Connecting Nodes at the Same Level in a Binary Tree**,julia,hard,1,1779
+cluster_006,connecting nodes at the same level in a binary tree,**Problem: Connecting Nodes at the Same Level in a Binary Tree**,ruby,hard,0,2994
+cluster_007,construct binary tree from preorder and inorder traversal,**Problem: Construct Binary Tree from Preorder and Inorder Traversal**,elixir,hard,1,79
+cluster_007,construct binary tree from preorder and inorder traversal,**Problem: Construct Binary Tree from Preorder and Inorder Traversal**,julia,medium,0,1825
+cluster_008,count paths with target sum in a binary tree,**Problem: Count Paths with Target Sum in a Binary Tree**,julia,hard,0,1809
+cluster_008,count paths with target sum in a binary tree,**Problem: Count Paths with Target Sum in a Binary Tree**,swift,easy,0,3620
+cluster_009,count univalue subtrees,**Problem: Count Univalue Subtrees**,julia,hard,0,1928
+cluster_009,count univalue subtrees,**Problem: Count Univalue Subtrees**,racket,medium,0,16
+cluster_009,count univalue subtrees,**Problem: Count Univalue Subtrees**,swift,medium,0,3608
+cluster_010,counting trees on slopes,**Problem: Counting Trees on Slopes**,julia,hard,0,1853
+cluster_010,counting trees on slopes,**Problem: Counting Trees on Slopes**,racket,hard,0,109
+cluster_011,counting ways to decode a message,**Problem: Counting Ways to Decode a Message**,elixir,hard,0,147
+cluster_011,counting ways to decode a message,**Problem: Counting Ways to Decode a Message**,julia,medium,1,1894
+cluster_012,file operations handler,# File Operations Handler,java,hard,0,408
+cluster_012,file operations handler,# File Operations Handler,python,hard,0,800
+cluster_013,find indices of two numbers that sum to target,**Problem: Find Indices of Two Numbers That Sum to Target**,julia,medium,1,1808
+cluster_013,find indices of two numbers that sum to target,**Problem: Find Indices of Two Numbers That Sum to Target**,swift,hard,0,3675
+cluster_014,fragment management system,# Fragment Management System,java,easy,1,382
+cluster_014,fragment management system,# Fragment Management System,scala,hard,1,3344
+cluster_015,game of life pattern application,# Game of Life Pattern Application,java,hard,0,436
+cluster_015,game of life pattern application,# Game of Life Pattern Application,csharp,hard,0,1171
+cluster_016,graph analysis problem,# Graph Analysis Problem,cpp,medium,1,173
+cluster_016,graph analysis problem,# Graph Analysis Problem,java,hard,0,457
+cluster_017,http request simulator implementation,HTTP Request Simulator Implementation,java,hard,0,430
+cluster_017,http request simulator implementation,HTTP Request Simulator Implementation,scala,hard,0,3499
+cluster_018,insert interval,**Problem: Insert Interval**,racket,medium,0,129
+cluster_018,insert interval,**Problem: Insert Interval**,ruby,medium,1,3040
+cluster_019,maximize stock profit,**Problem: Maximize Stock Profit**,elixir,medium,1,189
+cluster_019,maximize stock profit,**Problem: Maximize Stock Profit**,racket,easy,0,151
+cluster_020,merge two sorted linked lists,**Problem: Merge Two Sorted Linked Lists**,elixir,hard,0,170
+cluster_020,merge two sorted linked lists,**Problem: Merge Two Sorted Linked Lists**,racket,easy,1,58
+cluster_021,minimum depth of a binary tree,**Problem: Minimum Depth of a Binary Tree**,elixir,medium,1,8
+cluster_021,minimum depth of a binary tree,**Problem: Minimum Depth of a Binary Tree**,swift,hard,0,3678
+cluster_022,permission management system,# Permission Management System,csharp,hard,1,1308
+cluster_022,permission management system,# Permission Management System,kotlin,easy,0,1966
+cluster_023,reorganize string,**Problem: Reorganize String**,elixir,hard,1,27
+cluster_023,reorganize string,**Problem: Reorganize String**,r,hard,1,2863
+cluster_024,robot movement simulation,# Robot Movement Simulation,python,medium,1,911
+cluster_024,robot movement simulation,# Robot Movement Simulation,shell,hard,1,1047
+cluster_025,search in rotated sorted array with duplicates,# Problem: Search in Rotated Sorted Array with Duplicates,cpp,hard,0,71
+cluster_025,search in rotated sorted array with duplicates,# Problem: Search in Rotated Sorted Array with Duplicates,rust,medium,1,3198
+cluster_026,shortest palindrome construction,**Problem: Shortest Palindrome Construction**,julia,hard,1,1780
+cluster_026,shortest palindrome construction,**Problem: Shortest Palindrome Construction**,swift,medium,0,3630
+cluster_027,string processing problem,# String Processing Problem,cpp,hard,1,22
+cluster_027,string processing problem,# String Processing Problem,java,hard,0,379
+cluster_028,user management system implementation,# User Management System Implementation,java,hard,0,513
+cluster_028,user management system implementation,# User Management System Implementation,scala,hard,1,3370
