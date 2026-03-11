@@ -1,0 +1,9 @@
+evidence_bucket,suite,signal,value,interpretation
+artifact_control,suite_h,elixir_delta_vs_difficulty_only,40.4,Elixir stays far above expectation after difficulty controls.
+artifact_control,suite_h,elixir_delta_vs_question_len,42.7,Question length does not erase Elixir's lead.
+passive_proxy,suite_d,control_flow_score,6.517,Elixir scores highest on the current control-flow legibility proxy.
+passive_proxy,suite_f,mutability_burden_score,4.289,Elixir shows low mutability burden while keeping the highest pass rate.
+active_ablation,suite_a,signature_only_delta_vs_full_docs,-41.4,Reducing the task to signatures only materially hurts performance.
+active_ablation,suite_e,sentinel_helpers_delta_vs_baseline,0.0,Weaker implicit helper contracts perform worse than the baseline prompt.
+active_ablation,suite_d,worst_control_flow_condition_delta,-3.0,Alternative control-flow prompting under active rerun did not clearly beat the baseline style.
+active_ablation,suite_f,worst_state_style_condition_delta,0.0,Alternative state-style prompting did not clearly outperform the baseline prompt.

@@ -1,0 +1,3 @@
+suite_id,baseline_condition,condition,n_shared,baseline_only_wins,condition_only_wins,mcnemar_pvalue,delta_ci_low,delta_ci_high,baseline_pass_subset_n,condition_pass_rate_on_baseline_pass_subset,baseline_fail_subset_n,condition_pass_rate_on_baseline_fail_subset
+suite_e,baseline,sentinel_helpers,198,12,12,1.0,-5.1,5.1,166,92.8,32,37.5
+suite_e,baseline,tagged_tuple_helpers,198,9,15,0.307456,-2.0,8.1,166,94.6,32,46.9

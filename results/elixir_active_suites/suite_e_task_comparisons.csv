@@ -1,0 +1,397 @@
+suite_id,baseline_condition,condition,source_index,difficulty,title,baseline_success,condition_success,outcome
+suite_e,baseline,sentinel_helpers,1,hard,**Problem: Generate MD5 Hash of a String**,1,1,same
+suite_e,baseline,sentinel_helpers,2,medium,**Problem: Find Insert Position in Sorted Array**,1,1,same
+suite_e,baseline,sentinel_helpers,3,hard,**Knight's Possible Moves on a Chessboard**,1,1,same
+suite_e,baseline,sentinel_helpers,4,hard,**Problem: Increasing Triplet Subsequence**,1,1,same
+suite_e,baseline,sentinel_helpers,5,easy,**Problem: Find the Single Non-Duplicate Element in a Sorted Array**,1,1,same
+suite_e,baseline,sentinel_helpers,6,hard,**Excel Column Title Conversion in Elixir**,1,1,same
+suite_e,baseline,sentinel_helpers,7,easy,Test case 1,1,1,same
+suite_e,baseline,sentinel_helpers,8,medium,Test case 1: Simple binary tree with depth 2,1,1,same
+suite_e,baseline,sentinel_helpers,9,medium,"Test case 1: [2, 4, 3] + [5, 6, 4] = [7, 0, 8]",1,1,same
+suite_e,baseline,sentinel_helpers,10,hard,**Problem: Adjust Color Luminosity**,1,1,same
+suite_e,baseline,sentinel_helpers,11,hard,**Problem: Counting Integer Partitions**,0,0,same
+suite_e,baseline,sentinel_helpers,12,hard,**Problem Description:**,1,1,same
+suite_e,baseline,sentinel_helpers,13,hard,**Programming Problem: Alice and Bob's Number Game**,1,1,same
+suite_e,baseline,sentinel_helpers,14,easy,**Problem: Simulate Socket Communication Error Handling**,1,1,same
+suite_e,baseline,sentinel_helpers,15,medium,Test case 1: Simple linear graph,1,1,same
+suite_e,baseline,sentinel_helpers,16,hard,**Problem: Counting Bipartite Graphs**,1,1,same
+suite_e,baseline,sentinel_helpers,17,hard,Test case 1: Single synthetic chessboard image,1,0,baseline_only
+suite_e,baseline,sentinel_helpers,18,hard,Test Case 1,1,1,same
+suite_e,baseline,sentinel_helpers,19,medium,Test case 1: Simple tier calculation,1,1,same
+suite_e,baseline,sentinel_helpers,20,hard,Implement a 1D Kalman Filter in Elixir that can track and estimate the state of a system over time. The filter should handle both prediction (based on system dynamics) and correction (based on measurements) steps.,1,1,same
+suite_e,baseline,sentinel_helpers,21,medium,Test case 1: Basic substitution,1,1,same
+suite_e,baseline,sentinel_helpers,22,hard,Functions to Implement:,1,1,same
+suite_e,baseline,sentinel_helpers,23,hard,Input Format,1,1,same
+suite_e,baseline,sentinel_helpers,24,medium,**Problem Description:**,1,1,same
+suite_e,baseline,sentinel_helpers,25,hard,**Problem: Minimum Refueling Stops**,1,1,same
+suite_e,baseline,sentinel_helpers,26,medium,Test Case 1: Small memory with sequential access,0,0,same
+suite_e,baseline,sentinel_helpers,27,hard,**Problem: Reorganize String**,1,0,baseline_only
+suite_e,baseline,sentinel_helpers,28,medium,Test Case 1,1,1,same
+suite_e,baseline,sentinel_helpers,29,hard,**Kubernetes Object Management Problem in Elixir**,1,1,same
+suite_e,baseline,sentinel_helpers,30,medium,Your implementation here,1,1,same
+suite_e,baseline,sentinel_helpers,31,easy,Test case 1: Both arms,1,1,same
+suite_e,baseline,sentinel_helpers,32,hard,Your implementation here,0,0,same
+suite_e,baseline,sentinel_helpers,33,hard,**Problem: Decoding Ways with Wildcards**,1,1,same
+suite_e,baseline,sentinel_helpers,34,hard,**Problem: Anagram Checker**,1,1,same
+suite_e,baseline,sentinel_helpers,35,medium,**Ball Game Simulation**,0,1,condition_only
+suite_e,baseline,sentinel_helpers,36,hard,**Minimum Jumps to Reach the End of an Array**,1,1,same
+suite_e,baseline,sentinel_helpers,37,hard,Example 1: Basic case with country and continent,1,1,same
+suite_e,baseline,sentinel_helpers,38,hard,Test case where the API call fails due to network/resolution error,1,1,same
+suite_e,baseline,sentinel_helpers,39,hard,Input:,1,1,same
+suite_e,baseline,sentinel_helpers,40,hard,Test case 1: Simple binary tree,0,0,same
+suite_e,baseline,sentinel_helpers,41,hard,**Problem: Validate Magic: The Gathering Card Names in Elixir**,1,1,same
+suite_e,baseline,sentinel_helpers,42,hard,**Problem: Count Unique Modulo Results**,1,1,same
+suite_e,baseline,sentinel_helpers,43,hard,**Problem Description:**,1,1,same
+suite_e,baseline,sentinel_helpers,44,medium,Function Names,0,1,condition_only
+suite_e,baseline,sentinel_helpers,45,hard,**Problem Description:**,1,1,same
+suite_e,baseline,sentinel_helpers,46,hard,**Problem: Count Fair and Square Numbers**,1,1,same
+suite_e,baseline,sentinel_helpers,47,hard,**Problem: Counting Islands in a Grid**,1,1,same
+suite_e,baseline,sentinel_helpers,48,hard,**Problem: Transform 3D Coordinates**,1,1,same
+suite_e,baseline,sentinel_helpers,49,hard,**Problem: Revoke Security Group Access**,1,1,same
+suite_e,baseline,sentinel_helpers,50,hard,Test Case 1,1,1,same
+suite_e,baseline,sentinel_helpers,51,hard,**Elixir GUI Layout Configuration**,0,0,same
+suite_e,baseline,sentinel_helpers,52,hard,Test case 1: Simple string comparison,1,1,same
+suite_e,baseline,sentinel_helpers,53,hard,Your implementation here,1,1,same
+suite_e,baseline,sentinel_helpers,54,hard,**Problem: Minimum Refueling Stops**,0,0,same
+suite_e,baseline,sentinel_helpers,55,hard,**Problem: Parse RISC-V OVPsim Execution Logs**,1,1,same
+suite_e,baseline,sentinel_helpers,56,medium,Test case 1: Simple BST with one mode,0,0,same
+suite_e,baseline,sentinel_helpers,57,hard,**Problem: Count Digit One**,1,1,same
+suite_e,baseline,sentinel_helpers,58,hard,**Problem: Handling URL Metadata Fetching in Elixir**,1,1,same
+suite_e,baseline,sentinel_helpers,59,hard,Test case 1: X wins horizontally (top row),1,1,same
+suite_e,baseline,sentinel_helpers,60,hard,**Problem: Mock ZeroMQ Client in Elixir**,1,1,same
+suite_e,baseline,sentinel_helpers,61,easy,Test case 1: A valid BST,1,1,same
+suite_e,baseline,sentinel_helpers,62,hard,**Programming Problem: Reformatting Alphanumeric Strings**,1,1,same
+suite_e,baseline,sentinel_helpers,63,hard,Test case 1: Basic configuration merge,1,1,same
+suite_e,baseline,sentinel_helpers,64,hard,**Problem: Sum Numbers in a String**,1,1,same
+suite_e,baseline,sentinel_helpers,65,medium,**Problem: Generate All Permutations of a String or List**,1,1,same
+suite_e,baseline,sentinel_helpers,66,easy,**Elixir Mandelbrot Set Membership Checker**,1,1,same
+suite_e,baseline,sentinel_helpers,67,hard,Test case 1: Small domain with 5 points,1,1,same
+suite_e,baseline,sentinel_helpers,68,hard,Test Case 1: Basic RSA workflow,1,1,same
+suite_e,baseline,sentinel_helpers,69,medium,Vertical line image,1,1,same
+suite_e,baseline,sentinel_helpers,70,hard,Test Case 1 - Valid parameters,0,0,same
+suite_e,baseline,sentinel_helpers,71,hard,**Problem: Binary Image Feature Detection in Elixir**,1,1,same
+suite_e,baseline,sentinel_helpers,72,hard,**Problem: K-th Symbol in Grammar**,1,1,same
+suite_e,baseline,sentinel_helpers,73,medium,Test count_posts,1,1,same
+suite_e,baseline,sentinel_helpers,74,hard,**Problem: Counting Islands in a Grid**,1,1,same
+suite_e,baseline,sentinel_helpers,75,hard,**Problem: Simulating User Input in Elixir**,1,1,same
+suite_e,baseline,sentinel_helpers,76,hard,**Problem: Counting 'p's and 'y's in a String**,1,1,same
+suite_e,baseline,sentinel_helpers,77,hard,**Military Enlistment Year Calculator**,1,1,same
+suite_e,baseline,sentinel_helpers,78,hard,**Programming Problem: Homework Due Date Formatter**,1,1,same
+suite_e,baseline,sentinel_helpers,79,hard,Test Case 1,1,1,same
+suite_e,baseline,sentinel_helpers,80,easy,**Problem: Drawing a Triforce Pattern in Elixir**,1,0,baseline_only
+suite_e,baseline,sentinel_helpers,81,medium,Your implementation here,1,1,same
+suite_e,baseline,sentinel_helpers,82,hard,Module Requirements:,0,1,condition_only
+suite_e,baseline,sentinel_helpers,83,hard,**Problem: Largest Rectangle in a Histogram**,1,1,same
+suite_e,baseline,sentinel_helpers,84,hard,... other element-specific properties,1,1,same
+suite_e,baseline,sentinel_helpers,85,hard,**Problem: Count Unique Values**,1,1,same
+suite_e,baseline,sentinel_helpers,86,hard,Your implementation,1,1,same
+suite_e,baseline,sentinel_helpers,87,hard,Test Case 1 - Graph1,1,0,baseline_only
+suite_e,baseline,sentinel_helpers,88,hard,**Problem: Check Sum Parity**,1,1,same
+suite_e,baseline,sentinel_helpers,89,medium,**Elixir Programming Problem: Options Menu Interaction**,1,1,same
+suite_e,baseline,sentinel_helpers,90,hard,**Problem Description:**,1,1,same
+suite_e,baseline,sentinel_helpers,91,hard,**Problem: Binary Tree Level Order Traversal**,1,1,same
+suite_e,baseline,sentinel_helpers,92,hard,**Programming Problem: Generate Odd Number Sequence**,1,1,same
+suite_e,baseline,sentinel_helpers,93,hard,Implement Shamir's Secret Sharing scheme in Elixir. The implementation should include two main functions:,0,1,condition_only
+suite_e,baseline,sentinel_helpers,94,hard,**Programming Problem: Counting Special Subsets**,1,0,baseline_only
+suite_e,baseline,sentinel_helpers,95,hard,**Problem: Find the Maximum Digit in a Number**,1,1,same
+suite_e,baseline,sentinel_helpers,96,medium,**Problem: Chess King Check Detection**,1,1,same
+suite_e,baseline,sentinel_helpers,97,hard,**Problem: Check if a String is a Palindrome**,1,1,same
+suite_e,baseline,sentinel_helpers,98,hard,**Programming Problem: Insertion Sort Implementation in Elixir**,1,1,same
+suite_e,baseline,sentinel_helpers,99,hard,**Programming Problem: Counting Chessboard Squares**,0,0,same
+suite_e,baseline,sentinel_helpers,100,hard,Test case 1,1,1,same
+suite_e,baseline,sentinel_helpers,101,hard,Test case 1: Simple linear graph,1,1,same
+suite_e,baseline,sentinel_helpers,102,hard,**Problem: Categorize Machine Specifications**,1,0,baseline_only
+suite_e,baseline,sentinel_helpers,103,medium,Test case 1: Simple BST,1,1,same
+suite_e,baseline,sentinel_helpers,104,medium,**Minimum Platforms Needed at a Railway Station**,1,0,baseline_only
+suite_e,baseline,sentinel_helpers,105,hard,Expected result:,1,1,same
+suite_e,baseline,sentinel_helpers,106,hard,"Write an Elixir function named `update_window_title/2` that handles updating a window title with user confirmation. The function should take two string arguments: the current window title and a proposed new title, then return a tuple containing the appropriate new title and a confirmation message.",1,1,same
+suite_e,baseline,sentinel_helpers,107,hard,**Problem Description:**,1,1,same
+suite_e,baseline,sentinel_helpers,108,hard,Test case 1: Simple list of numbers with filtering,1,1,same
+suite_e,baseline,sentinel_helpers,109,hard,**Elixir Programming Problem: Game State Analysis**,0,0,same
+suite_e,baseline,sentinel_helpers,110,hard,Your implementation here,0,0,same
+suite_e,baseline,sentinel_helpers,111,hard,Example 1: No cycle,1,1,same
+suite_e,baseline,sentinel_helpers,112,medium,Module Specification:,1,1,same
+suite_e,baseline,sentinel_helpers,113,hard,**Problem: Extract Personal Information from Text**,1,1,same
+suite_e,baseline,sentinel_helpers,114,hard,Test case 1,1,1,same
+suite_e,baseline,sentinel_helpers,115,easy,Your implementation here,1,1,same
+suite_e,baseline,sentinel_helpers,116,medium,Test case 1: No exception raised,1,1,same
+suite_e,baseline,sentinel_helpers,117,easy,**Problem: Network Interface MAC Address Processor**,1,1,same
+suite_e,baseline,sentinel_helpers,118,medium,Test case 1: Basic case,1,1,same
+suite_e,baseline,sentinel_helpers,119,hard,**Problem: Maximum Minimum Distance**,1,1,same
+suite_e,baseline,sentinel_helpers,120,hard,**Elixir Programming Problem: Indentation Pattern Calculation**,1,1,same
+suite_e,baseline,sentinel_helpers,121,hard,**Wildcard Pattern Matching in Elixir**,1,1,same
+suite_e,baseline,sentinel_helpers,122,medium,Your implementation here,1,1,same
+suite_e,baseline,sentinel_helpers,123,hard,Test case 1: Basic rectangle creation and area calculation,1,1,same
+suite_e,baseline,sentinel_helpers,124,hard,**Problem: Sum Even and Odd Numbers**,1,1,same
+suite_e,baseline,sentinel_helpers,125,hard,**Problem: Flip Lights**,0,0,same
+suite_e,baseline,sentinel_helpers,126,medium,Test case 1: Move right in open space,1,1,same
+suite_e,baseline,sentinel_helpers,127,hard,**Problem: Calculate Statistical Measures for Paired Data**,1,1,same
+suite_e,baseline,sentinel_helpers,128,hard,Functions to Implement:,1,0,baseline_only
+suite_e,baseline,sentinel_helpers,129,medium,**Blackjack Winner Determination in Elixir**,1,1,same
+suite_e,baseline,sentinel_helpers,130,medium,Test Case 1: Basic insertion and retrieval,0,0,same
+suite_e,baseline,sentinel_helpers,131,hard,**Problem: Hexadecimal Character to Decimal Conversion**,1,1,same
+suite_e,baseline,sentinel_helpers,132,hard,**Sound Message Processor**,1,1,same
+suite_e,baseline,sentinel_helpers,133,hard,Test case 1,1,1,same
+suite_e,baseline,sentinel_helpers,134,medium,Your implementation here,1,1,same
+suite_e,baseline,sentinel_helpers,135,hard,**Problem: Maximizing Funded Departments**,1,1,same
+suite_e,baseline,sentinel_helpers,136,medium,**Problem: Determine the Winner of a Game**,1,1,same
+suite_e,baseline,sentinel_helpers,137,medium,**Elixir Programming Problem: Simulating Web Element Interactions**,1,1,same
+suite_e,baseline,sentinel_helpers,138,easy,**Problem: Finding Anagrams**,1,1,same
+suite_e,baseline,sentinel_helpers,139,hard,**Video Playback Segment Selection in Elixir**,1,1,same
+suite_e,baseline,sentinel_helpers,140,hard,Test case 1: Valid token with user data,1,1,same
+suite_e,baseline,sentinel_helpers,141,medium,Requirements:,0,0,same
+suite_e,baseline,sentinel_helpers,142,hard,Test case 1: minimal definitions,1,1,same
+suite_e,baseline,sentinel_helpers,143,hard,**Problem Description:**,1,1,same
+suite_e,baseline,sentinel_helpers,144,hard,**Problem: Bubble Sort with Swap Count and Range**,1,1,same
+suite_e,baseline,sentinel_helpers,145,medium,**Problem: Bin Packing in Elixir**,0,1,condition_only
+suite_e,baseline,sentinel_helpers,146,hard,**Problem: IMAP Folder Information Retrieval in Elixir**,1,1,same
+suite_e,baseline,sentinel_helpers,147,hard,**Problem: Counting Ways to Decode a Message**,1,1,same
+suite_e,baseline,sentinel_helpers,148,hard,**Programming Problem: Overlap Calculation**,0,0,same
+suite_e,baseline,sentinel_helpers,149,hard,Test case 1: Simple binary tree with diameter 3,1,1,same
+suite_e,baseline,sentinel_helpers,150,hard,**Leap Year Checker in Elixir**,1,0,baseline_only
+suite_e,baseline,sentinel_helpers,151,medium,Your implementation,0,1,condition_only
+suite_e,baseline,sentinel_helpers,152,hard,**Problem: Format Difference as Plain Text**,1,1,same
+suite_e,baseline,sentinel_helpers,153,medium,Test case 1: Text normalization,1,0,baseline_only
+suite_e,baseline,sentinel_helpers,154,hard,**Problem: Convert Decimal to Binary**,1,0,baseline_only
+suite_e,baseline,sentinel_helpers,155,hard,**Problem: Find Two Numbers That Sum to Target**,1,1,same
+suite_e,baseline,sentinel_helpers,156,hard,Test case 1: One Pair vs One Pair (higher pair wins),1,1,same
+suite_e,baseline,sentinel_helpers,157,medium,Function to Implement:,0,1,condition_only
+suite_e,baseline,sentinel_helpers,158,easy,Parameters,0,0,same
+suite_e,baseline,sentinel_helpers,159,medium,Input:,1,1,same
+suite_e,baseline,sentinel_helpers,160,medium,**Problem: Next Greater Element**,1,1,same
+suite_e,baseline,sentinel_helpers,161,hard,**Programming Problem: Count Common Values**,1,1,same
+suite_e,baseline,sentinel_helpers,162,hard,**Programming Problem: Voting Eligibility Checker**,1,1,same
+suite_e,baseline,sentinel_helpers,163,hard,Requirements:,1,1,same
+suite_e,baseline,sentinel_helpers,164,easy,**Problem: Syllable Processing**,1,1,same
+suite_e,baseline,sentinel_helpers,165,hard,**Problem: Convert Comma-Separated String to List of Integers**,1,1,same
+suite_e,baseline,sentinel_helpers,166,hard,Your implementation here,0,0,same
+suite_e,baseline,sentinel_helpers,167,hard,**Problem: Speeding Ticket Calculator in Elixir**,1,1,same
+suite_e,baseline,sentinel_helpers,168,hard,Test Case 1,1,1,same
+suite_e,baseline,sentinel_helpers,169,hard,**Non-Decreasing Array Possibility Check**,1,1,same
+suite_e,baseline,sentinel_helpers,170,hard,Your implementation here,0,0,same
+suite_e,baseline,sentinel_helpers,171,hard,**Problem: Minimum Dice Changes**,1,1,same
+suite_e,baseline,sentinel_helpers,172,hard,**Problem: Permutation Coefficient Calculation**,1,1,same
+suite_e,baseline,sentinel_helpers,173,hard,**Programming Problem: Validate a Special Code**,1,1,same
+suite_e,baseline,sentinel_helpers,174,medium,**Programming Problem: Generate Username**,1,1,same
+suite_e,baseline,sentinel_helpers,175,hard,**Elixir Programming Problem: Port Scanner**,1,1,same
+suite_e,baseline,sentinel_helpers,176,hard,**Problem: Basic Calculator**,1,1,same
+suite_e,baseline,sentinel_helpers,177,medium,**Supermarket Queue Simulation in Elixir**,0,1,condition_only
+suite_e,baseline,sentinel_helpers,178,medium,Test case 1: Simple stack with mixed numbers,1,1,same
+suite_e,baseline,sentinel_helpers,179,hard,**Problem: Maximum Subarray Sum**,1,1,same
+suite_e,baseline,sentinel_helpers,180,hard,**Problem: Find Character Index in List**,1,1,same
+suite_e,baseline,sentinel_helpers,181,hard,**Problem: Trapping Rain Water**,1,1,same
+suite_e,baseline,sentinel_helpers,182,hard,**Zigzag Conversion Problem in Elixir**,1,1,same
+suite_e,baseline,sentinel_helpers,183,hard,**Problem: Sum of Even Numbers in a Range**,1,1,same
+suite_e,baseline,sentinel_helpers,184,hard,Test case 1: Simple word translation,1,1,same
+suite_e,baseline,sentinel_helpers,185,hard,**Problem: Operation Distribution**,0,0,same
+suite_e,baseline,sentinel_helpers,186,medium,Test Case 1,1,1,same
+suite_e,baseline,sentinel_helpers,187,medium,**Book Reading Queue Management in Elixir**,1,1,same
+suite_e,baseline,sentinel_helpers,188,medium,Test case 1,1,0,baseline_only
+suite_e,baseline,sentinel_helpers,189,medium,**Problem: Maximize Stock Profit**,1,1,same
+suite_e,baseline,sentinel_helpers,190,hard,**Programming Problem: Check for Positive Numbers**,0,1,condition_only
+suite_e,baseline,sentinel_helpers,191,easy,**Programming Problem: Staircase Pattern**,1,1,same
+suite_e,baseline,sentinel_helpers,192,hard,**Problem Description:**,0,1,condition_only
+suite_e,baseline,sentinel_helpers,193,hard,**Problem: Cutting the Sticks**,0,1,condition_only
+suite_e,baseline,sentinel_helpers,194,hard,**Problem: Maximum Stock Profit**,1,1,same
+suite_e,baseline,sentinel_helpers,195,hard,**Problem: Calculate Phone Dial Time**,1,1,same
+suite_e,baseline,sentinel_helpers,196,hard,Initialize a board with some pieces,0,0,same
+suite_e,baseline,sentinel_helpers,197,hard,**Problem: Box Packaging Optimization**,1,1,same
+suite_e,baseline,sentinel_helpers,198,medium,**Programming Problem: Symbolic Differentiation**,0,1,condition_only
+suite_e,baseline,tagged_tuple_helpers,1,hard,**Problem: Generate MD5 Hash of a String**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,2,medium,**Problem: Find Insert Position in Sorted Array**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,3,hard,**Knight's Possible Moves on a Chessboard**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,4,hard,**Problem: Increasing Triplet Subsequence**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,5,easy,**Problem: Find the Single Non-Duplicate Element in a Sorted Array**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,6,hard,**Excel Column Title Conversion in Elixir**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,7,easy,Test case 1,1,1,same
+suite_e,baseline,tagged_tuple_helpers,8,medium,Test case 1: Simple binary tree with depth 2,1,0,baseline_only
+suite_e,baseline,tagged_tuple_helpers,9,medium,"Test case 1: [2, 4, 3] + [5, 6, 4] = [7, 0, 8]",1,1,same
+suite_e,baseline,tagged_tuple_helpers,10,hard,**Problem: Adjust Color Luminosity**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,11,hard,**Problem: Counting Integer Partitions**,0,0,same
+suite_e,baseline,tagged_tuple_helpers,12,hard,**Problem Description:**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,13,hard,**Programming Problem: Alice and Bob's Number Game**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,14,easy,**Problem: Simulate Socket Communication Error Handling**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,15,medium,Test case 1: Simple linear graph,1,1,same
+suite_e,baseline,tagged_tuple_helpers,16,hard,**Problem: Counting Bipartite Graphs**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,17,hard,Test case 1: Single synthetic chessboard image,1,1,same
+suite_e,baseline,tagged_tuple_helpers,18,hard,Test Case 1,1,1,same
+suite_e,baseline,tagged_tuple_helpers,19,medium,Test case 1: Simple tier calculation,1,1,same
+suite_e,baseline,tagged_tuple_helpers,20,hard,Implement a 1D Kalman Filter in Elixir that can track and estimate the state of a system over time. The filter should handle both prediction (based on system dynamics) and correction (based on measurements) steps.,1,0,baseline_only
+suite_e,baseline,tagged_tuple_helpers,21,medium,Test case 1: Basic substitution,1,1,same
+suite_e,baseline,tagged_tuple_helpers,22,hard,Functions to Implement:,1,1,same
+suite_e,baseline,tagged_tuple_helpers,23,hard,Input Format,1,1,same
+suite_e,baseline,tagged_tuple_helpers,24,medium,**Problem Description:**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,25,hard,**Problem: Minimum Refueling Stops**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,26,medium,Test Case 1: Small memory with sequential access,0,1,condition_only
+suite_e,baseline,tagged_tuple_helpers,27,hard,**Problem: Reorganize String**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,28,medium,Test Case 1,1,1,same
+suite_e,baseline,tagged_tuple_helpers,29,hard,**Kubernetes Object Management Problem in Elixir**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,30,medium,Your implementation here,1,1,same
+suite_e,baseline,tagged_tuple_helpers,31,easy,Test case 1: Both arms,1,1,same
+suite_e,baseline,tagged_tuple_helpers,32,hard,Your implementation here,0,1,condition_only
+suite_e,baseline,tagged_tuple_helpers,33,hard,**Problem: Decoding Ways with Wildcards**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,34,hard,**Problem: Anagram Checker**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,35,medium,**Ball Game Simulation**,0,0,same
+suite_e,baseline,tagged_tuple_helpers,36,hard,**Minimum Jumps to Reach the End of an Array**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,37,hard,Example 1: Basic case with country and continent,1,1,same
+suite_e,baseline,tagged_tuple_helpers,38,hard,Test case where the API call fails due to network/resolution error,1,1,same
+suite_e,baseline,tagged_tuple_helpers,39,hard,Input:,1,1,same
+suite_e,baseline,tagged_tuple_helpers,40,hard,Test case 1: Simple binary tree,0,0,same
+suite_e,baseline,tagged_tuple_helpers,41,hard,**Problem: Validate Magic: The Gathering Card Names in Elixir**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,42,hard,**Problem: Count Unique Modulo Results**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,43,hard,**Problem Description:**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,44,medium,Function Names,0,1,condition_only
+suite_e,baseline,tagged_tuple_helpers,45,hard,**Problem Description:**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,46,hard,**Problem: Count Fair and Square Numbers**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,47,hard,**Problem: Counting Islands in a Grid**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,48,hard,**Problem: Transform 3D Coordinates**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,49,hard,**Problem: Revoke Security Group Access**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,50,hard,Test Case 1,1,1,same
+suite_e,baseline,tagged_tuple_helpers,51,hard,**Elixir GUI Layout Configuration**,0,0,same
+suite_e,baseline,tagged_tuple_helpers,52,hard,Test case 1: Simple string comparison,1,1,same
+suite_e,baseline,tagged_tuple_helpers,53,hard,Your implementation here,1,1,same
+suite_e,baseline,tagged_tuple_helpers,54,hard,**Problem: Minimum Refueling Stops**,0,1,condition_only
+suite_e,baseline,tagged_tuple_helpers,55,hard,**Problem: Parse RISC-V OVPsim Execution Logs**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,56,medium,Test case 1: Simple BST with one mode,0,0,same
+suite_e,baseline,tagged_tuple_helpers,57,hard,**Problem: Count Digit One**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,58,hard,**Problem: Handling URL Metadata Fetching in Elixir**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,59,hard,Test case 1: X wins horizontally (top row),1,1,same
+suite_e,baseline,tagged_tuple_helpers,60,hard,**Problem: Mock ZeroMQ Client in Elixir**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,61,easy,Test case 1: A valid BST,1,1,same
+suite_e,baseline,tagged_tuple_helpers,62,hard,**Programming Problem: Reformatting Alphanumeric Strings**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,63,hard,Test case 1: Basic configuration merge,1,1,same
+suite_e,baseline,tagged_tuple_helpers,64,hard,**Problem: Sum Numbers in a String**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,65,medium,**Problem: Generate All Permutations of a String or List**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,66,easy,**Elixir Mandelbrot Set Membership Checker**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,67,hard,Test case 1: Small domain with 5 points,1,1,same
+suite_e,baseline,tagged_tuple_helpers,68,hard,Test Case 1: Basic RSA workflow,1,1,same
+suite_e,baseline,tagged_tuple_helpers,69,medium,Vertical line image,1,1,same
+suite_e,baseline,tagged_tuple_helpers,70,hard,Test Case 1 - Valid parameters,0,0,same
+suite_e,baseline,tagged_tuple_helpers,71,hard,**Problem: Binary Image Feature Detection in Elixir**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,72,hard,**Problem: K-th Symbol in Grammar**,1,0,baseline_only
+suite_e,baseline,tagged_tuple_helpers,73,medium,Test count_posts,1,1,same
+suite_e,baseline,tagged_tuple_helpers,74,hard,**Problem: Counting Islands in a Grid**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,75,hard,**Problem: Simulating User Input in Elixir**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,76,hard,**Problem: Counting 'p's and 'y's in a String**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,77,hard,**Military Enlistment Year Calculator**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,78,hard,**Programming Problem: Homework Due Date Formatter**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,79,hard,Test Case 1,1,1,same
+suite_e,baseline,tagged_tuple_helpers,80,easy,**Problem: Drawing a Triforce Pattern in Elixir**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,81,medium,Your implementation here,1,1,same
+suite_e,baseline,tagged_tuple_helpers,82,hard,Module Requirements:,0,1,condition_only
+suite_e,baseline,tagged_tuple_helpers,83,hard,**Problem: Largest Rectangle in a Histogram**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,84,hard,... other element-specific properties,1,1,same
+suite_e,baseline,tagged_tuple_helpers,85,hard,**Problem: Count Unique Values**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,86,hard,Your implementation,1,1,same
+suite_e,baseline,tagged_tuple_helpers,87,hard,Test Case 1 - Graph1,1,1,same
+suite_e,baseline,tagged_tuple_helpers,88,hard,**Problem: Check Sum Parity**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,89,medium,**Elixir Programming Problem: Options Menu Interaction**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,90,hard,**Problem Description:**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,91,hard,**Problem: Binary Tree Level Order Traversal**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,92,hard,**Programming Problem: Generate Odd Number Sequence**,1,0,baseline_only
+suite_e,baseline,tagged_tuple_helpers,93,hard,Implement Shamir's Secret Sharing scheme in Elixir. The implementation should include two main functions:,0,0,same
+suite_e,baseline,tagged_tuple_helpers,94,hard,**Programming Problem: Counting Special Subsets**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,95,hard,**Problem: Find the Maximum Digit in a Number**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,96,medium,**Problem: Chess King Check Detection**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,97,hard,**Problem: Check if a String is a Palindrome**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,98,hard,**Programming Problem: Insertion Sort Implementation in Elixir**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,99,hard,**Programming Problem: Counting Chessboard Squares**,0,0,same
+suite_e,baseline,tagged_tuple_helpers,100,hard,Test case 1,1,0,baseline_only
+suite_e,baseline,tagged_tuple_helpers,101,hard,Test case 1: Simple linear graph,1,1,same
+suite_e,baseline,tagged_tuple_helpers,102,hard,**Problem: Categorize Machine Specifications**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,103,medium,Test case 1: Simple BST,1,1,same
+suite_e,baseline,tagged_tuple_helpers,104,medium,**Minimum Platforms Needed at a Railway Station**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,105,hard,Expected result:,1,0,baseline_only
+suite_e,baseline,tagged_tuple_helpers,106,hard,"Write an Elixir function named `update_window_title/2` that handles updating a window title with user confirmation. The function should take two string arguments: the current window title and a proposed new title, then return a tuple containing the appropriate new title and a confirmation message.",1,1,same
+suite_e,baseline,tagged_tuple_helpers,107,hard,**Problem Description:**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,108,hard,Test case 1: Simple list of numbers with filtering,1,1,same
+suite_e,baseline,tagged_tuple_helpers,109,hard,**Elixir Programming Problem: Game State Analysis**,0,1,condition_only
+suite_e,baseline,tagged_tuple_helpers,110,hard,Your implementation here,0,0,same
+suite_e,baseline,tagged_tuple_helpers,111,hard,Example 1: No cycle,1,1,same
+suite_e,baseline,tagged_tuple_helpers,112,medium,Module Specification:,1,1,same
+suite_e,baseline,tagged_tuple_helpers,113,hard,**Problem: Extract Personal Information from Text**,1,0,baseline_only
+suite_e,baseline,tagged_tuple_helpers,114,hard,Test case 1,1,0,baseline_only
+suite_e,baseline,tagged_tuple_helpers,115,easy,Your implementation here,1,1,same
+suite_e,baseline,tagged_tuple_helpers,116,medium,Test case 1: No exception raised,1,1,same
+suite_e,baseline,tagged_tuple_helpers,117,easy,**Problem: Network Interface MAC Address Processor**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,118,medium,Test case 1: Basic case,1,1,same
+suite_e,baseline,tagged_tuple_helpers,119,hard,**Problem: Maximum Minimum Distance**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,120,hard,**Elixir Programming Problem: Indentation Pattern Calculation**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,121,hard,**Wildcard Pattern Matching in Elixir**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,122,medium,Your implementation here,1,1,same
+suite_e,baseline,tagged_tuple_helpers,123,hard,Test case 1: Basic rectangle creation and area calculation,1,1,same
+suite_e,baseline,tagged_tuple_helpers,124,hard,**Problem: Sum Even and Odd Numbers**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,125,hard,**Problem: Flip Lights**,0,0,same
+suite_e,baseline,tagged_tuple_helpers,126,medium,Test case 1: Move right in open space,1,1,same
+suite_e,baseline,tagged_tuple_helpers,127,hard,**Problem: Calculate Statistical Measures for Paired Data**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,128,hard,Functions to Implement:,1,1,same
+suite_e,baseline,tagged_tuple_helpers,129,medium,**Blackjack Winner Determination in Elixir**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,130,medium,Test Case 1: Basic insertion and retrieval,0,1,condition_only
+suite_e,baseline,tagged_tuple_helpers,131,hard,**Problem: Hexadecimal Character to Decimal Conversion**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,132,hard,**Sound Message Processor**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,133,hard,Test case 1,1,1,same
+suite_e,baseline,tagged_tuple_helpers,134,medium,Your implementation here,1,1,same
+suite_e,baseline,tagged_tuple_helpers,135,hard,**Problem: Maximizing Funded Departments**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,136,medium,**Problem: Determine the Winner of a Game**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,137,medium,**Elixir Programming Problem: Simulating Web Element Interactions**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,138,easy,**Problem: Finding Anagrams**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,139,hard,**Video Playback Segment Selection in Elixir**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,140,hard,Test case 1: Valid token with user data,1,1,same
+suite_e,baseline,tagged_tuple_helpers,141,medium,Requirements:,0,0,same
+suite_e,baseline,tagged_tuple_helpers,142,hard,Test case 1: minimal definitions,1,1,same
+suite_e,baseline,tagged_tuple_helpers,143,hard,**Problem Description:**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,144,hard,**Problem: Bubble Sort with Swap Count and Range**,1,0,baseline_only
+suite_e,baseline,tagged_tuple_helpers,145,medium,**Problem: Bin Packing in Elixir**,0,1,condition_only
+suite_e,baseline,tagged_tuple_helpers,146,hard,**Problem: IMAP Folder Information Retrieval in Elixir**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,147,hard,**Problem: Counting Ways to Decode a Message**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,148,hard,**Programming Problem: Overlap Calculation**,0,0,same
+suite_e,baseline,tagged_tuple_helpers,149,hard,Test case 1: Simple binary tree with diameter 3,1,1,same
+suite_e,baseline,tagged_tuple_helpers,150,hard,**Leap Year Checker in Elixir**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,151,medium,Your implementation,0,1,condition_only
+suite_e,baseline,tagged_tuple_helpers,152,hard,**Problem: Format Difference as Plain Text**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,153,medium,Test case 1: Text normalization,1,1,same
+suite_e,baseline,tagged_tuple_helpers,154,hard,**Problem: Convert Decimal to Binary**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,155,hard,**Problem: Find Two Numbers That Sum to Target**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,156,hard,Test case 1: One Pair vs One Pair (higher pair wins),1,1,same
+suite_e,baseline,tagged_tuple_helpers,157,medium,Function to Implement:,0,1,condition_only
+suite_e,baseline,tagged_tuple_helpers,158,easy,Parameters,0,0,same
+suite_e,baseline,tagged_tuple_helpers,159,medium,Input:,1,1,same
+suite_e,baseline,tagged_tuple_helpers,160,medium,**Problem: Next Greater Element**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,161,hard,**Programming Problem: Count Common Values**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,162,hard,**Programming Problem: Voting Eligibility Checker**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,163,hard,Requirements:,1,1,same
+suite_e,baseline,tagged_tuple_helpers,164,easy,**Problem: Syllable Processing**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,165,hard,**Problem: Convert Comma-Separated String to List of Integers**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,166,hard,Your implementation here,0,1,condition_only
+suite_e,baseline,tagged_tuple_helpers,167,hard,**Problem: Speeding Ticket Calculator in Elixir**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,168,hard,Test Case 1,1,1,same
+suite_e,baseline,tagged_tuple_helpers,169,hard,**Non-Decreasing Array Possibility Check**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,170,hard,Your implementation here,0,0,same
+suite_e,baseline,tagged_tuple_helpers,171,hard,**Problem: Minimum Dice Changes**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,172,hard,**Problem: Permutation Coefficient Calculation**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,173,hard,**Programming Problem: Validate a Special Code**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,174,medium,**Programming Problem: Generate Username**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,175,hard,**Elixir Programming Problem: Port Scanner**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,176,hard,**Problem: Basic Calculator**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,177,medium,**Supermarket Queue Simulation in Elixir**,0,1,condition_only
+suite_e,baseline,tagged_tuple_helpers,178,medium,Test case 1: Simple stack with mixed numbers,1,1,same
+suite_e,baseline,tagged_tuple_helpers,179,hard,**Problem: Maximum Subarray Sum**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,180,hard,**Problem: Find Character Index in List**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,181,hard,**Problem: Trapping Rain Water**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,182,hard,**Zigzag Conversion Problem in Elixir**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,183,hard,**Problem: Sum of Even Numbers in a Range**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,184,hard,Test case 1: Simple word translation,1,1,same
+suite_e,baseline,tagged_tuple_helpers,185,hard,**Problem: Operation Distribution**,0,0,same
+suite_e,baseline,tagged_tuple_helpers,186,medium,Test Case 1,1,1,same
+suite_e,baseline,tagged_tuple_helpers,187,medium,**Book Reading Queue Management in Elixir**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,188,medium,Test case 1,1,1,same
+suite_e,baseline,tagged_tuple_helpers,189,medium,**Problem: Maximize Stock Profit**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,190,hard,**Programming Problem: Check for Positive Numbers**,0,1,condition_only
+suite_e,baseline,tagged_tuple_helpers,191,easy,**Programming Problem: Staircase Pattern**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,192,hard,**Problem Description:**,0,1,condition_only
+suite_e,baseline,tagged_tuple_helpers,193,hard,**Problem: Cutting the Sticks**,0,1,condition_only
+suite_e,baseline,tagged_tuple_helpers,194,hard,**Problem: Maximum Stock Profit**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,195,hard,**Problem: Calculate Phone Dial Time**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,196,hard,Initialize a board with some pieces,0,0,same
+suite_e,baseline,tagged_tuple_helpers,197,hard,**Problem: Box Packaging Optimization**,1,1,same
+suite_e,baseline,tagged_tuple_helpers,198,medium,**Programming Problem: Symbolic Differentiation**,0,0,same

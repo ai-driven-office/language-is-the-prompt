@@ -1,23 +1,10 @@
-# Elixir Active Ablation Pilot
+# Elixir Active Ablation Study
 
-This report summarizes the first active rerun pass for the scientific Elixir suites.
-
-Pilot shape:
-
-- `9` Elixir benchmark rows
-- `3` easy, `3` medium, `3` hard
-- source rows selected from tasks that already passed in the corrected main benchmark run
-- model: `gpt-5.4` with medium reasoning
+This report summarizes the active rerun results for the scientific Elixir suites.
 
 ## Key findings
 
-- `suite_a`: baseline `full_docs` = `100.0%`; best condition `full_docs` = `100.0%`; worst condition `signature_only` = `55.6%`.
-- `suite_d`: baseline `baseline` = `100.0%`; best condition `baseline` = `100.0%`; worst condition `baseline` = `100.0%`.
-- `suite_e`: baseline `baseline` = `100.0%`; best condition `baseline` = `100.0%`; worst condition `sentinel_helpers` = `88.9%`.
-- `suite_f`: baseline `baseline` = `100.0%`; best condition `baseline` = `100.0%`; worst condition `baseline` = `100.0%`.
-
-Interpretation:
-
-- Documentation compression clearly hurts once the prompt is reduced to signatures only.
-- Tagged-tuple helper prompting is at least competitive with the unconstrained baseline on this slice.
-- Control-flow style and mutability-style prompt constraints did not move pass rate on this first pilot slice, which means those hypotheses need a larger or harder intervention set before drawing strong conclusions.
+- `suite_a`: baseline `full_docs` = `84.3%`; best condition `full_docs` = `84.3%`; worst condition `signature_only` = `42.9%`.
+- `suite_d`: baseline `baseline` = `84.3%`; best condition `cond_if` = `86.9%`; worst condition `case_with` = `81.3%`.
+- `suite_e`: baseline `baseline` = `83.8%`; best condition `tagged_tuple_helpers` = `86.9%`; worst condition `baseline` = `83.8%`.
+- `suite_f`: baseline `baseline` = `81.8%`; best condition `rebinding_stepwise` = `87.4%`; worst condition `baseline` = `81.8%`.

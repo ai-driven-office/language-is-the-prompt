@@ -1,5 +1,5 @@
-suite_id,condition,passed,total,pass_rate,delta_vs_baseline
-suite_a,full_docs,9,9,100.0,0.0
-suite_a,minimal_docs,7,9,77.8,-22.2
-suite_a,reference_no_examples,9,9,100.0,0.0
-suite_a,signature_only,5,9,55.6,-44.4
+suite_id,condition,passed,total,pass_rate,ci_low,ci_high,delta_vs_baseline
+suite_a,full_docs,167,198,84.3,78.6,88.7,0.0
+suite_a,minimal_docs,91,198,46.0,39.2,52.9,-38.4
+suite_a,reference_no_examples,167,198,84.3,78.6,88.7,0.0
+suite_a,signature_only,85,198,42.9,36.2,49.9,-41.4

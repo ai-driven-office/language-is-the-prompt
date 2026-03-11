@@ -1,0 +1,4 @@
+suite_id,baseline_condition,condition,n_shared,baseline_only_wins,condition_only_wins,mcnemar_pvalue,delta_ci_low,delta_ci_high,baseline_pass_subset_n,condition_pass_rate_on_baseline_pass_subset,baseline_fail_subset_n,condition_pass_rate_on_baseline_fail_subset
+suite_f,baseline,explicit_state_threading,198,8,18,0.075519,0.0,10.6,162,95.1,36,50.0
+suite_f,baseline,immutable_pipeline,198,17,17,1.0,-5.6,6.1,162,89.5,36,47.2
+suite_f,baseline,rebinding_stepwise,198,9,20,0.061428,0.5,11.1,162,94.4,36,55.6

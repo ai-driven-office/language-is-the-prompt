@@ -1,0 +1,4 @@
+suite_id,baseline_condition,condition,n_shared,baseline_only_wins,condition_only_wins,mcnemar_pvalue,delta_ci_low,delta_ci_high,baseline_pass_subset_n,condition_pass_rate_on_baseline_pass_subset,baseline_fail_subset_n,condition_pass_rate_on_baseline_fail_subset
+suite_a,full_docs,minimal_docs,198,85,9,0.0,-46.0,-30.3,167,49.1,31,29.0
+suite_a,full_docs,reference_no_examples,198,10,10,1.0,-4.5,4.5,167,94.0,31,32.3
+suite_a,full_docs,signature_only,198,89,7,0.0,-49.0,-33.8,167,46.7,31,22.6

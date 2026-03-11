@@ -1,0 +1,388 @@
+benchmark_replication:
+  model: gpt-5.4
+  reasoning: medium
+  main_elixir_pass_rate: '87.4'
+  artifact_control_expected_difficulty_only: '47.0'
+  artifact_control_delta_difficulty_only: '40.4'
+  artifact_control_delta_question_len: '42.7'
+  artifact_control_delta_full_test_len: '36.8'
+  hard_task_pass_rate: '86.3'
+current_hypothesis:
+  primary: Elixir appears unusually model-friendly because docs and public contracts
+    make intent explicit and reduce ambiguity.
+  secondary:
+  - Pattern matching likely helps by externalizing control flow.
+  - Low hidden-state burden likely helps by reducing implicit mutable-state reasoning.
+  not_supported_as_primary:
+  - benchmark composition alone
+  - stylistic cleanliness alone
+  - docs alignment alone
+active_suite_progress:
+- suite_id: suite_a
+  input_rows: 792
+  generated_rows: 792
+  scored_rows: 792
+  status: complete
+- suite_id: suite_d
+  input_rows: 792
+  generated_rows: 792
+  scored_rows: 792
+  status: complete
+- suite_id: suite_e
+  input_rows: 594
+  generated_rows: 594
+  scored_rows: 594
+  status: complete
+- suite_id: suite_f
+  input_rows: 792
+  generated_rows: 792
+  scored_rows: 792
+  status: complete
+passive_suites:
+  suite_a_docs_quality:
+    mean_docs_score: '17.694'
+    docs_success_corr: '-0.146'
+  suite_d_control_flow:
+    mean_control_flow_score: '6.517'
+    pattern_signal_count: '3.545'
+  suite_e_result_contracts:
+    mean_contract_score: '1.108'
+    tagged_tuple_count: '0.141'
+  suite_f_mutability:
+    mean_mutability_burden_score: '4.289'
+  suite_g_alignment:
+    mean_alignment_score: '17.311'
+active_suites:
+  suite_a:
+    title: Documentation Quality
+    baseline: full_docs
+    summary:
+    - suite_id: suite_a
+      condition: full_docs
+      passed: '167'
+      total: '198'
+      pass_rate: '84.3'
+      ci_low: '78.6'
+      ci_high: '88.7'
+      delta_vs_baseline: '0.0'
+    - suite_id: suite_a
+      condition: minimal_docs
+      passed: '91'
+      total: '198'
+      pass_rate: '46.0'
+      ci_low: '39.2'
+      ci_high: '52.9'
+      delta_vs_baseline: '-38.4'
+    - suite_id: suite_a
+      condition: reference_no_examples
+      passed: '167'
+      total: '198'
+      pass_rate: '84.3'
+      ci_low: '78.6'
+      ci_high: '88.7'
+      delta_vs_baseline: '0.0'
+    - suite_id: suite_a
+      condition: signature_only
+      passed: '85'
+      total: '198'
+      pass_rate: '42.9'
+      ci_low: '36.2'
+      ci_high: '49.9'
+      delta_vs_baseline: '-41.4'
+    paired:
+    - suite_id: suite_a
+      baseline_condition: full_docs
+      condition: minimal_docs
+      n_shared: '198'
+      baseline_only_wins: '85'
+      condition_only_wins: '9'
+      mcnemar_pvalue: '0.0'
+      delta_ci_low: '-46.0'
+      delta_ci_high: '-30.3'
+      baseline_pass_subset_n: '167'
+      condition_pass_rate_on_baseline_pass_subset: '49.1'
+      baseline_fail_subset_n: '31'
+      condition_pass_rate_on_baseline_fail_subset: '29.0'
+    - suite_id: suite_a
+      baseline_condition: full_docs
+      condition: reference_no_examples
+      n_shared: '198'
+      baseline_only_wins: '10'
+      condition_only_wins: '10'
+      mcnemar_pvalue: '1.0'
+      delta_ci_low: '-4.5'
+      delta_ci_high: '4.5'
+      baseline_pass_subset_n: '167'
+      condition_pass_rate_on_baseline_pass_subset: '94.0'
+      baseline_fail_subset_n: '31'
+      condition_pass_rate_on_baseline_fail_subset: '32.3'
+    - suite_id: suite_a
+      baseline_condition: full_docs
+      condition: signature_only
+      n_shared: '198'
+      baseline_only_wins: '89'
+      condition_only_wins: '7'
+      mcnemar_pvalue: '0.0'
+      delta_ci_low: '-49.0'
+      delta_ci_high: '-33.8'
+      baseline_pass_subset_n: '167'
+      condition_pass_rate_on_baseline_pass_subset: '46.7'
+      baseline_fail_subset_n: '31'
+      condition_pass_rate_on_baseline_fail_subset: '22.6'
+  suite_d:
+    title: Pattern Matching and Control Flow
+    baseline: baseline
+    summary:
+    - suite_id: suite_d
+      condition: baseline
+      passed: '167'
+      total: '198'
+      pass_rate: '84.3'
+      ci_low: '78.6'
+      ci_high: '88.7'
+      delta_vs_baseline: '0.0'
+    - suite_id: suite_d
+      condition: case_with
+      passed: '161'
+      total: '198'
+      pass_rate: '81.3'
+      ci_low: '75.3'
+      ci_high: '86.1'
+      delta_vs_baseline: '-3.0'
+    - suite_id: suite_d
+      condition: cond_if
+      passed: '172'
+      total: '198'
+      pass_rate: '86.9'
+      ci_low: '81.5'
+      ci_high: '90.9'
+      delta_vs_baseline: '2.5'
+    - suite_id: suite_d
+      condition: function_heads
+      passed: '164'
+      total: '198'
+      pass_rate: '82.8'
+      ci_low: '77.0'
+      ci_high: '87.4'
+      delta_vs_baseline: '-1.5'
+    paired:
+    - suite_id: suite_d
+      baseline_condition: baseline
+      condition: case_with
+      n_shared: '198'
+      baseline_only_wins: '15'
+      condition_only_wins: '9'
+      mcnemar_pvalue: '0.307456'
+      delta_ci_low: '-8.1'
+      delta_ci_high: '2.0'
+      baseline_pass_subset_n: '167'
+      condition_pass_rate_on_baseline_pass_subset: '91.0'
+      baseline_fail_subset_n: '31'
+      condition_pass_rate_on_baseline_fail_subset: '29.0'
+    - suite_id: suite_d
+      baseline_condition: baseline
+      condition: cond_if
+      n_shared: '198'
+      baseline_only_wins: '10'
+      condition_only_wins: '15'
+      mcnemar_pvalue: '0.424356'
+      delta_ci_low: '-2.5'
+      delta_ci_high: '7.6'
+      baseline_pass_subset_n: '167'
+      condition_pass_rate_on_baseline_pass_subset: '94.0'
+      baseline_fail_subset_n: '31'
+      condition_pass_rate_on_baseline_fail_subset: '48.4'
+    - suite_id: suite_d
+      baseline_condition: baseline
+      condition: function_heads
+      n_shared: '198'
+      baseline_only_wins: '17'
+      condition_only_wins: '14'
+      mcnemar_pvalue: '0.7201'
+      delta_ci_low: '-7.1'
+      delta_ci_high: '4.0'
+      baseline_pass_subset_n: '167'
+      condition_pass_rate_on_baseline_pass_subset: '89.8'
+      baseline_fail_subset_n: '31'
+      condition_pass_rate_on_baseline_fail_subset: '45.2'
+  suite_e:
+    title: Result Contracts
+    baseline: baseline
+    summary:
+    - suite_id: suite_e
+      condition: baseline
+      passed: '166'
+      total: '198'
+      pass_rate: '83.8'
+      ci_low: '78.1'
+      ci_high: '88.3'
+      delta_vs_baseline: '0.0'
+    - suite_id: suite_e
+      condition: sentinel_helpers
+      passed: '166'
+      total: '198'
+      pass_rate: '83.8'
+      ci_low: '78.1'
+      ci_high: '88.3'
+      delta_vs_baseline: '0.0'
+    - suite_id: suite_e
+      condition: tagged_tuple_helpers
+      passed: '172'
+      total: '198'
+      pass_rate: '86.9'
+      ci_low: '81.5'
+      ci_high: '90.9'
+      delta_vs_baseline: '3.0'
+    paired:
+    - suite_id: suite_e
+      baseline_condition: baseline
+      condition: sentinel_helpers
+      n_shared: '198'
+      baseline_only_wins: '12'
+      condition_only_wins: '12'
+      mcnemar_pvalue: '1.0'
+      delta_ci_low: '-5.1'
+      delta_ci_high: '5.1'
+      baseline_pass_subset_n: '166'
+      condition_pass_rate_on_baseline_pass_subset: '92.8'
+      baseline_fail_subset_n: '32'
+      condition_pass_rate_on_baseline_fail_subset: '37.5'
+    - suite_id: suite_e
+      baseline_condition: baseline
+      condition: tagged_tuple_helpers
+      n_shared: '198'
+      baseline_only_wins: '9'
+      condition_only_wins: '15'
+      mcnemar_pvalue: '0.307456'
+      delta_ci_low: '-2.0'
+      delta_ci_high: '8.1'
+      baseline_pass_subset_n: '166'
+      condition_pass_rate_on_baseline_pass_subset: '94.6'
+      baseline_fail_subset_n: '32'
+      condition_pass_rate_on_baseline_fail_subset: '46.9'
+  suite_f:
+    title: Mutability and State Style
+    baseline: baseline
+    summary:
+    - suite_id: suite_f
+      condition: baseline
+      passed: '162'
+      total: '198'
+      pass_rate: '81.8'
+      ci_low: '75.9'
+      ci_high: '86.6'
+      delta_vs_baseline: '0.0'
+    - suite_id: suite_f
+      condition: explicit_state_threading
+      passed: '172'
+      total: '198'
+      pass_rate: '86.9'
+      ci_low: '81.5'
+      ci_high: '90.9'
+      delta_vs_baseline: '5.1'
+    - suite_id: suite_f
+      condition: immutable_pipeline
+      passed: '162'
+      total: '198'
+      pass_rate: '81.8'
+      ci_low: '75.9'
+      ci_high: '86.6'
+      delta_vs_baseline: '0.0'
+    - suite_id: suite_f
+      condition: rebinding_stepwise
+      passed: '173'
+      total: '198'
+      pass_rate: '87.4'
+      ci_low: '82.0'
+      ci_high: '91.3'
+      delta_vs_baseline: '5.6'
+    paired:
+    - suite_id: suite_f
+      baseline_condition: baseline
+      condition: explicit_state_threading
+      n_shared: '198'
+      baseline_only_wins: '8'
+      condition_only_wins: '18'
+      mcnemar_pvalue: '0.075519'
+      delta_ci_low: '0.0'
+      delta_ci_high: '10.6'
+      baseline_pass_subset_n: '162'
+      condition_pass_rate_on_baseline_pass_subset: '95.1'
+      baseline_fail_subset_n: '36'
+      condition_pass_rate_on_baseline_fail_subset: '50.0'
+    - suite_id: suite_f
+      baseline_condition: baseline
+      condition: immutable_pipeline
+      n_shared: '198'
+      baseline_only_wins: '17'
+      condition_only_wins: '17'
+      mcnemar_pvalue: '1.0'
+      delta_ci_low: '-5.6'
+      delta_ci_high: '6.1'
+      baseline_pass_subset_n: '162'
+      condition_pass_rate_on_baseline_pass_subset: '89.5'
+      baseline_fail_subset_n: '36'
+      condition_pass_rate_on_baseline_fail_subset: '47.2'
+    - suite_id: suite_f
+      baseline_condition: baseline
+      condition: rebinding_stepwise
+      n_shared: '198'
+      baseline_only_wins: '9'
+      condition_only_wins: '20'
+      mcnemar_pvalue: '0.061428'
+      delta_ci_low: '0.5'
+      delta_ci_high: '11.1'
+      baseline_pass_subset_n: '162'
+      condition_pass_rate_on_baseline_pass_subset: '94.4'
+      baseline_fail_subset_n: '36'
+      condition_pass_rate_on_baseline_fail_subset: '55.6'
+language_design_lessons:
+- Make public API behavior explicit in docs and examples.
+- Prefer standard result-shape conventions over ad hoc sentinel returns.
+- Reduce hidden mutable state and make control flow legible.
+- Keep the gap small between docs, tests, and implementation.
+evidence_matrix:
+- evidence_bucket: artifact_control
+  suite: suite_h
+  signal: elixir_delta_vs_difficulty_only
+  value: '40.4'
+  interpretation: Elixir stays far above expectation after difficulty controls.
+- evidence_bucket: artifact_control
+  suite: suite_h
+  signal: elixir_delta_vs_question_len
+  value: '42.7'
+  interpretation: Question length does not erase Elixir's lead.
+- evidence_bucket: passive_proxy
+  suite: suite_d
+  signal: control_flow_score
+  value: '6.517'
+  interpretation: Elixir scores highest on the current control-flow legibility proxy.
+- evidence_bucket: passive_proxy
+  suite: suite_f
+  signal: mutability_burden_score
+  value: '4.289'
+  interpretation: Elixir shows low mutability burden while keeping the highest pass
+    rate.
+- evidence_bucket: active_ablation
+  suite: suite_a
+  signal: signature_only_delta_vs_full_docs
+  value: '-41.4'
+  interpretation: Reducing the task to signatures only materially hurts performance.
+- evidence_bucket: active_ablation
+  suite: suite_e
+  signal: sentinel_helpers_delta_vs_baseline
+  value: '0.0'
+  interpretation: Weaker implicit helper contracts perform worse than the baseline
+    prompt.
+- evidence_bucket: active_ablation
+  suite: suite_d
+  signal: worst_control_flow_condition_delta
+  value: '-3.0'
+  interpretation: Alternative control-flow prompting under active rerun did not clearly
+    beat the baseline style.
+- evidence_bucket: active_ablation
+  suite: suite_f
+  signal: worst_state_style_condition_delta
+  value: '0.0'
+  interpretation: Alternative state-style prompting did not clearly outperform the
+    baseline prompt.

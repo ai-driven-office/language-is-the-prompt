@@ -1,0 +1,595 @@
+suite_id,baseline_condition,condition,source_index,difficulty,title,baseline_success,condition_success,outcome
+suite_f,baseline,explicit_state_threading,1,hard,**Problem: Generate MD5 Hash of a String**,1,1,same
+suite_f,baseline,explicit_state_threading,2,medium,**Problem: Find Insert Position in Sorted Array**,1,1,same
+suite_f,baseline,explicit_state_threading,3,hard,**Knight's Possible Moves on a Chessboard**,1,1,same
+suite_f,baseline,explicit_state_threading,4,hard,**Problem: Increasing Triplet Subsequence**,1,1,same
+suite_f,baseline,explicit_state_threading,5,easy,**Problem: Find the Single Non-Duplicate Element in a Sorted Array**,1,1,same
+suite_f,baseline,explicit_state_threading,6,hard,**Excel Column Title Conversion in Elixir**,1,1,same
+suite_f,baseline,explicit_state_threading,7,easy,Test case 1,1,1,same
+suite_f,baseline,explicit_state_threading,8,medium,Test case 1: Simple binary tree with depth 2,1,1,same
+suite_f,baseline,explicit_state_threading,9,medium,"Test case 1: [2, 4, 3] + [5, 6, 4] = [7, 0, 8]",1,1,same
+suite_f,baseline,explicit_state_threading,10,hard,**Problem: Adjust Color Luminosity**,1,1,same
+suite_f,baseline,explicit_state_threading,11,hard,**Problem: Counting Integer Partitions**,0,1,condition_only
+suite_f,baseline,explicit_state_threading,12,hard,**Problem Description:**,1,1,same
+suite_f,baseline,explicit_state_threading,13,hard,**Programming Problem: Alice and Bob's Number Game**,1,1,same
+suite_f,baseline,explicit_state_threading,14,easy,**Problem: Simulate Socket Communication Error Handling**,1,1,same
+suite_f,baseline,explicit_state_threading,15,medium,Test case 1: Simple linear graph,1,1,same
+suite_f,baseline,explicit_state_threading,16,hard,**Problem: Counting Bipartite Graphs**,1,1,same
+suite_f,baseline,explicit_state_threading,17,hard,Test case 1: Single synthetic chessboard image,1,1,same
+suite_f,baseline,explicit_state_threading,18,hard,Test Case 1,1,1,same
+suite_f,baseline,explicit_state_threading,19,medium,Test case 1: Simple tier calculation,1,1,same
+suite_f,baseline,explicit_state_threading,20,hard,Implement a 1D Kalman Filter in Elixir that can track and estimate the state of a system over time. The filter should handle both prediction (based on system dynamics) and correction (based on measurements) steps.,1,1,same
+suite_f,baseline,explicit_state_threading,21,medium,Test case 1: Basic substitution,1,1,same
+suite_f,baseline,explicit_state_threading,22,hard,Functions to Implement:,1,1,same
+suite_f,baseline,explicit_state_threading,23,hard,Input Format,1,1,same
+suite_f,baseline,explicit_state_threading,24,medium,**Problem Description:**,1,1,same
+suite_f,baseline,explicit_state_threading,25,hard,**Problem: Minimum Refueling Stops**,1,1,same
+suite_f,baseline,explicit_state_threading,26,medium,Test Case 1: Small memory with sequential access,0,1,condition_only
+suite_f,baseline,explicit_state_threading,27,hard,**Problem: Reorganize String**,0,1,condition_only
+suite_f,baseline,explicit_state_threading,28,medium,Test Case 1,1,1,same
+suite_f,baseline,explicit_state_threading,29,hard,**Kubernetes Object Management Problem in Elixir**,1,1,same
+suite_f,baseline,explicit_state_threading,30,medium,Your implementation here,1,1,same
+suite_f,baseline,explicit_state_threading,31,easy,Test case 1: Both arms,1,1,same
+suite_f,baseline,explicit_state_threading,32,hard,Your implementation here,0,1,condition_only
+suite_f,baseline,explicit_state_threading,33,hard,**Problem: Decoding Ways with Wildcards**,1,1,same
+suite_f,baseline,explicit_state_threading,34,hard,**Problem: Anagram Checker**,1,1,same
+suite_f,baseline,explicit_state_threading,35,medium,**Ball Game Simulation**,0,0,same
+suite_f,baseline,explicit_state_threading,36,hard,**Minimum Jumps to Reach the End of an Array**,1,1,same
+suite_f,baseline,explicit_state_threading,37,hard,Example 1: Basic case with country and continent,1,1,same
+suite_f,baseline,explicit_state_threading,38,hard,Test case where the API call fails due to network/resolution error,0,0,same
+suite_f,baseline,explicit_state_threading,39,hard,Input:,1,1,same
+suite_f,baseline,explicit_state_threading,40,hard,Test case 1: Simple binary tree,0,0,same
+suite_f,baseline,explicit_state_threading,41,hard,**Problem: Validate Magic: The Gathering Card Names in Elixir**,1,1,same
+suite_f,baseline,explicit_state_threading,42,hard,**Problem: Count Unique Modulo Results**,1,1,same
+suite_f,baseline,explicit_state_threading,43,hard,**Problem Description:**,1,1,same
+suite_f,baseline,explicit_state_threading,44,medium,Function Names,1,1,same
+suite_f,baseline,explicit_state_threading,45,hard,**Problem Description:**,1,1,same
+suite_f,baseline,explicit_state_threading,46,hard,**Problem: Count Fair and Square Numbers**,0,1,condition_only
+suite_f,baseline,explicit_state_threading,47,hard,**Problem: Counting Islands in a Grid**,1,1,same
+suite_f,baseline,explicit_state_threading,48,hard,**Problem: Transform 3D Coordinates**,1,1,same
+suite_f,baseline,explicit_state_threading,49,hard,**Problem: Revoke Security Group Access**,0,1,condition_only
+suite_f,baseline,explicit_state_threading,50,hard,Test Case 1,1,1,same
+suite_f,baseline,explicit_state_threading,51,hard,**Elixir GUI Layout Configuration**,0,0,same
+suite_f,baseline,explicit_state_threading,52,hard,Test case 1: Simple string comparison,1,1,same
+suite_f,baseline,explicit_state_threading,53,hard,Your implementation here,1,1,same
+suite_f,baseline,explicit_state_threading,54,hard,**Problem: Minimum Refueling Stops**,1,0,baseline_only
+suite_f,baseline,explicit_state_threading,55,hard,**Problem: Parse RISC-V OVPsim Execution Logs**,1,1,same
+suite_f,baseline,explicit_state_threading,56,medium,Test case 1: Simple BST with one mode,0,0,same
+suite_f,baseline,explicit_state_threading,57,hard,**Problem: Count Digit One**,1,1,same
+suite_f,baseline,explicit_state_threading,58,hard,**Problem: Handling URL Metadata Fetching in Elixir**,1,1,same
+suite_f,baseline,explicit_state_threading,59,hard,Test case 1: X wins horizontally (top row),1,1,same
+suite_f,baseline,explicit_state_threading,60,hard,**Problem: Mock ZeroMQ Client in Elixir**,1,1,same
+suite_f,baseline,explicit_state_threading,61,easy,Test case 1: A valid BST,1,1,same
+suite_f,baseline,explicit_state_threading,62,hard,**Programming Problem: Reformatting Alphanumeric Strings**,1,1,same
+suite_f,baseline,explicit_state_threading,63,hard,Test case 1: Basic configuration merge,0,1,condition_only
+suite_f,baseline,explicit_state_threading,64,hard,**Problem: Sum Numbers in a String**,1,1,same
+suite_f,baseline,explicit_state_threading,65,medium,**Problem: Generate All Permutations of a String or List**,1,1,same
+suite_f,baseline,explicit_state_threading,66,easy,**Elixir Mandelbrot Set Membership Checker**,1,1,same
+suite_f,baseline,explicit_state_threading,67,hard,Test case 1: Small domain with 5 points,1,1,same
+suite_f,baseline,explicit_state_threading,68,hard,Test Case 1: Basic RSA workflow,1,1,same
+suite_f,baseline,explicit_state_threading,69,medium,Vertical line image,1,1,same
+suite_f,baseline,explicit_state_threading,70,hard,Test Case 1 - Valid parameters,0,0,same
+suite_f,baseline,explicit_state_threading,71,hard,**Problem: Binary Image Feature Detection in Elixir**,1,0,baseline_only
+suite_f,baseline,explicit_state_threading,72,hard,**Problem: K-th Symbol in Grammar**,1,1,same
+suite_f,baseline,explicit_state_threading,73,medium,Test count_posts,1,1,same
+suite_f,baseline,explicit_state_threading,74,hard,**Problem: Counting Islands in a Grid**,1,1,same
+suite_f,baseline,explicit_state_threading,75,hard,**Problem: Simulating User Input in Elixir**,1,1,same
+suite_f,baseline,explicit_state_threading,76,hard,**Problem: Counting 'p's and 'y's in a String**,1,1,same
+suite_f,baseline,explicit_state_threading,77,hard,**Military Enlistment Year Calculator**,1,1,same
+suite_f,baseline,explicit_state_threading,78,hard,**Programming Problem: Homework Due Date Formatter**,1,1,same
+suite_f,baseline,explicit_state_threading,79,hard,Test Case 1,1,1,same
+suite_f,baseline,explicit_state_threading,80,easy,**Problem: Drawing a Triforce Pattern in Elixir**,1,1,same
+suite_f,baseline,explicit_state_threading,81,medium,Your implementation here,1,1,same
+suite_f,baseline,explicit_state_threading,82,hard,Module Requirements:,1,1,same
+suite_f,baseline,explicit_state_threading,83,hard,**Problem: Largest Rectangle in a Histogram**,1,1,same
+suite_f,baseline,explicit_state_threading,84,hard,... other element-specific properties,1,1,same
+suite_f,baseline,explicit_state_threading,85,hard,**Problem: Count Unique Values**,1,1,same
+suite_f,baseline,explicit_state_threading,86,hard,Your implementation,1,1,same
+suite_f,baseline,explicit_state_threading,87,hard,Test Case 1 - Graph1,1,1,same
+suite_f,baseline,explicit_state_threading,88,hard,**Problem: Check Sum Parity**,1,1,same
+suite_f,baseline,explicit_state_threading,89,medium,**Elixir Programming Problem: Options Menu Interaction**,1,1,same
+suite_f,baseline,explicit_state_threading,90,hard,**Problem Description:**,1,1,same
+suite_f,baseline,explicit_state_threading,91,hard,**Problem: Binary Tree Level Order Traversal**,1,1,same
+suite_f,baseline,explicit_state_threading,92,hard,**Programming Problem: Generate Odd Number Sequence**,1,1,same
+suite_f,baseline,explicit_state_threading,93,hard,Implement Shamir's Secret Sharing scheme in Elixir. The implementation should include two main functions:,0,1,condition_only
+suite_f,baseline,explicit_state_threading,94,hard,**Programming Problem: Counting Special Subsets**,0,0,same
+suite_f,baseline,explicit_state_threading,95,hard,**Problem: Find the Maximum Digit in a Number**,0,1,condition_only
+suite_f,baseline,explicit_state_threading,96,medium,**Problem: Chess King Check Detection**,1,1,same
+suite_f,baseline,explicit_state_threading,97,hard,**Problem: Check if a String is a Palindrome**,1,1,same
+suite_f,baseline,explicit_state_threading,98,hard,**Programming Problem: Insertion Sort Implementation in Elixir**,1,1,same
+suite_f,baseline,explicit_state_threading,99,hard,**Programming Problem: Counting Chessboard Squares**,0,0,same
+suite_f,baseline,explicit_state_threading,100,hard,Test case 1,0,1,condition_only
+suite_f,baseline,explicit_state_threading,101,hard,Test case 1: Simple linear graph,1,1,same
+suite_f,baseline,explicit_state_threading,102,hard,**Problem: Categorize Machine Specifications**,1,1,same
+suite_f,baseline,explicit_state_threading,103,medium,Test case 1: Simple BST,1,1,same
+suite_f,baseline,explicit_state_threading,104,medium,**Minimum Platforms Needed at a Railway Station**,1,1,same
+suite_f,baseline,explicit_state_threading,105,hard,Expected result:,1,1,same
+suite_f,baseline,explicit_state_threading,106,hard,"Write an Elixir function named `update_window_title/2` that handles updating a window title with user confirmation. The function should take two string arguments: the current window title and a proposed new title, then return a tuple containing the appropriate new title and a confirmation message.",1,1,same
+suite_f,baseline,explicit_state_threading,107,hard,**Problem Description:**,0,1,condition_only
+suite_f,baseline,explicit_state_threading,108,hard,Test case 1: Simple list of numbers with filtering,1,1,same
+suite_f,baseline,explicit_state_threading,109,hard,**Elixir Programming Problem: Game State Analysis**,0,0,same
+suite_f,baseline,explicit_state_threading,110,hard,Your implementation here,0,0,same
+suite_f,baseline,explicit_state_threading,111,hard,Example 1: No cycle,1,1,same
+suite_f,baseline,explicit_state_threading,112,medium,Module Specification:,1,1,same
+suite_f,baseline,explicit_state_threading,113,hard,**Problem: Extract Personal Information from Text**,0,0,same
+suite_f,baseline,explicit_state_threading,114,hard,Test case 1,1,0,baseline_only
+suite_f,baseline,explicit_state_threading,115,easy,Your implementation here,1,1,same
+suite_f,baseline,explicit_state_threading,116,medium,Test case 1: No exception raised,1,1,same
+suite_f,baseline,explicit_state_threading,117,easy,**Problem: Network Interface MAC Address Processor**,1,1,same
+suite_f,baseline,explicit_state_threading,118,medium,Test case 1: Basic case,1,1,same
+suite_f,baseline,explicit_state_threading,119,hard,**Problem: Maximum Minimum Distance**,1,1,same
+suite_f,baseline,explicit_state_threading,120,hard,**Elixir Programming Problem: Indentation Pattern Calculation**,1,1,same
+suite_f,baseline,explicit_state_threading,121,hard,**Wildcard Pattern Matching in Elixir**,1,1,same
+suite_f,baseline,explicit_state_threading,122,medium,Your implementation here,1,1,same
+suite_f,baseline,explicit_state_threading,123,hard,Test case 1: Basic rectangle creation and area calculation,1,1,same
+suite_f,baseline,explicit_state_threading,124,hard,**Problem: Sum Even and Odd Numbers**,1,1,same
+suite_f,baseline,explicit_state_threading,125,hard,**Problem: Flip Lights**,0,0,same
+suite_f,baseline,explicit_state_threading,126,medium,Test case 1: Move right in open space,1,1,same
+suite_f,baseline,explicit_state_threading,127,hard,**Problem: Calculate Statistical Measures for Paired Data**,1,1,same
+suite_f,baseline,explicit_state_threading,128,hard,Functions to Implement:,1,1,same
+suite_f,baseline,explicit_state_threading,129,medium,**Blackjack Winner Determination in Elixir**,1,1,same
+suite_f,baseline,explicit_state_threading,130,medium,Test Case 1: Basic insertion and retrieval,0,1,condition_only
+suite_f,baseline,explicit_state_threading,131,hard,**Problem: Hexadecimal Character to Decimal Conversion**,1,1,same
+suite_f,baseline,explicit_state_threading,132,hard,**Sound Message Processor**,1,1,same
+suite_f,baseline,explicit_state_threading,133,hard,Test case 1,1,1,same
+suite_f,baseline,explicit_state_threading,134,medium,Your implementation here,1,1,same
+suite_f,baseline,explicit_state_threading,135,hard,**Problem: Maximizing Funded Departments**,1,1,same
+suite_f,baseline,explicit_state_threading,136,medium,**Problem: Determine the Winner of a Game**,1,1,same
+suite_f,baseline,explicit_state_threading,137,medium,**Elixir Programming Problem: Simulating Web Element Interactions**,1,1,same
+suite_f,baseline,explicit_state_threading,138,easy,**Problem: Finding Anagrams**,1,1,same
+suite_f,baseline,explicit_state_threading,139,hard,**Video Playback Segment Selection in Elixir**,1,1,same
+suite_f,baseline,explicit_state_threading,140,hard,Test case 1: Valid token with user data,1,1,same
+suite_f,baseline,explicit_state_threading,141,medium,Requirements:,0,0,same
+suite_f,baseline,explicit_state_threading,142,hard,Test case 1: minimal definitions,1,1,same
+suite_f,baseline,explicit_state_threading,143,hard,**Problem Description:**,1,1,same
+suite_f,baseline,explicit_state_threading,144,hard,**Problem: Bubble Sort with Swap Count and Range**,1,1,same
+suite_f,baseline,explicit_state_threading,145,medium,**Problem: Bin Packing in Elixir**,0,1,condition_only
+suite_f,baseline,explicit_state_threading,146,hard,**Problem: IMAP Folder Information Retrieval in Elixir**,1,1,same
+suite_f,baseline,explicit_state_threading,147,hard,**Problem: Counting Ways to Decode a Message**,1,1,same
+suite_f,baseline,explicit_state_threading,148,hard,**Programming Problem: Overlap Calculation**,0,0,same
+suite_f,baseline,explicit_state_threading,149,hard,Test case 1: Simple binary tree with diameter 3,1,1,same
+suite_f,baseline,explicit_state_threading,150,hard,**Leap Year Checker in Elixir**,1,1,same
+suite_f,baseline,explicit_state_threading,151,medium,Your implementation,1,1,same
+suite_f,baseline,explicit_state_threading,152,hard,**Problem: Format Difference as Plain Text**,0,1,condition_only
+suite_f,baseline,explicit_state_threading,153,medium,Test case 1: Text normalization,1,1,same
+suite_f,baseline,explicit_state_threading,154,hard,**Problem: Convert Decimal to Binary**,0,1,condition_only
+suite_f,baseline,explicit_state_threading,155,hard,**Problem: Find Two Numbers That Sum to Target**,1,1,same
+suite_f,baseline,explicit_state_threading,156,hard,Test case 1: One Pair vs One Pair (higher pair wins),1,0,baseline_only
+suite_f,baseline,explicit_state_threading,157,medium,Function to Implement:,1,1,same
+suite_f,baseline,explicit_state_threading,158,easy,Parameters,0,0,same
+suite_f,baseline,explicit_state_threading,159,medium,Input:,1,1,same
+suite_f,baseline,explicit_state_threading,160,medium,**Problem: Next Greater Element**,1,1,same
+suite_f,baseline,explicit_state_threading,161,hard,**Programming Problem: Count Common Values**,1,1,same
+suite_f,baseline,explicit_state_threading,162,hard,**Programming Problem: Voting Eligibility Checker**,1,1,same
+suite_f,baseline,explicit_state_threading,163,hard,Requirements:,1,1,same
+suite_f,baseline,explicit_state_threading,164,easy,**Problem: Syllable Processing**,1,1,same
+suite_f,baseline,explicit_state_threading,165,hard,**Problem: Convert Comma-Separated String to List of Integers**,1,1,same
+suite_f,baseline,explicit_state_threading,166,hard,Your implementation here,0,0,same
+suite_f,baseline,explicit_state_threading,167,hard,**Problem: Speeding Ticket Calculator in Elixir**,1,1,same
+suite_f,baseline,explicit_state_threading,168,hard,Test Case 1,1,1,same
+suite_f,baseline,explicit_state_threading,169,hard,**Non-Decreasing Array Possibility Check**,1,1,same
+suite_f,baseline,explicit_state_threading,170,hard,Your implementation here,1,1,same
+suite_f,baseline,explicit_state_threading,171,hard,**Problem: Minimum Dice Changes**,1,1,same
+suite_f,baseline,explicit_state_threading,172,hard,**Problem: Permutation Coefficient Calculation**,1,1,same
+suite_f,baseline,explicit_state_threading,173,hard,**Programming Problem: Validate a Special Code**,1,1,same
+suite_f,baseline,explicit_state_threading,174,medium,**Programming Problem: Generate Username**,1,1,same
+suite_f,baseline,explicit_state_threading,175,hard,**Elixir Programming Problem: Port Scanner**,1,0,baseline_only
+suite_f,baseline,explicit_state_threading,176,hard,**Problem: Basic Calculator**,1,1,same
+suite_f,baseline,explicit_state_threading,177,medium,**Supermarket Queue Simulation in Elixir**,0,1,condition_only
+suite_f,baseline,explicit_state_threading,178,medium,Test case 1: Simple stack with mixed numbers,1,1,same
+suite_f,baseline,explicit_state_threading,179,hard,**Problem: Maximum Subarray Sum**,1,1,same
+suite_f,baseline,explicit_state_threading,180,hard,**Problem: Find Character Index in List**,1,1,same
+suite_f,baseline,explicit_state_threading,181,hard,**Problem: Trapping Rain Water**,1,1,same
+suite_f,baseline,explicit_state_threading,182,hard,**Zigzag Conversion Problem in Elixir**,0,1,condition_only
+suite_f,baseline,explicit_state_threading,183,hard,**Problem: Sum of Even Numbers in a Range**,1,1,same
+suite_f,baseline,explicit_state_threading,184,hard,Test case 1: Simple word translation,1,1,same
+suite_f,baseline,explicit_state_threading,185,hard,**Problem: Operation Distribution**,0,0,same
+suite_f,baseline,explicit_state_threading,186,medium,Test Case 1,1,1,same
+suite_f,baseline,explicit_state_threading,187,medium,**Book Reading Queue Management in Elixir**,1,1,same
+suite_f,baseline,explicit_state_threading,188,medium,Test case 1,1,1,same
+suite_f,baseline,explicit_state_threading,189,medium,**Problem: Maximize Stock Profit**,1,1,same
+suite_f,baseline,explicit_state_threading,190,hard,**Programming Problem: Check for Positive Numbers**,1,0,baseline_only
+suite_f,baseline,explicit_state_threading,191,easy,**Programming Problem: Staircase Pattern**,1,0,baseline_only
+suite_f,baseline,explicit_state_threading,192,hard,**Problem Description:**,0,1,condition_only
+suite_f,baseline,explicit_state_threading,193,hard,**Problem: Cutting the Sticks**,1,1,same
+suite_f,baseline,explicit_state_threading,194,hard,**Problem: Maximum Stock Profit**,1,1,same
+suite_f,baseline,explicit_state_threading,195,hard,**Problem: Calculate Phone Dial Time**,1,1,same
+suite_f,baseline,explicit_state_threading,196,hard,Initialize a board with some pieces,0,0,same
+suite_f,baseline,explicit_state_threading,197,hard,**Problem: Box Packaging Optimization**,1,1,same
+suite_f,baseline,explicit_state_threading,198,medium,**Programming Problem: Symbolic Differentiation**,1,0,baseline_only
+suite_f,baseline,immutable_pipeline,1,hard,**Problem: Generate MD5 Hash of a String**,1,0,baseline_only
+suite_f,baseline,immutable_pipeline,2,medium,**Problem: Find Insert Position in Sorted Array**,1,1,same
+suite_f,baseline,immutable_pipeline,3,hard,**Knight's Possible Moves on a Chessboard**,1,1,same
+suite_f,baseline,immutable_pipeline,4,hard,**Problem: Increasing Triplet Subsequence**,1,1,same
+suite_f,baseline,immutable_pipeline,5,easy,**Problem: Find the Single Non-Duplicate Element in a Sorted Array**,1,1,same
+suite_f,baseline,immutable_pipeline,6,hard,**Excel Column Title Conversion in Elixir**,1,1,same
+suite_f,baseline,immutable_pipeline,7,easy,Test case 1,1,1,same
+suite_f,baseline,immutable_pipeline,8,medium,Test case 1: Simple binary tree with depth 2,1,1,same
+suite_f,baseline,immutable_pipeline,9,medium,"Test case 1: [2, 4, 3] + [5, 6, 4] = [7, 0, 8]",1,1,same
+suite_f,baseline,immutable_pipeline,10,hard,**Problem: Adjust Color Luminosity**,1,1,same
+suite_f,baseline,immutable_pipeline,11,hard,**Problem: Counting Integer Partitions**,0,1,condition_only
+suite_f,baseline,immutable_pipeline,12,hard,**Problem Description:**,1,1,same
+suite_f,baseline,immutable_pipeline,13,hard,**Programming Problem: Alice and Bob's Number Game**,1,1,same
+suite_f,baseline,immutable_pipeline,14,easy,**Problem: Simulate Socket Communication Error Handling**,1,1,same
+suite_f,baseline,immutable_pipeline,15,medium,Test case 1: Simple linear graph,1,1,same
+suite_f,baseline,immutable_pipeline,16,hard,**Problem: Counting Bipartite Graphs**,1,1,same
+suite_f,baseline,immutable_pipeline,17,hard,Test case 1: Single synthetic chessboard image,1,1,same
+suite_f,baseline,immutable_pipeline,18,hard,Test Case 1,1,1,same
+suite_f,baseline,immutable_pipeline,19,medium,Test case 1: Simple tier calculation,1,1,same
+suite_f,baseline,immutable_pipeline,20,hard,Implement a 1D Kalman Filter in Elixir that can track and estimate the state of a system over time. The filter should handle both prediction (based on system dynamics) and correction (based on measurements) steps.,1,0,baseline_only
+suite_f,baseline,immutable_pipeline,21,medium,Test case 1: Basic substitution,1,1,same
+suite_f,baseline,immutable_pipeline,22,hard,Functions to Implement:,1,1,same
+suite_f,baseline,immutable_pipeline,23,hard,Input Format,1,1,same
+suite_f,baseline,immutable_pipeline,24,medium,**Problem Description:**,1,0,baseline_only
+suite_f,baseline,immutable_pipeline,25,hard,**Problem: Minimum Refueling Stops**,1,0,baseline_only
+suite_f,baseline,immutable_pipeline,26,medium,Test Case 1: Small memory with sequential access,0,1,condition_only
+suite_f,baseline,immutable_pipeline,27,hard,**Problem: Reorganize String**,0,1,condition_only
+suite_f,baseline,immutable_pipeline,28,medium,Test Case 1,1,1,same
+suite_f,baseline,immutable_pipeline,29,hard,**Kubernetes Object Management Problem in Elixir**,1,1,same
+suite_f,baseline,immutable_pipeline,30,medium,Your implementation here,1,1,same
+suite_f,baseline,immutable_pipeline,31,easy,Test case 1: Both arms,1,1,same
+suite_f,baseline,immutable_pipeline,32,hard,Your implementation here,0,0,same
+suite_f,baseline,immutable_pipeline,33,hard,**Problem: Decoding Ways with Wildcards**,1,1,same
+suite_f,baseline,immutable_pipeline,34,hard,**Problem: Anagram Checker**,1,1,same
+suite_f,baseline,immutable_pipeline,35,medium,**Ball Game Simulation**,0,1,condition_only
+suite_f,baseline,immutable_pipeline,36,hard,**Minimum Jumps to Reach the End of an Array**,1,1,same
+suite_f,baseline,immutable_pipeline,37,hard,Example 1: Basic case with country and continent,1,1,same
+suite_f,baseline,immutable_pipeline,38,hard,Test case where the API call fails due to network/resolution error,0,1,condition_only
+suite_f,baseline,immutable_pipeline,39,hard,Input:,1,1,same
+suite_f,baseline,immutable_pipeline,40,hard,Test case 1: Simple binary tree,0,0,same
+suite_f,baseline,immutable_pipeline,41,hard,**Problem: Validate Magic: The Gathering Card Names in Elixir**,1,1,same
+suite_f,baseline,immutable_pipeline,42,hard,**Problem: Count Unique Modulo Results**,1,1,same
+suite_f,baseline,immutable_pipeline,43,hard,**Problem Description:**,1,1,same
+suite_f,baseline,immutable_pipeline,44,medium,Function Names,1,1,same
+suite_f,baseline,immutable_pipeline,45,hard,**Problem Description:**,1,1,same
+suite_f,baseline,immutable_pipeline,46,hard,**Problem: Count Fair and Square Numbers**,0,1,condition_only
+suite_f,baseline,immutable_pipeline,47,hard,**Problem: Counting Islands in a Grid**,1,1,same
+suite_f,baseline,immutable_pipeline,48,hard,**Problem: Transform 3D Coordinates**,1,1,same
+suite_f,baseline,immutable_pipeline,49,hard,**Problem: Revoke Security Group Access**,0,1,condition_only
+suite_f,baseline,immutable_pipeline,50,hard,Test Case 1,1,1,same
+suite_f,baseline,immutable_pipeline,51,hard,**Elixir GUI Layout Configuration**,0,0,same
+suite_f,baseline,immutable_pipeline,52,hard,Test case 1: Simple string comparison,1,1,same
+suite_f,baseline,immutable_pipeline,53,hard,Your implementation here,1,1,same
+suite_f,baseline,immutable_pipeline,54,hard,**Problem: Minimum Refueling Stops**,1,0,baseline_only
+suite_f,baseline,immutable_pipeline,55,hard,**Problem: Parse RISC-V OVPsim Execution Logs**,1,1,same
+suite_f,baseline,immutable_pipeline,56,medium,Test case 1: Simple BST with one mode,0,0,same
+suite_f,baseline,immutable_pipeline,57,hard,**Problem: Count Digit One**,1,1,same
+suite_f,baseline,immutable_pipeline,58,hard,**Problem: Handling URL Metadata Fetching in Elixir**,1,1,same
+suite_f,baseline,immutable_pipeline,59,hard,Test case 1: X wins horizontally (top row),1,1,same
+suite_f,baseline,immutable_pipeline,60,hard,**Problem: Mock ZeroMQ Client in Elixir**,1,1,same
+suite_f,baseline,immutable_pipeline,61,easy,Test case 1: A valid BST,1,1,same
+suite_f,baseline,immutable_pipeline,62,hard,**Programming Problem: Reformatting Alphanumeric Strings**,1,1,same
+suite_f,baseline,immutable_pipeline,63,hard,Test case 1: Basic configuration merge,0,0,same
+suite_f,baseline,immutable_pipeline,64,hard,**Problem: Sum Numbers in a String**,1,1,same
+suite_f,baseline,immutable_pipeline,65,medium,**Problem: Generate All Permutations of a String or List**,1,1,same
+suite_f,baseline,immutable_pipeline,66,easy,**Elixir Mandelbrot Set Membership Checker**,1,1,same
+suite_f,baseline,immutable_pipeline,67,hard,Test case 1: Small domain with 5 points,1,1,same
+suite_f,baseline,immutable_pipeline,68,hard,Test Case 1: Basic RSA workflow,1,1,same
+suite_f,baseline,immutable_pipeline,69,medium,Vertical line image,1,1,same
+suite_f,baseline,immutable_pipeline,70,hard,Test Case 1 - Valid parameters,0,0,same
+suite_f,baseline,immutable_pipeline,71,hard,**Problem: Binary Image Feature Detection in Elixir**,1,1,same
+suite_f,baseline,immutable_pipeline,72,hard,**Problem: K-th Symbol in Grammar**,1,1,same
+suite_f,baseline,immutable_pipeline,73,medium,Test count_posts,1,1,same
+suite_f,baseline,immutable_pipeline,74,hard,**Problem: Counting Islands in a Grid**,1,1,same
+suite_f,baseline,immutable_pipeline,75,hard,**Problem: Simulating User Input in Elixir**,1,0,baseline_only
+suite_f,baseline,immutable_pipeline,76,hard,**Problem: Counting 'p's and 'y's in a String**,1,1,same
+suite_f,baseline,immutable_pipeline,77,hard,**Military Enlistment Year Calculator**,1,1,same
+suite_f,baseline,immutable_pipeline,78,hard,**Programming Problem: Homework Due Date Formatter**,1,1,same
+suite_f,baseline,immutable_pipeline,79,hard,Test Case 1,1,1,same
+suite_f,baseline,immutable_pipeline,80,easy,**Problem: Drawing a Triforce Pattern in Elixir**,1,0,baseline_only
+suite_f,baseline,immutable_pipeline,81,medium,Your implementation here,1,1,same
+suite_f,baseline,immutable_pipeline,82,hard,Module Requirements:,1,0,baseline_only
+suite_f,baseline,immutable_pipeline,83,hard,**Problem: Largest Rectangle in a Histogram**,1,1,same
+suite_f,baseline,immutable_pipeline,84,hard,... other element-specific properties,1,1,same
+suite_f,baseline,immutable_pipeline,85,hard,**Problem: Count Unique Values**,1,1,same
+suite_f,baseline,immutable_pipeline,86,hard,Your implementation,1,1,same
+suite_f,baseline,immutable_pipeline,87,hard,Test Case 1 - Graph1,1,1,same
+suite_f,baseline,immutable_pipeline,88,hard,**Problem: Check Sum Parity**,1,1,same
+suite_f,baseline,immutable_pipeline,89,medium,**Elixir Programming Problem: Options Menu Interaction**,1,1,same
+suite_f,baseline,immutable_pipeline,90,hard,**Problem Description:**,1,1,same
+suite_f,baseline,immutable_pipeline,91,hard,**Problem: Binary Tree Level Order Traversal**,1,1,same
+suite_f,baseline,immutable_pipeline,92,hard,**Programming Problem: Generate Odd Number Sequence**,1,1,same
+suite_f,baseline,immutable_pipeline,93,hard,Implement Shamir's Secret Sharing scheme in Elixir. The implementation should include two main functions:,0,0,same
+suite_f,baseline,immutable_pipeline,94,hard,**Programming Problem: Counting Special Subsets**,0,0,same
+suite_f,baseline,immutable_pipeline,95,hard,**Problem: Find the Maximum Digit in a Number**,0,0,same
+suite_f,baseline,immutable_pipeline,96,medium,**Problem: Chess King Check Detection**,1,1,same
+suite_f,baseline,immutable_pipeline,97,hard,**Problem: Check if a String is a Palindrome**,1,1,same
+suite_f,baseline,immutable_pipeline,98,hard,**Programming Problem: Insertion Sort Implementation in Elixir**,1,1,same
+suite_f,baseline,immutable_pipeline,99,hard,**Programming Problem: Counting Chessboard Squares**,0,0,same
+suite_f,baseline,immutable_pipeline,100,hard,Test case 1,0,1,condition_only
+suite_f,baseline,immutable_pipeline,101,hard,Test case 1: Simple linear graph,1,1,same
+suite_f,baseline,immutable_pipeline,102,hard,**Problem: Categorize Machine Specifications**,1,1,same
+suite_f,baseline,immutable_pipeline,103,medium,Test case 1: Simple BST,1,1,same
+suite_f,baseline,immutable_pipeline,104,medium,**Minimum Platforms Needed at a Railway Station**,1,1,same
+suite_f,baseline,immutable_pipeline,105,hard,Expected result:,1,0,baseline_only
+suite_f,baseline,immutable_pipeline,106,hard,"Write an Elixir function named `update_window_title/2` that handles updating a window title with user confirmation. The function should take two string arguments: the current window title and a proposed new title, then return a tuple containing the appropriate new title and a confirmation message.",1,1,same
+suite_f,baseline,immutable_pipeline,107,hard,**Problem Description:**,0,1,condition_only
+suite_f,baseline,immutable_pipeline,108,hard,Test case 1: Simple list of numbers with filtering,1,1,same
+suite_f,baseline,immutable_pipeline,109,hard,**Elixir Programming Problem: Game State Analysis**,0,0,same
+suite_f,baseline,immutable_pipeline,110,hard,Your implementation here,0,0,same
+suite_f,baseline,immutable_pipeline,111,hard,Example 1: No cycle,1,1,same
+suite_f,baseline,immutable_pipeline,112,medium,Module Specification:,1,0,baseline_only
+suite_f,baseline,immutable_pipeline,113,hard,**Problem: Extract Personal Information from Text**,0,1,condition_only
+suite_f,baseline,immutable_pipeline,114,hard,Test case 1,1,1,same
+suite_f,baseline,immutable_pipeline,115,easy,Your implementation here,1,1,same
+suite_f,baseline,immutable_pipeline,116,medium,Test case 1: No exception raised,1,1,same
+suite_f,baseline,immutable_pipeline,117,easy,**Problem: Network Interface MAC Address Processor**,1,1,same
+suite_f,baseline,immutable_pipeline,118,medium,Test case 1: Basic case,1,1,same
+suite_f,baseline,immutable_pipeline,119,hard,**Problem: Maximum Minimum Distance**,1,1,same
+suite_f,baseline,immutable_pipeline,120,hard,**Elixir Programming Problem: Indentation Pattern Calculation**,1,1,same
+suite_f,baseline,immutable_pipeline,121,hard,**Wildcard Pattern Matching in Elixir**,1,1,same
+suite_f,baseline,immutable_pipeline,122,medium,Your implementation here,1,1,same
+suite_f,baseline,immutable_pipeline,123,hard,Test case 1: Basic rectangle creation and area calculation,1,1,same
+suite_f,baseline,immutable_pipeline,124,hard,**Problem: Sum Even and Odd Numbers**,1,1,same
+suite_f,baseline,immutable_pipeline,125,hard,**Problem: Flip Lights**,0,1,condition_only
+suite_f,baseline,immutable_pipeline,126,medium,Test case 1: Move right in open space,1,1,same
+suite_f,baseline,immutable_pipeline,127,hard,**Problem: Calculate Statistical Measures for Paired Data**,1,1,same
+suite_f,baseline,immutable_pipeline,128,hard,Functions to Implement:,1,1,same
+suite_f,baseline,immutable_pipeline,129,medium,**Blackjack Winner Determination in Elixir**,1,1,same
+suite_f,baseline,immutable_pipeline,130,medium,Test Case 1: Basic insertion and retrieval,0,0,same
+suite_f,baseline,immutable_pipeline,131,hard,**Problem: Hexadecimal Character to Decimal Conversion**,1,1,same
+suite_f,baseline,immutable_pipeline,132,hard,**Sound Message Processor**,1,1,same
+suite_f,baseline,immutable_pipeline,133,hard,Test case 1,1,1,same
+suite_f,baseline,immutable_pipeline,134,medium,Your implementation here,1,1,same
+suite_f,baseline,immutable_pipeline,135,hard,**Problem: Maximizing Funded Departments**,1,1,same
+suite_f,baseline,immutable_pipeline,136,medium,**Problem: Determine the Winner of a Game**,1,1,same
+suite_f,baseline,immutable_pipeline,137,medium,**Elixir Programming Problem: Simulating Web Element Interactions**,1,1,same
+suite_f,baseline,immutable_pipeline,138,easy,**Problem: Finding Anagrams**,1,1,same
+suite_f,baseline,immutable_pipeline,139,hard,**Video Playback Segment Selection in Elixir**,1,0,baseline_only
+suite_f,baseline,immutable_pipeline,140,hard,Test case 1: Valid token with user data,1,1,same
+suite_f,baseline,immutable_pipeline,141,medium,Requirements:,0,0,same
+suite_f,baseline,immutable_pipeline,142,hard,Test case 1: minimal definitions,1,1,same
+suite_f,baseline,immutable_pipeline,143,hard,**Problem Description:**,1,1,same
+suite_f,baseline,immutable_pipeline,144,hard,**Problem: Bubble Sort with Swap Count and Range**,1,1,same
+suite_f,baseline,immutable_pipeline,145,medium,**Problem: Bin Packing in Elixir**,0,1,condition_only
+suite_f,baseline,immutable_pipeline,146,hard,**Problem: IMAP Folder Information Retrieval in Elixir**,1,1,same
+suite_f,baseline,immutable_pipeline,147,hard,**Problem: Counting Ways to Decode a Message**,1,1,same
+suite_f,baseline,immutable_pipeline,148,hard,**Programming Problem: Overlap Calculation**,0,0,same
+suite_f,baseline,immutable_pipeline,149,hard,Test case 1: Simple binary tree with diameter 3,1,1,same
+suite_f,baseline,immutable_pipeline,150,hard,**Leap Year Checker in Elixir**,1,1,same
+suite_f,baseline,immutable_pipeline,151,medium,Your implementation,1,1,same
+suite_f,baseline,immutable_pipeline,152,hard,**Problem: Format Difference as Plain Text**,0,1,condition_only
+suite_f,baseline,immutable_pipeline,153,medium,Test case 1: Text normalization,1,0,baseline_only
+suite_f,baseline,immutable_pipeline,154,hard,**Problem: Convert Decimal to Binary**,0,1,condition_only
+suite_f,baseline,immutable_pipeline,155,hard,**Problem: Find Two Numbers That Sum to Target**,1,1,same
+suite_f,baseline,immutable_pipeline,156,hard,Test case 1: One Pair vs One Pair (higher pair wins),1,0,baseline_only
+suite_f,baseline,immutable_pipeline,157,medium,Function to Implement:,1,0,baseline_only
+suite_f,baseline,immutable_pipeline,158,easy,Parameters,0,0,same
+suite_f,baseline,immutable_pipeline,159,medium,Input:,1,1,same
+suite_f,baseline,immutable_pipeline,160,medium,**Problem: Next Greater Element**,1,1,same
+suite_f,baseline,immutable_pipeline,161,hard,**Programming Problem: Count Common Values**,1,1,same
+suite_f,baseline,immutable_pipeline,162,hard,**Programming Problem: Voting Eligibility Checker**,1,1,same
+suite_f,baseline,immutable_pipeline,163,hard,Requirements:,1,1,same
+suite_f,baseline,immutable_pipeline,164,easy,**Problem: Syllable Processing**,1,1,same
+suite_f,baseline,immutable_pipeline,165,hard,**Problem: Convert Comma-Separated String to List of Integers**,1,1,same
+suite_f,baseline,immutable_pipeline,166,hard,Your implementation here,0,0,same
+suite_f,baseline,immutable_pipeline,167,hard,**Problem: Speeding Ticket Calculator in Elixir**,1,1,same
+suite_f,baseline,immutable_pipeline,168,hard,Test Case 1,1,0,baseline_only
+suite_f,baseline,immutable_pipeline,169,hard,**Non-Decreasing Array Possibility Check**,1,1,same
+suite_f,baseline,immutable_pipeline,170,hard,Your implementation here,1,0,baseline_only
+suite_f,baseline,immutable_pipeline,171,hard,**Problem: Minimum Dice Changes**,1,1,same
+suite_f,baseline,immutable_pipeline,172,hard,**Problem: Permutation Coefficient Calculation**,1,1,same
+suite_f,baseline,immutable_pipeline,173,hard,**Programming Problem: Validate a Special Code**,1,1,same
+suite_f,baseline,immutable_pipeline,174,medium,**Programming Problem: Generate Username**,1,0,baseline_only
+suite_f,baseline,immutable_pipeline,175,hard,**Elixir Programming Problem: Port Scanner**,1,1,same
+suite_f,baseline,immutable_pipeline,176,hard,**Problem: Basic Calculator**,1,1,same
+suite_f,baseline,immutable_pipeline,177,medium,**Supermarket Queue Simulation in Elixir**,0,1,condition_only
+suite_f,baseline,immutable_pipeline,178,medium,Test case 1: Simple stack with mixed numbers,1,1,same
+suite_f,baseline,immutable_pipeline,179,hard,**Problem: Maximum Subarray Sum**,1,1,same
+suite_f,baseline,immutable_pipeline,180,hard,**Problem: Find Character Index in List**,1,1,same
+suite_f,baseline,immutable_pipeline,181,hard,**Problem: Trapping Rain Water**,1,1,same
+suite_f,baseline,immutable_pipeline,182,hard,**Zigzag Conversion Problem in Elixir**,0,1,condition_only
+suite_f,baseline,immutable_pipeline,183,hard,**Problem: Sum of Even Numbers in a Range**,1,1,same
+suite_f,baseline,immutable_pipeline,184,hard,Test case 1: Simple word translation,1,1,same
+suite_f,baseline,immutable_pipeline,185,hard,**Problem: Operation Distribution**,0,0,same
+suite_f,baseline,immutable_pipeline,186,medium,Test Case 1,1,1,same
+suite_f,baseline,immutable_pipeline,187,medium,**Book Reading Queue Management in Elixir**,1,1,same
+suite_f,baseline,immutable_pipeline,188,medium,Test case 1,1,1,same
+suite_f,baseline,immutable_pipeline,189,medium,**Problem: Maximize Stock Profit**,1,1,same
+suite_f,baseline,immutable_pipeline,190,hard,**Programming Problem: Check for Positive Numbers**,1,1,same
+suite_f,baseline,immutable_pipeline,191,easy,**Programming Problem: Staircase Pattern**,1,1,same
+suite_f,baseline,immutable_pipeline,192,hard,**Problem Description:**,0,1,condition_only
+suite_f,baseline,immutable_pipeline,193,hard,**Problem: Cutting the Sticks**,1,1,same
+suite_f,baseline,immutable_pipeline,194,hard,**Problem: Maximum Stock Profit**,1,1,same
+suite_f,baseline,immutable_pipeline,195,hard,**Problem: Calculate Phone Dial Time**,1,1,same
+suite_f,baseline,immutable_pipeline,196,hard,Initialize a board with some pieces,0,0,same
+suite_f,baseline,immutable_pipeline,197,hard,**Problem: Box Packaging Optimization**,1,1,same
+suite_f,baseline,immutable_pipeline,198,medium,**Programming Problem: Symbolic Differentiation**,1,1,same
+suite_f,baseline,rebinding_stepwise,1,hard,**Problem: Generate MD5 Hash of a String**,1,1,same
+suite_f,baseline,rebinding_stepwise,2,medium,**Problem: Find Insert Position in Sorted Array**,1,1,same
+suite_f,baseline,rebinding_stepwise,3,hard,**Knight's Possible Moves on a Chessboard**,1,1,same
+suite_f,baseline,rebinding_stepwise,4,hard,**Problem: Increasing Triplet Subsequence**,1,1,same
+suite_f,baseline,rebinding_stepwise,5,easy,**Problem: Find the Single Non-Duplicate Element in a Sorted Array**,1,1,same
+suite_f,baseline,rebinding_stepwise,6,hard,**Excel Column Title Conversion in Elixir**,1,1,same
+suite_f,baseline,rebinding_stepwise,7,easy,Test case 1,1,1,same
+suite_f,baseline,rebinding_stepwise,8,medium,Test case 1: Simple binary tree with depth 2,1,1,same
+suite_f,baseline,rebinding_stepwise,9,medium,"Test case 1: [2, 4, 3] + [5, 6, 4] = [7, 0, 8]",1,1,same
+suite_f,baseline,rebinding_stepwise,10,hard,**Problem: Adjust Color Luminosity**,1,1,same
+suite_f,baseline,rebinding_stepwise,11,hard,**Problem: Counting Integer Partitions**,0,1,condition_only
+suite_f,baseline,rebinding_stepwise,12,hard,**Problem Description:**,1,1,same
+suite_f,baseline,rebinding_stepwise,13,hard,**Programming Problem: Alice and Bob's Number Game**,1,1,same
+suite_f,baseline,rebinding_stepwise,14,easy,**Problem: Simulate Socket Communication Error Handling**,1,1,same
+suite_f,baseline,rebinding_stepwise,15,medium,Test case 1: Simple linear graph,1,1,same
+suite_f,baseline,rebinding_stepwise,16,hard,**Problem: Counting Bipartite Graphs**,1,1,same
+suite_f,baseline,rebinding_stepwise,17,hard,Test case 1: Single synthetic chessboard image,1,1,same
+suite_f,baseline,rebinding_stepwise,18,hard,Test Case 1,1,1,same
+suite_f,baseline,rebinding_stepwise,19,medium,Test case 1: Simple tier calculation,1,1,same
+suite_f,baseline,rebinding_stepwise,20,hard,Implement a 1D Kalman Filter in Elixir that can track and estimate the state of a system over time. The filter should handle both prediction (based on system dynamics) and correction (based on measurements) steps.,1,0,baseline_only
+suite_f,baseline,rebinding_stepwise,21,medium,Test case 1: Basic substitution,1,1,same
+suite_f,baseline,rebinding_stepwise,22,hard,Functions to Implement:,1,1,same
+suite_f,baseline,rebinding_stepwise,23,hard,Input Format,1,1,same
+suite_f,baseline,rebinding_stepwise,24,medium,**Problem Description:**,1,1,same
+suite_f,baseline,rebinding_stepwise,25,hard,**Problem: Minimum Refueling Stops**,1,1,same
+suite_f,baseline,rebinding_stepwise,26,medium,Test Case 1: Small memory with sequential access,0,1,condition_only
+suite_f,baseline,rebinding_stepwise,27,hard,**Problem: Reorganize String**,0,1,condition_only
+suite_f,baseline,rebinding_stepwise,28,medium,Test Case 1,1,1,same
+suite_f,baseline,rebinding_stepwise,29,hard,**Kubernetes Object Management Problem in Elixir**,1,1,same
+suite_f,baseline,rebinding_stepwise,30,medium,Your implementation here,1,1,same
+suite_f,baseline,rebinding_stepwise,31,easy,Test case 1: Both arms,1,1,same
+suite_f,baseline,rebinding_stepwise,32,hard,Your implementation here,0,1,condition_only
+suite_f,baseline,rebinding_stepwise,33,hard,**Problem: Decoding Ways with Wildcards**,1,1,same
+suite_f,baseline,rebinding_stepwise,34,hard,**Problem: Anagram Checker**,1,1,same
+suite_f,baseline,rebinding_stepwise,35,medium,**Ball Game Simulation**,0,1,condition_only
+suite_f,baseline,rebinding_stepwise,36,hard,**Minimum Jumps to Reach the End of an Array**,1,0,baseline_only
+suite_f,baseline,rebinding_stepwise,37,hard,Example 1: Basic case with country and continent,1,1,same
+suite_f,baseline,rebinding_stepwise,38,hard,Test case where the API call fails due to network/resolution error,0,1,condition_only
+suite_f,baseline,rebinding_stepwise,39,hard,Input:,1,1,same
+suite_f,baseline,rebinding_stepwise,40,hard,Test case 1: Simple binary tree,0,0,same
+suite_f,baseline,rebinding_stepwise,41,hard,**Problem: Validate Magic: The Gathering Card Names in Elixir**,1,1,same
+suite_f,baseline,rebinding_stepwise,42,hard,**Problem: Count Unique Modulo Results**,1,1,same
+suite_f,baseline,rebinding_stepwise,43,hard,**Problem Description:**,1,1,same
+suite_f,baseline,rebinding_stepwise,44,medium,Function Names,1,0,baseline_only
+suite_f,baseline,rebinding_stepwise,45,hard,**Problem Description:**,1,1,same
+suite_f,baseline,rebinding_stepwise,46,hard,**Problem: Count Fair and Square Numbers**,0,1,condition_only
+suite_f,baseline,rebinding_stepwise,47,hard,**Problem: Counting Islands in a Grid**,1,1,same
+suite_f,baseline,rebinding_stepwise,48,hard,**Problem: Transform 3D Coordinates**,1,1,same
+suite_f,baseline,rebinding_stepwise,49,hard,**Problem: Revoke Security Group Access**,0,1,condition_only
+suite_f,baseline,rebinding_stepwise,50,hard,Test Case 1,1,1,same
+suite_f,baseline,rebinding_stepwise,51,hard,**Elixir GUI Layout Configuration**,0,0,same
+suite_f,baseline,rebinding_stepwise,52,hard,Test case 1: Simple string comparison,1,1,same
+suite_f,baseline,rebinding_stepwise,53,hard,Your implementation here,1,1,same
+suite_f,baseline,rebinding_stepwise,54,hard,**Problem: Minimum Refueling Stops**,1,1,same
+suite_f,baseline,rebinding_stepwise,55,hard,**Problem: Parse RISC-V OVPsim Execution Logs**,1,1,same
+suite_f,baseline,rebinding_stepwise,56,medium,Test case 1: Simple BST with one mode,0,1,condition_only
+suite_f,baseline,rebinding_stepwise,57,hard,**Problem: Count Digit One**,1,1,same
+suite_f,baseline,rebinding_stepwise,58,hard,**Problem: Handling URL Metadata Fetching in Elixir**,1,1,same
+suite_f,baseline,rebinding_stepwise,59,hard,Test case 1: X wins horizontally (top row),1,1,same
+suite_f,baseline,rebinding_stepwise,60,hard,**Problem: Mock ZeroMQ Client in Elixir**,1,1,same
+suite_f,baseline,rebinding_stepwise,61,easy,Test case 1: A valid BST,1,1,same
+suite_f,baseline,rebinding_stepwise,62,hard,**Programming Problem: Reformatting Alphanumeric Strings**,1,1,same
+suite_f,baseline,rebinding_stepwise,63,hard,Test case 1: Basic configuration merge,0,1,condition_only
+suite_f,baseline,rebinding_stepwise,64,hard,**Problem: Sum Numbers in a String**,1,1,same
+suite_f,baseline,rebinding_stepwise,65,medium,**Problem: Generate All Permutations of a String or List**,1,1,same
+suite_f,baseline,rebinding_stepwise,66,easy,**Elixir Mandelbrot Set Membership Checker**,1,1,same
+suite_f,baseline,rebinding_stepwise,67,hard,Test case 1: Small domain with 5 points,1,1,same
+suite_f,baseline,rebinding_stepwise,68,hard,Test Case 1: Basic RSA workflow,1,1,same
+suite_f,baseline,rebinding_stepwise,69,medium,Vertical line image,1,1,same
+suite_f,baseline,rebinding_stepwise,70,hard,Test Case 1 - Valid parameters,0,0,same
+suite_f,baseline,rebinding_stepwise,71,hard,**Problem: Binary Image Feature Detection in Elixir**,1,1,same
+suite_f,baseline,rebinding_stepwise,72,hard,**Problem: K-th Symbol in Grammar**,1,1,same
+suite_f,baseline,rebinding_stepwise,73,medium,Test count_posts,1,1,same
+suite_f,baseline,rebinding_stepwise,74,hard,**Problem: Counting Islands in a Grid**,1,1,same
+suite_f,baseline,rebinding_stepwise,75,hard,**Problem: Simulating User Input in Elixir**,1,0,baseline_only
+suite_f,baseline,rebinding_stepwise,76,hard,**Problem: Counting 'p's and 'y's in a String**,1,1,same
+suite_f,baseline,rebinding_stepwise,77,hard,**Military Enlistment Year Calculator**,1,1,same
+suite_f,baseline,rebinding_stepwise,78,hard,**Programming Problem: Homework Due Date Formatter**,1,1,same
+suite_f,baseline,rebinding_stepwise,79,hard,Test Case 1,1,1,same
+suite_f,baseline,rebinding_stepwise,80,easy,**Problem: Drawing a Triforce Pattern in Elixir**,1,1,same
+suite_f,baseline,rebinding_stepwise,81,medium,Your implementation here,1,1,same
+suite_f,baseline,rebinding_stepwise,82,hard,Module Requirements:,1,1,same
+suite_f,baseline,rebinding_stepwise,83,hard,**Problem: Largest Rectangle in a Histogram**,1,1,same
+suite_f,baseline,rebinding_stepwise,84,hard,... other element-specific properties,1,1,same
+suite_f,baseline,rebinding_stepwise,85,hard,**Problem: Count Unique Values**,1,1,same
+suite_f,baseline,rebinding_stepwise,86,hard,Your implementation,1,1,same
+suite_f,baseline,rebinding_stepwise,87,hard,Test Case 1 - Graph1,1,1,same
+suite_f,baseline,rebinding_stepwise,88,hard,**Problem: Check Sum Parity**,1,1,same
+suite_f,baseline,rebinding_stepwise,89,medium,**Elixir Programming Problem: Options Menu Interaction**,1,1,same
+suite_f,baseline,rebinding_stepwise,90,hard,**Problem Description:**,1,1,same
+suite_f,baseline,rebinding_stepwise,91,hard,**Problem: Binary Tree Level Order Traversal**,1,1,same
+suite_f,baseline,rebinding_stepwise,92,hard,**Programming Problem: Generate Odd Number Sequence**,1,1,same
+suite_f,baseline,rebinding_stepwise,93,hard,Implement Shamir's Secret Sharing scheme in Elixir. The implementation should include two main functions:,0,1,condition_only
+suite_f,baseline,rebinding_stepwise,94,hard,**Programming Problem: Counting Special Subsets**,0,0,same
+suite_f,baseline,rebinding_stepwise,95,hard,**Problem: Find the Maximum Digit in a Number**,0,1,condition_only
+suite_f,baseline,rebinding_stepwise,96,medium,**Problem: Chess King Check Detection**,1,1,same
+suite_f,baseline,rebinding_stepwise,97,hard,**Problem: Check if a String is a Palindrome**,1,1,same
+suite_f,baseline,rebinding_stepwise,98,hard,**Programming Problem: Insertion Sort Implementation in Elixir**,1,1,same
+suite_f,baseline,rebinding_stepwise,99,hard,**Programming Problem: Counting Chessboard Squares**,0,0,same
+suite_f,baseline,rebinding_stepwise,100,hard,Test case 1,0,1,condition_only
+suite_f,baseline,rebinding_stepwise,101,hard,Test case 1: Simple linear graph,1,0,baseline_only
+suite_f,baseline,rebinding_stepwise,102,hard,**Problem: Categorize Machine Specifications**,1,1,same
+suite_f,baseline,rebinding_stepwise,103,medium,Test case 1: Simple BST,1,1,same
+suite_f,baseline,rebinding_stepwise,104,medium,**Minimum Platforms Needed at a Railway Station**,1,1,same
+suite_f,baseline,rebinding_stepwise,105,hard,Expected result:,1,1,same
+suite_f,baseline,rebinding_stepwise,106,hard,"Write an Elixir function named `update_window_title/2` that handles updating a window title with user confirmation. The function should take two string arguments: the current window title and a proposed new title, then return a tuple containing the appropriate new title and a confirmation message.",1,1,same
+suite_f,baseline,rebinding_stepwise,107,hard,**Problem Description:**,0,0,same
+suite_f,baseline,rebinding_stepwise,108,hard,Test case 1: Simple list of numbers with filtering,1,1,same
+suite_f,baseline,rebinding_stepwise,109,hard,**Elixir Programming Problem: Game State Analysis**,0,0,same
+suite_f,baseline,rebinding_stepwise,110,hard,Your implementation here,0,0,same
+suite_f,baseline,rebinding_stepwise,111,hard,Example 1: No cycle,1,1,same
+suite_f,baseline,rebinding_stepwise,112,medium,Module Specification:,1,1,same
+suite_f,baseline,rebinding_stepwise,113,hard,**Problem: Extract Personal Information from Text**,0,1,condition_only
+suite_f,baseline,rebinding_stepwise,114,hard,Test case 1,1,1,same
+suite_f,baseline,rebinding_stepwise,115,easy,Your implementation here,1,1,same
+suite_f,baseline,rebinding_stepwise,116,medium,Test case 1: No exception raised,1,1,same
+suite_f,baseline,rebinding_stepwise,117,easy,**Problem: Network Interface MAC Address Processor**,1,1,same
+suite_f,baseline,rebinding_stepwise,118,medium,Test case 1: Basic case,1,1,same
+suite_f,baseline,rebinding_stepwise,119,hard,**Problem: Maximum Minimum Distance**,1,1,same
+suite_f,baseline,rebinding_stepwise,120,hard,**Elixir Programming Problem: Indentation Pattern Calculation**,1,1,same
+suite_f,baseline,rebinding_stepwise,121,hard,**Wildcard Pattern Matching in Elixir**,1,1,same
+suite_f,baseline,rebinding_stepwise,122,medium,Your implementation here,1,1,same
+suite_f,baseline,rebinding_stepwise,123,hard,Test case 1: Basic rectangle creation and area calculation,1,1,same
+suite_f,baseline,rebinding_stepwise,124,hard,**Problem: Sum Even and Odd Numbers**,1,1,same
+suite_f,baseline,rebinding_stepwise,125,hard,**Problem: Flip Lights**,0,0,same
+suite_f,baseline,rebinding_stepwise,126,medium,Test case 1: Move right in open space,1,1,same
+suite_f,baseline,rebinding_stepwise,127,hard,**Problem: Calculate Statistical Measures for Paired Data**,1,1,same
+suite_f,baseline,rebinding_stepwise,128,hard,Functions to Implement:,1,1,same
+suite_f,baseline,rebinding_stepwise,129,medium,**Blackjack Winner Determination in Elixir**,1,1,same
+suite_f,baseline,rebinding_stepwise,130,medium,Test Case 1: Basic insertion and retrieval,0,1,condition_only
+suite_f,baseline,rebinding_stepwise,131,hard,**Problem: Hexadecimal Character to Decimal Conversion**,1,1,same
+suite_f,baseline,rebinding_stepwise,132,hard,**Sound Message Processor**,1,1,same
+suite_f,baseline,rebinding_stepwise,133,hard,Test case 1,1,1,same
+suite_f,baseline,rebinding_stepwise,134,medium,Your implementation here,1,1,same
+suite_f,baseline,rebinding_stepwise,135,hard,**Problem: Maximizing Funded Departments**,1,1,same
+suite_f,baseline,rebinding_stepwise,136,medium,**Problem: Determine the Winner of a Game**,1,1,same
+suite_f,baseline,rebinding_stepwise,137,medium,**Elixir Programming Problem: Simulating Web Element Interactions**,1,1,same
+suite_f,baseline,rebinding_stepwise,138,easy,**Problem: Finding Anagrams**,1,1,same
+suite_f,baseline,rebinding_stepwise,139,hard,**Video Playback Segment Selection in Elixir**,1,1,same
+suite_f,baseline,rebinding_stepwise,140,hard,Test case 1: Valid token with user data,1,1,same
+suite_f,baseline,rebinding_stepwise,141,medium,Requirements:,0,0,same
+suite_f,baseline,rebinding_stepwise,142,hard,Test case 1: minimal definitions,1,1,same
+suite_f,baseline,rebinding_stepwise,143,hard,**Problem Description:**,1,1,same
+suite_f,baseline,rebinding_stepwise,144,hard,**Problem: Bubble Sort with Swap Count and Range**,1,1,same
+suite_f,baseline,rebinding_stepwise,145,medium,**Problem: Bin Packing in Elixir**,0,1,condition_only
+suite_f,baseline,rebinding_stepwise,146,hard,**Problem: IMAP Folder Information Retrieval in Elixir**,1,1,same
+suite_f,baseline,rebinding_stepwise,147,hard,**Problem: Counting Ways to Decode a Message**,1,1,same
+suite_f,baseline,rebinding_stepwise,148,hard,**Programming Problem: Overlap Calculation**,0,0,same
+suite_f,baseline,rebinding_stepwise,149,hard,Test case 1: Simple binary tree with diameter 3,1,1,same
+suite_f,baseline,rebinding_stepwise,150,hard,**Leap Year Checker in Elixir**,1,1,same
+suite_f,baseline,rebinding_stepwise,151,medium,Your implementation,1,1,same
+suite_f,baseline,rebinding_stepwise,152,hard,**Problem: Format Difference as Plain Text**,0,1,condition_only
+suite_f,baseline,rebinding_stepwise,153,medium,Test case 1: Text normalization,1,1,same
+suite_f,baseline,rebinding_stepwise,154,hard,**Problem: Convert Decimal to Binary**,0,1,condition_only
+suite_f,baseline,rebinding_stepwise,155,hard,**Problem: Find Two Numbers That Sum to Target**,1,1,same
+suite_f,baseline,rebinding_stepwise,156,hard,Test case 1: One Pair vs One Pair (higher pair wins),1,0,baseline_only
+suite_f,baseline,rebinding_stepwise,157,medium,Function to Implement:,1,1,same
+suite_f,baseline,rebinding_stepwise,158,easy,Parameters,0,0,same
+suite_f,baseline,rebinding_stepwise,159,medium,Input:,1,1,same
+suite_f,baseline,rebinding_stepwise,160,medium,**Problem: Next Greater Element**,1,1,same
+suite_f,baseline,rebinding_stepwise,161,hard,**Programming Problem: Count Common Values**,1,1,same
+suite_f,baseline,rebinding_stepwise,162,hard,**Programming Problem: Voting Eligibility Checker**,1,1,same
+suite_f,baseline,rebinding_stepwise,163,hard,Requirements:,1,1,same
+suite_f,baseline,rebinding_stepwise,164,easy,**Problem: Syllable Processing**,1,1,same
+suite_f,baseline,rebinding_stepwise,165,hard,**Problem: Convert Comma-Separated String to List of Integers**,1,1,same
+suite_f,baseline,rebinding_stepwise,166,hard,Your implementation here,0,0,same
+suite_f,baseline,rebinding_stepwise,167,hard,**Problem: Speeding Ticket Calculator in Elixir**,1,1,same
+suite_f,baseline,rebinding_stepwise,168,hard,Test Case 1,1,1,same
+suite_f,baseline,rebinding_stepwise,169,hard,**Non-Decreasing Array Possibility Check**,1,1,same
+suite_f,baseline,rebinding_stepwise,170,hard,Your implementation here,1,0,baseline_only
+suite_f,baseline,rebinding_stepwise,171,hard,**Problem: Minimum Dice Changes**,1,1,same
+suite_f,baseline,rebinding_stepwise,172,hard,**Problem: Permutation Coefficient Calculation**,1,1,same
+suite_f,baseline,rebinding_stepwise,173,hard,**Programming Problem: Validate a Special Code**,1,1,same
+suite_f,baseline,rebinding_stepwise,174,medium,**Programming Problem: Generate Username**,1,1,same
+suite_f,baseline,rebinding_stepwise,175,hard,**Elixir Programming Problem: Port Scanner**,1,0,baseline_only
+suite_f,baseline,rebinding_stepwise,176,hard,**Problem: Basic Calculator**,1,1,same
+suite_f,baseline,rebinding_stepwise,177,medium,**Supermarket Queue Simulation in Elixir**,0,1,condition_only
+suite_f,baseline,rebinding_stepwise,178,medium,Test case 1: Simple stack with mixed numbers,1,1,same
+suite_f,baseline,rebinding_stepwise,179,hard,**Problem: Maximum Subarray Sum**,1,1,same
+suite_f,baseline,rebinding_stepwise,180,hard,**Problem: Find Character Index in List**,1,1,same
+suite_f,baseline,rebinding_stepwise,181,hard,**Problem: Trapping Rain Water**,1,1,same
+suite_f,baseline,rebinding_stepwise,182,hard,**Zigzag Conversion Problem in Elixir**,0,1,condition_only
+suite_f,baseline,rebinding_stepwise,183,hard,**Problem: Sum of Even Numbers in a Range**,1,1,same
+suite_f,baseline,rebinding_stepwise,184,hard,Test case 1: Simple word translation,1,1,same
+suite_f,baseline,rebinding_stepwise,185,hard,**Problem: Operation Distribution**,0,0,same
+suite_f,baseline,rebinding_stepwise,186,medium,Test Case 1,1,1,same
+suite_f,baseline,rebinding_stepwise,187,medium,**Book Reading Queue Management in Elixir**,1,1,same
+suite_f,baseline,rebinding_stepwise,188,medium,Test case 1,1,1,same
+suite_f,baseline,rebinding_stepwise,189,medium,**Problem: Maximize Stock Profit**,1,1,same
+suite_f,baseline,rebinding_stepwise,190,hard,**Programming Problem: Check for Positive Numbers**,1,1,same
+suite_f,baseline,rebinding_stepwise,191,easy,**Programming Problem: Staircase Pattern**,1,1,same
+suite_f,baseline,rebinding_stepwise,192,hard,**Problem Description:**,0,0,same
+suite_f,baseline,rebinding_stepwise,193,hard,**Problem: Cutting the Sticks**,1,0,baseline_only
+suite_f,baseline,rebinding_stepwise,194,hard,**Problem: Maximum Stock Profit**,1,1,same
+suite_f,baseline,rebinding_stepwise,195,hard,**Problem: Calculate Phone Dial Time**,1,1,same
+suite_f,baseline,rebinding_stepwise,196,hard,Initialize a board with some pieces,0,0,same
+suite_f,baseline,rebinding_stepwise,197,hard,**Problem: Box Packaging Optimization**,1,1,same
+suite_f,baseline,rebinding_stepwise,198,medium,**Programming Problem: Symbolic Differentiation**,1,1,same
