@@ -753,6 +753,143 @@ Although the main contribution of the paper is explanatory, the results also sug
 
 Across languages, these recommendations all target the same operational goal: reduce the amount of hidden context that must be reconstructed during generation.
 
+### 8.6 Real-World Elixir Patterns and Ecosystem Support
+
+The benchmark evidence in this paper is necessarily synthetic, but the same explicitness properties also appear in current Elixir production practice. This is important because a plausible objection is that Elixir may look unusually clean only inside small benchmark tasks. In current official tooling and ecosystem guidance, however, Elixir continues to move toward the same combination of local legibility, stable boundaries, and explicit contracts that the benchmark results reward.
+
+At the language level, Elixir v1.18 introduced built-in JSON support, expanded compiler type checking of calls, and new infrastructure aimed at language-server support, while the v1.19 line continues the broader compiler and tooling push [18][19]. The core documentation now also includes explicit anti-pattern guides, covering both code-level and design-level pitfalls [20]. This matters for the present paper because it offers a plausible mechanism for corpus quality: Elixir does not merely encourage explicit style informally, it increasingly documents and tooling-enforces it.
+
+The documentation system is particularly important here, because in Elixir documentation is part of the language surface rather than a secondary publishing convention. The official guides state that Elixir treats documentation as a **first-class citizen** [28]. Public documentation is written directly in source via reserved module attributes such as `@moduledoc`, `@doc`, and `@typedoc` [29]. Those docs are then compiled into BEAM documentation chunks and can be retrieved programmatically through `Code.fetch_docs/1` [28][30]. In other words, documentation is not merely adjacent prose in a separate website; it is structured metadata attached to modules, functions, callbacks, and types.
+
+That design has three consequences relevant to this paper. First, API contracts are usually written in a uniform place next to the code they describe. Second, examples inside docs are often executable rather than purely narrative, because ExUnit can derive tests directly from `@moduledoc` and `@doc` examples via `doctest/1` [31][32]. Third, ExDoc and HexDocs give the ecosystem a common publication surface for package docs, guides, grouped APIs, extra pages, and dependency-linked references [33][34]. This combination plausibly raises both human readability and corpus consistency: many libraries present documentation in the same structural format, with similar headings, examples, and module-qualified APIs.
+
+The distinction between documentation and comments is explicit in the official Elixir writing guide, which describes documentation as an API contract rather than as incidental inline annotation [28]. The same guide also standardizes how internal surfaces are hidden: `@doc false` and `@moduledoc false` remove items from end-user docs without changing runtime visibility [28]. That matters because it gives library authors a coarse but clear separation between public and internal APIs, which may reduce the amount of contradictory or noisy material exposed to downstream users and models.
+
+The following minimal example shows the ecosystem pattern:
+
+```elixir
+defmodule MyApp.Accounts.User do
+  @moduledoc """
+  User registration and account lookups.
+
+  ## Examples
+
+      iex> MyApp.Accounts.User.normalize_email("ALICE@EXAMPLE.COM ")
+      "alice@example.com"
+  """
+
+  @doc """
+  Normalizes an email address for storage and comparison.
+  """
+  @spec normalize_email(String.t()) :: String.t()
+  def normalize_email(email) do
+    email
+    |> String.trim()
+    |> String.downcase()
+  end
+end
+```
+
+And the example can be promoted into executable documentation with a normal test module:
+
+```elixir
+defmodule MyApp.Accounts.UserTest do
+  use ExUnit.Case, async: true
+  doctest MyApp.Accounts.User
+end
+```
+
+This pipeline is unusual in its end-to-end regularity: author-facing doc syntax, compiler-visible metadata, executable examples, and a standardized publication path all line up. If the paper is correct that documentation/task framing is the strongest within-language causal signal, then this documentation architecture is a credible ecosystem-level explanation for why Elixir may provide unusually good model-facing signals.
+
+At the framework level, Phoenix continues to treat **contexts** as application boundaries rather than as optional architecture [21]. LiveView adds bounded, explicit stateful UI primitives such as `stream/4`, `stream_insert/4`, and `stream_async/4`, which help keep high-volume UI updates legible without forcing state to sprawl across unrelated components [22]. Ecto makes external-data handling explicit through changesets and multi-step transactional workflows [23][24]. Oban extends the same style to background work with transactional insertion, uniqueness controls, and Telemetry-native observability [25][26]. Even the web-server layer is aligned with this direction: Bandit is entirely written in Elixir and emphasizes correctness, clarity, and direct integration with Plug/Phoenix applications [27].
+
+Three short examples show how these ecosystem conventions realize the design principles argued for in the paper.
+
+**Example 1: Context boundary + changeset + transactional background work**
+
+```elixir
+defmodule MyApp.Accounts do
+  alias Ecto.Multi
+  alias MyApp.{Repo, Accounts.User, Workers.SendWelcomeEmail}
+
+  def register_user(attrs) do
+    Multi.new()
+    |> Multi.insert(:user, User.registration_changeset(%User{}, attrs))
+    |> Oban.insert(:welcome_email, fn %{user: user} ->
+      SendWelcomeEmail.new(%{user_id: user.id}, unique: [period: 300])
+    end)
+    |> Repo.transaction()
+    |> case do
+      {:ok, %{user: user}} -> {:ok, user}
+      {:error, :user, changeset, _changes} -> {:error, changeset}
+      {:error, :welcome_email, reason, _changes} -> {:error, reason}
+    end
+  end
+end
+```
+
+This single function exhibits several of the paper's strongest signals at once:
+
+- the **context** (`MyApp.Accounts`) is an API boundary rather than a grab-bag of controller logic [21]
+- external input is filtered and validated explicitly through a **changeset** [23]
+- persistence and job enqueueing are grouped in an **Ecto.Multi** transaction [24]
+- background work is inserted through **Oban.insert/4** rather than an ad hoc side effect, preserving transactional semantics and uniqueness [25][26]
+- success and failure paths use explicit tagged results rather than mixed exceptions and sentinel returns
+
+From a predictive-burden perspective, the function makes each stage of the workflow visible in local syntax: validation, insertion, job scheduling, and error routing.
+
+**Example 2: LiveView streams and bounded UI state**
+
+```elixir
+defmodule MyAppWeb.OrderLive.Index do
+  use MyAppWeb, :live_view
+  alias MyApp.Orders
+
+  def mount(_params, _session, socket) do
+    {:ok,
+     socket
+     |> stream_configure(:orders, dom_id: &"order-#{&1.id}")
+     |> stream_async(:orders, fn ->
+       {:ok, Orders.list_recent_orders()}
+     end)}
+  end
+
+  def handle_info({:order_created, order}, socket) do
+    {:noreply, stream_insert(socket, :orders, order, at: 0)}
+  end
+end
+```
+
+The LiveView example is informative because it shows that Elixir's local explicitness extends beyond isolated functions into interactive systems:
+
+- domain access remains module-qualified through `Orders.list_recent_orders/0`
+- asynchronous loading is explicit at the call site via `stream_async/4` [22]
+- incremental updates enter through one message shape and one update function (`stream_insert/4`)
+- the UI state is bounded around a named stream rather than being diffused through mutable front-end state containers
+
+This is precisely the kind of "locally visible state flow" that Suite F was trying to isolate in miniature.
+
+**Example 3: Latest core support for explicit external boundaries**
+
+```elixir
+defmodule MyApp.API.Invoice do
+  @derive {JSON.Encoder, only: [:id, :status, :total_cents, :issued_at]}
+  defstruct [:id, :status, :total_cents, :issued_at]
+end
+
+def encode_invoice(%MyApp.API.Invoice{} = invoice) do
+  JSON.encode_to_iodata!(invoice)
+end
+```
+
+This example uses the built-in `JSON` support introduced in Elixir v1.18 [18]. The point is not that JSON encoding is unique to Elixir; rather, it shows how current Elixir keeps an external boundary compact and explicit:
+
+- the public data shape is a named struct
+- the serializable surface is narrowed through `@derive`
+- the encoder is in the core toolchain rather than a mandatory external dependency
+
+In aggregate, these examples suggest that Elixir's benchmark performance is not disconnected from real usage. The same ecosystem defaults that make production systems readable to humans also tend to make them readable to models: bounded contexts, explicit validation, transactional workflows, structured result shapes, and direct tooling support for clarity-oriented practices.
+
 ---
 
 ## 9. Limitations and Future Work
@@ -823,6 +960,40 @@ The broader lesson is therefore not that one feature explains everything, but th
 [16] "Revisiting the Uniform Information Density Hypothesis in LLM Reasoning Traces." 2025.
 
 [17] S. Laviosa-Braithwaite et al. "The Explicitness Hypothesis." Applied to code generation contexts from translation universals, 2024–2026.
+
+[18] J. Valim. "Elixir v1.18 released: type checking of calls, LSP listeners, built-in JSON, and more." elixir-lang.org, December 19, 2024.
+
+[19] J. Valim. "Elixir v1.19 released: enhanced type checking and up to 4x faster compilation for large projects." elixir-lang.org, October 16, 2025.
+
+[20] Elixir Documentation Team. "What are anti-patterns?" HexDocs / Elixir documentation, v1.16+; see also design-related and code-related anti-pattern guides.
+
+[21] Phoenix Framework Documentation. "Contexts." HexDocs / Phoenix documentation, v1.7+.
+
+[22] Phoenix LiveView Documentation. "Phoenix.LiveView." HexDocs / Phoenix LiveView documentation, v1.1.23; see `stream/4`, `stream_insert/4`, and `stream_async/4`.
+
+[23] Ecto Documentation Team. "Ecto.Changeset." HexDocs / Ecto documentation, v3.13.5.
+
+[24] Ecto Documentation Team. "Ecto.Multi." HexDocs / Ecto documentation, v3.13.5.
+
+[25] Oban Documentation Team. "Oban." HexDocs / Oban documentation, v2.20.x; see transactional insertion and `Oban.insert/4`.
+
+[26] Oban Documentation Team. "Unique Jobs." HexDocs / Oban documentation, v2.20.x.
+
+[27] Bandit Documentation Team. "README." HexDocs / Bandit documentation, v1.10.2.
+
+[28] Elixir Documentation Team. "Writing Documentation." HexDocs / Elixir documentation.
+
+[29] Elixir Documentation Team. "Module Attributes." HexDocs / Elixir documentation; see reserved attributes `@moduledoc`, `@doc`, and `@typedoc`.
+
+[30] Elixir Documentation Team. "Code.fetch_docs/1." HexDocs / Elixir `Code` module documentation.
+
+[31] ExUnit Documentation Team. "ExUnit.DocTest." HexDocs / ExUnit documentation.
+
+[32] ExUnit Documentation Team. "doctest/1 macro." HexDocs / ExUnit.Case documentation.
+
+[33] ExDoc Documentation Team. "ExDoc." HexDocs / ExDoc documentation.
+
+[34] Hex.pm Team. "HexDocs." Hex package manager documentation.
 
 ---
 
