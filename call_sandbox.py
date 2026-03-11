@@ -680,6 +680,19 @@ class UnifiedProcessor:
 
     def save_results(self, results: List[Dict[str, Any]], output_file: str):
         """Save processing results to file"""
+        def _sanitize_jsonable(value):
+            if isinstance(value, bytes):
+                return value.decode('utf-8', errors='replace')
+            if isinstance(value, dict):
+                return {str(k): _sanitize_jsonable(v) for k, v in value.items()}
+            if isinstance(value, list):
+                return [_sanitize_jsonable(v) for v in value]
+            if isinstance(value, tuple):
+                return [_sanitize_jsonable(v) for v in value]
+            if isinstance(value, set):
+                return [_sanitize_jsonable(v) for v in sorted(value, key=repr)]
+            return value
+
         with open(output_file, 'w', encoding='utf-8') as f:
             for result in results:
                 # Simplify output format, keep only necessary information
@@ -687,9 +700,9 @@ class UnifiedProcessor:
                     "index": result.get("index", 0),
                     "language": result.get("language", ""),
                     "success": result.get("success", False),
-                    "full_test_result": result.get("full_test_result", {}),
-                    "demo_test_result": result.get("demo_test_result", {}),
-                    "original_data": result.get("original_data", {})
+                    "full_test_result": _sanitize_jsonable(result.get("full_test_result", {})),
+                    "demo_test_result": _sanitize_jsonable(result.get("demo_test_result", {})),
+                    "original_data": _sanitize_jsonable(result.get("original_data", {}))
                 }
                 f.write(json.dumps(simplified_result, ensure_ascii=False) + '\n')
         logger.info(f"Results saved to: {output_file}")

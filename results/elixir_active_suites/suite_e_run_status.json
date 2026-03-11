@@ -1,16 +1,16 @@
 {
-  "suite_id": "suite_d",
+  "suite_id": "suite_e",
   "phase": "complete",
-  "updated_at_epoch": 1773238610,
+  "updated_at_epoch": 1773241237,
   "model": "gpt-5.4",
   "label": "GPT-5.4 Medium",
   "language": "elixir",
   "concurrency": 12,
   "min_concurrency": 12,
   "counts": {
-    "input": 792,
-    "output": 792,
-    "exec": 792,
+    "input": 594,
+    "output": 594,
+    "exec": 594,
     "error": 0
   },
   "complete": true
