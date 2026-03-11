@@ -2,3 +2,10 @@ AutoCodeGen0
 AutoCodeBench/*.jsonl
 README_sandbox.md
 MultiLanguageSandbox/
+.venv/
+data/
+outputs/
+logs/
+unified_processor.log
+__pycache__/
+tmp/

@@ -8,10 +8,19 @@ import argparse
 import os
 import logging
 import re
+import shutil
+import subprocess
+import tempfile
+import shlex
 from typing import Dict, Any, List
 from multiprocessing import Pool
 from tqdm import tqdm
 from prettytable import PrettyTable
+
+try:
+    import psutil
+except ImportError:  # pragma: no cover - optional dependency
+    psutil = None
 
 # Setup logging
 logging.basicConfig(
@@ -29,10 +38,108 @@ logger = logging.getLogger(__name__)
 _global_processor = None
 
 
-def init_worker(server_ip, server_port):
+NATIVE_LANGUAGE_SPECS = {
+    "elixir": {
+        "file_name": "test.ex",
+        "commands": [
+            ["elixir", "{file_path}"],
+        ],
+    },
+    "gleam": {
+        "file_name": "acb_bench.gleam",
+        "commands": [
+            ["gleam", "run"],
+        ],
+    },
+    "lean4": {
+        "file_name": "Main.lean",
+        "commands": [
+            ["lean", "--run", "{file_path}"],
+        ],
+    },
+    "racket": {
+        "file_name": "test.rkt",
+        "commands": [
+            ["racket", "{file_path}"],
+            ["raco", "test", "{file_path}"],
+        ],
+    },
+    "typescript_effect": {
+        "file_name": "test.ts",
+        "commands": [
+            ["{tsx_bin}", "{file_name}"],
+        ],
+    },
+}
+
+
+def sample_system_state() -> Dict[str, float]:
+    cpu_percent = None
+    memory_percent = None
+    load_ratio = None
+
+    if psutil is not None:
+        cpu_percent = psutil.cpu_percent(interval=None)
+        memory_percent = psutil.virtual_memory().percent
+
+    try:
+        cpu_count = os.cpu_count() or 1
+        load_ratio = os.getloadavg()[0] / cpu_count
+    except (AttributeError, OSError):
+        load_ratio = None
+
+    return {
+        "cpu_percent": cpu_percent,
+        "memory_percent": memory_percent,
+        "load_ratio": load_ratio,
+    }
+
+
+def should_reduce_target(state: Dict[str, float], cpu_high_watermark: float,
+                         memory_high_watermark: float, load_high_watermark: float) -> bool:
+    cpu_percent = state.get("cpu_percent")
+    memory_percent = state.get("memory_percent")
+    load_ratio = state.get("load_ratio")
+    return (
+        (cpu_percent is not None and cpu_percent >= cpu_high_watermark) or
+        (memory_percent is not None and memory_percent >= memory_high_watermark) or
+        (load_ratio is not None and load_ratio >= load_high_watermark)
+    )
+
+
+def should_increase_target(state: Dict[str, float], cpu_high_watermark: float,
+                           memory_high_watermark: float, load_high_watermark: float) -> bool:
+    cpu_percent = state.get("cpu_percent")
+    memory_percent = state.get("memory_percent")
+    load_ratio = state.get("load_ratio")
+    cpu_ok = cpu_percent is None or cpu_percent <= cpu_high_watermark - 20
+    memory_ok = memory_percent is None or memory_percent <= memory_high_watermark - 8
+    load_ok = load_ratio is None or load_ratio <= load_high_watermark - 0.2
+    return cpu_ok and memory_ok and load_ok
+
+
+def format_system_state(state: Dict[str, float]) -> str:
+    cpu = "n/a" if state.get("cpu_percent") is None else f"{state['cpu_percent']:.0f}%"
+    mem = "n/a" if state.get("memory_percent") is None else f"{state['memory_percent']:.0f}%"
+    load = "n/a" if state.get("load_ratio") is None else f"{state['load_ratio']:.2f}"
+    return f"cpu={cpu} mem={mem} load={load}"
+
+
+def parse_native_languages(raw_value: str) -> List[str]:
+    if not raw_value:
+        return []
+    return sorted({item.strip().lower() for item in raw_value.split(",") if item.strip()})
+
+
+def init_worker(server_ip, server_port, native_languages=None, native_timeout_seconds: float = 45.0):
     """Initialize worker process"""
     global _global_processor
-    _global_processor = UnifiedProcessor(server_ip, server_port)
+    _global_processor = UnifiedProcessor(
+        server_ip,
+        server_port,
+        native_languages=native_languages,
+        native_timeout_seconds=native_timeout_seconds,
+    )
 
 
 def process_single_data_worker(args):
@@ -61,13 +168,17 @@ def process_single_data_worker(data, index, debug, print_code=False):
 
 
 class UnifiedProcessor:
-    def __init__(self, server_ip: str = "localhost", server_port: int = 8080):
+    def __init__(self, server_ip: str = "localhost", server_port: int = 8080,
+                 native_languages: List[str] = None, native_timeout_seconds: float = 45.0):
         self.server_ip = server_ip
         self.server_port = server_port
         self.submit_url = f"http://{server_ip}:{server_port}/submit"
         self.headers = {
             "Content-Type": "application/json"
         }
+        self.native_languages = set(native_languages or [])
+        self.native_timeout_seconds = native_timeout_seconds
+        self.repo_root = os.path.dirname(os.path.abspath(__file__))
 
     
     def read_jsonl_file(self, file_path: str, line_number: int = None, target_language: str = None) -> List[Dict[str, Any]]:
@@ -122,8 +233,7 @@ class UnifiedProcessor:
         """Call submit API"""
         try:
             language = data["language"]
-            # is_special_language = language in self.special_languages
-            
+
             # Select test code based on test type
             if test_type == "full":
                 test_code = data["full_test_func"]
@@ -131,7 +241,10 @@ class UnifiedProcessor:
                 test_code = data["demo_test_func"]
             else:
                 raise ValueError(f"Unsupported test type: {test_type}")
-            
+
+            if language in self.native_languages:
+                return self.call_submit_native(data, language, test_code, test_type)
+
             payload = {
                 "src_uid": f"0710_bench_test_{test_type}_{int(time.time())}",
                 "func_code": data["main_test_func"],  # code solution
@@ -164,6 +277,151 @@ class UnifiedProcessor:
                 "error": str(e),
                 "status_code": None
             }
+
+    def call_submit_native(self, data: Dict[str, Any], language: str, test_code: str,
+                           test_type: str) -> Dict[str, Any]:
+        spec = NATIVE_LANGUAGE_SPECS.get(language)
+        if spec is None:
+            return {
+                "success": False,
+                "error": f"Native execution is not implemented for language '{language}'",
+                "status_code": None,
+            }
+
+        missing_commands = []
+        selected_command = None
+        extra_formats = {}
+        if language == "typescript_effect":
+            tsx_bin = self._resolve_typescript_effect_tsx_bin()
+            if not tsx_bin:
+                return {
+                    "success": False,
+                    "error": (
+                        "TypeScript Effect runtime is not prepared. "
+                        "Expected tmp/native_runtimes/typescript_effect/node_modules/.bin/tsx"
+                    ),
+                    "status_code": None,
+                }
+            extra_formats["tsx_bin"] = tsx_bin
+
+        for command in spec["commands"]:
+            executable = command[0]
+            if executable.startswith("{") and executable.endswith("}"):
+                selected_command = command
+                break
+            if shutil.which(executable):
+                selected_command = command
+                break
+            missing_commands.append(executable)
+
+        if selected_command is None:
+            return {
+                "success": False,
+                "error": (
+                    f"No native runtime found for '{language}'. "
+                    f"Tried: {', '.join(missing_commands)}"
+                ),
+                "status_code": None,
+            }
+
+        source_code = self._combine_native_source(language, data["main_test_func"], test_code)
+        with tempfile.TemporaryDirectory(prefix=f"acb-native-{language}-") as tmpdir:
+            file_path, working_dir = self._prepare_native_workspace(language, tmpdir, spec["file_name"], source_code)
+            rendered_command = [
+                part.format(file_path=file_path, file_name=os.path.basename(file_path), **extra_formats)
+                for part in selected_command
+            ]
+            try:
+                completed = subprocess.run(
+                    rendered_command,
+                    cwd=working_dir,
+                    capture_output=True,
+                    text=True,
+                    timeout=self.native_timeout_seconds,
+                    check=False,
+                )
+                response_extensions = {
+                    "stdout": completed.stdout,
+                    "stderr": completed.stderr,
+                    "exit_code": completed.returncode,
+                    "native_execution": True,
+                    "native_language": language,
+                    "command": shlex.join(rendered_command),
+                }
+                return {
+                    "success": True,
+                    "response": {
+                        "exec_outcome": "PASSED" if completed.returncode == 0 else "RUNTIME_ERROR",
+                        "response_extensions": response_extensions,
+                    },
+                    "status_code": 200,
+                }
+            except subprocess.TimeoutExpired as exc:
+                stdout = exc.stdout or ""
+                stderr = exc.stderr or ""
+                return {
+                    "success": True,
+                    "response": {
+                        "exec_outcome": "TIME_LIMIT_EXCEEDED",
+                        "response_extensions": {
+                            "stdout": stdout,
+                            "stderr": stderr,
+                            "exit_code": None,
+                            "native_execution": True,
+                            "native_language": language,
+                            "command": shlex.join(rendered_command),
+                            "timeout_seconds": self.native_timeout_seconds,
+                        },
+                    },
+                    "status_code": 200,
+                }
+
+    def _combine_native_source(self, language: str, solution_code: str, test_code: str) -> str:
+        solution = solution_code.rstrip()
+        tests = test_code.rstrip()
+
+        if language == "racket":
+            test_lines = tests.lstrip().splitlines()
+            if test_lines and test_lines[0].startswith("#lang "):
+                tests = "\n".join(test_lines[1:]).lstrip()
+
+        return f"{solution}\n\n{tests}\n"
+
+    def _prepare_native_workspace(self, language: str, tmpdir: str, file_name: str, source_code: str) -> tuple[str, str]:
+        if language == "gleam":
+            project_dir = os.path.join(tmpdir, "gleam_project")
+            os.makedirs(os.path.join(project_dir, "src"), exist_ok=True)
+            gleam_toml = """name = "acb_bench"\nversion = "1.0.0"\n\n[dependencies]\ngleam_stdlib = ">= 0.44.0 and < 2.0.0"\n\n[dev-dependencies]\ngleeunit = ">= 1.0.0 and < 2.0.0"\n"""
+            with open(os.path.join(project_dir, "gleam.toml"), "w", encoding="utf-8") as handle:
+                handle.write(gleam_toml)
+            file_path = os.path.join(project_dir, "src", file_name)
+            with open(file_path, "w", encoding="utf-8") as handle:
+                handle.write(source_code)
+            return file_path, project_dir
+
+        if language == "typescript_effect":
+            runtime_root = self._typescript_effect_runtime_root()
+            case_dir = os.path.join(runtime_root, os.path.basename(tmpdir))
+            os.makedirs(case_dir, exist_ok=True)
+            file_path = os.path.join(case_dir, file_name)
+            with open(file_path, "w", encoding="utf-8") as handle:
+                handle.write(source_code)
+            return file_path, case_dir
+
+        file_path = os.path.join(tmpdir, file_name)
+        with open(file_path, "w", encoding="utf-8") as handle:
+            handle.write(source_code)
+        return file_path, tmpdir
+
+    def _typescript_effect_runtime_root(self) -> str:
+        return os.path.join(self.repo_root, "tmp", "native_runtimes", "typescript_effect")
+
+    def _resolve_typescript_effect_tsx_bin(self) -> str | None:
+        runtime_root = self._typescript_effect_runtime_root()
+        tsx_bin = os.path.join(runtime_root, "node_modules", ".bin", "tsx")
+        if os.path.exists(tsx_bin):
+            return tsx_bin
+        return None
     
     def process_data(self, data: Dict[str, Any], debug: bool = False, print_code: bool = False) -> Dict[str, Any]:
         """Process single data item, call submit API twice"""
@@ -206,7 +464,11 @@ class UnifiedProcessor:
     
     def process_file(self, file_path: str, max_items: int = None, line_number: int = None,
                      debug: bool = False, concurrency: int = 5, target_language: str = None,
-                     solution_key: str = 'output') -> List[Dict[str, Any]]:
+                     solution_key: str = 'output', adaptive_concurrency: bool = False,
+                     min_concurrency: int = 2, adjust_interval_seconds: float = 5.0,
+                     cpu_high_watermark: float = 85.0,
+                     memory_high_watermark: float = 85.0,
+                     load_high_watermark: float = 1.15) -> List[Dict[str, Any]]:
         """Process entire JSONL file"""
         logger.info(f"Start processing file: {file_path}")
         if target_language:
@@ -269,7 +531,17 @@ class UnifiedProcessor:
 
         # Use multiprocess mode
         logger.info(f"Using multiprocess mode, concurrency: {concurrency}")
-        return self._process_file_multiprocess(data_list, debug, concurrency)
+        return self._process_file_multiprocess(
+            data_list,
+            debug,
+            concurrency,
+            adaptive_concurrency,
+            min_concurrency,
+            adjust_interval_seconds,
+            cpu_high_watermark,
+            memory_high_watermark,
+            load_high_watermark,
+        )
 
     def _process_file_serial(self, data_list: List[Dict[str, Any]], line_number: int = None,
                            debug: bool = False) -> List[Dict[str, Any]]:
@@ -303,47 +575,96 @@ class UnifiedProcessor:
         return results
     
     def _process_file_multiprocess(self, data_list: List[Dict[str, Any]], debug: bool = False,
-                                 concurrency: int = 5) -> List[Dict[str, Any]]:
+                                 concurrency: int = 5, adaptive_concurrency: bool = False,
+                                 min_concurrency: int = 2, adjust_interval_seconds: float = 5.0,
+                                 cpu_high_watermark: float = 85.0,
+                                 memory_high_watermark: float = 85.0,
+                                 load_high_watermark: float = 1.15) -> List[Dict[str, Any]]:
         """Process file with multiprocessing - simplified version"""
         total_items = len(data_list)
+        max_concurrency = max(1, concurrency)
+        min_concurrency = max(1, min(min_concurrency, max_concurrency))
+        target_concurrency = min_concurrency if adaptive_concurrency else max_concurrency
 
-        logger.info(f"Starting {concurrency} processes to handle {total_items} items")
+        logger.info(f"Starting up to {max_concurrency} processes to handle {total_items} items")
 
         results = []
         try:
             # Use process pool, each task processes one data item
-            with Pool(processes=concurrency, initializer=init_worker, initargs=(self.server_ip, self.server_port)) as pool:
+            with Pool(
+                processes=max_concurrency,
+                initializer=init_worker,
+                initargs=(
+                    self.server_ip,
+                    self.server_port,
+                    sorted(self.native_languages),
+                    self.native_timeout_seconds,
+                ),
+            ) as pool:
                 # Use tqdm to show progress
-                with tqdm(total=total_items, desc=f"Multiprocess ({concurrency} processes)", unit="items") as pbar:
-                    # Submit all tasks
+                with tqdm(total=total_items, desc=f"Multiprocess (up to {max_concurrency} processes)", unit="items") as pbar:
                     futures = []
-                    for i, data in enumerate(data_list, 1):
-                        future = pool.apply_async(process_single_data_worker, (data, i, debug, False))
-                        futures.append(future)
+                    next_index = 0
+                    completed_count = 0
+                    last_adjustment_at = time.monotonic()
+                    sample_system_state()
+
+                    def submit_until_target():
+                        nonlocal next_index
+                        while len(futures) < target_concurrency and next_index < total_items:
+                            data = data_list[next_index]
+                            future = pool.apply_async(process_single_data_worker, (data, next_index + 1, debug, False))
+                            futures.append(future)
+                            next_index += 1
+
+                    submit_until_target()
+                    pbar.set_postfix({"Success": 0, "Failed": 0, "InFlight": len(futures), "Target": target_concurrency})
 
                     # Collect results
-                    for future in futures:
+                    while futures:
+                        if adaptive_concurrency and time.monotonic() - last_adjustment_at >= adjust_interval_seconds:
+                            state = sample_system_state()
+                            previous_target = target_concurrency
+                            if should_reduce_target(state, cpu_high_watermark, memory_high_watermark, load_high_watermark):
+                                target_concurrency = max(min_concurrency, target_concurrency - 2)
+                            elif should_increase_target(state, cpu_high_watermark, memory_high_watermark, load_high_watermark):
+                                target_concurrency = min(max_concurrency, target_concurrency + 1)
+                            if target_concurrency != previous_target:
+                                logger.info(
+                                    f"[adaptive] target_concurrency {previous_target} -> {target_concurrency} "
+                                    f"({format_system_state(state)})"
+                                )
+                            last_adjustment_at = time.monotonic()
+
+                        future = futures[0]
                         try:
                             result = future.get(timeout=300)  # 5 minutes timeout
                             results.append(result)
                             pbar.update(1)
+                            completed_count += 1
 
                             # Update progress bar statistics
                             pbar.set_postfix({
                                 "Success": sum(1 for r in results if r.get("success", False)),
-                                "Failed": sum(1 for r in results if not r.get("success", False))
+                                "Failed": sum(1 for r in results if not r.get("success", False)),
+                                "InFlight": len(futures) - 1,
+                                "Target": target_concurrency
                             })
                         except Exception as e:
                             logger.error(f"Task failed: {e}")
                             # Create failed result
                             failed_result = {
-                                "index": len(results) + 1,
+                                "index": completed_count + 1,
                                 "success": False,
                                 "error": str(e),
                                 "original_data": {}
                             }
                             results.append(failed_result)
                             pbar.update(1)
+                            completed_count += 1
+                        finally:
+                            futures.pop(0)
+                            submit_until_target()
 
         except Exception as e:
             logger.error(f"Error occurred during multiprocess processing: {e}")
@@ -500,17 +821,57 @@ def main():
     parser.add_argument('-c', '--concurrency', type=int, default=30, help='Number of concurrent processes (default 30)')
     parser.add_argument('--lang', help='Specify programming language to process, only process data of that language')
     parser.add_argument('--solution_key', default='output', help='Specify the key name where the solution is located')
+    parser.add_argument('--adaptive-concurrency', action='store_true', help='Adapt scorer concurrency based on host load')
+    parser.add_argument('--min-concurrency', type=int, default=2, help='Minimum scorer concurrency when adaptive mode is enabled')
+    parser.add_argument('--adjust-interval-seconds', type=float, default=5.0, help='How often to reevaluate adaptive scorer concurrency')
+    parser.add_argument('--cpu-high-watermark', type=float, default=85.0, help='Reduce scorer concurrency above this CPU percent')
+    parser.add_argument('--memory-high-watermark', type=float, default=85.0, help='Reduce scorer concurrency above this memory percent')
+    parser.add_argument('--load-high-watermark', type=float, default=1.15, help='Reduce scorer concurrency above this 1m load ratio')
+    parser.add_argument(
+        '--native-langs',
+        default=os.environ.get('ACB_NATIVE_LANGS', ''),
+        help='Comma-separated languages to run natively instead of through the sandbox, e.g. elixir,racket',
+    )
+    parser.add_argument(
+        '--native-timeout-seconds',
+        type=float,
+        default=float(os.environ.get('ACB_NATIVE_TIMEOUT_SECONDS', '45')),
+        help='Timeout for native language execution when --native-langs is enabled',
+    )
 
     args = parser.parse_args()
     
     if args.concurrency > 20:
         logger.warning("High concurrency may put pressure on the server, recommended not to exceed 20")
 
+    native_languages = parse_native_languages(args.native_langs)
+    if native_languages:
+        logger.info(f"Native execution enabled for languages: {', '.join(native_languages)}")
+
     # Create processor
-    processor = UnifiedProcessor(args.server_ip, args.server_port)
+    processor = UnifiedProcessor(
+        args.server_ip,
+        args.server_port,
+        native_languages=native_languages,
+        native_timeout_seconds=args.native_timeout_seconds,
+    )
 
     # Process file
-    results = processor.process_file(args.input_file, args.max_items, args.line, args.debug, args.concurrency, args.lang, args.solution_key)
+    results = processor.process_file(
+        args.input_file,
+        args.max_items,
+        args.line,
+        args.debug,
+        args.concurrency,
+        args.lang,
+        args.solution_key,
+        args.adaptive_concurrency,
+        args.min_concurrency,
+        args.adjust_interval_seconds,
+        args.cpu_high_watermark,
+        args.memory_high_watermark,
+        args.load_high_watermark,
+    )
 
     # Determine output filename
     if args.output:

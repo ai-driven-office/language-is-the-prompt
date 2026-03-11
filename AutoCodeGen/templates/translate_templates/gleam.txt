@@ -1,0 +1,112 @@
+You are an experienced programming master with expertise in multiple languages, particularly in Gleam.
+
+I will provide:
+1. A programming problem description
+2. A reference solution written in another language
+3. Demo and full test functions written in another language
+
+Your task is to translate the benchmark into VALID, RUNNABLE Gleam 1.x.
+
+Hard requirements:
+1. The translated problem statement must clearly say the solution must be implemented in Gleam.
+2. The translated reference solution must be valid Gleam syntax.
+3. The translated demo and full test blocks must also be valid Gleam syntax.
+4. The solution block and the test blocks must be SEPARATE.
+5. The test blocks must call the functions/types defined in the solution block, but MUST NOT repeat the solution implementation.
+6. Do not use any external packages. Only use the standard library.
+7. Do not use a test framework.
+8. Each test block must define exactly one `pub fn main()`.
+
+Critical Gleam syntax rules:
+- Do NOT use `if` anywhere in the generated code. Gleam does NOT have `if condition { ... } else { ... }` expressions. Use `case condition { True -> ... False -> ... }`.
+- Gleam uses `let assert_ok = condition` only if it is valid syntax; prefer helper assertion functions plus `case`.
+- Keep function/type names explicit and public when tests need to call them.
+- Avoid unsupported pseudo-functions or syntax copied from TypeScript, Rust, Elixir, or Python.
+- If you use `Option`, `Result`, or variant constructors such as `Some` and `None`, you must import them explicitly.
+- If you use helpers from modules such as `gleam/list`, `gleam/option`, or `gleam/int`, import those modules explicitly.
+- If you need an assertion helper, define a normal function that uses `case` and `panic as`.
+- If a `case` branch needs more than one expression, wrap the branch body in `{ ... }`.
+- Do NOT write a branch like `"w" -> let updated = ...`; write `"w" -> { let updated = ... Ok(updated) }`.
+- The test blocks must not copy any solution code. They may define only assertion helpers plus `pub fn main()`.
+
+Test block rules:
+- The test blocks should contain only helper assertion functions plus `pub fn main()`.
+- Do not repeat imports that are already unnecessary.
+- Do not redefine solution functions or solution types inside the test blocks.
+- The test blocks must be executable after appending them below the solution block in the same file.
+
+Example of VALID assertion style in Gleam:
+```gleam
+fn assert_true(condition: Bool, message: String) {
+  case condition {
+    True -> Nil
+    False -> panic as message
+  }
+}
+
+pub fn main() {
+  assert_true(add(1, 2) == 3, "expected add(1, 2) == 3")
+}
+```
+
+Example of INVALID style that you must NOT produce:
+```gleam
+pub fn main() {
+  if add(1, 2) == 3 {
+    Nil
+  } else {
+    panic as "bad"
+  }
+}
+```
+
+Example of VALID multi-expression `case` branch:
+```gleam
+case mode {
+  "w" -> {
+    let updated = set_value(state, "x")
+    Ok(updated)
+  }
+  _ -> Error("bad mode")
+}
+```
+
+Your answer must be exactly this shape:
+<translated_problem>
+new problem
+</translated_problem>
+
+<translated_reference_solution>
+```gleam
+your solution code
+```
+</translated_reference_solution>
+
+<demo_test_cases>
+```gleam
+your demo test code
+```
+</demo_test_cases>
+
+<full_test_cases>
+```gleam
+your full test code
+```
+</full_test_cases>
+
+Here is the problem, reference solution and test case
+[problem]
+<<<problem>>>
+[problem end]
+
+[reference solution]
+<<<code>>>
+[reference solution end]
+
+[demo test case]
+<<<demo_test>>>
+[demo test case end]
+
+[full test case]
+<<<full_test>>>
+[full test case end]

@@ -1,0 +1,65 @@
+You are an experienced programming master with expertise in multiple languages, particularly in TypeScript with the Effect ecosystem. I will provide
+you with:
+
+1. A code generation problem description (including requirements, constraints, and examples)
+2. The reference solution code (in another language, typically Python/Java/C++/Go/JavaScript/Shell)
+3. Corresponding test case functions including demo test cases and full test cases
+
+Your task is to:
+
+1. Accurately translate the problem description into clear English while preserving all technical details. Explicitly state that the solution must be implemented in TypeScript using the Effect ecosystem where it adds value.
+2. Convert the reference solution into idiomatic TypeScript code that:
+   - Uses TypeScript conventions
+   - Prefers `effect`, `@effect/platform`, and `@effect/schema` when they make the implementation clearer or safer
+   - Keeps the public API directly callable by the translated tests
+   - Avoids forcing asynchronous or highly abstract patterns when a small synchronous abstraction is the better fit
+3. Translate the test cases into runnable TypeScript code:
+   - Use plain assertions or `console.assert`
+   - Do not use a unit test framework
+   - The demo test code must be a standalone code block that can be appended after the solution and executed
+   - The full test code must be a standalone code block that can be appended after the solution and executed
+
+Additional requirements:
+- Preserve the same behavior and asymptotic complexity
+- If the problem is simple, it is acceptable to use the Effect ecosystem lightly instead of forcing every function to return `Effect`
+- Keep the solution block separate from the test blocks
+
+Your answer must be exactly this shape:
+<translated_problem>
+new problem
+</translated_problem>
+
+<translated_reference_solution>
+```typescript
+your solution code
+```
+</translated_reference_solution>
+
+<demo_test_cases>
+```typescript
+your demo test code
+```
+</demo_test_cases>
+
+<full_test_cases>
+```typescript
+your full test code
+```
+</full_test_cases>
+
+Here is the problem, reference solution and test case
+[problem]
+<<<problem>>>
+[problem end]
+
+[reference solution]
+<<<code>>>
+[reference solution end]
+
+[demo test case]
+<<<demo_test>>>
+[demo test case end]
+
+[full test case]
+<<<full_test>>>
+[full test case end]

@@ -1,0 +1,59 @@
+{
+  "run": {
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "verbosity": "low"
+  },
+  "main_benchmark": {
+    "name": "ACB-Full",
+    "total_passed": 2088,
+    "total_rows": 3920,
+    "pass_rate": 53.3,
+    "languages": {
+      "cpp": {"passed": 93, "total": 186, "pass_rate": 50.0},
+      "csharp": {"passed": 144, "total": 199, "pass_rate": 72.4},
+      "dart": {"passed": 113, "total": 200, "pass_rate": 56.5},
+      "elixir": {"passed": 173, "total": 198, "pass_rate": 87.4},
+      "go": {"passed": 82, "total": 191, "pass_rate": 42.9},
+      "java": {"passed": 96, "total": 188, "pass_rate": 51.1},
+      "javascript": {"passed": 79, "total": 184, "pass_rate": 42.9},
+      "julia": {"passed": 114, "total": 200, "pass_rate": 57.0},
+      "kotlin": {"passed": 153, "total": 200, "pass_rate": 76.5},
+      "perl": {"passed": 89, "total": 200, "pass_rate": 44.5},
+      "php": {"passed": 71, "total": 199, "pass_rate": 35.7},
+      "python": {"passed": 86, "total": 196, "pass_rate": 43.9},
+      "r": {"passed": 108, "total": 198, "pass_rate": 54.5},
+      "racket": {"passed": 100, "total": 196, "pass_rate": 51.0},
+      "ruby": {"passed": 126, "total": 200, "pass_rate": 63.0},
+      "rust": {"passed": 80, "total": 199, "pass_rate": 40.2},
+      "scala": {"passed": 101, "total": 199, "pass_rate": 50.8},
+      "shell": {"passed": 95, "total": 188, "pass_rate": 50.5},
+      "swift": {"passed": 87, "total": 200, "pass_rate": 43.5},
+      "typescript": {"passed": 98, "total": 199, "pass_rate": 49.2}
+    }
+  },
+  "extension_slices": {
+    "gleam": {
+      "source_rows": 196,
+      "validated_rows": 122,
+      "validated_coverage": 62.2,
+      "passed": 25,
+      "pass_rate_on_validated_rows": 20.5,
+      "pass_rate_over_source_rows": 12.8
+    },
+    "lean4": {
+      "source_rows": 196,
+      "validated_rows": 125,
+      "validated_coverage": 63.8,
+      "passed": 36,
+      "pass_rate_on_validated_rows": 28.8,
+      "pass_rate_over_source_rows": 18.4
+    },
+    "typescript_effect": {
+      "source_rows": 196,
+      "passed": 105,
+      "pass_rate": 53.6,
+      "notes": "legacy extension run without canonical-validation filter"
+    }
+  }
+}

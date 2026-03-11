@@ -1,0 +1,4 @@
+language,source_rows,validated_rows,validated_coverage,passed,pass_rate,notes
+gleam,196,122,62.2,25,20.5,validated subset only
+lean4,196,125,63.8,36,28.8,validated subset only
+typescript_effect,196,,,105,53.6,legacy extension run without canonical-validation filter
