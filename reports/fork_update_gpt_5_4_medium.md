@@ -31,13 +31,15 @@ The extension language results are fork-specific translated slices built from th
 
 Top-performing languages in this run:
 
+
 | Language | Passed | Total | Pass Rate |
-|---|---:|---:|---:|
-| elixir | 173 | 198 | 87.4% |
-| kotlin | 153 | 200 | 76.5% |
-| csharp | 144 | 199 | 72.4% |
-| ruby | 126 | 200 | 63.0% |
-| julia | 114 | 200 | 57.0% |
+| -------- | ------ | ----- | --------- |
+| elixir   | 173    | 198   | 87.4%     |
+| kotlin   | 153    | 200   | 76.5%     |
+| csharp   | 144    | 199   | 72.4%     |
+| ruby     | 126    | 200   | 63.0%     |
+| julia    | 114    | 200   | 57.0%     |
+
 
 ## Fork-only extension languages
 
@@ -45,16 +47,20 @@ Top-performing languages in this run:
 
 These are the meaningful corrected results for the new extension languages. The earlier near-zero Gleam and Lean4 numbers were invalid because the translated benchmark rows themselves were broken.
 
+
 | Language | Validated Rows | Passed | Pass Rate on Validated Rows | Coverage of 196 Source Rows |
-|---|---:|---:|---:|---:|
-| gleam | 122 | 25 | 20.5% | 62.2% |
-| lean4 | 125 | 36 | 28.8% | 63.8% |
+| -------- | -------------- | ------ | --------------------------- | --------------------------- |
+| gleam    | 122            | 25     | 20.5%                       | 62.2%                       |
+| lean4    | 125            | 36     | 28.8%                       | 63.8%                       |
+
 
 ### Preliminary extension slice
 
-| Language | Source Rows | Passed | Pass Rate | Note |
-|---|---:|---:|---:|---|
-| typescript_effect | 196 | 105 | 53.6% | Legacy extension run prior to canonical-validation gating |
+
+| Language          | Source Rows | Passed | Pass Rate | Note                                                      |
+| ----------------- | ----------- | ------ | --------- | --------------------------------------------------------- |
+| typescript_effect | 196         | 105    | 53.6%     | Legacy extension run prior to canonical-validation gating |
+
 
 ## What changed in the fork
 
@@ -91,3 +97,4 @@ These are the meaningful corrected results for the new extension languages. The 
 - The corrected `elixir` and `racket` main-benchmark values fix a local runtime problem. They should replace the earlier broken local zeros.
 - `gleam` and `lean4` are reported on validated translated subsets, because naive reporting over broken translated rows would understate model performance and misrepresent the benchmark.
 - `typescript_effect` should be treated as a useful but earlier-stage extension result until it is rerun under the same canonical-validation gate.
+

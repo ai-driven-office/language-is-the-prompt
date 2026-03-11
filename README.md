@@ -17,6 +17,17 @@
     <a href="#citation">📜 Citation</a>
 </p>
 
+<p align="center">
+  <img alt="Fork update" src="https://img.shields.io/badge/Fork%20Update-March%202026-0f766e?style=for-the-badge">
+  <img alt="GPT-5.4 Medium ACB-Full" src="https://img.shields.io/badge/GPT--5.4%20Medium-53.3%25%20on%20ACB--Full-2563eb?style=for-the-badge">
+  <img alt="Gleam validated slice" src="https://img.shields.io/badge/Gleam-20.5%25%20validated-d97706?style=for-the-badge">
+  <img alt="Lean4 validated slice" src="https://img.shields.io/badge/Lean4-28.8%25%20validated-7c3aed?style=for-the-badge">
+</p>
+
+<div align="center">
+  <img src="figures/fork_leaderboard_share_gpt_5_4_medium.svg" width="96%">
+</div>
+
 
 ## 📰 News
 
@@ -143,8 +154,25 @@ It also adds fork-only extension slices for:
 
 The extension-language pipeline includes translated benchmark generation and, for `gleam` and `lean4`, canonical validation of translated benchmark rows before scoring the model.
 
+Quick takeaway:
+
+- Use `elixir` or `kotlin` first if you want the strongest verified GPT-5.4 Medium performance in this fork.
+- `csharp`, `ruby`, and `julia` are also strong choices.
+- `Opus 4.6` is intentionally not ranked yet here because this fork does not publish unverified Anthropic numbers.
+
 <div align="center">
   <img src="figures/fork_results_overview_gpt_5_4_medium.svg" width="92%">
+</div>
+
+#### Model-language guidance
+
+If you want a quick answer for what to use right now:
+
+- `GPT-5.4 Medium`: strongest verified languages in this fork are `elixir`, `kotlin`, `csharp`, `ruby`, and `julia`
+- `Opus 4.6`: pending benchmark in this fork, so no language recommendation is published yet
+
+<div align="center">
+  <img src="figures/fork_model_language_guide.svg" width="92%">
 </div>
 
 #### Main ACB-Full result

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="860" viewBox="0 0 1400 860">
+<defs>
+<linearGradient id="guidebg" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#f8fafc"/>
+<stop offset="100%" stop-color="#ecfeff"/>
+</linearGradient>
+</defs>
+<rect width="100%" height="100%" fill="url(#guidebg)"/>
+<text x="60" y="72" font-family="Inter,Arial,sans-serif" font-size="38" font-weight="700" fill="#1f2937">Language Guide for This Fork</text>
+<text x="60" y="108" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="normal" fill="#475569">Verified guidance for GPT-5.4 Medium, plus an Opus 4.6 slot reserved for the next benchmark.</text>
+<rect x="50" y="150" width="860" height="650" rx="32" fill="#ffffff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="80" y="198" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="700" fill="#1f2937">GPT-5.4 Medium</text>
+<text x="80" y="228" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="normal" fill="#475569">Verified local run on ACB-Full: 2088 / 3920 (53.3%)</text>
+<text x="80" y="280" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="700" fill="#0f766e">Best fit</text>
+<rect x="80" y="304" width="138" height="30" rx="15" fill="#f8fafc" stroke="#0f766e" stroke-width="1"/>
+<text x="94" y="324" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">elixir 87.4%</text>
+<rect x="230" y="304" width="138" height="30" rx="15" fill="#f8fafc" stroke="#0f766e" stroke-width="1"/>
+<text x="244" y="324" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">kotlin 76.5%</text>
+<rect x="380" y="304" width="138" height="30" rx="15" fill="#f8fafc" stroke="#0f766e" stroke-width="1"/>
+<text x="394" y="324" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">csharp 72.4%</text>
+<rect x="530" y="304" width="120" height="30" rx="15" fill="#f8fafc" stroke="#0f766e" stroke-width="1"/>
+<text x="544" y="324" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">ruby 63.0%</text>
+<text x="80" y="384" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="700" fill="#2563eb">Solid</text>
+<rect x="80" y="408" width="128" height="30" rx="15" fill="#f8fafc" stroke="#2563eb" stroke-width="1"/>
+<text x="94" y="428" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">julia 57.0%</text>
+<rect x="220" y="408" width="120" height="30" rx="15" fill="#f8fafc" stroke="#2563eb" stroke-width="1"/>
+<text x="234" y="428" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">dart 56.5%</text>
+<rect x="352" y="408" width="120" height="30" rx="15" fill="#f8fafc" stroke="#2563eb" stroke-width="1"/>
+<text x="366" y="428" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">r 54.5%</text>
+<rect x="484" y="408" width="120" height="30" rx="15" fill="#f8fafc" stroke="#2563eb" stroke-width="1"/>
+<text x="498" y="428" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">java 51.1%</text>
+<rect x="616" y="408" width="138" height="30" rx="15" fill="#f8fafc" stroke="#2563eb" stroke-width="1"/>
+<text x="630" y="428" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">racket 51.0%</text>
+<rect x="80" y="452" width="128" height="30" rx="15" fill="#f8fafc" stroke="#2563eb" stroke-width="1"/>
+<text x="94" y="472" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">scala 50.8%</text>
+<rect x="220" y="452" width="128" height="30" rx="15" fill="#f8fafc" stroke="#2563eb" stroke-width="1"/>
+<text x="234" y="472" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">shell 50.5%</text>
+<rect x="360" y="452" width="120" height="30" rx="15" fill="#f8fafc" stroke="#2563eb" stroke-width="1"/>
+<text x="374" y="472" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">cpp 50.0%</text>
+<text x="80" y="532" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="700" fill="#d97706">Watchouts</text>
+<rect x="80" y="556" width="178" height="30" rx="15" fill="#f8fafc" stroke="#d97706" stroke-width="1"/>
+<text x="94" y="576" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">typescript 49.2%</text>
+<rect x="270" y="556" width="120" height="30" rx="15" fill="#f8fafc" stroke="#d97706" stroke-width="1"/>
+<text x="284" y="576" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">perl 44.5%</text>
+<rect x="402" y="556" width="138" height="30" rx="15" fill="#f8fafc" stroke="#d97706" stroke-width="1"/>
+<text x="416" y="576" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">python 43.9%</text>
+<rect x="552" y="556" width="128" height="30" rx="15" fill="#f8fafc" stroke="#d97706" stroke-width="1"/>
+<text x="566" y="576" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">swift 43.5%</text>
+<rect x="692" y="556" width="120" height="30" rx="15" fill="#f8fafc" stroke="#d97706" stroke-width="1"/>
+<text x="706" y="576" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">go 42.9%</text>
+<rect x="80" y="600" width="178" height="30" rx="15" fill="#f8fafc" stroke="#d97706" stroke-width="1"/>
+<text x="94" y="620" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">javascript 42.9%</text>
+<rect x="270" y="600" width="120" height="30" rx="15" fill="#f8fafc" stroke="#d97706" stroke-width="1"/>
+<text x="284" y="620" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">rust 40.2%</text>
+<rect x="402" y="600" width="120" height="30" rx="15" fill="#f8fafc" stroke="#d97706" stroke-width="1"/>
+<text x="416" y="620" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">php 35.7%</text>
+<rect x="950" y="150" width="400" height="650" rx="32" fill="#ffffff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="980" y="198" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="700" fill="#1f2937">Opus 4.6</text>
+<text x="980" y="228" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="700" fill="#b45309">Pending benchmark</text>
+<text x="980" y="276" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="normal" fill="#475569">No verified local results are published</text>
+<text x="980" y="300" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="normal" fill="#475569">for Opus 4.6 in this fork yet.</text>
+<rect x="980" y="344" width="340" height="140" rx="24" fill="#fff7ed" stroke="#fdba74" stroke-width="1"/>
+<text x="1008" y="382" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="700" fill="#9a3412">What this means:</text>
+<text x="1008" y="416" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="normal" fill="#7c2d12">Use the GPT-5.4 guidance today.</text>
+<text x="1008" y="442" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="normal" fill="#7c2d12">Replace this card with verified Opus</text>
+<text x="1008" y="468" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="normal" fill="#7c2d12">tiers after the Anthropic run completes.</text>
+<rect x="980" y="528" width="340" height="180" rx="24" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+<text x="1008" y="566" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="700" fill="#1f2937">Next step</text>
+<text x="1008" y="600" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="normal" fill="#475569">Run the same local pipeline with</text>
+<text x="1008" y="626" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="normal" fill="#475569">the exact Opus 4.6 model id and</text>
+<text x="1008" y="652" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="normal" fill="#475569">publish the resulting YAML/JSON</text>
+<text x="1008" y="678" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="normal" fill="#475569">through the same summaries.</text>
+</svg>

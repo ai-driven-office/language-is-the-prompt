@@ -1,0 +1,54 @@
+gpt_5_4_medium:
+  status: verified
+  recommended_languages:
+    - elixir
+    - kotlin
+    - csharp
+    - ruby
+  solid_languages:
+    - julia
+    - dart
+    - r
+    - java
+    - racket
+    - scala
+    - shell
+    - cpp
+  watchout_languages:
+    - typescript
+    - perl
+    - python
+    - swift
+    - go
+    - javascript
+    - rust
+    - php
+  top5:
+    -
+      language: elixir
+      pass_rate: 87.4
+      passed: 173
+      total: 198
+    -
+      language: kotlin
+      pass_rate: 76.5
+      passed: 153
+      total: 200
+    -
+      language: csharp
+      pass_rate: 72.4
+      passed: 144
+      total: 199
+    -
+      language: ruby
+      pass_rate: 63.0
+      passed: 126
+      total: 200
+    -
+      language: julia
+      pass_rate: 57.0
+      passed: 114
+      total: 200
+opus_4_6:
+  status: pending_benchmark
+  notes: No verified local Opus 4.6 benchmark results are published in this fork yet.

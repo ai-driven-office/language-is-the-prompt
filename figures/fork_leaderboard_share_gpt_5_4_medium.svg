@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs>
+<linearGradient id="sharebg" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#eff6ff"/>
+<stop offset="55%" stop-color="#f8fafc"/>
+<stop offset="100%" stop-color="#fefce8"/>
+</linearGradient>
+</defs>
+<rect width="100%" height="100%" fill="url(#sharebg)"/>
+<rect x="44" y="44" width="1512" height="812" rx="36" fill="#ffffff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="88" y="122" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="700" fill="#0f172a">AutoCodeBenchmark Fork Snapshot</text>
+<text x="88" y="170" font-family="Inter,Arial,sans-serif" font-size="50" font-weight="700" fill="#1d4ed8">GPT-5.4 Medium language guidance</text>
+<text x="88" y="212" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="600" fill="#334155">Verified local run on ACB-Full: 2088 / 3920 passed (53.3%)</text>
+<text x="88" y="248" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="normal" fill="#475569">Best current choices in this fork: Elixir, Kotlin, C#, Ruby, Julia. Opus 4.6 is marked pending until a verified local run exists.</text>
+<rect x="1030" y="92" width="438" height="170" rx="28" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+<text x="1064" y="146" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="700" fill="#1f2937">Fork-only extensions</text>
+<text x="1064" y="184" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="normal" fill="#334155">TypeScript + Effect: 53.6%</text>
+<text x="1064" y="214" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="normal" fill="#334155">Lean4: 28.8% on validated rows</text>
+<text x="1064" y="244" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="normal" fill="#334155">Gleam: 20.5% on validated rows</text>
+<text x="88" y="300" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="700" fill="#1f2937">Top verified languages for GPT-5.4 Medium</text>
+<text x="88" y="354" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="600" fill="#1f2937">elixir</text>
+<rect x="420" y="330" width="460" height="36" rx="18" fill="#e2e8f0"/>
+<rect x="420" y="330" width="459" height="36" rx="18" fill="#0f766e"/>
+<text x="898" y="354" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="700" fill="#0f766e">87.4%</text>
+<text x="88" y="412" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="600" fill="#1f2937">kotlin</text>
+<rect x="420" y="388" width="460" height="36" rx="18" fill="#e2e8f0"/>
+<rect x="420" y="388" width="402" height="36" rx="18" fill="#0f766e"/>
+<text x="898" y="412" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="700" fill="#0f766e">76.5%</text>
+<text x="88" y="470" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="600" fill="#1f2937">csharp</text>
+<rect x="420" y="446" width="460" height="36" rx="18" fill="#e2e8f0"/>
+<rect x="420" y="446" width="381" height="36" rx="18" fill="#0f766e"/>
+<text x="898" y="470" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="700" fill="#0f766e">72.4%</text>
+<text x="88" y="528" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="600" fill="#1f2937">ruby</text>
+<rect x="420" y="504" width="460" height="36" rx="18" fill="#e2e8f0"/>
+<rect x="420" y="504" width="331" height="36" rx="18" fill="#2563eb"/>
+<text x="898" y="528" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="700" fill="#2563eb">63.0%</text>
+<text x="88" y="586" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="600" fill="#1f2937">julia</text>
+<rect x="420" y="562" width="460" height="36" rx="18" fill="#e2e8f0"/>
+<rect x="420" y="562" width="300" height="36" rx="18" fill="#2563eb"/>
+<text x="898" y="586" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="700" fill="#2563eb">57.0%</text>
+<text x="88" y="644" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="600" fill="#1f2937">dart</text>
+<rect x="420" y="620" width="460" height="36" rx="18" fill="#e2e8f0"/>
+<rect x="420" y="620" width="297" height="36" rx="18" fill="#2563eb"/>
+<text x="898" y="644" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="700" fill="#2563eb">56.5%</text>
+<text x="88" y="702" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="600" fill="#1f2937">r</text>
+<rect x="420" y="678" width="460" height="36" rx="18" fill="#e2e8f0"/>
+<rect x="420" y="678" width="286" height="36" rx="18" fill="#2563eb"/>
+<text x="898" y="702" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="700" fill="#2563eb">54.5%</text>
+<text x="88" y="760" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="600" fill="#1f2937">java</text>
+<rect x="420" y="736" width="460" height="36" rx="18" fill="#e2e8f0"/>
+<rect x="420" y="736" width="268" height="36" rx="18" fill="#2563eb"/>
+<text x="898" y="760" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="700" fill="#2563eb">51.1%</text>
+<rect x="980" y="330" width="488" height="420" rx="32" fill="#fff7ed" stroke="#fdba74" stroke-width="1"/>
+<text x="1016" y="382" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="700" fill="#9a3412">How to read this</text>
+<text x="1016" y="430" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="normal" fill="#7c2d12">Use the ranked GPT-5.4 list for immediate language choice.</text>
+<text x="1016" y="466" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="normal" fill="#7c2d12">Elixir and Kotlin are the standout verified picks in this fork.</text>
+<text x="1016" y="502" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="normal" fill="#7c2d12">C#, Ruby, and Julia are also comfortably above the pack.</text>
+<text x="1016" y="556" font-family="Inter,Arial,sans-serif" font-size="26" font-weight="700" fill="#7c2d12">Opus 4.6</text>
+<text x="1016" y="594" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="700" fill="#b45309">Status: pending benchmark</text>
+<text x="1016" y="628" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="normal" fill="#7c2d12">This fork does not publish an Opus recommendation until</text>
+<text x="1016" y="656" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="normal" fill="#7c2d12">the same local pipeline has been run and validated.</text>
+<text x="88" y="818" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="normal" fill="#475569">Repo: ai-driven-office/AutoCodeBenchmark  |  Data: results/*.json, *.csv, *.yaml  |  Snapshot date: 2026-03-11</text>
+</svg>

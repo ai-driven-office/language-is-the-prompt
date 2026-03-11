@@ -79,6 +79,7 @@ Compact summaries:
 - [results/summary.yaml](/Users/a12907/Documents/GitHub/AutoCodeBenchmark/results/summary.yaml)
 - [results/main_benchmark.yaml](/Users/a12907/Documents/GitHub/AutoCodeBenchmark/results/main_benchmark.yaml)
 - [results/extension_slices.yaml](/Users/a12907/Documents/GitHub/AutoCodeBenchmark/results/extension_slices.yaml)
+- [results/model_guidance.yaml](/Users/a12907/Documents/GitHub/AutoCodeBenchmark/results/model_guidance.yaml)
 
 Primary raw result artifacts used for the summaries:
 
