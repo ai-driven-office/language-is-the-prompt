@@ -22,6 +22,7 @@
   <img alt="GPT-5.4 Medium ACB-Full" src="https://img.shields.io/badge/GPT--5.4%20Medium-53.3%25%20on%20ACB--Full-2563eb?style=for-the-badge">
   <img alt="Gleam validated slice" src="https://img.shields.io/badge/Gleam-20.5%25%20validated-d97706?style=for-the-badge">
   <img alt="Lean4 validated slice" src="https://img.shields.io/badge/Lean4-28.8%25%20validated-7c3aed?style=for-the-badge">
+  <img alt="All languages in one view" src="https://img.shields.io/badge/23%20Language%20Tracks-One%20Unified%20Leaderboard-111827?style=for-the-badge">
 </p>
 
 <div align="center">
@@ -142,23 +143,28 @@ Results of two-stage GRPO and SFT with AutoCodeInstruct.
 
 ## Experimental Results
 
-### Fork Update: GPT-5.4 Medium + Extension Languages
+### Fork Update: GPT-5.4 Medium + Added Languages
 
 This fork adds a local `gpt-5.4` run with `medium` reasoning over `ACB-Full`, using the latest benchmark assets available in this repository snapshot on **March 11, 2026**.
 
-It also adds fork-only extension slices for:
+It also adds three extra language tracks:
 
 - `gleam`
 - `lean4`
 - `typescript_effect`
 
-The extension-language pipeline includes translated benchmark generation and, for `gleam` and `lean4`, canonical validation of translated benchmark rows before scoring the model.
+The new visuals fold those added languages into the same leaderboard view as the original benchmark languages. The basis stays explicit through tags:
+
+- `FULL`: original `ACB-Full` language
+- `VALIDATED`: translated slice that passed canonical validation before scoring
+- `SLICE`: translated slice without that validation gate
 
 Quick takeaway:
 
 - Use `elixir` or `kotlin` first if you want the strongest verified GPT-5.4 Medium performance in this fork.
 - `csharp`, `ruby`, and `julia` are also strong choices.
-- `Opus 4.6` is intentionally not ranked yet here because this fork does not publish unverified Anthropic numbers.
+- `typescript_effect` is already competitive in the combined chart.
+- `lean4` and `gleam` are present in the same visual, but their tags show they are still measured on translated subsets.
 
 <div align="center">
   <img src="figures/fork_results_overview_gpt_5_4_medium.svg" width="92%">
@@ -168,14 +174,17 @@ Quick takeaway:
 
 If you want a quick answer for what to use right now:
 
-- `GPT-5.4 Medium`: strongest verified languages in this fork are `elixir`, `kotlin`, `csharp`, `ruby`, and `julia`
-- `Opus 4.6`: pending benchmark in this fork, so no language recommendation is published yet
+- Best current choices: `elixir`, `kotlin`, `csharp`, `ruby`, `julia`
+- Next tier: `dart`, `r`, `typescript_effect`, `java`, `racket`, `scala`, `shell`, `cpp`
+- Added-language caveat: `lean4` and `gleam` stay in the same chart, but keep their `VALIDATED` tags because they are not on the exact same basis as `FULL`
 
 <div align="center">
   <img src="figures/fork_model_language_guide.svg" width="92%">
 </div>
 
-#### Main ACB-Full result
+#### Unified leaderboard view
+
+This chart now includes every language currently tracked in this fork.
 
 | Model | Benchmark | Passed | Total | Pass Rate | Notes |
 |---|---|---:|---:|---:|---|
@@ -185,7 +194,7 @@ If you want a quick answer for what to use right now:
   <img src="figures/fork_acb_full_gpt_5_4_medium.svg" width="92%">
 </div>
 
-#### Fork-only extension slices
+#### Added languages in this fork
 
 | Model | Slice | Validated Rows | Passed | Pass Rate | Notes |
 |---|---|---:|---:|---:|---|
@@ -193,12 +202,8 @@ If you want a quick answer for what to use right now:
 | GPT-5.4 Medium | `lean4` | 125 | 36 | 28.8% | Validated translated subset from 196 Python-source rows |
 | GPT-5.4 Medium | `typescript_effect` | 196 | 105 | 53.6% | Earlier extension run without canonical-validation gate |
 
-<div align="center">
-  <img src="figures/fork_extension_languages_gpt_5_4_medium.svg" width="92%">
-</div>
-
 Full tables and methodology notes are in [RESULTS.md](./RESULTS.md) and the [fork update report](./reports/fork_update_gpt_5_4_medium.md).
-Machine-readable summaries are available in `json`, `csv`, and `yaml` under [results](./results/).
+Machine-readable summaries are available in `json`, `csv`, and `yaml` under [results](./results/), including `all_languages.yaml` and `model_guidance.yaml`.
 
 <div align="center">
   <img src="figures/exp_acb.png" width="85%">

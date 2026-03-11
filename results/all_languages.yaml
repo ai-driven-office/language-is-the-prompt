@@ -1,0 +1,208 @@
+languages:
+  -
+    language: elixir
+    pass_rate: 87.4
+    passed: 173
+    denominator: 198
+    basis: ACB-Full
+    basis_tag: FULL
+    basis_detail: 173/198
+    kind: full
+  -
+    language: kotlin
+    pass_rate: 76.5
+    passed: 153
+    denominator: 200
+    basis: ACB-Full
+    basis_tag: FULL
+    basis_detail: 153/200
+    kind: full
+  -
+    language: csharp
+    pass_rate: 72.4
+    passed: 144
+    denominator: 199
+    basis: ACB-Full
+    basis_tag: FULL
+    basis_detail: 144/199
+    kind: full
+  -
+    language: ruby
+    pass_rate: 63.0
+    passed: 126
+    denominator: 200
+    basis: ACB-Full
+    basis_tag: FULL
+    basis_detail: 126/200
+    kind: full
+  -
+    language: julia
+    pass_rate: 57.0
+    passed: 114
+    denominator: 200
+    basis: ACB-Full
+    basis_tag: FULL
+    basis_detail: 114/200
+    kind: full
+  -
+    language: dart
+    pass_rate: 56.5
+    passed: 113
+    denominator: 200
+    basis: ACB-Full
+    basis_tag: FULL
+    basis_detail: 113/200
+    kind: full
+  -
+    language: r
+    pass_rate: 54.5
+    passed: 108
+    denominator: 198
+    basis: ACB-Full
+    basis_tag: FULL
+    basis_detail: 108/198
+    kind: full
+  -
+    language: typescript_effect
+    pass_rate: 53.6
+    passed: 105
+    denominator: 196
+    basis: translated slice
+    basis_tag: SLICE
+    basis_detail: 105/196
+    kind: slice
+  -
+    language: java
+    pass_rate: 51.1
+    passed: 96
+    denominator: 188
+    basis: ACB-Full
+    basis_tag: FULL
+    basis_detail: 96/188
+    kind: full
+  -
+    language: racket
+    pass_rate: 51.0
+    passed: 100
+    denominator: 196
+    basis: ACB-Full
+    basis_tag: FULL
+    basis_detail: 100/196
+    kind: full
+  -
+    language: scala
+    pass_rate: 50.8
+    passed: 101
+    denominator: 199
+    basis: ACB-Full
+    basis_tag: FULL
+    basis_detail: 101/199
+    kind: full
+  -
+    language: shell
+    pass_rate: 50.5
+    passed: 95
+    denominator: 188
+    basis: ACB-Full
+    basis_tag: FULL
+    basis_detail: 95/188
+    kind: full
+  -
+    language: cpp
+    pass_rate: 50.0
+    passed: 93
+    denominator: 186
+    basis: ACB-Full
+    basis_tag: FULL
+    basis_detail: 93/186
+    kind: full
+  -
+    language: typescript
+    pass_rate: 49.2
+    passed: 98
+    denominator: 199
+    basis: ACB-Full
+    basis_tag: FULL
+    basis_detail: 98/199
+    kind: full
+  -
+    language: perl
+    pass_rate: 44.5
+    passed: 89
+    denominator: 200
+    basis: ACB-Full
+    basis_tag: FULL
+    basis_detail: 89/200
+    kind: full
+  -
+    language: python
+    pass_rate: 43.9
+    passed: 86
+    denominator: 196
+    basis: ACB-Full
+    basis_tag: FULL
+    basis_detail: 86/196
+    kind: full
+  -
+    language: swift
+    pass_rate: 43.5
+    passed: 87
+    denominator: 200
+    basis: ACB-Full
+    basis_tag: FULL
+    basis_detail: 87/200
+    kind: full
+  -
+    language: go
+    pass_rate: 42.9
+    passed: 82
+    denominator: 191
+    basis: ACB-Full
+    basis_tag: FULL
+    basis_detail: 82/191
+    kind: full
+  -
+    language: javascript
+    pass_rate: 42.9
+    passed: 79
+    denominator: 184
+    basis: ACB-Full
+    basis_tag: FULL
+    basis_detail: 79/184
+    kind: full
+  -
+    language: rust
+    pass_rate: 40.2
+    passed: 80
+    denominator: 199
+    basis: ACB-Full
+    basis_tag: FULL
+    basis_detail: 80/199
+    kind: full
+  -
+    language: php
+    pass_rate: 35.7
+    passed: 71
+    denominator: 199
+    basis: ACB-Full
+    basis_tag: FULL
+    basis_detail: 71/199
+    kind: full
+  -
+    language: lean4
+    pass_rate: 28.8
+    passed: 36
+    denominator: 125
+    basis: validated subset
+    basis_tag: VALIDATED
+    basis_detail: 36/125
+    kind: validated
+  -
+    language: gleam
+    pass_rate: 20.5
+    passed: 25
+    denominator: 122
+    basis: validated subset
+    basis_tag: VALIDATED
+    basis_detail: 25/122
+    kind: validated

@@ -1,73 +1,217 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="860" viewBox="0 0 1400 860">
+<svg xmlns="http://www.w3.org/2000/svg" width="1660" height="1260" viewBox="0 0 1660 1260">
 <defs>
-<linearGradient id="guidebg" x1="0%" y1="0%" x2="100%" y2="100%">
-<stop offset="0%" stop-color="#f8fafc"/>
-<stop offset="100%" stop-color="#ecfeff"/>
+<linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#f8fbff"/>
+<stop offset="45%" stop-color="#f4f7ff"/>
+<stop offset="100%" stop-color="#fff8ef"/>
 </linearGradient>
+<linearGradient id="titlegrad" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" stop-color="#0f766e"/>
+<stop offset="50%" stop-color="#2563eb"/>
+<stop offset="100%" stop-color="#7c3aed"/>
+</linearGradient>
+<linearGradient id="cardgrad" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#ffffff" stop-opacity="0.98"/>
+<stop offset="100%" stop-color="#f8fafc" stop-opacity="0.92"/>
+</linearGradient>
+<linearGradient id="elitegrad" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" stop-color="#14b8a6"/>
+<stop offset="100%" stop-color="#0f766e"/>
+</linearGradient>
+<linearGradient id="stronggrad" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" stop-color="#60a5fa"/>
+<stop offset="100%" stop-color="#2563eb"/>
+</linearGradient>
+<linearGradient id="capablegrad" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" stop-color="#a78bfa"/>
+<stop offset="100%" stop-color="#7c3aed"/>
+</linearGradient>
+<linearGradient id="emerginggrad" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" stop-color="#fb923c"/>
+<stop offset="100%" stop-color="#ea580c"/>
+</linearGradient>
+<filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+<feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#94a3b8" flood-opacity="0.18"/>
+</filter>
+<filter id="softblur" x="-50%" y="-50%" width="200%" height="200%">
+<feGaussianBlur stdDeviation="36"/>
+</filter>
 </defs>
-<rect width="100%" height="100%" fill="url(#guidebg)"/>
-<text x="60" y="72" font-family="Inter,Arial,sans-serif" font-size="38" font-weight="700" fill="#1f2937">Language Guide for This Fork</text>
-<text x="60" y="108" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="normal" fill="#475569">Verified guidance for GPT-5.4 Medium, plus an Opus 4.6 slot reserved for the next benchmark.</text>
-<rect x="50" y="150" width="860" height="650" rx="32" fill="#ffffff" stroke="#dbe4f0" stroke-width="1"/>
-<text x="80" y="198" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="700" fill="#1f2937">GPT-5.4 Medium</text>
-<text x="80" y="228" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="normal" fill="#475569">Verified local run on ACB-Full: 2088 / 3920 (53.3%)</text>
-<text x="80" y="280" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="700" fill="#0f766e">Best fit</text>
-<rect x="80" y="304" width="138" height="30" rx="15" fill="#f8fafc" stroke="#0f766e" stroke-width="1"/>
-<text x="94" y="324" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">elixir 87.4%</text>
-<rect x="230" y="304" width="138" height="30" rx="15" fill="#f8fafc" stroke="#0f766e" stroke-width="1"/>
-<text x="244" y="324" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">kotlin 76.5%</text>
-<rect x="380" y="304" width="138" height="30" rx="15" fill="#f8fafc" stroke="#0f766e" stroke-width="1"/>
-<text x="394" y="324" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">csharp 72.4%</text>
-<rect x="530" y="304" width="120" height="30" rx="15" fill="#f8fafc" stroke="#0f766e" stroke-width="1"/>
-<text x="544" y="324" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">ruby 63.0%</text>
-<text x="80" y="384" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="700" fill="#2563eb">Solid</text>
-<rect x="80" y="408" width="128" height="30" rx="15" fill="#f8fafc" stroke="#2563eb" stroke-width="1"/>
-<text x="94" y="428" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">julia 57.0%</text>
-<rect x="220" y="408" width="120" height="30" rx="15" fill="#f8fafc" stroke="#2563eb" stroke-width="1"/>
-<text x="234" y="428" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">dart 56.5%</text>
-<rect x="352" y="408" width="120" height="30" rx="15" fill="#f8fafc" stroke="#2563eb" stroke-width="1"/>
-<text x="366" y="428" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">r 54.5%</text>
-<rect x="484" y="408" width="120" height="30" rx="15" fill="#f8fafc" stroke="#2563eb" stroke-width="1"/>
-<text x="498" y="428" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">java 51.1%</text>
-<rect x="616" y="408" width="138" height="30" rx="15" fill="#f8fafc" stroke="#2563eb" stroke-width="1"/>
-<text x="630" y="428" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">racket 51.0%</text>
-<rect x="80" y="452" width="128" height="30" rx="15" fill="#f8fafc" stroke="#2563eb" stroke-width="1"/>
-<text x="94" y="472" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">scala 50.8%</text>
-<rect x="220" y="452" width="128" height="30" rx="15" fill="#f8fafc" stroke="#2563eb" stroke-width="1"/>
-<text x="234" y="472" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">shell 50.5%</text>
-<rect x="360" y="452" width="120" height="30" rx="15" fill="#f8fafc" stroke="#2563eb" stroke-width="1"/>
-<text x="374" y="472" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">cpp 50.0%</text>
-<text x="80" y="532" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="700" fill="#d97706">Watchouts</text>
-<rect x="80" y="556" width="178" height="30" rx="15" fill="#f8fafc" stroke="#d97706" stroke-width="1"/>
-<text x="94" y="576" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">typescript 49.2%</text>
-<rect x="270" y="556" width="120" height="30" rx="15" fill="#f8fafc" stroke="#d97706" stroke-width="1"/>
-<text x="284" y="576" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">perl 44.5%</text>
-<rect x="402" y="556" width="138" height="30" rx="15" fill="#f8fafc" stroke="#d97706" stroke-width="1"/>
-<text x="416" y="576" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">python 43.9%</text>
-<rect x="552" y="556" width="128" height="30" rx="15" fill="#f8fafc" stroke="#d97706" stroke-width="1"/>
-<text x="566" y="576" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">swift 43.5%</text>
-<rect x="692" y="556" width="120" height="30" rx="15" fill="#f8fafc" stroke="#d97706" stroke-width="1"/>
-<text x="706" y="576" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">go 42.9%</text>
-<rect x="80" y="600" width="178" height="30" rx="15" fill="#f8fafc" stroke="#d97706" stroke-width="1"/>
-<text x="94" y="620" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">javascript 42.9%</text>
-<rect x="270" y="600" width="120" height="30" rx="15" fill="#f8fafc" stroke="#d97706" stroke-width="1"/>
-<text x="284" y="620" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">rust 40.2%</text>
-<rect x="402" y="600" width="120" height="30" rx="15" fill="#f8fafc" stroke="#d97706" stroke-width="1"/>
-<text x="416" y="620" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#1f2937">php 35.7%</text>
-<rect x="950" y="150" width="400" height="650" rx="32" fill="#ffffff" stroke="#dbe4f0" stroke-width="1"/>
-<text x="980" y="198" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="700" fill="#1f2937">Opus 4.6</text>
-<text x="980" y="228" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="700" fill="#b45309">Pending benchmark</text>
-<text x="980" y="276" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="normal" fill="#475569">No verified local results are published</text>
-<text x="980" y="300" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="normal" fill="#475569">for Opus 4.6 in this fork yet.</text>
-<rect x="980" y="344" width="340" height="140" rx="24" fill="#fff7ed" stroke="#fdba74" stroke-width="1"/>
-<text x="1008" y="382" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="700" fill="#9a3412">What this means:</text>
-<text x="1008" y="416" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="normal" fill="#7c2d12">Use the GPT-5.4 guidance today.</text>
-<text x="1008" y="442" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="normal" fill="#7c2d12">Replace this card with verified Opus</text>
-<text x="1008" y="468" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="normal" fill="#7c2d12">tiers after the Anthropic run completes.</text>
-<rect x="980" y="528" width="340" height="180" rx="24" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
-<text x="1008" y="566" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="700" fill="#1f2937">Next step</text>
-<text x="1008" y="600" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="normal" fill="#475569">Run the same local pipeline with</text>
-<text x="1008" y="626" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="normal" fill="#475569">the exact Opus 4.6 model id and</text>
-<text x="1008" y="652" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="normal" fill="#475569">publish the resulting YAML/JSON</text>
-<text x="1008" y="678" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="normal" fill="#475569">through the same summaries.</text>
+<rect width="1660" height="1260" fill="url(#bg)"/>
+<circle cx="220" cy="140" r="150" fill="#93c5fd" opacity="0.28" filter="url(#softblur)"/>
+<circle cx="1480" cy="180" r="170" fill="#c4b5fd" opacity="0.22" filter="url(#softblur)"/>
+<circle cx="1540" cy="1130" r="190" fill="#fdba74" opacity="0.18" filter="url(#softblur)"/>
+<circle cx="160" cy="1140" r="120" fill="#2dd4bf" opacity="0.12" filter="url(#softblur)"/>
+<rect x="34" y="34" width="1592" height="1192" rx="40" fill="url(#cardgrad)" stroke="#dbe4f0" stroke-width="1" filter="url(#shadow)"/>
+<text x="72" y="108" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="28" font-weight="700" fill="#0f172a">Language Atlas</text>
+<text x="72" y="162" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="54" font-weight="800" fill="url(#titlegrad)">GPT-5.4 Medium across</text>
+<text x="72" y="214" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="54" font-weight="800" fill="url(#titlegrad)">every language tracked in this fork</text>
+<text x="72" y="252" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="22" font-weight="400" fill="#475569">The 20 ACB-Full languages and the 3 added language tracks are shown together. Basis tags stay attached to every row.</text>
+<rect x="72" y="286" width="270" height="88" rx="24" fill="#ffffff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="94" y="320" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="15" font-weight="700" fill="#64748b">ACB-Full</text>
+<text x="94" y="350" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="24" font-weight="800" fill="#0f766e">53.3% overall</text>
+<rect x="360" y="286" width="270" height="88" rx="24" fill="#ffffff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="382" y="320" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="15" font-weight="700" fill="#64748b">Top verified</text>
+<text x="382" y="350" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="18" font-weight="800" fill="#2563eb">elixir / kotlin / csharp</text>
+<rect x="648" y="286" width="270" height="88" rx="24" fill="#ffffff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="670" y="320" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="15" font-weight="700" fill="#64748b">Added tracks</text>
+<text x="670" y="350" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="18" font-weight="800" fill="#7c3aed">ts_effect / lean4 / gleam</text>
+<rect x="936" y="286" width="300" height="88" rx="24" fill="#ffffff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="958" y="320" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="15" font-weight="700" fill="#64748b">Basis tags</text>
+<text x="958" y="350" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="18" font-weight="800" fill="#ea580c">FULL | VALIDATED | SLICE</text>
+<rect x="72" y="412" width="736" height="318" rx="30" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<rect x="90" y="430" width="700" height="66" rx="22" fill="url(#elitegrad)" opacity="0.12"/>
+<text x="100" y="460" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="28" font-weight="800" fill="#14b8a6">Elite</text>
+<text x="780" y="460" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="16" font-weight="700" fill="#64748b" text-anchor="end">3 languages</text>
+<rect x="88.0" y="514" width="344.0" height="64" rx="20" fill="#fbfdff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="104.0" y="538" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#0f172a">elixir</text>
+<rect x="352.0" y="526" width="66" height="22" rx="11" fill="#dbeafe"/>
+<text x="385.0" y="542" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="11" font-weight="800" fill="#1d4ed8" text-anchor="middle">FULL</text>
+<text x="104.0" y="562" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="13" font-weight="400" fill="#64748b">173/198</text>
+<text x="416.0" y="563" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="22" font-weight="800" fill="#14b8a6" text-anchor="end">87.4%</text>
+<rect x="448.0" y="514" width="344.0" height="64" rx="20" fill="#fbfdff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="464.0" y="538" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#0f172a">kotlin</text>
+<rect x="712.0" y="526" width="66" height="22" rx="11" fill="#dbeafe"/>
+<text x="745.0" y="542" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="11" font-weight="800" fill="#1d4ed8" text-anchor="middle">FULL</text>
+<text x="464.0" y="562" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="13" font-weight="400" fill="#64748b">153/200</text>
+<text x="776.0" y="563" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="22" font-weight="800" fill="#14b8a6" text-anchor="end">76.5%</text>
+<rect x="88.0" y="582" width="344.0" height="64" rx="20" fill="#fbfdff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="104.0" y="606" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#0f172a">csharp</text>
+<rect x="352.0" y="594" width="66" height="22" rx="11" fill="#dbeafe"/>
+<text x="385.0" y="610" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="11" font-weight="800" fill="#1d4ed8" text-anchor="middle">FULL</text>
+<text x="104.0" y="630" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="13" font-weight="400" fill="#64748b">144/199</text>
+<text x="416.0" y="631" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="22" font-weight="800" fill="#14b8a6" text-anchor="end">72.4%</text>
+<rect x="852" y="412" width="736" height="318" rx="30" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<rect x="870" y="430" width="700" height="66" rx="22" fill="url(#stronggrad)" opacity="0.12"/>
+<text x="880" y="460" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="28" font-weight="800" fill="#3b82f6">Strong</text>
+<text x="1560" y="460" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="16" font-weight="700" fill="#64748b" text-anchor="end">3 languages</text>
+<rect x="868.0" y="514" width="344.0" height="64" rx="20" fill="#fbfdff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="884.0" y="538" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#0f172a">ruby</text>
+<rect x="1132.0" y="526" width="66" height="22" rx="11" fill="#dbeafe"/>
+<text x="1165.0" y="542" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="11" font-weight="800" fill="#1d4ed8" text-anchor="middle">FULL</text>
+<text x="884.0" y="562" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="13" font-weight="400" fill="#64748b">126/200</text>
+<text x="1196.0" y="563" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="22" font-weight="800" fill="#3b82f6" text-anchor="end">63.0%</text>
+<rect x="1228.0" y="514" width="344.0" height="64" rx="20" fill="#fbfdff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="1244.0" y="538" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#0f172a">julia</text>
+<rect x="1492.0" y="526" width="66" height="22" rx="11" fill="#dbeafe"/>
+<text x="1525.0" y="542" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="11" font-weight="800" fill="#1d4ed8" text-anchor="middle">FULL</text>
+<text x="1244.0" y="562" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="13" font-weight="400" fill="#64748b">114/200</text>
+<text x="1556.0" y="563" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="22" font-weight="800" fill="#3b82f6" text-anchor="end">57.0%</text>
+<rect x="868.0" y="582" width="344.0" height="64" rx="20" fill="#fbfdff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="884.0" y="606" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#0f172a">dart</text>
+<rect x="1132.0" y="594" width="66" height="22" rx="11" fill="#dbeafe"/>
+<text x="1165.0" y="610" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="11" font-weight="800" fill="#1d4ed8" text-anchor="middle">FULL</text>
+<text x="884.0" y="630" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="13" font-weight="400" fill="#64748b">113/200</text>
+<text x="1196.0" y="631" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="22" font-weight="800" fill="#3b82f6" text-anchor="end">56.5%</text>
+<rect x="72" y="764" width="736" height="406" rx="30" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<rect x="90" y="782" width="700" height="66" rx="22" fill="url(#capablegrad)" opacity="0.12"/>
+<text x="100" y="812" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="28" font-weight="800" fill="#8b5cf6">Capable</text>
+<text x="780" y="812" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="16" font-weight="700" fill="#64748b" text-anchor="end">8 languages</text>
+<rect x="88.0" y="866" width="344.0" height="64" rx="20" fill="#fbfdff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="104.0" y="890" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#0f172a">r</text>
+<rect x="352.0" y="878" width="66" height="22" rx="11" fill="#dbeafe"/>
+<text x="385.0" y="894" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="11" font-weight="800" fill="#1d4ed8" text-anchor="middle">FULL</text>
+<text x="104.0" y="914" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="13" font-weight="400" fill="#64748b">108/198</text>
+<text x="416.0" y="915" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="22" font-weight="800" fill="#8b5cf6" text-anchor="end">54.5%</text>
+<rect x="448.0" y="866" width="344.0" height="64" rx="20" fill="#fbfdff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="464.0" y="890" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#0f172a">typescript_effect</text>
+<rect x="684.0" y="878" width="94" height="22" rx="11" fill="#ede9fe"/>
+<text x="731.0" y="894" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="11" font-weight="800" fill="#6d28d9" text-anchor="middle">SLICE</text>
+<text x="464.0" y="914" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="13" font-weight="400" fill="#64748b">105/196</text>
+<text x="776.0" y="915" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="22" font-weight="800" fill="#8b5cf6" text-anchor="end">53.6%</text>
+<rect x="88.0" y="934" width="344.0" height="64" rx="20" fill="#fbfdff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="104.0" y="958" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#0f172a">java</text>
+<rect x="352.0" y="946" width="66" height="22" rx="11" fill="#dbeafe"/>
+<text x="385.0" y="962" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="11" font-weight="800" fill="#1d4ed8" text-anchor="middle">FULL</text>
+<text x="104.0" y="982" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="13" font-weight="400" fill="#64748b">96/188</text>
+<text x="416.0" y="983" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="22" font-weight="800" fill="#8b5cf6" text-anchor="end">51.1%</text>
+<rect x="448.0" y="934" width="344.0" height="64" rx="20" fill="#fbfdff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="464.0" y="958" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#0f172a">racket</text>
+<rect x="712.0" y="946" width="66" height="22" rx="11" fill="#dbeafe"/>
+<text x="745.0" y="962" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="11" font-weight="800" fill="#1d4ed8" text-anchor="middle">FULL</text>
+<text x="464.0" y="982" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="13" font-weight="400" fill="#64748b">100/196</text>
+<text x="776.0" y="983" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="22" font-weight="800" fill="#8b5cf6" text-anchor="end">51.0%</text>
+<rect x="88.0" y="1002" width="344.0" height="64" rx="20" fill="#fbfdff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="104.0" y="1026" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#0f172a">scala</text>
+<rect x="352.0" y="1014" width="66" height="22" rx="11" fill="#dbeafe"/>
+<text x="385.0" y="1030" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="11" font-weight="800" fill="#1d4ed8" text-anchor="middle">FULL</text>
+<text x="104.0" y="1050" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="13" font-weight="400" fill="#64748b">101/199</text>
+<text x="416.0" y="1051" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="22" font-weight="800" fill="#8b5cf6" text-anchor="end">50.8%</text>
+<rect x="448.0" y="1002" width="344.0" height="64" rx="20" fill="#fbfdff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="464.0" y="1026" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#0f172a">shell</text>
+<rect x="712.0" y="1014" width="66" height="22" rx="11" fill="#dbeafe"/>
+<text x="745.0" y="1030" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="11" font-weight="800" fill="#1d4ed8" text-anchor="middle">FULL</text>
+<text x="464.0" y="1050" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="13" font-weight="400" fill="#64748b">95/188</text>
+<text x="776.0" y="1051" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="22" font-weight="800" fill="#8b5cf6" text-anchor="end">50.5%</text>
+<rect x="88.0" y="1070" width="344.0" height="64" rx="20" fill="#fbfdff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="104.0" y="1094" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#0f172a">cpp</text>
+<rect x="352.0" y="1082" width="66" height="22" rx="11" fill="#dbeafe"/>
+<text x="385.0" y="1098" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="11" font-weight="800" fill="#1d4ed8" text-anchor="middle">FULL</text>
+<text x="104.0" y="1118" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="13" font-weight="400" fill="#64748b">93/186</text>
+<text x="416.0" y="1119" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="22" font-weight="800" fill="#8b5cf6" text-anchor="end">50.0%</text>
+<rect x="448.0" y="1070" width="344.0" height="64" rx="20" fill="#fbfdff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="464.0" y="1094" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#0f172a">typescript</text>
+<rect x="712.0" y="1082" width="66" height="22" rx="11" fill="#dbeafe"/>
+<text x="745.0" y="1098" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="11" font-weight="800" fill="#1d4ed8" text-anchor="middle">FULL</text>
+<text x="464.0" y="1118" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="13" font-weight="400" fill="#64748b">98/199</text>
+<text x="776.0" y="1119" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="22" font-weight="800" fill="#8b5cf6" text-anchor="end">49.2%</text>
+<rect x="852" y="764" width="736" height="406" rx="30" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<rect x="870" y="782" width="700" height="66" rx="22" fill="url(#emerginggrad)" opacity="0.12"/>
+<text x="880" y="812" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="28" font-weight="800" fill="#f97316">Emerging</text>
+<text x="1560" y="812" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="16" font-weight="700" fill="#64748b" text-anchor="end">9 languages</text>
+<rect x="868.0" y="866" width="344.0" height="64" rx="20" fill="#fbfdff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="884.0" y="890" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#0f172a">perl</text>
+<rect x="1132.0" y="878" width="66" height="22" rx="11" fill="#dbeafe"/>
+<text x="1165.0" y="894" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="11" font-weight="800" fill="#1d4ed8" text-anchor="middle">FULL</text>
+<text x="884.0" y="914" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="13" font-weight="400" fill="#64748b">89/200</text>
+<text x="1196.0" y="915" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="22" font-weight="800" fill="#f97316" text-anchor="end">44.5%</text>
+<rect x="1228.0" y="866" width="344.0" height="64" rx="20" fill="#fbfdff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="1244.0" y="890" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#0f172a">python</text>
+<rect x="1492.0" y="878" width="66" height="22" rx="11" fill="#dbeafe"/>
+<text x="1525.0" y="894" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="11" font-weight="800" fill="#1d4ed8" text-anchor="middle">FULL</text>
+<text x="1244.0" y="914" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="13" font-weight="400" fill="#64748b">86/196</text>
+<text x="1556.0" y="915" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="22" font-weight="800" fill="#f97316" text-anchor="end">43.9%</text>
+<rect x="868.0" y="934" width="344.0" height="64" rx="20" fill="#fbfdff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="884.0" y="958" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#0f172a">swift</text>
+<rect x="1132.0" y="946" width="66" height="22" rx="11" fill="#dbeafe"/>
+<text x="1165.0" y="962" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="11" font-weight="800" fill="#1d4ed8" text-anchor="middle">FULL</text>
+<text x="884.0" y="982" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="13" font-weight="400" fill="#64748b">87/200</text>
+<text x="1196.0" y="983" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="22" font-weight="800" fill="#f97316" text-anchor="end">43.5%</text>
+<rect x="1228.0" y="934" width="344.0" height="64" rx="20" fill="#fbfdff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="1244.0" y="958" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#0f172a">go</text>
+<rect x="1492.0" y="946" width="66" height="22" rx="11" fill="#dbeafe"/>
+<text x="1525.0" y="962" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="11" font-weight="800" fill="#1d4ed8" text-anchor="middle">FULL</text>
+<text x="1244.0" y="982" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="13" font-weight="400" fill="#64748b">82/191</text>
+<text x="1556.0" y="983" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="22" font-weight="800" fill="#f97316" text-anchor="end">42.9%</text>
+<rect x="868.0" y="1002" width="344.0" height="64" rx="20" fill="#fbfdff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="884.0" y="1026" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#0f172a">javascript</text>
+<rect x="1132.0" y="1014" width="66" height="22" rx="11" fill="#dbeafe"/>
+<text x="1165.0" y="1030" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="11" font-weight="800" fill="#1d4ed8" text-anchor="middle">FULL</text>
+<text x="884.0" y="1050" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="13" font-weight="400" fill="#64748b">79/184</text>
+<text x="1196.0" y="1051" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="22" font-weight="800" fill="#f97316" text-anchor="end">42.9%</text>
+<rect x="1228.0" y="1002" width="344.0" height="64" rx="20" fill="#fbfdff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="1244.0" y="1026" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#0f172a">rust</text>
+<rect x="1492.0" y="1014" width="66" height="22" rx="11" fill="#dbeafe"/>
+<text x="1525.0" y="1030" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="11" font-weight="800" fill="#1d4ed8" text-anchor="middle">FULL</text>
+<text x="1244.0" y="1050" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="13" font-weight="400" fill="#64748b">80/199</text>
+<text x="1556.0" y="1051" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="22" font-weight="800" fill="#f97316" text-anchor="end">40.2%</text>
+<rect x="868.0" y="1070" width="344.0" height="64" rx="20" fill="#fbfdff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="884.0" y="1094" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#0f172a">php</text>
+<rect x="1132.0" y="1082" width="66" height="22" rx="11" fill="#dbeafe"/>
+<text x="1165.0" y="1098" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="11" font-weight="800" fill="#1d4ed8" text-anchor="middle">FULL</text>
+<text x="884.0" y="1118" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="13" font-weight="400" fill="#64748b">71/199</text>
+<text x="1196.0" y="1119" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="22" font-weight="800" fill="#f97316" text-anchor="end">35.7%</text>
+<rect x="1228.0" y="1070" width="344.0" height="64" rx="20" fill="#fbfdff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="1244.0" y="1094" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#0f172a">lean4</text>
+<rect x="1464.0" y="1082" width="94" height="22" rx="11" fill="#fef3c7"/>
+<text x="1511.0" y="1098" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="11" font-weight="800" fill="#b45309" text-anchor="middle">VALIDATED</text>
+<text x="1244.0" y="1118" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="13" font-weight="400" fill="#64748b">36/125</text>
+<text x="1556.0" y="1119" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="22" font-weight="800" fill="#f97316" text-anchor="end">28.8%</text>
+<rect x="868.0" y="1138" width="344.0" height="64" rx="20" fill="#fbfdff" stroke="#dbe4f0" stroke-width="1"/>
+<text x="884.0" y="1162" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#0f172a">gleam</text>
+<rect x="1104.0" y="1150" width="94" height="22" rx="11" fill="#fef3c7"/>
+<text x="1151.0" y="1166" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="11" font-weight="800" fill="#b45309" text-anchor="middle">VALIDATED</text>
+<text x="884.0" y="1186" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="13" font-weight="400" fill="#64748b">25/122</text>
+<text x="1196.0" y="1187" font-family="'Space Grotesk','Avenir Next','Inter','Segoe UI',sans-serif" font-size="22" font-weight="800" fill="#f97316" text-anchor="end">20.5%</text>
+<text x="72" y="1210" font-family="'DM Sans','Inter','Segoe UI',sans-serif" font-size="17" font-weight="400" fill="#475569">FULL = original benchmark language. VALIDATED = translated slice that passed canonical validation. SLICE = translated slice without that gate.</text>
 </svg>
