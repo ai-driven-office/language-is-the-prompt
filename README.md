@@ -143,6 +143,10 @@ It also adds fork-only extension slices for:
 
 The extension-language pipeline includes translated benchmark generation and, for `gleam` and `lean4`, canonical validation of translated benchmark rows before scoring the model.
 
+<div align="center">
+  <img src="figures/fork_results_overview_gpt_5_4_medium.svg" width="92%">
+</div>
+
 #### Main ACB-Full result
 
 | Model | Benchmark | Passed | Total | Pass Rate | Notes |
@@ -166,6 +170,7 @@ The extension-language pipeline includes translated benchmark generation and, fo
 </div>
 
 Full tables and methodology notes are in [RESULTS.md](./RESULTS.md) and the [fork update report](./reports/fork_update_gpt_5_4_medium.md).
+Machine-readable summaries are available in `json`, `csv`, and `yaml` under [results](./results/).
 
 <div align="center">
   <img src="figures/exp_acb.png" width="85%">
@@ -265,4 +270,3 @@ If you find our project helpful, please cite:
 ## License
 
 This repository is licensed under the terms of the [LICENSE](LICENSE) file.
-

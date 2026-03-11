@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="860" viewBox="0 0 1280 860">
 <rect width="100%" height="100%" fill="#f8fafc"/>
+<rect x="20" y="20" width="1240" height="820" rx="28" fill="#ffffff" stroke="#dbe4f0" stroke-width="1"/>
 <text x="40" y="48" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="700" fill="#1f2937">GPT-5.4 Medium on ACB-Full</text>
 <text x="40" y="76" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="normal" fill="#475569">Corrected local run on 3,920 problems across 20 languages. Overall: 53.3% pass@1.</text>
 <line x1="230.0" y1="90" x2="230.0" y2="820" stroke="#e2e8f0" stroke-width="1"/>

@@ -1,0 +1,19 @@
+gleam:
+  source_rows: 196
+  validated_rows: 122
+  validated_coverage: 62.2
+  passed: 25
+  pass_rate_on_validated_rows: 20.5
+  pass_rate_over_source_rows: 12.8
+lean4:
+  source_rows: 196
+  validated_rows: 125
+  validated_coverage: 63.8
+  passed: 36
+  pass_rate_on_validated_rows: 28.8
+  pass_rate_over_source_rows: 18.4
+typescript_effect:
+  source_rows: 196
+  passed: 105
+  pass_rate: 53.6
+  notes: legacy extension run without canonical-validation filter

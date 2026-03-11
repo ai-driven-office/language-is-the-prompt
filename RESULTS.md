@@ -76,6 +76,9 @@ Compact summaries:
 - [results/acb_full_openai_gpt_5_4_medium.csv](/Users/a12907/Documents/GitHub/AutoCodeBenchmark/results/acb_full_openai_gpt_5_4_medium.csv)
 - [results/extension_slices_openai_gpt_5_4_medium.csv](/Users/a12907/Documents/GitHub/AutoCodeBenchmark/results/extension_slices_openai_gpt_5_4_medium.csv)
 - [results/summary.json](/Users/a12907/Documents/GitHub/AutoCodeBenchmark/results/summary.json)
+- [results/summary.yaml](/Users/a12907/Documents/GitHub/AutoCodeBenchmark/results/summary.yaml)
+- [results/main_benchmark.yaml](/Users/a12907/Documents/GitHub/AutoCodeBenchmark/results/main_benchmark.yaml)
+- [results/extension_slices.yaml](/Users/a12907/Documents/GitHub/AutoCodeBenchmark/results/extension_slices.yaml)
 
 Primary raw result artifacts used for the summaries:
 
