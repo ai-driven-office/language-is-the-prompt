@@ -1,14 +1,10 @@
-# Why Elixir? Language Design Properties That Predict LLM Code Generation Success
-
-**Authors:** [Your Name]
-**Date:** March 2026
-**Status:** Draft v4 — evidence aligned to completed active suites and expanded explicit-task panel
+# Elixir and the Design of LLM-Friendly Programming Languages: Evidence from AutoCodeBench and Controlled Ablations
 
 ---
 
 ## Abstract
 
-Large language models (LLMs) exhibit striking performance variation across programming languages on code generation benchmarks, yet the relationship between language design and generation quality remains poorly understood. We present evidence from a controlled reproduction of AutoCodeBench (ACB) using GPT-5.4 that Elixir — a low-resource functional language running on the BEAM VM — achieves 87.4% Pass@1 across 198 benchmark problems, exceeding the 20-language mean of 53.3% by 34.1 percentage points and outperforming the next-best language (Kotlin, 76.5%) by 10.9 points. Crucially, Elixir dominates the *hard* problem bucket at 86.3%, nearly doubling the runner-up (C#, 54.3%). Through a nine-suite research program combining benchmark-artifact controls, cross-language proxy analysis, paper-grade active ablations over the full 198-task Elixir slice, a conservative recurring-task fixed-effects sanity check, a formal first-failure taxonomy, and an expanded auxiliary explicit-task cross-language panel with exact task ids (144 executable rows, 16 tasks, 3 languages, 3 framing conditions), we find that Elixir's ACB advantage (a) survives normalization for difficulty and problem length (+42.7 points above expected), (b) is most strongly explained within Elixir by documentation and task-framing explicitness (`84.3%` with full docs, `84.3%` with examples removed, `46.0%` with minimal docs, `42.9%` with signatures only), but (c) does not cleanly replicate as a universal language lead on the matched panel, where Elixir scores 64.6% versus Python 81.2% and TypeScript 83.3%, while richer contract wording alone does not move results and concrete examples only directionally improve the panel overall (`83.3%` vs `72.9%`, `7` improvements and `2` degradations, exact sign `p=0.179688`). The resulting thesis is deliberately narrower than a feature-by-feature triumphal story: Elixir appears unusually model-friendly on ACB because language-level explicitness and benchmark task framing push in the same direction, while the most portable design lesson is broader and more practical: make task intent, API contracts, and executable examples locally legible.
+Large language models (LLMs) exhibit substantial performance variation across programming languages on code generation benchmarks, yet the relationship between language design and generation quality remains poorly understood. We report a controlled reproduction of AutoCodeBench (ACB) using GPT-5.4 in which Elixir, a low-resource functional language running on the BEAM VM, achieves 87.4% Pass@1 across 198 benchmark problems, exceeding the 20-language mean of 53.3% by 34.1 percentage points and outperforming the next-best language (Kotlin, 76.5%) by 10.9 points. Elixir also leads the hard-problem bucket at 86.3%, well above the runner-up (C#, 54.3%). We then conduct a nine-suite analysis program combining benchmark-artifact controls, cross-language proxy analysis, full-scale paired ablations over the 198-task Elixir slice, a recurring-task fixed-effects sanity check, a formal first-failure taxonomy, and an auxiliary exact-task multilingual panel with 144 executable rows (16 tasks, 3 languages, 3 framing conditions). The results show that Elixir's ACB advantage (a) survives normalization for difficulty and problem length (+42.7 points above expected), (b) is most strongly explained within Elixir by documentation and task-framing explicitness (`84.3%` with full docs, `84.3%` with examples removed, `46.0%` with minimal docs, `42.9%` with signatures only), but (c) does not replicate as a universal language lead on the matched panel, where Elixir scores 64.6% versus Python 81.2% and TypeScript 83.3%. Richer contract wording alone does not change matched-panel performance, while concrete examples improve the panel overall only directionally (`83.3%` vs `72.9%`, `7` improvements and `2` degradations, exact sign `p=0.179688`). The resulting interpretation is narrower than a feature-by-feature account: Elixir appears unusually model-friendly on ACB because language-level explicitness and benchmark task framing reinforce one another, while the most portable design lesson is broader, namely that task intent, API contracts, and executable examples should be made locally legible.
 
 **Keywords:** code generation, programming language design, LLM benchmark, Elixir, documentation, task framing, pattern matching, immutability, AutoCodeBench, predictive burden, information density, agent-centric design
 
@@ -42,39 +38,28 @@ We test this hypothesis through:
 ### 1.1 Contributions
 
 1. **Empirical confirmation** that Elixir's benchmark advantage on ACB is real, not a benchmark artifact, surviving normalization for difficulty, problem length, and test complexity (+42.7 points above expected, §5).
-2. **Paper-grade active-ablation evidence** that the strongest currently supported within-Elixir causal signal is documentation and task framing, not examples alone, with large and statistically durable drops when documentation structure is removed (§6).
+2. **Full-scale active-ablation evidence** that the strongest currently supported within-Elixir causal signal is documentation and task framing, not examples alone, with large and statistically durable drops when documentation structure is removed (§6).
 3. **A strengthened same-task follow-up design** via a canonically validated explicit-task panel (144 executable rows) showing that Elixir's leaderboard dominance does not automatically persist once tasks are tightly matched, while concrete examples rescue a small subset of tasks and lift the panel overall without a decisive paired-significance result (§4, §6).
 4. **A stronger statistical methodology** for studying language effects in code generation, including paired ablations with exact McNemar tests and Holm correction, a recurring-task fixed-effects sanity check, an explicit-task matched panel, and a formal first-failure taxonomy with confidence intervals and exact tests (§4-§6).
 5. **A refined design thesis** for human-AI programming languages: prioritize legibility of tasks, public contracts, concrete examples, state flow, and local reasoning, while treating broader claims about pattern matching or tagged tuples as suggestive rather than settled (§7-§8).
 
 ---
 
-## 2. How LLMs Generate Code: A Primer
+## 2. Background: Autoregressive Code Generation and Predictive Burden
 
-*This section provides necessary background for readers unfamiliar with the mechanics of LLM code generation. Readers already familiar with autoregressive language models may skip to §3 (Related Work) or §4 (Methodology).*
+### 2.1 Local Prediction Under Bounded Context
 
-### 2.1 Next-Token Prediction: The Core Mechanism
+Autoregressive language models generate code token by token under a bounded context window. At each decoding step, the model conditions on the visible prompt and previously generated tokens, then commits to a next-token continuation. This mechanism is powerful, but it makes generation sensitive to how much relevant information is available in local context. When types, contracts, data shape, and control-flow cues are nearby and overtly represented, code generation is comparatively stable. When correctness depends on distant declarations, implicit conventions, or hidden state transitions, the model must infer more latent structure and error rates rise.
 
-Large language models generate code one token at a time, left to right — much like a human typing at a keyboard, except the model has no ability to "go back" and reconsider earlier decisions. At each step, the model sees everything it has generated so far (the **context**) and produces a probability distribution over every possible next token (roughly, a next word or symbol). It then samples from this distribution and commits to that choice permanently.
+This observation motivates the central construct used throughout the paper: **predictive burden**, the amount of latent information the model must recover correctly in order to produce an executable solution. Predictive burden is not solely a property of the model; it is also shaped by the prompt, the task specification, and the target language.
 
-This mechanism has a profound implication: **the model cannot plan ahead.** When it writes the opening line of a function, it does not "know" what the closing line will be. It is making the best local prediction it can at each step, hoping that the cumulative sequence of local decisions produces globally correct code. This is fundamentally different from how a human programmer works — humans hold a mental model of the entire solution and fill in details.
+### 2.2 Language Design as a Constraint Surface
 
-### 2.2 The Context Window: What the Model Can See
+Programming languages differ in how much semantic information they force into locally visible structure. The same logical task can therefore present very different decoding difficulty depending on whether the language exposes data shape, branch structure, state flow, and return conventions directly in syntax.
 
-Each model has a fixed **context window** — the maximum number of tokens it can "see" at once (ranging from 8,000 to over 1,000,000 tokens in current models). Within this window, the model uses an **attention mechanism** that allows any token to attend to any other token. In practice, attention becomes less effective over long distances — the model's "memory" of something 10,000 tokens ago is weaker than its memory of the previous line.
+For example, Elixir commonly expresses dispatch in multi-clause function heads:
 
-For code generation, this means:
-- **Local code is easy.** The model can reliably complete a function when the relevant context (types, variable names, the function signature) is nearby.
-- **Distant dependencies are hard.** If a function's correctness depends on understanding a class definition 500 lines away, or a global variable set in another file, the model is more likely to make errors.
-- **Implicit state is invisible.** If a method silently mutates an object defined elsewhere, the model has no way to "see" that mutation unless it was explicitly shown in the context.
-
-### 2.3 Why Programming Language Design Matters
-
-Consider the model's task: given a problem description and some context, predict the next token of correct code. The difficulty of this task depends on *how much information is implicit vs. explicit* in the language:
-
-**Easy for the model:**
 ```elixir
-# Elixir: Everything is visible in the clause head
 def calculate_discount({:ok, %Order{total: total}}) when total > 100 do
   {:ok, total * 0.9}
 end
@@ -83,30 +68,22 @@ def calculate_discount({:ok, %Order{total: total}}) do
 end
 def calculate_discount({:error, _} = error), do: error
 ```
-The model can see: what data shape each clause handles, what values are destructured, what is returned. The branches are exhaustive and explicit. Each clause is a self-contained prediction.
 
-**Hard for the model:**
+Here, input shape, branch boundaries, and result form are all locally exposed. By contrast, an imperative implementation with mutation, sentinel returns, and convention-driven branching can force the model to infer more unstated behavior:
+
 ```python
-# Python: The model must track hidden state and implicit conventions
 def calculate_discount(order):
     if order is None:
-        return None  # Or raise? Or return -1? Convention unclear
-    if not hasattr(order, 'total'):
-        raise AttributeError(...)  # Or return None?
+        return None
+    if not hasattr(order, "total"):
+        raise AttributeError(...)
     if order.total > 100:
-        order.discounted_total = order.total * 0.9  # Mutates order!
-        return order  # Returns the mutated object
-    return order  # Same object, not mutated
+        order.discounted_total = order.total * 0.9
+        return order
+    return order
 ```
-The model must guess: What happens if `order` is None? Does the function mutate its input? What type does it return? Is the caller expecting the mutation? These are all *implicit* — nothing in the syntax forces the programmer (or the model) to be explicit about them.
 
-This is the core insight of our paper: **languages that make intent explicit reduce the number of correct tokens the model must guess, because the syntax itself constrains the space of valid continuations.**
-
-### 2.4 An Analogy: Following a Recipe vs. Improvising
-
-Think of code generation as cooking. A recipe (explicit language) says: "Take 200g flour, add 2 eggs, mix for 3 minutes." Each step is clear, self-contained, and verifiable. An implicit language is like being told: "Make something like what we had last Tuesday" — the cook must remember the meal, guess the portions, and infer the technique.
-
-LLMs are excellent recipe-followers but poor improvisers. They thrive when the language provides a clear recipe format (pattern matching, immutability, explicit results) and struggle when the language requires them to remember implicit context, guess at conventions, or track invisible state changes.
+In this second style, several semantic decisions are underdetermined by surface structure alone: null behavior, mutation policy, return-shape expectations, and downstream handling conventions. The paper's core hypothesis follows directly from this contrast: **languages and ecosystems that make task intent, control flow, data transformation, and error handling locally legible reduce predictive burden and therefore improve code-generation reliability.**
 
 ---
 
@@ -120,7 +97,7 @@ LLMs are excellent recipe-followers but poor improvisers. They thrive when the l
 
 Le-Cong et al. [2] introduced **FPEval/FPBench**, evaluating LLMs on 721 tasks across Haskell, OCaml, Scala, and Java. Their key finding — that pure FP languages underperform imperative baselines — directly contradicts the naive functional-programming hypothesis. Baseline pass rates are stark: Haskell 14.5%, OCaml 9.43%, Scala 19.28%, versus Java 22.19%. Even with advanced models, the structural gap persists (Haskell rises to 42.34%, Scala to 52.16%, but the pure-FP deficit remains). Furthermore, FPEval reveals a pervasive "imperative bias" in LLM outputs: models generate syntactically valid but non-idiomatic functional code, injecting procedural loops, mutable variable workarounds, and nested if-else blocks that bypass native higher-order abstractions.
 
-This is crucial context: Elixir's success cannot be attributed to "functional programming" generically, since purer functional languages *fail*. The critical distinction is that Elixir is a *pragmatic* functional language: it enforces immutability and encourages pattern matching but does not require purity, dependent types, or complex type inference. We argue this pragmatic middle ground — maximum structural benefit with minimum conceptual overhead — is precisely what benefits LLMs.
+This distinction matters for the present study. Elixir's success cannot be attributed to "functional programming" in the abstract, since purer functional languages underperform in FPEval. The more plausible distinction is that Elixir occupies a pragmatic middle ground: it preserves immutability and pattern matching while avoiding the higher inference burden imposed by purity, dependent typing, or richer type-level machinery.
 
 Notably, FPEval also demonstrates that LLMs possess latent capacity for self-repair: when supplied with explicit static analysis feedback identifying functional violations, models can successfully refactor imperative outputs into idiomatic functional code [2]. This suggests the bottleneck is not model capability but the *information available during generation* — a point we return to in §7.
 
@@ -132,7 +109,7 @@ Notably, FPEval also demonstrates that LLMs possess latent capacity for self-rep
 
 **"LLMs Love Python"** [9] documented that LLMs use Python 90–97% of the time when unconstrained, even when Python is suboptimal. In project initialization tasks where Python is demonstrably wrong (high-concurrency servers, embedded systems), models still default to Python 58% of the time with 0% Rust utilization. Models contradict their own language recommendations in 83% of project scenarios — correctly stating that Rust is required, then generating the scaffold in Python [9]. Library selection shows similar distortion: NumPy is injected unnecessarily in 48% of cases, and legacy frameworks (Flask) are favored over modern alternatives (FastAPI) by margins of 36–79% [9].
 
-**The Matthew Effect** [14] formalizes this bias as a self-reinforcing cycle: LLMs trained on popular code generate more popular code, which becomes training data for the next generation. This "rich get richer" dynamic actively suppresses the discovery and adoption of superior paradigms. That Elixir *outperforms* Python despite this massive structural disadvantage makes the result not merely surprising but theoretically significant — it implies a language-design signal strong enough to overcome the Matthew Effect.
+**The Matthew Effect** [14] formalizes this bias as a self-reinforcing cycle: LLMs trained on popular code generate more popular code, which in turn becomes training data for later systems. Elixir's ability to outperform Python despite this structural disadvantage therefore suggests that language design can matter enough to offset substantial corpus-frequency asymmetries.
 
 ### 3.4 Low-Resource Language Code Generation
 
@@ -232,7 +209,7 @@ To partially overcome the absence of shared multilingual task ids without rerunn
 
 $$\bar{\Delta}_{c_1,c_0} = \frac{1}{|L||T|}\sum_{l \in L}\sum_{t \in T}(y_{l,t,c_1} - y_{l,t,c_0})$$
 
-along with discordant win/loss counts. This panel is intentionally small and low-power; we use it as a methodological strengthening experiment, not as a replacement leaderboard.
+along with discordant win/loss counts. This panel remains small and statistically underpowered; we use it as a methodological strengthening experiment, not as a replacement leaderboard.
 
 ### 4.6 Claim Evaluation Criteria
 
@@ -262,7 +239,7 @@ This classification is used explicitly in §6-§7 so that the paper's narrative 
 
 ### 4.8 Threats to Validity
 
-To reduce "magic" interpretations, we separate the main validity risks and what this study does or does not mitigate.
+We distinguish the main validity risks explicitly so that causal claims are matched to the strength of the evidence.
 
 **Construct validity.**
 The main construct in this paper is "explicitness," which mixes language-level properties with prompt-level task legibility. Suite A and the explicit-task panel show clearly that task framing is part of the effect, but they do not imply that all explicitness comes from the language alone. We therefore avoid treating task framing, documentation culture, and syntax as interchangeable.
@@ -274,7 +251,7 @@ The strongest internal-validity risk is accidental benchmark or runtime bias. We
 The main benchmark evidence comes from isolated function/class tasks, and the explicit-task panel covers only Elixir, Python, and TypeScript. So the study does not yet establish that the same causal ordering holds in large repositories, in framework-heavy code, or across the full ecosystem of programming languages.
 
 **Statistical conclusion validity.**
-The paper-grade Elixir ablations are reasonably powered, but the matched multilingual panel is still not. Its exact-task result is useful precisely because it is cleaner, not because it is large. We therefore treat its example effect as directional (`p=0.179688`) and do not overstate null or reversal results from that panel.
+The full-scale Elixir ablations are reasonably powered, but the matched multilingual panel is not. Its exact-task result is valuable because it provides cleaner task alignment, not because it is large. We therefore treat its example effect as directional (`p=0.179688`) and do not overstate null or reversal results from that panel.
 
 ---
 
@@ -333,7 +310,7 @@ The most diagnostic signal is performance on hard problems. Elixir's 86.3% hard-
 
 Elixir's Hard-to-Easy ratio of 0.863 means it loses almost no performance on hard problems. For comparison, the 20-language mean Hard-to-Easy ratio is 0.400 — models typically lose 60% of their easy-problem capability on hard problems. Elixir loses only 13.7%.
 
-This is the paper's central empirical finding: **Elixir's advantage is concentrated precisely where it matters most — on the hardest problems where other languages collapse.**
+This is the main benchmark-wide result of the paper: **Elixir's advantage is concentrated on the hard-problem subset, where most other languages lose substantially more performance.**
 
 ### 5.3 Failure Mode Analysis
 
@@ -366,7 +343,7 @@ For Elixir specifically, the 25 runtime failures decompose into:
 - `2` clear language exceptions (`8.0%`)
 - `16` other runtime failures (`64.0%`)
 
-So the strongest defensible claim is not that Elixir has a unique semantic failure profile, but that it reaches failure states far less often in the first place.
+The most conservative interpretation is therefore not that Elixir has a unique semantic failure profile, but that it reaches failure states much less often in the first place.
 
 ### 5.4 Artifact Controls (Suite H)
 
@@ -382,7 +359,7 @@ To rule out the possibility that Elixir simply received easier problems, we appl
 | Difficulty + full test length | 50.5%    | 87.4%    | **+36.8** |
 
 
-All three methods confirm that Elixir dramatically exceeds expectations. The difficulty + question length model actually *increases* the unexplained delta to +42.7 because Elixir's problems, while shorter in character count, are disproportionately classified as Hard (70.2% Hard vs. 43.5% for Kotlin).
+All three methods show that Elixir materially exceeds expectation under the available controls. The difficulty + question length model increases the unexplained delta to +42.7 because Elixir's problems, while shorter in character count, are disproportionately classified as Hard (70.2% Hard vs. 43.5% for Kotlin).
 
 **Comparison with other languages:**
 
@@ -402,7 +379,7 @@ Elixir's delta (+42.7) is nearly 3× the next highest (Kotlin, +15.8), indicatin
 
 ### 5.5 A Worked Example: The Same Problem in Three Languages
 
-To build intuition for *why* the numbers differ so dramatically, consider a typical benchmark problem: **parse a list of key-value pairs, group by key, and return the values summed per key, handling malformed entries gracefully.**
+To illustrate the kind of structural differences emphasized by the predictive-burden framework, consider a benchmark-style problem: **parse a list of key-value pairs, group by key, and return the values summed per key, handling malformed entries gracefully.**
 
 **Elixir solution (model-generated, passes all tests):**
 ```elixir
@@ -450,7 +427,7 @@ std::map<std::string, double> sum_by_key(
 ```
 The model must navigate: template types, structured bindings, `std::variant` vs. `std::any`, `std::holds_alternative` vs. `std::get_if`, `const auto&` correctness, and implicit default construction of `double` in the map. The type ceremony alone introduces multiple high-entropy decision points.
 
-This single example illustrates the pattern we see across 3,920 problems: **Elixir's syntax compresses the solution into fewer, more explicit decisions, each of which is locally verifiable.** The model makes fewer total predictions and each prediction is more constrained — exactly the conditions under which autoregressive generation succeeds.
+This example is illustrative rather than definitive, but it matches the broader pattern observed across the benchmark: **Elixir often compresses a solution into fewer, more locally checkable decisions.** In predictive-burden terms, the space of plausible continuations is narrower and more strongly constrained by nearby syntax.
 
 ---
 
@@ -488,7 +465,7 @@ Corpus cleanliness and stylistic-stability proxies do not track the benchmark st
 
 The largest and most statistically durable effect in the completed active study is documentation structure removal, not examples alone.
 
-**Table 6.** Suite A paper-grade results (198 source tasks)
+**Table 6.** Suite A results (198 source tasks)
 
 
 | Condition             | Passed | Total | Pass@1 | Delta vs Full Docs | Exact McNemar p | Holm-adjusted p |
@@ -502,16 +479,16 @@ The largest and most statistically durable effect in the completed active study 
 Two facts matter here:
 
 1. Removing **examples only** does not hurt: `84.3%` remains unchanged.
-2. Removing **documentation structure** hurts dramatically: both `minimal_docs` and `signature_only` collapse by roughly 40 points.
+2. Removing **documentation structure** substantially reduces performance: both `minimal_docs` and `signature_only` fall by roughly 40 points.
 
-The hard-task bucket is even more striking:
+The hard-task subset shows the same pattern:
 
 - `full_docs`: `84.2%`
 - `reference_no_examples`: `81.3%`
 - `minimal_docs`: `39.6%`
 - `signature_only`: `38.8%`
 
-So the strongest supported claim in this paper is not "Elixir has better examples." It is that **rich task framing and API legibility matter enormously** for Elixir generation, especially on hard tasks. This is the most robust within-language causal signal we have.
+The strongest supported within-language claim in the paper is therefore not "Elixir has better examples." It is that **rich task framing and API legibility are major determinants of Elixir performance**, especially on hard tasks.
 
 But Suite A alone does not tell us whether that effect is uniquely Elixir-like or whether richer framing simply helps any language. We address that question with a small exact-task multilingual panel in §6.5.
 
@@ -525,7 +502,7 @@ Cross-linguistically, Elixir is structurally unique on the control-flow proxy: i
 
 The active control-flow ablation is likewise modest in the full matched-task rerun:
 
-**Table 7.** Suite D paper-grade results
+**Table 7.** Suite D results
 
 
 | Condition      | Passed | Total | Pass@1 | Delta vs Baseline | Exact McNemar p | Holm-adjusted p |
@@ -549,7 +526,7 @@ Elixir's tagged-tuple result convention remains conceptually attractive because 
 
 But the completed active rerun is modest:
 
-**Table 8.** Suite E paper-grade results
+**Table 8.** Suite E results
 
 
 | Condition            | Passed | Total | Pass@1 | Delta vs Baseline | Exact McNemar p | Holm-adjusted p |
@@ -565,7 +542,7 @@ That is directionally consistent with explicit contracts helping, but it is not 
 
 The cross-language mutability proxy is directionally aligned with the thesis (Pearson `-0.207`, Spearman `-0.240`), but again not strong enough to stand alone. The more interesting signal comes from the state-style interventions:
 
-**Table 9.** Suite F paper-grade results
+**Table 9.** Suite F results
 
 
 | Condition                | Passed | Total | Pass@1 | Delta vs Baseline | Exact McNemar p | Holm-adjusted p |
@@ -614,7 +591,7 @@ Aggregate condition totals make the same pattern visible:
 
 The contrast between `rich_contract` and `baseline_compact` is exact zero in this panel: `0` improvements and `0` degradations. So the multilingual matched-task result is not "more contract prose helps." The stronger statement is narrower: **concrete examples rescue some tasks that compact contracts do not, but the effect is selective and still low-power at this scale.** In the expanded panel, the clearest rescues are `dense_rankings`, `rule_based_discount`, `session_durations`, and `stable_group_runs`, while `normalize_phone_book` shows that examples can also hurt by overconstraining or misdirecting solutions.
 
-This does not erase the ACB finding. The full ACB leaderboard still shows a very large Elixir lead that survives artifact controls. But the matched panel makes the paper's interpretation more precise: **the portable causal signal is not "Elixir syntax wins everywhere." It is that locally legible task semantics, especially with concrete examples, help multiple languages, while Elixir's benchmark lead likely reflects a favorable interaction between language conventions and how benchmark tasks are communicated.**
+These matched-panel results do not negate the ACB finding. The full ACB leaderboard still shows a large Elixir lead that survives artifact controls. What the matched panel adds is a tighter interpretation: **the portable causal signal is not that Elixir syntax dominates under exact task matching, but that locally legible task semantics, especially when supported by concrete examples, benefit multiple languages, while Elixir's benchmark lead likely reflects a favorable interaction between language conventions and benchmark task presentation.**
 
 ![Figure 3. Exact-task cross-language panel. The matched panel still favors Python and TypeScript, while example-rich framing produces a selective, low-power improvement pattern rather than an Elixir-only lead.](figures/figure_3_explicit_task_panel.svg)
 
@@ -660,7 +637,7 @@ and conjecture:
 
 $$\text{Pass@1}(L,T) \approx g\Big(\frac{1}{B(L,T)}\Big)$$
 
-The paper-grade evidence gives this framework a more concrete interpretation:
+The completed evidence base gives this framework a more concrete interpretation:
 
 - **$B_{\text{task}}$** is the amount of contract information that must be inferred because the task framing is too sparse.
 - **$B_{\text{cf}}$** is the uncertainty at branching points.
@@ -745,67 +722,36 @@ This remains close to Elixir, which was designed (by José Valim, 2011) for huma
 
 But Elixir also has a ceiling. It lacks static types, formal verification, and structured effect tracking — all of which could *further* reduce the predictive burden if designed correctly. Haskell and Rust demonstrate that adding these features naively *increases* $B_{\text{type}}$ and cancels the gains. The open question is whether a language can achieve Elixir's low $B_{\text{cf}}$, $B_{\text{state}}$, and $B_{\text{return}}$ while *also* lowering $B_{\text{type}}$ through a carefully graduated type system.
 
-### 8.4 From Findings to Practice: Informing Next-Generation Language Design
+### 8.4 Prospective Design Directions
 
-The Predictive Burden framework is not intended as a retrospective curiosity. We believe these findings can inform the design of next-generation programming languages being built for the AI-native era.
+The Predictive Burden framework is intended not only as an explanatory model for current benchmark behavior, but also as a guide for future language and tooling design. The present results suggest that the most promising design direction is not maximal formalism or maximal flexibility in isolation, but a combination of:
 
-One concrete example is **Dream** [13], a programming language currently in active design whose architects are interested in many of the same constraints highlighted here. Where Elixir *accidentally* optimizes for LLM generation through pragmatic design choices made in 2011, Dream represents a new class of languages that *intentionally* treat LLM-friendliness as a measurable design goal alongside human ergonomics and runtime performance.
+- locally visible control flow,
+- explicit result and error shapes,
+- stable, module-qualified APIs,
+- concise task and API documentation conventions, and
+- static guarantees that add constraints without obscuring local reasoning.
 
-Dream's design incorporates every property identified in this paper as beneficial, while addressing Elixir's remaining gaps:
+Two prospective directions follow from the evidence. First, gradual or lightweight type-and-effect systems may reduce $B_{\text{type}}$ when they expose useful constraints without imposing heavy ceremony on ordinary code generation. Second, tighter integration between compilers and agent tooling, including deterministic diagnostics and constrained decoding interfaces, may reduce generation error by pruning invalid continuations earlier in the decoding process.
 
-**Table 11.** Predictive Burden comparison: Elixir vs. Dream (projected)
+These directions should be treated as design hypotheses rather than validated results of the present study. The appropriate next step is empirical: benchmark languages, language subsets, or toolchains that combine Elixir-like local explicitness with stronger static guarantees, and test whether those combinations outperform current baselines under matched evaluation conditions. Ongoing experimental language-design efforts [13] can be used as prospective testbeds for that agenda, but not as evidence for it.
 
+### 8.5 Implications for Software Practice
 
-| Burden Dimension                        | Elixir            | Dream             | Mechanism in Dream                                                                                                          |
-| --------------------------------------- | ----------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| $B_{\text{cf}}$ Control Flow            | **Low**           | **Low**           | Pattern matching with exhaustiveness checking; first-class state machines via `machine` keyword                             |
-| $B_{\text{state}}$ Hidden State         | **Low**           | **Low**           | Immutable by default; linear types (QTT) for safe in-place mutation when needed                                             |
-| $B_{\text{return}}$ Result Shapes       | **Low**           | **Lower**         | Algebraic result types with `?` propagation; no null, no exceptions — structurally enforced                                 |
-| $B_{\text{type}}$ Type Complexity       | **Low** (dynamic) | **Low** (gradual) | Gradual verification via `?` operator — types are *optional and incremental*, from zero annotations to full dependent types |
-| $B_{\text{syntax}}$ Syntactic Ambiguity | **Low**           | **Low**           | Brace-delimited (avoids whitespace tokenization issues for LLMs); explicit effect rows in signatures                        |
+Although the main contribution of the paper is explanatory, the results also suggest several practical coding patterns for teams that work with code-generating models:
 
+1. **Prefer structural dispatch over long boolean chains.**
+   Match-style control flow, destructuring, and clause-based dispatch expose branch intent more directly than deeply nested conditionals.
+2. **Keep state transitions locally visible.**
+   Immutable defaults, explicit rebinding, and state-threading patterns reduce ambiguity about when and where values change.
+3. **Standardize return and error contracts.**
+   Discriminated unions, tagged results, or otherwise regular result shapes reduce uncertainty about downstream handling.
+4. **Use concise but informative API/task framing.**
+   The strongest effect in the study comes from preserving documentation structure and boundary-condition information near the task.
+5. **Favor idiomatic, module-qualified code.**
+   Stable conventions and explicit symbol provenance reduce cross-language confusion and make navigation easier for both humans and agents.
 
-The key insight from Dream's design is that type systems need not increase predictive burden if they are **gradual**. Dream's `?` operator allows code to start with zero type annotations (Elixir-like simplicity) and incrementally add refinement types, linear constraints, and dependent types as needed — all within the same language. At every level of annotation, the compiler provides the maximum verification possible, and the LLM sees exactly as much type structure as is present in the source.
-
-Additionally, Dream introduces two features that go beyond our current framework but may further reduce generation errors:
-
-1. **Algebraic effects with explicit effect rows.** Every function signature declares its effects: `fn fetch(url: String) -> String with [Http, Parse]`. The model never needs to guess which side effects a function might have — they are visible in the type. This converts a hidden source of bugs into an explicit, checkable contract.
-2. **Content-addressable code identity.** Every definition is identified by a SHA3-512 hash of its normalized AST, not by a file path or name. This eliminates an entire class of LLM errors — referencing renamed functions, stale imports, or moved modules — because the identity of code is its *content*, not its location.
-3. **Compiler-as-library for constrained decoding.** Dream exposes its type checker as a library API, enabling LLMs to perform type-checked generation: the model proposes a token, the type checker validates it, and invalid continuations are pruned in real time. This is the logical endpoint of the type-constrained generation approach [7], built into the language from day one.
-
-Dream inherits Elixir's BEAM-inspired actor model (lightweight processes, supervision trees, "let it crash" philosophy) while adding typed mailboxes and session types that make protocol compliance verifiable at compile time.
-
-The language is currently in active specification and early prototype phase, with a comprehensive design book, formal specification modules, and a Zig-based compiler scaffold. More information is available at **[https://dreamlang.dev](https://dreamlang.dev)** [13].
-
-If our Predictive Burden framework is correct, Dream represents a concrete prospective test: a language designed from first principles to reduce multiple burden dimensions simultaneously should be benchmarkable against Elixir's current result. We intend to benchmark Dream on AutoCodeBench once the compiler reaches sufficient maturity, treating that as a prospective validation target rather than a result assumed in advance.
-
-More broadly, we encourage the programming language design community to treat LLM code generation benchmarks as a **new empirical signal** alongside traditional metrics like developer productivity, runtime performance, and safety guarantees. The data in this paper demonstrates that language design choices have measurable, large-magnitude effects on AI generation quality — effects that dwarf the differences between model families. As AI-assisted development becomes the norm rather than the exception, languages that ignore this signal risk creating an unnecessary ceiling on how effectively their users can collaborate with AI tools. The Predictive Burden framework offers a starting vocabulary for reasoning about these trade-offs, and projects like Dream [13] demonstrate that the community is already acting on it.
-
-### 8.5 Practical Guidance for Working Developers
-
-*This section translates our findings into actionable advice, regardless of what language you use today.*
-
-The Predictive Burden framework is not just a theory for language designers — it has immediate practical implications for anyone writing code that an LLM will generate, review, or maintain. Even within a language you cannot change, you can adopt patterns that reduce the predictive burden on your AI collaborator:
-
-**1. Prefer pattern matching and structural decomposition over boolean chains.**
-If your language supports it (Python 3.10+ `match/case`, Rust `match`, Scala `match`, even JavaScript proposals), use it. Each match arm is a self-contained prediction for the model. An if/else chain is an accumulating sequence of dependent predictions where each branch constrains the next.
-
-**2. Default to immutable data structures.**
-Use `frozen=True` dataclasses in Python, `readonly` in TypeScript, `val` instead of `var` in Kotlin, `const` everywhere in JavaScript. When the model sees immutable data, it knows every reference to that value is stable — it doesn't need to track whether something was changed three lines ago.
-
-**3. Make function contracts explicit in the signature.**
-Return `Result<T, E>` types or discriminated unions instead of throwing exceptions or returning null. When the model can see the return shape in the type/contract, it generates correct handling code. When the return is "maybe a value, maybe null, maybe an exception," the model must guess — and guesses compound.
-
-**4. Keep functions small and self-contained.**
-Our data shows that Elixir's advantage concentrates on hard problems — and hard problems are precisely the ones where long functions with distant dependencies cause models to fail. A function that fits in a single screen is a function the model can hold entirely in its high-attention window.
-
-**5. Use explicit module prefixes, not wildcard imports.**
-`from module import *` in Python or `import * from` in JavaScript forces the model to guess where every name comes from. `import Enum; Enum.map(...)` in Elixir or `collections.defaultdict()` in Python makes the provenance of every function unambiguous.
-
-**6. Write in the style your language was designed for.**
-Go code should look like Go, not Java-in-Go. Elixir code should use pipes, not nested function calls. Idiomatic code matches the patterns the model saw most during training for that language, reducing confusion. Non-idiomatic code puts you in the sparse tail of the training distribution where model confidence is lowest.
-
-**The meta-principle:** Every time you write code that requires the reader (human or AI) to hold invisible context in their head — a mutation that happened elsewhere, a convention about what null means, an exception that might be thrown — you are increasing the predictive burden. Reduce that burden and both your human teammates and your AI tools will make fewer errors.
+Across languages, these recommendations all target the same operational goal: reduce the amount of hidden context that must be reconstructed during generation.
 
 ---
 
@@ -834,11 +780,11 @@ Go code should look like Go, not Java-in-Go. Elixir code should use pipes, not n
 
 We have presented evidence that Elixir's exceptional performance on the ACB leaderboard — 87.4% Pass@1, 86.3% on hard problems, +42.7 points above difficulty-adjusted expectations — is real and survives the strongest artifact controls we currently have.
 
-But the completed paper-grade program now supports a more precise interpretation than "Elixir is universally best because of syntax." Within Elixir, the strongest causal signal is **documentation and task/API framing explicitness**: removing examples does nothing, but removing documentation structure cuts performance roughly in half. In the expanded exact-task multilingual panel, however, Elixir no longer dominates; instead, Python and TypeScript remain ahead, richer contract wording alone remains neutral, and concrete examples lift the panel overall from `72.9%` to `83.3%` without yielding a decisive paired-significance result at current scale.
+The completed study supports a more precise interpretation than the claim that Elixir is universally best because of syntax alone. Within Elixir, the strongest causal signal is **documentation and task/API framing explicitness**: removing examples does nothing, but removing documentation structure cuts performance roughly in half. In the expanded exact-task multilingual panel, by contrast, Elixir no longer dominates; Python and TypeScript remain ahead, richer contract wording alone remains neutral, and concrete examples lift the panel overall from `72.9%` to `83.3%` without yielding a decisive paired-significance result at current scale.
 
 These two findings are compatible. They suggest that Elixir's ACB advantage comes from an especially favorable alignment between language-level explicitness and benchmark task framing, while the more portable design lesson is broader: *LLMs perform best when task semantics, API contracts, examples, and local program behavior are all easy to read from nearby context.*
 
-The broader lesson is therefore not that Elixir wins by magic, nor that one feature explains everything. It is that languages and ecosystems built for pragmatic human clarity — explicit contracts, locally visible state flow, structured control flow, concise examples, and honest interfaces — reduce the predictive burden on code-generating models. Elixir remains the strongest benchmark case study we have, but the paper's most durable claim is really about legibility.
+The broader lesson is therefore not that one feature explains everything, but that languages and ecosystems built for pragmatic human clarity, explicit contracts, locally visible state flow, structured control flow, concise examples, and stable interfaces reduce the predictive burden on code-generating models. Elixir remains the strongest benchmark case study in the present data, but the paper's most durable claim concerns legibility rather than language exceptionalism.
 
 ---
 
@@ -913,7 +859,7 @@ The broader lesson is therefore not that Elixir wins by magic, nor that one feat
 
 ## Appendix B: Active Ablation Summary
 
-**Table B1.** All paper-grade active ablation conditions (GPT-5.4, 198 source tasks per condition)
+**Table B1.** Active ablation conditions (GPT-5.4, 198 source tasks per condition)
 
 
 | Suite | Condition                | Passed | Total | Pass@1 | Delta vs Baseline | Holm-significant |
@@ -946,7 +892,7 @@ All code was executed in Docker-based sandboxes with language-specific runtime e
 ### C.2 Reproducibility
 
 The full benchmark suite, evaluation scripts, and result data are available at:
-`https://github.com/[REDACTED]/AutoCodeBenchmark`
+`https://github.com/ai-driven-office/AutoCodeBenchmark`
 
 Scripts: `scripts/elixir_active_ablation_runner.py`, `scripts/elixir_research_suite_manager.py`, `scripts/build_elixir_research_master_summary.py`
 Additional analysis scripts: `scripts/elixir_paper_extra_measurements.py`, `scripts/elixir_common_task_fixed_effects.py`, `scripts/elixir_error_taxonomy.py`
@@ -1019,4 +965,4 @@ This panel is not used as a replacement benchmark leaderboard. It is a targeted 
 | Sliding Window Majority | invariant across all three conditions |
 
 
-So the matched-panel gain is concentrated, not diffuse: nine tasks are completely unchanged, four show example-driven rescues, and three expose persistent or example-induced failure patterns. That concentration is one reason we treat the multilingual panel as a useful strengthening experiment rather than as a final causal verdict.
+The matched-panel gain is therefore concentrated rather than diffuse: nine tasks are completely unchanged, four show example-driven rescues, and three expose persistent or example-induced failure patterns. This concentration is one reason the multilingual panel is best interpreted as a targeted methodological check rather than a final causal estimate.
