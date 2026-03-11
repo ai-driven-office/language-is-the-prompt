@@ -13,12 +13,14 @@
     <a href="https://autocodebench.github.io/">🏠 Home Page</a> •
     <a href="https://huggingface.co/datasets/tencent/AutoCodeBenchmark">💻 Data </a> •
     <a href="https://autocodebench.github.io/leaderboard.html">🏆 Leaderboard</a> •
+    <a href="./reports/fork_update_gpt_5_4_medium.md">🧪 Fork Update Report</a> •
     <a href="#citation">📜 Citation</a>
 </p>
 
 
 ## 📰 News
 
+- **2026.03.11** 🧪 - This fork adds a local `gpt-5.4` `medium` reasoning run on the latest benchmark assets available in this repository snapshot, plus extension-language evaluations for `gleam`, `lean4`, and `typescript_effect`. See the [fork update report](./reports/fork_update_gpt_5_4_medium.md).
 - **2025.12.04** 🚀 - We released ***AutoCodeBench-V2***, built on the original dataset and iteratively refined through top proprietary models and a sandbox to produce 1,000 higher-quality problems! The **leaderboard and evaluation tutorial** are available in [AutoCodeBench-V2](./AutoCodeBench-V2/)!
 - **2025.12.04** 📚 - We released ***AutoCodeInstruct***, a large-scale multilingual dataset equipped with golden answers distilled from DeepSeek-V3-0324, and filtered using Qwen2.5-Coder-7B/32B-Instruct to create two versions suitable for RL and SFT training! The dataset is available at [autocodeinstruct_v3answer_qwen32b.jsonl](https://huggingface.co/datasets/tencent/AutoCodeBenchmark/blob/main/autocodeinstruct_v3answer_qwen32b.jsonl) and [autocodeinstruct_v3answer_qwen7b.jsonl](https://huggingface.co/datasets/tencent/AutoCodeBenchmark/blob/main/autocodeinstruct_v3answer_qwen7b.jsonl). Experimental results can be found in the AutoCodeInstruct section below.
 - **2025.08.15** 🎉 - We released AutoCodeGen, AutoCodeBench series, and Multi-lingual Sandbox!
@@ -129,6 +131,42 @@ Results of two-stage GRPO and SFT with AutoCodeInstruct.
 
 ## Experimental Results
 
+### Fork Update: GPT-5.4 Medium + Extension Languages
+
+This fork adds a local `gpt-5.4` run with `medium` reasoning over `ACB-Full`, using the latest benchmark assets available in this repository snapshot on **March 11, 2026**.
+
+It also adds fork-only extension slices for:
+
+- `gleam`
+- `lean4`
+- `typescript_effect`
+
+The extension-language pipeline includes translated benchmark generation and, for `gleam` and `lean4`, canonical validation of translated benchmark rows before scoring the model.
+
+#### Main ACB-Full result
+
+| Model | Benchmark | Passed | Total | Pass Rate | Notes |
+|---|---|---:|---:|---:|---|
+| GPT-5.4 Medium | ACB-Full | 2088 | 3920 | 53.3% | Corrected local runtime paths for `elixir` and `racket` |
+
+<div align="center">
+  <img src="figures/fork_acb_full_gpt_5_4_medium.svg" width="92%">
+</div>
+
+#### Fork-only extension slices
+
+| Model | Slice | Validated Rows | Passed | Pass Rate | Notes |
+|---|---|---:|---:|---:|---|
+| GPT-5.4 Medium | `gleam` | 122 | 25 | 20.5% | Validated translated subset from 196 Python-source rows |
+| GPT-5.4 Medium | `lean4` | 125 | 36 | 28.8% | Validated translated subset from 196 Python-source rows |
+| GPT-5.4 Medium | `typescript_effect` | 196 | 105 | 53.6% | Earlier extension run without canonical-validation gate |
+
+<div align="center">
+  <img src="figures/fork_extension_languages_gpt_5_4_medium.svg" width="92%">
+</div>
+
+Full tables and methodology notes are in [RESULTS.md](./RESULTS.md) and the [fork update report](./reports/fork_update_gpt_5_4_medium.md).
+
 <div align="center">
   <img src="figures/exp_acb.png" width="85%">
 </div>
@@ -227,5 +265,4 @@ If you find our project helpful, please cite:
 ## License
 
 This repository is licensed under the terms of the [LICENSE](LICENSE) file.
-
 
