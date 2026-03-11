@@ -1,0 +1,5 @@
+factor,overall_delta,bootstrap_ci_low,bootstrap_ci_high,loo_task_min,loo_task_max,loo_language_min,loo_language_max
+docs_rich,0.046875,-0.020833,0.119792,0.027778,0.061111,0.039062,0.054688
+examples,0.203125,0.088542,0.323047,0.172222,0.227778,0.164062,0.250000
+contracts_explicit,0.359375,0.197917,0.531250,0.316667,0.394444,0.304688,0.460938
+state_guidance,-0.026042,-0.093750,0.031250,-0.033333,-0.005556,-0.039062,-0.015625

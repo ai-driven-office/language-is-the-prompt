@@ -1,0 +1,385 @@
+experiment_id,task_id,title,language,condition_id,condition_label,docs_rich,examples,contracts_explicit,state_guidance,success
+acct_balance_rollup:elixir:ff_0000,acct_balance_rollup,Account Balance Rollup,elixir,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+acct_balance_rollup:python:ff_0000,acct_balance_rollup,Account Balance Rollup,python,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+acct_balance_rollup:typescript:ff_0000,acct_balance_rollup,Account Balance Rollup,typescript,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+acct_balance_rollup:elixir:ff_0011,acct_balance_rollup,Account Balance Rollup,elixir,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,0
+acct_balance_rollup:python:ff_0011,acct_balance_rollup,Account Balance Rollup,python,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+acct_balance_rollup:typescript:ff_0011,acct_balance_rollup,Account Balance Rollup,typescript,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+acct_balance_rollup:elixir:ff_0101,acct_balance_rollup,Account Balance Rollup,elixir,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,0
+acct_balance_rollup:python:ff_0101,acct_balance_rollup,Account Balance Rollup,python,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,0
+acct_balance_rollup:typescript:ff_0101,acct_balance_rollup,Account Balance Rollup,typescript,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,0
+acct_balance_rollup:elixir:ff_0110,acct_balance_rollup,Account Balance Rollup,elixir,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,0
+acct_balance_rollup:python:ff_0110,acct_balance_rollup,Account Balance Rollup,python,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+acct_balance_rollup:typescript:ff_0110,acct_balance_rollup,Account Balance Rollup,typescript,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+acct_balance_rollup:elixir:ff_1001,acct_balance_rollup,Account Balance Rollup,elixir,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+acct_balance_rollup:python:ff_1001,acct_balance_rollup,Account Balance Rollup,python,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+acct_balance_rollup:typescript:ff_1001,acct_balance_rollup,Account Balance Rollup,typescript,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,1
+acct_balance_rollup:elixir:ff_1010,acct_balance_rollup,Account Balance Rollup,elixir,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,0
+acct_balance_rollup:python:ff_1010,acct_balance_rollup,Account Balance Rollup,python,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+acct_balance_rollup:typescript:ff_1010,acct_balance_rollup,Account Balance Rollup,typescript,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+acct_balance_rollup:elixir:ff_1100,acct_balance_rollup,Account Balance Rollup,elixir,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,1
+acct_balance_rollup:python:ff_1100,acct_balance_rollup,Account Balance Rollup,python,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,1
+acct_balance_rollup:typescript:ff_1100,acct_balance_rollup,Account Balance Rollup,typescript,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,1
+acct_balance_rollup:elixir:ff_1111,acct_balance_rollup,Account Balance Rollup,elixir,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,0
+acct_balance_rollup:python:ff_1111,acct_balance_rollup,Account Balance Rollup,python,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+acct_balance_rollup:typescript:ff_1111,acct_balance_rollup,Account Balance Rollup,typescript,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+threshold_bursts:elixir:ff_0000,threshold_bursts,Threshold Bursts,elixir,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,1
+threshold_bursts:python:ff_0000,threshold_bursts,Threshold Bursts,python,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+threshold_bursts:typescript:ff_0000,threshold_bursts,Threshold Bursts,typescript,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,1
+threshold_bursts:elixir:ff_0011,threshold_bursts,Threshold Bursts,elixir,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+threshold_bursts:python:ff_0011,threshold_bursts,Threshold Bursts,python,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+threshold_bursts:typescript:ff_0011,threshold_bursts,Threshold Bursts,typescript,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+threshold_bursts:elixir:ff_0101,threshold_bursts,Threshold Bursts,elixir,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,1
+threshold_bursts:python:ff_0101,threshold_bursts,Threshold Bursts,python,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,1
+threshold_bursts:typescript:ff_0101,threshold_bursts,Threshold Bursts,typescript,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,1
+threshold_bursts:elixir:ff_0110,threshold_bursts,Threshold Bursts,elixir,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+threshold_bursts:python:ff_0110,threshold_bursts,Threshold Bursts,python,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+threshold_bursts:typescript:ff_0110,threshold_bursts,Threshold Bursts,typescript,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+threshold_bursts:elixir:ff_1001,threshold_bursts,Threshold Bursts,elixir,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,1
+threshold_bursts:python:ff_1001,threshold_bursts,Threshold Bursts,python,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+threshold_bursts:typescript:ff_1001,threshold_bursts,Threshold Bursts,typescript,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,1
+threshold_bursts:elixir:ff_1010,threshold_bursts,Threshold Bursts,elixir,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,0
+threshold_bursts:python:ff_1010,threshold_bursts,Threshold Bursts,python,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+threshold_bursts:typescript:ff_1010,threshold_bursts,Threshold Bursts,typescript,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+threshold_bursts:elixir:ff_1100,threshold_bursts,Threshold Bursts,elixir,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,1
+threshold_bursts:python:ff_1100,threshold_bursts,Threshold Bursts,python,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,1
+threshold_bursts:typescript:ff_1100,threshold_bursts,Threshold Bursts,typescript,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,1
+threshold_bursts:elixir:ff_1111,threshold_bursts,Threshold Bursts,elixir,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+threshold_bursts:python:ff_1111,threshold_bursts,Threshold Bursts,python,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+threshold_bursts:typescript:ff_1111,threshold_bursts,Threshold Bursts,typescript,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+csv_split_quoted:elixir:ff_0000,csv_split_quoted,CSV Split With Quotes,elixir,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,1
+csv_split_quoted:python:ff_0000,csv_split_quoted,CSV Split With Quotes,python,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,1
+csv_split_quoted:typescript:ff_0000,csv_split_quoted,CSV Split With Quotes,typescript,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,1
+csv_split_quoted:elixir:ff_0011,csv_split_quoted,CSV Split With Quotes,elixir,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+csv_split_quoted:python:ff_0011,csv_split_quoted,CSV Split With Quotes,python,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+csv_split_quoted:typescript:ff_0011,csv_split_quoted,CSV Split With Quotes,typescript,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+csv_split_quoted:elixir:ff_0101,csv_split_quoted,CSV Split With Quotes,elixir,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,1
+csv_split_quoted:python:ff_0101,csv_split_quoted,CSV Split With Quotes,python,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,1
+csv_split_quoted:typescript:ff_0101,csv_split_quoted,CSV Split With Quotes,typescript,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,1
+csv_split_quoted:elixir:ff_0110,csv_split_quoted,CSV Split With Quotes,elixir,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,0
+csv_split_quoted:python:ff_0110,csv_split_quoted,CSV Split With Quotes,python,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+csv_split_quoted:typescript:ff_0110,csv_split_quoted,CSV Split With Quotes,typescript,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+csv_split_quoted:elixir:ff_1001,csv_split_quoted,CSV Split With Quotes,elixir,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,1
+csv_split_quoted:python:ff_1001,csv_split_quoted,CSV Split With Quotes,python,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,1
+csv_split_quoted:typescript:ff_1001,csv_split_quoted,CSV Split With Quotes,typescript,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,1
+csv_split_quoted:elixir:ff_1010,csv_split_quoted,CSV Split With Quotes,elixir,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+csv_split_quoted:python:ff_1010,csv_split_quoted,CSV Split With Quotes,python,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+csv_split_quoted:typescript:ff_1010,csv_split_quoted,CSV Split With Quotes,typescript,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+csv_split_quoted:elixir:ff_1100,csv_split_quoted,CSV Split With Quotes,elixir,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,1
+csv_split_quoted:python:ff_1100,csv_split_quoted,CSV Split With Quotes,python,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,1
+csv_split_quoted:typescript:ff_1100,csv_split_quoted,CSV Split With Quotes,typescript,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,1
+csv_split_quoted:elixir:ff_1111,csv_split_quoted,CSV Split With Quotes,elixir,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+csv_split_quoted:python:ff_1111,csv_split_quoted,CSV Split With Quotes,python,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+csv_split_quoted:typescript:ff_1111,csv_split_quoted,CSV Split With Quotes,typescript,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+dependency_batches:elixir:ff_0000,dependency_batches,Dependency Batches,elixir,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+dependency_batches:python:ff_0000,dependency_batches,Dependency Batches,python,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+dependency_batches:typescript:ff_0000,dependency_batches,Dependency Batches,typescript,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+dependency_batches:elixir:ff_0011,dependency_batches,Dependency Batches,elixir,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+dependency_batches:python:ff_0011,dependency_batches,Dependency Batches,python,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+dependency_batches:typescript:ff_0011,dependency_batches,Dependency Batches,typescript,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+dependency_batches:elixir:ff_0101,dependency_batches,Dependency Batches,elixir,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,0
+dependency_batches:python:ff_0101,dependency_batches,Dependency Batches,python,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,0
+dependency_batches:typescript:ff_0101,dependency_batches,Dependency Batches,typescript,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,0
+dependency_batches:elixir:ff_0110,dependency_batches,Dependency Batches,elixir,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+dependency_batches:python:ff_0110,dependency_batches,Dependency Batches,python,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+dependency_batches:typescript:ff_0110,dependency_batches,Dependency Batches,typescript,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+dependency_batches:elixir:ff_1001,dependency_batches,Dependency Batches,elixir,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+dependency_batches:python:ff_1001,dependency_batches,Dependency Batches,python,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+dependency_batches:typescript:ff_1001,dependency_batches,Dependency Batches,typescript,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+dependency_batches:elixir:ff_1010,dependency_batches,Dependency Batches,elixir,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,0
+dependency_batches:python:ff_1010,dependency_batches,Dependency Batches,python,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+dependency_batches:typescript:ff_1010,dependency_batches,Dependency Batches,typescript,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+dependency_batches:elixir:ff_1100,dependency_batches,Dependency Batches,elixir,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,0
+dependency_batches:python:ff_1100,dependency_batches,Dependency Batches,python,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,0
+dependency_batches:typescript:ff_1100,dependency_batches,Dependency Batches,typescript,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,0
+dependency_batches:elixir:ff_1111,dependency_batches,Dependency Batches,elixir,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,0
+dependency_batches:python:ff_1111,dependency_batches,Dependency Batches,python,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+dependency_batches:typescript:ff_1111,dependency_batches,Dependency Batches,typescript,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+inventory_reconcile:elixir:ff_0000,inventory_reconcile,Inventory Reconcile,elixir,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+inventory_reconcile:python:ff_0000,inventory_reconcile,Inventory Reconcile,python,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+inventory_reconcile:typescript:ff_0000,inventory_reconcile,Inventory Reconcile,typescript,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+inventory_reconcile:elixir:ff_0011,inventory_reconcile,Inventory Reconcile,elixir,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,0
+inventory_reconcile:python:ff_0011,inventory_reconcile,Inventory Reconcile,python,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+inventory_reconcile:typescript:ff_0011,inventory_reconcile,Inventory Reconcile,typescript,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+inventory_reconcile:elixir:ff_0101,inventory_reconcile,Inventory Reconcile,elixir,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,0
+inventory_reconcile:python:ff_0101,inventory_reconcile,Inventory Reconcile,python,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,0
+inventory_reconcile:typescript:ff_0101,inventory_reconcile,Inventory Reconcile,typescript,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,0
+inventory_reconcile:elixir:ff_0110,inventory_reconcile,Inventory Reconcile,elixir,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+inventory_reconcile:python:ff_0110,inventory_reconcile,Inventory Reconcile,python,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+inventory_reconcile:typescript:ff_0110,inventory_reconcile,Inventory Reconcile,typescript,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+inventory_reconcile:elixir:ff_1001,inventory_reconcile,Inventory Reconcile,elixir,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+inventory_reconcile:python:ff_1001,inventory_reconcile,Inventory Reconcile,python,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+inventory_reconcile:typescript:ff_1001,inventory_reconcile,Inventory Reconcile,typescript,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+inventory_reconcile:elixir:ff_1010,inventory_reconcile,Inventory Reconcile,elixir,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+inventory_reconcile:python:ff_1010,inventory_reconcile,Inventory Reconcile,python,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+inventory_reconcile:typescript:ff_1010,inventory_reconcile,Inventory Reconcile,typescript,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+inventory_reconcile:elixir:ff_1100,inventory_reconcile,Inventory Reconcile,elixir,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,1
+inventory_reconcile:python:ff_1100,inventory_reconcile,Inventory Reconcile,python,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,1
+inventory_reconcile:typescript:ff_1100,inventory_reconcile,Inventory Reconcile,typescript,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,1
+inventory_reconcile:elixir:ff_1111,inventory_reconcile,Inventory Reconcile,elixir,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+inventory_reconcile:python:ff_1111,inventory_reconcile,Inventory Reconcile,python,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+inventory_reconcile:typescript:ff_1111,inventory_reconcile,Inventory Reconcile,typescript,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+session_durations:elixir:ff_0000,session_durations,Session Durations,elixir,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+session_durations:python:ff_0000,session_durations,Session Durations,python,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+session_durations:typescript:ff_0000,session_durations,Session Durations,typescript,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+session_durations:elixir:ff_0011,session_durations,Session Durations,elixir,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,0
+session_durations:python:ff_0011,session_durations,Session Durations,python,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,0
+session_durations:typescript:ff_0011,session_durations,Session Durations,typescript,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,0
+session_durations:elixir:ff_0101,session_durations,Session Durations,elixir,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,0
+session_durations:python:ff_0101,session_durations,Session Durations,python,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,1
+session_durations:typescript:ff_0101,session_durations,Session Durations,typescript,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,0
+session_durations:elixir:ff_0110,session_durations,Session Durations,elixir,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+session_durations:python:ff_0110,session_durations,Session Durations,python,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+session_durations:typescript:ff_0110,session_durations,Session Durations,typescript,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+session_durations:elixir:ff_1001,session_durations,Session Durations,elixir,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+session_durations:python:ff_1001,session_durations,Session Durations,python,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+session_durations:typescript:ff_1001,session_durations,Session Durations,typescript,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+session_durations:elixir:ff_1010,session_durations,Session Durations,elixir,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,0
+session_durations:python:ff_1010,session_durations,Session Durations,python,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,0
+session_durations:typescript:ff_1010,session_durations,Session Durations,typescript,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,0
+session_durations:elixir:ff_1100,session_durations,Session Durations,elixir,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,1
+session_durations:python:ff_1100,session_durations,Session Durations,python,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,0
+session_durations:typescript:ff_1100,session_durations,Session Durations,typescript,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,0
+session_durations:elixir:ff_1111,session_durations,Session Durations,elixir,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+session_durations:python:ff_1111,session_durations,Session Durations,python,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+session_durations:typescript:ff_1111,session_durations,Session Durations,typescript,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+window_majority:elixir:ff_0000,window_majority,Sliding Window Majority,elixir,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+window_majority:python:ff_0000,window_majority,Sliding Window Majority,python,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+window_majority:typescript:ff_0000,window_majority,Sliding Window Majority,typescript,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+window_majority:elixir:ff_0011,window_majority,Sliding Window Majority,elixir,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+window_majority:python:ff_0011,window_majority,Sliding Window Majority,python,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+window_majority:typescript:ff_0011,window_majority,Sliding Window Majority,typescript,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+window_majority:elixir:ff_0101,window_majority,Sliding Window Majority,elixir,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,0
+window_majority:python:ff_0101,window_majority,Sliding Window Majority,python,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,0
+window_majority:typescript:ff_0101,window_majority,Sliding Window Majority,typescript,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,0
+window_majority:elixir:ff_0110,window_majority,Sliding Window Majority,elixir,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+window_majority:python:ff_0110,window_majority,Sliding Window Majority,python,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+window_majority:typescript:ff_0110,window_majority,Sliding Window Majority,typescript,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+window_majority:elixir:ff_1001,window_majority,Sliding Window Majority,elixir,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+window_majority:python:ff_1001,window_majority,Sliding Window Majority,python,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+window_majority:typescript:ff_1001,window_majority,Sliding Window Majority,typescript,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+window_majority:elixir:ff_1010,window_majority,Sliding Window Majority,elixir,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+window_majority:python:ff_1010,window_majority,Sliding Window Majority,python,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+window_majority:typescript:ff_1010,window_majority,Sliding Window Majority,typescript,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+window_majority:elixir:ff_1100,window_majority,Sliding Window Majority,elixir,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,0
+window_majority:python:ff_1100,window_majority,Sliding Window Majority,python,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,0
+window_majority:typescript:ff_1100,window_majority,Sliding Window Majority,typescript,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,0
+window_majority:elixir:ff_1111,window_majority,Sliding Window Majority,elixir,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+window_majority:python:ff_1111,window_majority,Sliding Window Majority,python,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+window_majority:typescript:ff_1111,window_majority,Sliding Window Majority,typescript,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+rule_based_discount:elixir:ff_0000,rule_based_discount,Rule Based Discount,elixir,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+rule_based_discount:python:ff_0000,rule_based_discount,Rule Based Discount,python,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+rule_based_discount:typescript:ff_0000,rule_based_discount,Rule Based Discount,typescript,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+rule_based_discount:elixir:ff_0011,rule_based_discount,Rule Based Discount,elixir,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,0
+rule_based_discount:python:ff_0011,rule_based_discount,Rule Based Discount,python,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,0
+rule_based_discount:typescript:ff_0011,rule_based_discount,Rule Based Discount,typescript,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,0
+rule_based_discount:elixir:ff_0101,rule_based_discount,Rule Based Discount,elixir,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,1
+rule_based_discount:python:ff_0101,rule_based_discount,Rule Based Discount,python,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,0
+rule_based_discount:typescript:ff_0101,rule_based_discount,Rule Based Discount,typescript,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,0
+rule_based_discount:elixir:ff_0110,rule_based_discount,Rule Based Discount,elixir,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,0
+rule_based_discount:python:ff_0110,rule_based_discount,Rule Based Discount,python,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,0
+rule_based_discount:typescript:ff_0110,rule_based_discount,Rule Based Discount,typescript,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,0
+rule_based_discount:elixir:ff_1001,rule_based_discount,Rule Based Discount,elixir,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+rule_based_discount:python:ff_1001,rule_based_discount,Rule Based Discount,python,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+rule_based_discount:typescript:ff_1001,rule_based_discount,Rule Based Discount,typescript,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+rule_based_discount:elixir:ff_1010,rule_based_discount,Rule Based Discount,elixir,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,0
+rule_based_discount:python:ff_1010,rule_based_discount,Rule Based Discount,python,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,0
+rule_based_discount:typescript:ff_1010,rule_based_discount,Rule Based Discount,typescript,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,0
+rule_based_discount:elixir:ff_1100,rule_based_discount,Rule Based Discount,elixir,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,1
+rule_based_discount:python:ff_1100,rule_based_discount,Rule Based Discount,python,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,0
+rule_based_discount:typescript:ff_1100,rule_based_discount,Rule Based Discount,typescript,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,0
+rule_based_discount:elixir:ff_1111,rule_based_discount,Rule Based Discount,elixir,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,0
+rule_based_discount:python:ff_1111,rule_based_discount,Rule Based Discount,python,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,0
+rule_based_discount:typescript:ff_1111,rule_based_discount,Rule Based Discount,typescript,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,0
+merge_intervals:elixir:ff_0000,merge_intervals,Merge Touching Intervals,elixir,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,1
+merge_intervals:python:ff_0000,merge_intervals,Merge Touching Intervals,python,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+merge_intervals:typescript:ff_0000,merge_intervals,Merge Touching Intervals,typescript,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,1
+merge_intervals:elixir:ff_0011,merge_intervals,Merge Touching Intervals,elixir,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+merge_intervals:python:ff_0011,merge_intervals,Merge Touching Intervals,python,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+merge_intervals:typescript:ff_0011,merge_intervals,Merge Touching Intervals,typescript,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+merge_intervals:elixir:ff_0101,merge_intervals,Merge Touching Intervals,elixir,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,1
+merge_intervals:python:ff_0101,merge_intervals,Merge Touching Intervals,python,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,1
+merge_intervals:typescript:ff_0101,merge_intervals,Merge Touching Intervals,typescript,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,1
+merge_intervals:elixir:ff_0110,merge_intervals,Merge Touching Intervals,elixir,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+merge_intervals:python:ff_0110,merge_intervals,Merge Touching Intervals,python,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+merge_intervals:typescript:ff_0110,merge_intervals,Merge Touching Intervals,typescript,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+merge_intervals:elixir:ff_1001,merge_intervals,Merge Touching Intervals,elixir,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,1
+merge_intervals:python:ff_1001,merge_intervals,Merge Touching Intervals,python,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,1
+merge_intervals:typescript:ff_1001,merge_intervals,Merge Touching Intervals,typescript,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,1
+merge_intervals:elixir:ff_1010,merge_intervals,Merge Touching Intervals,elixir,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+merge_intervals:python:ff_1010,merge_intervals,Merge Touching Intervals,python,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+merge_intervals:typescript:ff_1010,merge_intervals,Merge Touching Intervals,typescript,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+merge_intervals:elixir:ff_1100,merge_intervals,Merge Touching Intervals,elixir,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,1
+merge_intervals:python:ff_1100,merge_intervals,Merge Touching Intervals,python,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,1
+merge_intervals:typescript:ff_1100,merge_intervals,Merge Touching Intervals,typescript,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,1
+merge_intervals:elixir:ff_1111,merge_intervals,Merge Touching Intervals,elixir,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+merge_intervals:python:ff_1111,merge_intervals,Merge Touching Intervals,python,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+merge_intervals:typescript:ff_1111,merge_intervals,Merge Touching Intervals,typescript,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+top_k_frequencies:elixir:ff_0000,top_k_frequencies,Top K Frequencies,elixir,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+top_k_frequencies:python:ff_0000,top_k_frequencies,Top K Frequencies,python,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+top_k_frequencies:typescript:ff_0000,top_k_frequencies,Top K Frequencies,typescript,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+top_k_frequencies:elixir:ff_0011,top_k_frequencies,Top K Frequencies,elixir,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+top_k_frequencies:python:ff_0011,top_k_frequencies,Top K Frequencies,python,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+top_k_frequencies:typescript:ff_0011,top_k_frequencies,Top K Frequencies,typescript,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,0
+top_k_frequencies:elixir:ff_0101,top_k_frequencies,Top K Frequencies,elixir,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,0
+top_k_frequencies:python:ff_0101,top_k_frequencies,Top K Frequencies,python,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,0
+top_k_frequencies:typescript:ff_0101,top_k_frequencies,Top K Frequencies,typescript,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,0
+top_k_frequencies:elixir:ff_0110,top_k_frequencies,Top K Frequencies,elixir,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,0
+top_k_frequencies:python:ff_0110,top_k_frequencies,Top K Frequencies,python,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+top_k_frequencies:typescript:ff_0110,top_k_frequencies,Top K Frequencies,typescript,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+top_k_frequencies:elixir:ff_1001,top_k_frequencies,Top K Frequencies,elixir,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+top_k_frequencies:python:ff_1001,top_k_frequencies,Top K Frequencies,python,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+top_k_frequencies:typescript:ff_1001,top_k_frequencies,Top K Frequencies,typescript,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+top_k_frequencies:elixir:ff_1010,top_k_frequencies,Top K Frequencies,elixir,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+top_k_frequencies:python:ff_1010,top_k_frequencies,Top K Frequencies,python,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+top_k_frequencies:typescript:ff_1010,top_k_frequencies,Top K Frequencies,typescript,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+top_k_frequencies:elixir:ff_1100,top_k_frequencies,Top K Frequencies,elixir,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,0
+top_k_frequencies:python:ff_1100,top_k_frequencies,Top K Frequencies,python,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,0
+top_k_frequencies:typescript:ff_1100,top_k_frequencies,Top K Frequencies,typescript,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,0
+top_k_frequencies:elixir:ff_1111,top_k_frequencies,Top K Frequencies,elixir,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+top_k_frequencies:python:ff_1111,top_k_frequencies,Top K Frequencies,python,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+top_k_frequencies:typescript:ff_1111,top_k_frequencies,Top K Frequencies,typescript,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+queue_wait_times:elixir:ff_0000,queue_wait_times,Queue Wait Times,elixir,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+queue_wait_times:python:ff_0000,queue_wait_times,Queue Wait Times,python,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+queue_wait_times:typescript:ff_0000,queue_wait_times,Queue Wait Times,typescript,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+queue_wait_times:elixir:ff_0011,queue_wait_times,Queue Wait Times,elixir,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+queue_wait_times:python:ff_0011,queue_wait_times,Queue Wait Times,python,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+queue_wait_times:typescript:ff_0011,queue_wait_times,Queue Wait Times,typescript,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+queue_wait_times:elixir:ff_0101,queue_wait_times,Queue Wait Times,elixir,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,1
+queue_wait_times:python:ff_0101,queue_wait_times,Queue Wait Times,python,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,1
+queue_wait_times:typescript:ff_0101,queue_wait_times,Queue Wait Times,typescript,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,1
+queue_wait_times:elixir:ff_0110,queue_wait_times,Queue Wait Times,elixir,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+queue_wait_times:python:ff_0110,queue_wait_times,Queue Wait Times,python,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+queue_wait_times:typescript:ff_0110,queue_wait_times,Queue Wait Times,typescript,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+queue_wait_times:elixir:ff_1001,queue_wait_times,Queue Wait Times,elixir,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+queue_wait_times:python:ff_1001,queue_wait_times,Queue Wait Times,python,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+queue_wait_times:typescript:ff_1001,queue_wait_times,Queue Wait Times,typescript,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+queue_wait_times:elixir:ff_1010,queue_wait_times,Queue Wait Times,elixir,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,0
+queue_wait_times:python:ff_1010,queue_wait_times,Queue Wait Times,python,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+queue_wait_times:typescript:ff_1010,queue_wait_times,Queue Wait Times,typescript,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+queue_wait_times:elixir:ff_1100,queue_wait_times,Queue Wait Times,elixir,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,1
+queue_wait_times:python:ff_1100,queue_wait_times,Queue Wait Times,python,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,1
+queue_wait_times:typescript:ff_1100,queue_wait_times,Queue Wait Times,typescript,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,1
+queue_wait_times:elixir:ff_1111,queue_wait_times,Queue Wait Times,elixir,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+queue_wait_times:python:ff_1111,queue_wait_times,Queue Wait Times,python,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+queue_wait_times:typescript:ff_1111,queue_wait_times,Queue Wait Times,typescript,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+normalize_phone_book:elixir:ff_0000,normalize_phone_book,Normalize Phone Book,elixir,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+normalize_phone_book:python:ff_0000,normalize_phone_book,Normalize Phone Book,python,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,1
+normalize_phone_book:typescript:ff_0000,normalize_phone_book,Normalize Phone Book,typescript,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+normalize_phone_book:elixir:ff_0011,normalize_phone_book,Normalize Phone Book,elixir,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,0
+normalize_phone_book:python:ff_0011,normalize_phone_book,Normalize Phone Book,python,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,0
+normalize_phone_book:typescript:ff_0011,normalize_phone_book,Normalize Phone Book,typescript,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+normalize_phone_book:elixir:ff_0101,normalize_phone_book,Normalize Phone Book,elixir,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,0
+normalize_phone_book:python:ff_0101,normalize_phone_book,Normalize Phone Book,python,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,0
+normalize_phone_book:typescript:ff_0101,normalize_phone_book,Normalize Phone Book,typescript,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,0
+normalize_phone_book:elixir:ff_0110,normalize_phone_book,Normalize Phone Book,elixir,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,0
+normalize_phone_book:python:ff_0110,normalize_phone_book,Normalize Phone Book,python,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+normalize_phone_book:typescript:ff_0110,normalize_phone_book,Normalize Phone Book,typescript,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+normalize_phone_book:elixir:ff_1001,normalize_phone_book,Normalize Phone Book,elixir,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+normalize_phone_book:python:ff_1001,normalize_phone_book,Normalize Phone Book,python,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+normalize_phone_book:typescript:ff_1001,normalize_phone_book,Normalize Phone Book,typescript,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+normalize_phone_book:elixir:ff_1010,normalize_phone_book,Normalize Phone Book,elixir,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,0
+normalize_phone_book:python:ff_1010,normalize_phone_book,Normalize Phone Book,python,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+normalize_phone_book:typescript:ff_1010,normalize_phone_book,Normalize Phone Book,typescript,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+normalize_phone_book:elixir:ff_1100,normalize_phone_book,Normalize Phone Book,elixir,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,0
+normalize_phone_book:python:ff_1100,normalize_phone_book,Normalize Phone Book,python,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,0
+normalize_phone_book:typescript:ff_1100,normalize_phone_book,Normalize Phone Book,typescript,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,0
+normalize_phone_book:elixir:ff_1111,normalize_phone_book,Normalize Phone Book,elixir,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,0
+normalize_phone_book:python:ff_1111,normalize_phone_book,Normalize Phone Book,python,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,0
+normalize_phone_book:typescript:ff_1111,normalize_phone_book,Normalize Phone Book,typescript,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,0
+stable_group_runs:elixir:ff_0000,stable_group_runs,Stable Group Runs,elixir,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+stable_group_runs:python:ff_0000,stable_group_runs,Stable Group Runs,python,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+stable_group_runs:typescript:ff_0000,stable_group_runs,Stable Group Runs,typescript,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,1
+stable_group_runs:elixir:ff_0011,stable_group_runs,Stable Group Runs,elixir,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,0
+stable_group_runs:python:ff_0011,stable_group_runs,Stable Group Runs,python,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+stable_group_runs:typescript:ff_0011,stable_group_runs,Stable Group Runs,typescript,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+stable_group_runs:elixir:ff_0101,stable_group_runs,Stable Group Runs,elixir,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,1
+stable_group_runs:python:ff_0101,stable_group_runs,Stable Group Runs,python,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,1
+stable_group_runs:typescript:ff_0101,stable_group_runs,Stable Group Runs,typescript,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,0
+stable_group_runs:elixir:ff_0110,stable_group_runs,Stable Group Runs,elixir,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+stable_group_runs:python:ff_0110,stable_group_runs,Stable Group Runs,python,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+stable_group_runs:typescript:ff_0110,stable_group_runs,Stable Group Runs,typescript,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+stable_group_runs:elixir:ff_1001,stable_group_runs,Stable Group Runs,elixir,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+stable_group_runs:python:ff_1001,stable_group_runs,Stable Group Runs,python,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,1
+stable_group_runs:typescript:ff_1001,stable_group_runs,Stable Group Runs,typescript,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,1
+stable_group_runs:elixir:ff_1010,stable_group_runs,Stable Group Runs,elixir,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,0
+stable_group_runs:python:ff_1010,stable_group_runs,Stable Group Runs,python,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+stable_group_runs:typescript:ff_1010,stable_group_runs,Stable Group Runs,typescript,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+stable_group_runs:elixir:ff_1100,stable_group_runs,Stable Group Runs,elixir,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,1
+stable_group_runs:python:ff_1100,stable_group_runs,Stable Group Runs,python,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,1
+stable_group_runs:typescript:ff_1100,stable_group_runs,Stable Group Runs,typescript,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,1
+stable_group_runs:elixir:ff_1111,stable_group_runs,Stable Group Runs,elixir,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+stable_group_runs:python:ff_1111,stable_group_runs,Stable Group Runs,python,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+stable_group_runs:typescript:ff_1111,stable_group_runs,Stable Group Runs,typescript,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+token_bucket_decisions:elixir:ff_0000,token_bucket_decisions,Token Bucket Decisions,elixir,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+token_bucket_decisions:python:ff_0000,token_bucket_decisions,Token Bucket Decisions,python,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+token_bucket_decisions:typescript:ff_0000,token_bucket_decisions,Token Bucket Decisions,typescript,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+token_bucket_decisions:elixir:ff_0011,token_bucket_decisions,Token Bucket Decisions,elixir,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,0
+token_bucket_decisions:python:ff_0011,token_bucket_decisions,Token Bucket Decisions,python,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,0
+token_bucket_decisions:typescript:ff_0011,token_bucket_decisions,Token Bucket Decisions,typescript,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,0
+token_bucket_decisions:elixir:ff_0101,token_bucket_decisions,Token Bucket Decisions,elixir,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,0
+token_bucket_decisions:python:ff_0101,token_bucket_decisions,Token Bucket Decisions,python,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,0
+token_bucket_decisions:typescript:ff_0101,token_bucket_decisions,Token Bucket Decisions,typescript,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,0
+token_bucket_decisions:elixir:ff_0110,token_bucket_decisions,Token Bucket Decisions,elixir,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,0
+token_bucket_decisions:python:ff_0110,token_bucket_decisions,Token Bucket Decisions,python,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,0
+token_bucket_decisions:typescript:ff_0110,token_bucket_decisions,Token Bucket Decisions,typescript,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,0
+token_bucket_decisions:elixir:ff_1001,token_bucket_decisions,Token Bucket Decisions,elixir,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+token_bucket_decisions:python:ff_1001,token_bucket_decisions,Token Bucket Decisions,python,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+token_bucket_decisions:typescript:ff_1001,token_bucket_decisions,Token Bucket Decisions,typescript,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+token_bucket_decisions:elixir:ff_1010,token_bucket_decisions,Token Bucket Decisions,elixir,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,0
+token_bucket_decisions:python:ff_1010,token_bucket_decisions,Token Bucket Decisions,python,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,0
+token_bucket_decisions:typescript:ff_1010,token_bucket_decisions,Token Bucket Decisions,typescript,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,0
+token_bucket_decisions:elixir:ff_1100,token_bucket_decisions,Token Bucket Decisions,elixir,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,0
+token_bucket_decisions:python:ff_1100,token_bucket_decisions,Token Bucket Decisions,python,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,0
+token_bucket_decisions:typescript:ff_1100,token_bucket_decisions,Token Bucket Decisions,typescript,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,0
+token_bucket_decisions:elixir:ff_1111,token_bucket_decisions,Token Bucket Decisions,elixir,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,0
+token_bucket_decisions:python:ff_1111,token_bucket_decisions,Token Bucket Decisions,python,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,0
+token_bucket_decisions:typescript:ff_1111,token_bucket_decisions,Token Bucket Decisions,typescript,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,0
+dense_rankings:elixir:ff_0000,dense_rankings,Dense Rankings,elixir,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+dense_rankings:python:ff_0000,dense_rankings,Dense Rankings,python,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+dense_rankings:typescript:ff_0000,dense_rankings,Dense Rankings,typescript,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+dense_rankings:elixir:ff_0011,dense_rankings,Dense Rankings,elixir,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,0
+dense_rankings:python:ff_0011,dense_rankings,Dense Rankings,python,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+dense_rankings:typescript:ff_0011,dense_rankings,Dense Rankings,typescript,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+dense_rankings:elixir:ff_0101,dense_rankings,Dense Rankings,elixir,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,1
+dense_rankings:python:ff_0101,dense_rankings,Dense Rankings,python,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,1
+dense_rankings:typescript:ff_0101,dense_rankings,Dense Rankings,typescript,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,1
+dense_rankings:elixir:ff_0110,dense_rankings,Dense Rankings,elixir,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+dense_rankings:python:ff_0110,dense_rankings,Dense Rankings,python,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+dense_rankings:typescript:ff_0110,dense_rankings,Dense Rankings,typescript,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+dense_rankings:elixir:ff_1001,dense_rankings,Dense Rankings,elixir,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,1
+dense_rankings:python:ff_1001,dense_rankings,Dense Rankings,python,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+dense_rankings:typescript:ff_1001,dense_rankings,Dense Rankings,typescript,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+dense_rankings:elixir:ff_1010,dense_rankings,Dense Rankings,elixir,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,0
+dense_rankings:python:ff_1010,dense_rankings,Dense Rankings,python,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+dense_rankings:typescript:ff_1010,dense_rankings,Dense Rankings,typescript,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+dense_rankings:elixir:ff_1100,dense_rankings,Dense Rankings,elixir,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,1
+dense_rankings:python:ff_1100,dense_rankings,Dense Rankings,python,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,1
+dense_rankings:typescript:ff_1100,dense_rankings,Dense Rankings,typescript,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,1
+dense_rankings:elixir:ff_1111,dense_rankings,Dense Rankings,elixir,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+dense_rankings:python:ff_1111,dense_rankings,Dense Rankings,python,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+dense_rankings:typescript:ff_1111,dense_rankings,Dense Rankings,typescript,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+bracket_balance_report:elixir:ff_0000,bracket_balance_report,Bracket Balance Report,elixir,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+bracket_balance_report:python:ff_0000,bracket_balance_report,Bracket Balance Report,python,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+bracket_balance_report:typescript:ff_0000,bracket_balance_report,Bracket Balance Report,typescript,ff_0000,docs_low_examples_low_contracts_low_state_low,0,0,0,0,0
+bracket_balance_report:elixir:ff_0011,bracket_balance_report,Bracket Balance Report,elixir,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,0
+bracket_balance_report:python:ff_0011,bracket_balance_report,Bracket Balance Report,python,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+bracket_balance_report:typescript:ff_0011,bracket_balance_report,Bracket Balance Report,typescript,ff_0011,docs_low_examples_low_contracts_high_state_high,0,0,1,1,1
+bracket_balance_report:elixir:ff_0101,bracket_balance_report,Bracket Balance Report,elixir,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,0
+bracket_balance_report:python:ff_0101,bracket_balance_report,Bracket Balance Report,python,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,1
+bracket_balance_report:typescript:ff_0101,bracket_balance_report,Bracket Balance Report,typescript,ff_0101,docs_low_examples_high_contracts_low_state_high,0,1,0,1,1
+bracket_balance_report:elixir:ff_0110,bracket_balance_report,Bracket Balance Report,elixir,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+bracket_balance_report:python:ff_0110,bracket_balance_report,Bracket Balance Report,python,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+bracket_balance_report:typescript:ff_0110,bracket_balance_report,Bracket Balance Report,typescript,ff_0110,docs_low_examples_high_contracts_high_state_low,0,1,1,0,1
+bracket_balance_report:elixir:ff_1001,bracket_balance_report,Bracket Balance Report,elixir,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+bracket_balance_report:python:ff_1001,bracket_balance_report,Bracket Balance Report,python,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+bracket_balance_report:typescript:ff_1001,bracket_balance_report,Bracket Balance Report,typescript,ff_1001,docs_high_examples_low_contracts_low_state_high,1,0,0,1,0
+bracket_balance_report:elixir:ff_1010,bracket_balance_report,Bracket Balance Report,elixir,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+bracket_balance_report:python:ff_1010,bracket_balance_report,Bracket Balance Report,python,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+bracket_balance_report:typescript:ff_1010,bracket_balance_report,Bracket Balance Report,typescript,ff_1010,docs_high_examples_low_contracts_high_state_low,1,0,1,0,1
+bracket_balance_report:elixir:ff_1100,bracket_balance_report,Bracket Balance Report,elixir,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,0
+bracket_balance_report:python:ff_1100,bracket_balance_report,Bracket Balance Report,python,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,1
+bracket_balance_report:typescript:ff_1100,bracket_balance_report,Bracket Balance Report,typescript,ff_1100,docs_high_examples_high_contracts_low_state_low,1,1,0,0,0
+bracket_balance_report:elixir:ff_1111,bracket_balance_report,Bracket Balance Report,elixir,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+bracket_balance_report:python:ff_1111,bracket_balance_report,Bracket Balance Report,python,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1
+bracket_balance_report:typescript:ff_1111,bracket_balance_report,Bracket Balance Report,typescript,ff_1111,docs_high_examples_high_contracts_high_state_high,1,1,1,1,1

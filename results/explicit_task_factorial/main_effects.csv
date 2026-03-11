@@ -1,0 +1,5 @@
+scope,factor,matched_mean_delta,wins,losses,ties,unit_count,sign_test_p,holm_adjusted_p
+all_languages,docs_rich,0.047,7,4,5,16,0.548828,1.0
+all_languages,examples,0.203,10,2,4,16,0.038574,0.115722
+all_languages,contracts_explicit,0.359,13,2,1,16,0.007385,0.02954
+all_languages,state_guidance,-0.026,5,3,8,16,0.726562,1.0

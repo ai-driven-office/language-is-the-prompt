@@ -1,0 +1,528 @@
+{
+  "panel": {
+    "study": "explicit_task_panel",
+    "comparison": "rich_contract_examples_vs_baseline_compact",
+    "overall_delta": 0.10416666666666667,
+    "task_bootstrap_ci": [
+      -0.0625,
+      0.2916666666666667
+    ],
+    "leave_one_task_out": [
+      {
+        "omitted": "acct_balance_rollup",
+        "title": "Account Balance Rollup",
+        "delta": 0.1111111111111111
+      },
+      {
+        "omitted": "bracket_balance_report",
+        "title": "Bracket Balance Report",
+        "delta": 0.1111111111111111
+      },
+      {
+        "omitted": "csv_split_quoted",
+        "title": "CSV Split With Quotes",
+        "delta": 0.1111111111111111
+      },
+      {
+        "omitted": "dense_rankings",
+        "title": "Dense Rankings",
+        "delta": 0.08888888888888889
+      },
+      {
+        "omitted": "dependency_batches",
+        "title": "Dependency Batches",
+        "delta": 0.1111111111111111
+      },
+      {
+        "omitted": "inventory_reconcile",
+        "title": "Inventory Reconcile",
+        "delta": 0.1111111111111111
+      },
+      {
+        "omitted": "merge_intervals",
+        "title": "Merge Touching Intervals",
+        "delta": 0.1111111111111111
+      },
+      {
+        "omitted": "normalize_phone_book",
+        "title": "Normalize Phone Book",
+        "delta": 0.15555555555555556
+      },
+      {
+        "omitted": "queue_wait_times",
+        "title": "Queue Wait Times",
+        "delta": 0.1111111111111111
+      },
+      {
+        "omitted": "rule_based_discount",
+        "title": "Rule Based Discount",
+        "delta": 0.06666666666666667
+      },
+      {
+        "omitted": "session_durations",
+        "title": "Session Durations",
+        "delta": 0.044444444444444446
+      },
+      {
+        "omitted": "stable_group_runs",
+        "title": "Stable Group Runs",
+        "delta": 0.08888888888888889
+      },
+      {
+        "omitted": "threshold_bursts",
+        "title": "Threshold Bursts",
+        "delta": 0.1111111111111111
+      },
+      {
+        "omitted": "token_bucket_decisions",
+        "title": "Token Bucket Decisions",
+        "delta": 0.1111111111111111
+      },
+      {
+        "omitted": "top_k_frequencies",
+        "title": "Top K Frequencies",
+        "delta": 0.1111111111111111
+      },
+      {
+        "omitted": "window_majority",
+        "title": "Sliding Window Majority",
+        "delta": 0.1111111111111111
+      }
+    ],
+    "leave_one_language_out": [
+      {
+        "omitted": "elixir",
+        "delta": 0.03125
+      },
+      {
+        "omitted": "python",
+        "delta": 0.15625
+      },
+      {
+        "omitted": "typescript",
+        "delta": 0.125
+      }
+    ]
+  },
+  "factorial": {
+    "study": "explicit_task_factorial",
+    "effects": [
+      {
+        "factor": "docs_rich",
+        "overall_delta": 0.046875,
+        "task_bootstrap_ci": [
+          -0.020833333333333332,
+          0.11979166666666667
+        ],
+        "leave_one_task_out": [
+          {
+            "omitted": "acct_balance_rollup",
+            "title": "Account Balance Rollup",
+            "delta": 0.027777777777777776
+          },
+          {
+            "omitted": "bracket_balance_report",
+            "title": "Bracket Balance Report",
+            "delta": 0.05
+          },
+          {
+            "omitted": "csv_split_quoted",
+            "title": "CSV Split With Quotes",
+            "delta": 0.044444444444444446
+          },
+          {
+            "omitted": "dense_rankings",
+            "title": "Dense Rankings",
+            "delta": 0.044444444444444446
+          },
+          {
+            "omitted": "dependency_batches",
+            "title": "Dependency Batches",
+            "delta": 0.06111111111111111
+          },
+          {
+            "omitted": "inventory_reconcile",
+            "title": "Inventory Reconcile",
+            "delta": 0.027777777777777776
+          },
+          {
+            "omitted": "merge_intervals",
+            "title": "Merge Touching Intervals",
+            "delta": 0.044444444444444446
+          },
+          {
+            "omitted": "normalize_phone_book",
+            "title": "Normalize Phone Book",
+            "delta": 0.06111111111111111
+          },
+          {
+            "omitted": "queue_wait_times",
+            "title": "Queue Wait Times",
+            "delta": 0.05555555555555555
+          },
+          {
+            "omitted": "rule_based_discount",
+            "title": "Rule Based Discount",
+            "delta": 0.05
+          },
+          {
+            "omitted": "session_durations",
+            "title": "Session Durations",
+            "delta": 0.05
+          },
+          {
+            "omitted": "stable_group_runs",
+            "title": "Stable Group Runs",
+            "delta": 0.03888888888888889
+          },
+          {
+            "omitted": "threshold_bursts",
+            "title": "Threshold Bursts",
+            "delta": 0.05555555555555555
+          },
+          {
+            "omitted": "token_bucket_decisions",
+            "title": "Token Bucket Decisions",
+            "delta": 0.05
+          },
+          {
+            "omitted": "top_k_frequencies",
+            "title": "Top K Frequencies",
+            "delta": 0.03888888888888889
+          },
+          {
+            "omitted": "window_majority",
+            "title": "Sliding Window Majority",
+            "delta": 0.05
+          }
+        ],
+        "leave_one_language_out": [
+          {
+            "omitted": "elixir",
+            "delta": 0.0390625
+          },
+          {
+            "omitted": "python",
+            "delta": 0.0546875
+          },
+          {
+            "omitted": "typescript",
+            "delta": 0.046875
+          }
+        ]
+      },
+      {
+        "factor": "examples",
+        "overall_delta": 0.203125,
+        "task_bootstrap_ci": [
+          0.08854166666666667,
+          0.3230468749999981
+        ],
+        "leave_one_task_out": [
+          {
+            "omitted": "acct_balance_rollup",
+            "title": "Account Balance Rollup",
+            "delta": 0.20555555555555555
+          },
+          {
+            "omitted": "bracket_balance_report",
+            "title": "Bracket Balance Report",
+            "delta": 0.19444444444444445
+          },
+          {
+            "omitted": "csv_split_quoted",
+            "title": "CSV Split With Quotes",
+            "delta": 0.2222222222222222
+          },
+          {
+            "omitted": "dense_rankings",
+            "title": "Dense Rankings",
+            "delta": 0.17777777777777778
+          },
+          {
+            "omitted": "dependency_batches",
+            "title": "Dependency Batches",
+            "delta": 0.21666666666666667
+          },
+          {
+            "omitted": "inventory_reconcile",
+            "title": "Inventory Reconcile",
+            "delta": 0.19444444444444445
+          },
+          {
+            "omitted": "merge_intervals",
+            "title": "Merge Touching Intervals",
+            "delta": 0.2111111111111111
+          },
+          {
+            "omitted": "normalize_phone_book",
+            "title": "Normalize Phone Book",
+            "delta": 0.22777777777777777
+          },
+          {
+            "omitted": "queue_wait_times",
+            "title": "Queue Wait Times",
+            "delta": 0.17777777777777778
+          },
+          {
+            "omitted": "rule_based_discount",
+            "title": "Rule Based Discount",
+            "delta": 0.20555555555555555
+          },
+          {
+            "omitted": "session_durations",
+            "title": "Session Durations",
+            "delta": 0.17222222222222222
+          },
+          {
+            "omitted": "stable_group_runs",
+            "title": "Stable Group Runs",
+            "delta": 0.19444444444444445
+          },
+          {
+            "omitted": "threshold_bursts",
+            "title": "Threshold Bursts",
+            "delta": 0.2
+          },
+          {
+            "omitted": "token_bucket_decisions",
+            "title": "Token Bucket Decisions",
+            "delta": 0.21666666666666667
+          },
+          {
+            "omitted": "top_k_frequencies",
+            "title": "Top K Frequencies",
+            "delta": 0.21666666666666667
+          },
+          {
+            "omitted": "window_majority",
+            "title": "Sliding Window Majority",
+            "delta": 0.21666666666666667
+          }
+        ],
+        "leave_one_language_out": [
+          {
+            "omitted": "elixir",
+            "delta": 0.1640625
+          },
+          {
+            "omitted": "python",
+            "delta": 0.1953125
+          },
+          {
+            "omitted": "typescript",
+            "delta": 0.25
+          }
+        ]
+      },
+      {
+        "factor": "contracts_explicit",
+        "overall_delta": 0.359375,
+        "task_bootstrap_ci": [
+          0.19791666666666666,
+          0.53125
+        ],
+        "leave_one_task_out": [
+          {
+            "omitted": "acct_balance_rollup",
+            "title": "Account Balance Rollup",
+            "delta": 0.3611111111111111
+          },
+          {
+            "omitted": "bracket_balance_report",
+            "title": "Bracket Balance Report",
+            "delta": 0.3388888888888889
+          },
+          {
+            "omitted": "csv_split_quoted",
+            "title": "CSV Split With Quotes",
+            "delta": 0.3888888888888889
+          },
+          {
+            "omitted": "dense_rankings",
+            "title": "Dense Rankings",
+            "delta": 0.36666666666666664
+          },
+          {
+            "omitted": "dependency_batches",
+            "title": "Dependency Batches",
+            "delta": 0.3277777777777778
+          },
+          {
+            "omitted": "inventory_reconcile",
+            "title": "Inventory Reconcile",
+            "delta": 0.3388888888888889
+          },
+          {
+            "omitted": "merge_intervals",
+            "title": "Merge Touching Intervals",
+            "delta": 0.37777777777777777
+          },
+          {
+            "omitted": "normalize_phone_book",
+            "title": "Normalize Phone Book",
+            "delta": 0.3611111111111111
+          },
+          {
+            "omitted": "queue_wait_times",
+            "title": "Queue Wait Times",
+            "delta": 0.35555555555555557
+          },
+          {
+            "omitted": "rule_based_discount",
+            "title": "Rule Based Discount",
+            "delta": 0.39444444444444443
+          },
+          {
+            "omitted": "session_durations",
+            "title": "Session Durations",
+            "delta": 0.3611111111111111
+          },
+          {
+            "omitted": "stable_group_runs",
+            "title": "Stable Group Runs",
+            "delta": 0.37222222222222223
+          },
+          {
+            "omitted": "threshold_bursts",
+            "title": "Threshold Bursts",
+            "delta": 0.37777777777777777
+          },
+          {
+            "omitted": "token_bucket_decisions",
+            "title": "Token Bucket Decisions",
+            "delta": 0.38333333333333336
+          },
+          {
+            "omitted": "top_k_frequencies",
+            "title": "Top K Frequencies",
+            "delta": 0.3277777777777778
+          },
+          {
+            "omitted": "window_majority",
+            "title": "Sliding Window Majority",
+            "delta": 0.31666666666666665
+          }
+        ],
+        "leave_one_language_out": [
+          {
+            "omitted": "elixir",
+            "delta": 0.4609375
+          },
+          {
+            "omitted": "python",
+            "delta": 0.3046875
+          },
+          {
+            "omitted": "typescript",
+            "delta": 0.3125
+          }
+        ]
+      },
+      {
+        "factor": "state_guidance",
+        "overall_delta": -0.026041666666666668,
+        "task_bootstrap_ci": [
+          -0.09375,
+          0.03125
+        ],
+        "leave_one_task_out": [
+          {
+            "omitted": "acct_balance_rollup",
+            "title": "Account Balance Rollup",
+            "delta": -0.016666666666666666
+          },
+          {
+            "omitted": "bracket_balance_report",
+            "title": "Bracket Balance Report",
+            "delta": -0.027777777777777776
+          },
+          {
+            "omitted": "csv_split_quoted",
+            "title": "CSV Split With Quotes",
+            "delta": -0.03333333333333333
+          },
+          {
+            "omitted": "dense_rankings",
+            "title": "Dense Rankings",
+            "delta": -0.03333333333333333
+          },
+          {
+            "omitted": "dependency_batches",
+            "title": "Dependency Batches",
+            "delta": -0.027777777777777776
+          },
+          {
+            "omitted": "inventory_reconcile",
+            "title": "Inventory Reconcile",
+            "delta": -0.005555555555555556
+          },
+          {
+            "omitted": "merge_intervals",
+            "title": "Merge Touching Intervals",
+            "delta": -0.03333333333333333
+          },
+          {
+            "omitted": "normalize_phone_book",
+            "title": "Normalize Phone Book",
+            "delta": -0.005555555555555556
+          },
+          {
+            "omitted": "queue_wait_times",
+            "title": "Queue Wait Times",
+            "delta": -0.03333333333333333
+          },
+          {
+            "omitted": "rule_based_discount",
+            "title": "Rule Based Discount",
+            "delta": -0.027777777777777776
+          },
+          {
+            "omitted": "session_durations",
+            "title": "Session Durations",
+            "delta": -0.027777777777777776
+          },
+          {
+            "omitted": "stable_group_runs",
+            "title": "Stable Group Runs",
+            "delta": -0.027777777777777776
+          },
+          {
+            "omitted": "threshold_bursts",
+            "title": "Threshold Bursts",
+            "delta": -0.03333333333333333
+          },
+          {
+            "omitted": "token_bucket_decisions",
+            "title": "Token Bucket Decisions",
+            "delta": -0.027777777777777776
+          },
+          {
+            "omitted": "top_k_frequencies",
+            "title": "Top K Frequencies",
+            "delta": -0.027777777777777776
+          },
+          {
+            "omitted": "window_majority",
+            "title": "Sliding Window Majority",
+            "delta": -0.027777777777777776
+          }
+        ],
+        "leave_one_language_out": [
+          {
+            "omitted": "elixir",
+            "delta": -0.0390625
+          },
+          {
+            "omitted": "python",
+            "delta": -0.0234375
+          },
+          {
+            "omitted": "typescript",
+            "delta": -0.015625
+          }
+        ]
+      }
+    ]
+  }
+}

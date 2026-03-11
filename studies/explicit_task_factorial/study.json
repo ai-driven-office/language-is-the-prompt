@@ -1,0 +1,16 @@
+{
+  "study_id": "explicit-task-factorial-v1",
+  "task_source": "studies/explicit_task_panel/tasks.json",
+  "target_languages": ["elixir", "python", "typescript"],
+  "design": {
+    "type": "fractional-factorial",
+    "runs": 8,
+    "generator_relation": "state_guidance = docs_rich XOR examples XOR contracts_explicit"
+  },
+  "primary_hypotheses": [
+    "Documentation richness is the dominant positive factor across the matched tasks.",
+    "Examples help beyond richer prose alone, but less than documentation richness.",
+    "Explicit contracts help when contract information is otherwise sparse.",
+    "Explicit state-flow guidance produces smaller and more task-dependent gains."
+  ]
+}

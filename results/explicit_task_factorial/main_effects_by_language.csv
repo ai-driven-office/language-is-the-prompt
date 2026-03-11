@@ -1,0 +1,13 @@
+scope,factor,matched_mean_delta,wins,losses,ties,unit_count,sign_test_p,holm_adjusted_p
+elixir,docs_rich,0.062,7,3,6,16,0.34375,1.0
+python,docs_rich,0.031,4,2,10,16,0.6875,1.0
+typescript,docs_rich,0.047,4,2,10,16,0.6875,0.867186
+elixir,examples,0.281,9,2,5,16,0.06543,0.26172
+python,examples,0.219,9,1,6,16,0.021484,0.064452
+typescript,examples,0.109,6,2,8,16,0.289062,0.867186
+elixir,contracts_explicit,0.156,7,5,4,16,0.774414,1.0
+python,contracts_explicit,0.469,13,0,3,16,0.000244,0.000976
+typescript,contracts_explicit,0.453,11,0,5,16,0.000977,0.003908
+elixir,state_guidance,0.0,5,4,7,16,1.0,1.0
+python,state_guidance,-0.031,3,3,10,16,1.0,1.0
+typescript,state_guidance,-0.047,1,4,11,16,0.375,0.867186

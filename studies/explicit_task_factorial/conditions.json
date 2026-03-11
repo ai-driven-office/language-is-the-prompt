@@ -1,0 +1,98 @@
+[
+  {
+    "id": "ff_0000",
+    "label": "docs_low_examples_low_contracts_low_state_low",
+    "docs_rich": false,
+    "examples": false,
+    "contracts_explicit": false,
+    "state_guidance": false,
+    "include_contract_details": false,
+    "include_edge_cases": false,
+    "include_examples": false,
+    "include_contract_note": false
+  },
+  {
+    "id": "ff_0011",
+    "label": "docs_low_examples_low_contracts_high_state_high",
+    "docs_rich": false,
+    "examples": false,
+    "contracts_explicit": true,
+    "state_guidance": true,
+    "include_contract_details": true,
+    "include_edge_cases": false,
+    "include_examples": false,
+    "include_contract_note": true
+  },
+  {
+    "id": "ff_0101",
+    "label": "docs_low_examples_high_contracts_low_state_high",
+    "docs_rich": false,
+    "examples": true,
+    "contracts_explicit": false,
+    "state_guidance": true,
+    "include_contract_details": false,
+    "include_edge_cases": false,
+    "include_examples": true,
+    "include_contract_note": false
+  },
+  {
+    "id": "ff_0110",
+    "label": "docs_low_examples_high_contracts_high_state_low",
+    "docs_rich": false,
+    "examples": true,
+    "contracts_explicit": true,
+    "state_guidance": false,
+    "include_contract_details": true,
+    "include_edge_cases": false,
+    "include_examples": true,
+    "include_contract_note": true
+  },
+  {
+    "id": "ff_1001",
+    "label": "docs_high_examples_low_contracts_low_state_high",
+    "docs_rich": true,
+    "examples": false,
+    "contracts_explicit": false,
+    "state_guidance": true,
+    "include_contract_details": false,
+    "include_edge_cases": true,
+    "include_examples": false,
+    "include_contract_note": false
+  },
+  {
+    "id": "ff_1010",
+    "label": "docs_high_examples_low_contracts_high_state_low",
+    "docs_rich": true,
+    "examples": false,
+    "contracts_explicit": true,
+    "state_guidance": false,
+    "include_contract_details": true,
+    "include_edge_cases": true,
+    "include_examples": false,
+    "include_contract_note": true
+  },
+  {
+    "id": "ff_1100",
+    "label": "docs_high_examples_high_contracts_low_state_low",
+    "docs_rich": true,
+    "examples": true,
+    "contracts_explicit": false,
+    "state_guidance": false,
+    "include_contract_details": false,
+    "include_edge_cases": true,
+    "include_examples": true,
+    "include_contract_note": false
+  },
+  {
+    "id": "ff_1111",
+    "label": "docs_high_examples_high_contracts_high_state_high",
+    "docs_rich": true,
+    "examples": true,
+    "contracts_explicit": true,
+    "state_guidance": true,
+    "include_contract_details": true,
+    "include_edge_cases": true,
+    "include_examples": true,
+    "include_contract_note": true
+  }
+]

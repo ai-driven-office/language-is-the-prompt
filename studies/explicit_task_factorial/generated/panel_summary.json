@@ -1,0 +1,11 @@
+{
+  "study_id": "explicit-task-factorial-v1",
+  "target_languages": [
+    "elixir",
+    "python",
+    "typescript"
+  ],
+  "task_count": 16,
+  "condition_count": 8,
+  "row_count": 384
+}

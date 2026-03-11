@@ -25,124 +25,124 @@
 <rect x="0" y="0" width="1500" height="1180" rx="0" fill="url(#bggrad)" stroke="none" opacity="1.0"/>
 <rect x="34" y="34" width="1432" height="1112" rx="34" fill="#ffffff" stroke="#e4e8f1" opacity="1.0"/>
 <text x="72" y="96" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" fill="#7c3aed" text-anchor="start">Figure 1</text>
-<text x="72" y="146" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="800" fill="#142033" text-anchor="start">AutoCodeBench leaderboard reproduced with GPT-5.4 medium</text>
-<text x="72" y="184" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="500" fill="#58647a" text-anchor="start">Elixir remains the strongest outlier on the original 20-language benchmark.</text>
-<line x1="190.0" y1="200" x2="190.0" y2="1218" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
-<text x="190.0" y="186" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="middle">0%</text>
-<line x1="390.0" y1="200" x2="390.0" y2="1218" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
-<text x="390.0" y="186" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="middle">20%</text>
-<line x1="590.0" y1="200" x2="590.0" y2="1218" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
-<text x="590.0" y="186" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="middle">40%</text>
-<line x1="790.0" y1="200" x2="790.0" y2="1218" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
-<text x="790.0" y="186" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="middle">60%</text>
-<line x1="990.0" y1="200" x2="990.0" y2="1218" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
-<text x="990.0" y="186" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="middle">80%</text>
-<line x1="1190.0" y1="200" x2="1190.0" y2="1218" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
-<text x="1190.0" y="186" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="middle">100%</text>
-<text x="72" y="232" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">1.</text>
-<text x="112" y="232" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#7c3aed" text-anchor="start">elixir</text>
-<rect x="190" y="210" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
-<rect x="190" y="210" width="874.0" height="30" rx="15" fill="url(#elixirgrad)" stroke="none" opacity="1.0"/>
-<text x="1208" y="232" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#7c3aed" text-anchor="start">87.4%</text>
-<text x="72" y="280" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">2.</text>
-<text x="112" y="280" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">kotlin</text>
-<rect x="190" y="258" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
-<rect x="190" y="258" width="765.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
-<text x="1208" y="280" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">76.5%</text>
-<text x="72" y="328" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">3.</text>
-<text x="112" y="328" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">csharp</text>
-<rect x="190" y="306" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
-<rect x="190" y="306" width="724.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
-<text x="1208" y="328" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">72.4%</text>
-<text x="72" y="376" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">4.</text>
-<text x="112" y="376" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">ruby</text>
-<rect x="190" y="354" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
-<rect x="190" y="354" width="630.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
-<text x="1208" y="376" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">63.0%</text>
-<text x="72" y="424" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">5.</text>
-<text x="112" y="424" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">julia</text>
-<rect x="190" y="402" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
-<rect x="190" y="402" width="570.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
-<text x="1208" y="424" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">57.0%</text>
-<text x="72" y="472" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">6.</text>
-<text x="112" y="472" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">dart</text>
-<rect x="190" y="450" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
-<rect x="190" y="450" width="565.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
-<text x="1208" y="472" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">56.5%</text>
-<text x="72" y="520" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">7.</text>
-<text x="112" y="520" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">r</text>
-<rect x="190" y="498" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
-<rect x="190" y="498" width="545.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
-<text x="1208" y="520" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">54.5%</text>
-<text x="72" y="568" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">8.</text>
-<text x="112" y="568" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">overall</text>
-<rect x="190" y="546" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
-<rect x="190" y="546" width="533.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
-<text x="1208" y="568" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">53.3%</text>
-<text x="72" y="616" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">9.</text>
-<text x="112" y="616" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">java</text>
-<rect x="190" y="594" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
-<rect x="190" y="594" width="511.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
-<text x="1208" y="616" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">51.1%</text>
-<text x="72" y="664" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">10.</text>
-<text x="112" y="664" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">racket</text>
-<rect x="190" y="642" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
-<rect x="190" y="642" width="510.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
-<text x="1208" y="664" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">51.0%</text>
-<text x="72" y="712" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">11.</text>
-<text x="112" y="712" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">scala</text>
-<rect x="190" y="690" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
-<rect x="190" y="690" width="508.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
-<text x="1208" y="712" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">50.8%</text>
-<text x="72" y="760" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">12.</text>
-<text x="112" y="760" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">shell</text>
-<rect x="190" y="738" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
-<rect x="190" y="738" width="505.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
-<text x="1208" y="760" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">50.5%</text>
-<text x="72" y="808" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">13.</text>
-<text x="112" y="808" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">cpp</text>
-<rect x="190" y="786" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
-<rect x="190" y="786" width="500.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
-<text x="1208" y="808" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">50.0%</text>
-<text x="72" y="856" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">14.</text>
-<text x="112" y="856" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">typescript</text>
-<rect x="190" y="834" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
-<rect x="190" y="834" width="492.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
-<text x="1208" y="856" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">49.2%</text>
-<text x="72" y="904" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">15.</text>
-<text x="112" y="904" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">perl</text>
-<rect x="190" y="882" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
-<rect x="190" y="882" width="445.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
-<text x="1208" y="904" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">44.5%</text>
-<text x="72" y="952" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">16.</text>
-<text x="112" y="952" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">python</text>
-<rect x="190" y="930" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
-<rect x="190" y="930" width="439.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
-<text x="1208" y="952" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">43.9%</text>
-<text x="72" y="1000" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">17.</text>
-<text x="112" y="1000" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">swift</text>
-<rect x="190" y="978" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
-<rect x="190" y="978" width="435.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
-<text x="1208" y="1000" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">43.5%</text>
-<text x="72" y="1048" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">18.</text>
-<text x="112" y="1048" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">go</text>
-<rect x="190" y="1026" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
-<rect x="190" y="1026" width="429.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
-<text x="1208" y="1048" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">42.9%</text>
-<text x="72" y="1096" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">19.</text>
-<text x="112" y="1096" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">javascript</text>
-<rect x="190" y="1074" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
-<rect x="190" y="1074" width="429.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
-<text x="1208" y="1096" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">42.9%</text>
-<text x="72" y="1144" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">20.</text>
-<text x="112" y="1144" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">rust</text>
-<rect x="190" y="1122" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
-<rect x="190" y="1122" width="402.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
-<text x="1208" y="1144" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">40.2%</text>
-<text x="72" y="1192" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">21.</text>
-<text x="112" y="1192" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">php</text>
-<rect x="190" y="1170" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
-<rect x="190" y="1170" width="357.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
-<text x="1208" y="1192" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">35.7%</text>
+<text x="72" y="146" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="800" fill="#142033" text-anchor="start"><tspan x="72" dy="0">AutoCodeBench leaderboard reproduced with GPT-5.4 medium</tspan></text>
+<text x="72" y="200" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="500" fill="#58647a" text-anchor="start"><tspan x="72" dy="0">Elixir remains the strongest outlier on the original 20-language benchmark.</tspan></text>
+<line x1="190.0" y1="240" x2="190.0" y2="1132" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="190.0" y="226" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="middle">0%</text>
+<line x1="390.0" y1="240" x2="390.0" y2="1132" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="390.0" y="226" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="middle">20%</text>
+<line x1="590.0" y1="240" x2="590.0" y2="1132" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="590.0" y="226" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="middle">40%</text>
+<line x1="790.0" y1="240" x2="790.0" y2="1132" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="790.0" y="226" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="middle">60%</text>
+<line x1="990.0" y1="240" x2="990.0" y2="1132" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="990.0" y="226" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="middle">80%</text>
+<line x1="1190.0" y1="240" x2="1190.0" y2="1132" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="1190.0" y="226" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="middle">100%</text>
+<text x="72" y="272" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">1.</text>
+<text x="112" y="272" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#7c3aed" text-anchor="start">elixir</text>
+<rect x="190" y="250" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
+<rect x="190" y="250" width="874.0" height="30" rx="15" fill="url(#elixirgrad)" stroke="none" opacity="1.0"/>
+<text x="1208" y="272" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#7c3aed" text-anchor="start">87.4%</text>
+<text x="72" y="314" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">2.</text>
+<text x="112" y="314" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">kotlin</text>
+<rect x="190" y="292" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
+<rect x="190" y="292" width="765.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
+<text x="1208" y="314" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">76.5%</text>
+<text x="72" y="356" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">3.</text>
+<text x="112" y="356" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">csharp</text>
+<rect x="190" y="334" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
+<rect x="190" y="334" width="724.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
+<text x="1208" y="356" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">72.4%</text>
+<text x="72" y="398" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">4.</text>
+<text x="112" y="398" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">ruby</text>
+<rect x="190" y="376" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
+<rect x="190" y="376" width="630.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
+<text x="1208" y="398" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">63.0%</text>
+<text x="72" y="440" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">5.</text>
+<text x="112" y="440" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">julia</text>
+<rect x="190" y="418" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
+<rect x="190" y="418" width="570.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
+<text x="1208" y="440" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">57.0%</text>
+<text x="72" y="482" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">6.</text>
+<text x="112" y="482" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">dart</text>
+<rect x="190" y="460" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
+<rect x="190" y="460" width="565.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
+<text x="1208" y="482" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">56.5%</text>
+<text x="72" y="524" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">7.</text>
+<text x="112" y="524" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">r</text>
+<rect x="190" y="502" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
+<rect x="190" y="502" width="545.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
+<text x="1208" y="524" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">54.5%</text>
+<text x="72" y="566" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">8.</text>
+<text x="112" y="566" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">overall</text>
+<rect x="190" y="544" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
+<rect x="190" y="544" width="533.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
+<text x="1208" y="566" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">53.3%</text>
+<text x="72" y="608" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">9.</text>
+<text x="112" y="608" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">java</text>
+<rect x="190" y="586" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
+<rect x="190" y="586" width="511.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
+<text x="1208" y="608" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">51.1%</text>
+<text x="72" y="650" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">10.</text>
+<text x="112" y="650" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">racket</text>
+<rect x="190" y="628" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
+<rect x="190" y="628" width="510.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
+<text x="1208" y="650" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">51.0%</text>
+<text x="72" y="692" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">11.</text>
+<text x="112" y="692" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">scala</text>
+<rect x="190" y="670" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
+<rect x="190" y="670" width="508.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
+<text x="1208" y="692" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">50.8%</text>
+<text x="72" y="734" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">12.</text>
+<text x="112" y="734" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">shell</text>
+<rect x="190" y="712" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
+<rect x="190" y="712" width="505.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
+<text x="1208" y="734" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">50.5%</text>
+<text x="72" y="776" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">13.</text>
+<text x="112" y="776" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">cpp</text>
+<rect x="190" y="754" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
+<rect x="190" y="754" width="500.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
+<text x="1208" y="776" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">50.0%</text>
+<text x="72" y="818" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">14.</text>
+<text x="112" y="818" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">typescript</text>
+<rect x="190" y="796" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
+<rect x="190" y="796" width="492.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
+<text x="1208" y="818" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">49.2%</text>
+<text x="72" y="860" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">15.</text>
+<text x="112" y="860" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">perl</text>
+<rect x="190" y="838" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
+<rect x="190" y="838" width="445.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
+<text x="1208" y="860" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">44.5%</text>
+<text x="72" y="902" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">16.</text>
+<text x="112" y="902" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">python</text>
+<rect x="190" y="880" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
+<rect x="190" y="880" width="439.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
+<text x="1208" y="902" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">43.9%</text>
+<text x="72" y="944" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">17.</text>
+<text x="112" y="944" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">swift</text>
+<rect x="190" y="922" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
+<rect x="190" y="922" width="435.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
+<text x="1208" y="944" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">43.5%</text>
+<text x="72" y="986" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">18.</text>
+<text x="112" y="986" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">go</text>
+<rect x="190" y="964" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
+<rect x="190" y="964" width="429.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
+<text x="1208" y="986" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">42.9%</text>
+<text x="72" y="1028" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">19.</text>
+<text x="112" y="1028" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">javascript</text>
+<rect x="190" y="1006" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
+<rect x="190" y="1006" width="429.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
+<text x="1208" y="1028" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">42.9%</text>
+<text x="72" y="1070" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">20.</text>
+<text x="112" y="1070" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">rust</text>
+<rect x="190" y="1048" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
+<rect x="190" y="1048" width="402.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
+<text x="1208" y="1070" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">40.2%</text>
+<text x="72" y="1112" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#58647a" text-anchor="start">21.</text>
+<text x="112" y="1112" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">php</text>
+<rect x="190" y="1090" width="1000" height="30" rx="15" fill="#eef2f8" stroke="none" opacity="1.0"/>
+<rect x="190" y="1090" width="357.0" height="30" rx="15" fill="#cbd5e1" stroke="none" opacity="1.0"/>
+<text x="1208" y="1112" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#142033" text-anchor="start">35.7%</text>
 <text x="72" y="1124" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="500" fill="#58647a" text-anchor="start">Source: results/acb_full_openai_gpt_5_4_medium.csv</text>
 </svg>

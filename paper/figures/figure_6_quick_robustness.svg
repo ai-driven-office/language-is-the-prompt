@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="980" viewBox="0 0 1560 980">
+
+<defs>
+  <linearGradient id="bggrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#fbfbff"/>
+    <stop offset="100%" stop-color="#eef2ff"/>
+  </linearGradient>
+  <linearGradient id="elixirgrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#7c3aed"/>
+    <stop offset="100%" stop-color="#a78bfa"/>
+  </linearGradient>
+  <linearGradient id="accentgrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#f97316"/>
+    <stop offset="100%" stop-color="#fb7185"/>
+  </linearGradient>
+  <linearGradient id="bluegrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#2563eb"/>
+    <stop offset="100%" stop-color="#60a5fa"/>
+  </linearGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#8b9ab7" flood-opacity="0.18"/>
+  </filter>
+</defs>
+
+<rect x="0" y="0" width="1560" height="980" rx="0" fill="url(#bggrad)" stroke="none" opacity="1.0"/>
+<rect x="34" y="34" width="1492" height="912" rx="34" fill="#ffffff" stroke="#e4e8f1" opacity="1.0"/>
+<text x="72" y="96" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" fill="#7c3aed" text-anchor="start">Figure 6</text>
+<text x="72" y="146" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="38" font-weight="800" fill="#142033" text-anchor="start"><tspan x="72" dy="0">Quick robustness checks: scoped panel signal, stable contract</tspan><tspan x="72" dy="42">effect</tspan></text>
+<text x="72" y="238" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="500" fill="#58647a" text-anchor="start"><tspan x="72" dy="0">The exact-task panel stays low-power, while the factorial contract effect remains positive under bootstrap and leave-one-out</tspan><tspan x="72" dy="26">scans.</tspan></text>
+<rect x="72" y="326" width="520" height="640" rx="28" fill="#f8fafc" stroke="#e5e7eb" opacity="1.0"/>
+<text x="104" y="376" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="28" font-weight="800" fill="#142033" text-anchor="start">Panel: examples vs baseline</text>
+<text x="104" y="410" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="500" fill="#58647a" text-anchor="start">Comparison: rich_contract_examples - baseline_compact</text>
+<line x1="168.0" y1="472" x2="168.0" y2="776" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="168.0" y="460" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="middle">-0.2</text>
+<line x1="235.27272727272725" y1="472" x2="235.27272727272725" y2="776" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="235.27272727272725" y="460" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="middle">-0.1</text>
+<line x1="302.5454545454545" y1="472" x2="302.5454545454545" y2="776" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="302.5454545454545" y="460" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="middle">+0.0</text>
+<line x1="369.81818181818187" y1="472" x2="369.81818181818187" y2="776" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="369.81818181818187" y="460" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="middle">+0.1</text>
+<line x1="437.09090909090907" y1="472" x2="437.09090909090907" y2="776" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="437.09090909090907" y="460" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="middle">+0.2</text>
+<line x1="504.3636363636363" y1="472" x2="504.3636363636363" y2="776" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="504.3636363636363" y="460" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="middle">+0.3</text>
+<text x="104" y="542" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700" fill="#142033" text-anchor="start">Overall delta</text>
+<line x1="260.5" y1="536" x2="498.75757575757575" y2="536" stroke="#7c3aed" stroke-width="8"/>
+<circle cx="372.6212121212121" cy="536" r="10" fill="#7c3aed"/>
+<text x="556" y="542" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" fill="#7c3aed" text-anchor="start">+0.104</text>
+<text x="104" y="606" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700" fill="#142033" text-anchor="start">Drop elixir</text>
+<line x1="323.5681818181818" y1="600" x2="323.5681818181818" y2="600" stroke="#2563eb" stroke-width="8"/>
+<circle cx="323.5681818181818" cy="600" r="10" fill="#2563eb"/>
+<text x="556" y="606" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" fill="#2563eb" text-anchor="start">+0.031</text>
+<text x="104" y="670" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700" fill="#142033" text-anchor="start">Drop python</text>
+<line x1="407.6590909090909" y1="664" x2="407.6590909090909" y2="664" stroke="#2563eb" stroke-width="8"/>
+<circle cx="407.6590909090909" cy="664" r="10" fill="#2563eb"/>
+<text x="556" y="670" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" fill="#2563eb" text-anchor="start">+0.156</text>
+<text x="104" y="734" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700" fill="#142033" text-anchor="start">Drop typescript</text>
+<line x1="386.6363636363636" y1="728" x2="386.6363636363636" y2="728" stroke="#2563eb" stroke-width="8"/>
+<circle cx="386.6363636363636" cy="728" r="10" fill="#2563eb"/>
+<text x="556" y="734" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" fill="#2563eb" text-anchor="start">+0.125</text>
+<rect x="96" y="796" width="472" height="130" rx="20" fill="#ffffff" stroke="#e5e7eb" opacity="1.0"/>
+<text x="120" y="836" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="800" fill="#142033" text-anchor="start">Read</text>
+<text x="120" y="870" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="500" fill="#142033" text-anchor="start">Bootstrap CI crosses zero, so the panel remains</text>
+<text x="120" y="898" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="500" fill="#142033" text-anchor="start">directional rather than decisive at this scale.</text>
+<rect x="632" y="240" width="856" height="640" rx="28" fill="#f8fafc" stroke="#e5e7eb" opacity="1.0"/>
+<text x="664" y="290" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="28" font-weight="800" fill="#142033" text-anchor="start">Factorial: overall main effects</text>
+<text x="664" y="324" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="500" fill="#58647a" text-anchor="start">Dot = overall delta, thick bar = task-bootstrap 95% CI, thin bar = leave-one-task-out range</text>
+<line x1="879.0666666666666" y1="366" x2="879.0666666666666" y2="730" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="879.0666666666666" y="354" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="middle">-0.1</text>
+<line x1="953.2" y1="366" x2="953.2" y2="730" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="953.2" y="354" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="middle">+0.0</text>
+<line x1="1027.3333333333333" y1="366" x2="1027.3333333333333" y2="730" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="1027.3333333333333" y="354" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="middle">+0.1</text>
+<line x1="1101.4666666666667" y1="366" x2="1101.4666666666667" y2="730" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="1101.4666666666667" y="354" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="middle">+0.2</text>
+<line x1="1175.6" y1="366" x2="1175.6" y2="730" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="1175.6" y="354" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="middle">+0.3</text>
+<line x1="1249.7333333333333" y1="366" x2="1249.7333333333333" y2="730" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="1249.7333333333333" y="354" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="middle">+0.4</text>
+<line x1="1323.8666666666668" y1="366" x2="1323.8666666666668" y2="730" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="1323.8666666666668" y="354" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="middle">+0.5</text>
+<text x="664" y="432" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="800" fill="#2563eb" text-anchor="start">Docs enrichment</text>
+<line x1="973.7925925925925" y1="426" x2="998.5037037037036" y2="426" stroke="#cbd5e1" stroke-width="3"/>
+<line x1="937.7555555555556" y1="426" x2="1042.0055555555555" y2="426" stroke="#2563eb" stroke-width="10"/>
+<circle cx="987.95" cy="426" r="11" fill="#2563eb"/>
+<text x="1418" y="432" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" fill="#2563eb" text-anchor="start">+0.047</text>
+<text x="664" y="514" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="800" fill="#f97316" text-anchor="start">Examples</text>
+<line x1="1080.874074074074" y1="508" x2="1122.0592592592593" y2="508" stroke="#cbd5e1" stroke-width="3"/>
+<line x1="1018.8388888888888" y1="508" x2="1192.6854166666653" y2="508" stroke="#f97316" stroke-width="10"/>
+<circle cx="1103.7833333333333" cy="508" r="11" fill="#f97316"/>
+<text x="1418" y="514" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" fill="#f97316" text-anchor="start">+0.203</text>
+<text x="664" y="596" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="800" fill="#7c3aed" text-anchor="start">Explicit contracts</text>
+<line x1="1187.9555555555555" y1="590" x2="1245.6148148148147" y2="590" stroke="#cbd5e1" stroke-width="3"/>
+<line x1="1099.9222222222222" y1="590" x2="1347.0333333333333" y2="590" stroke="#7c3aed" stroke-width="10"/>
+<circle cx="1219.6166666666668" cy="590" r="11" fill="#7c3aed"/>
+<text x="1418" y="596" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" fill="#7c3aed" text-anchor="start">+0.359</text>
+<text x="664" y="678" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="800" fill="#64748b" text-anchor="start">State guidance</text>
+<line x1="928.4888888888889" y1="672" x2="949.0814814814814" y2="672" stroke="#cbd5e1" stroke-width="3"/>
+<line x1="883.7" y1="672" x2="976.3666666666667" y2="672" stroke="#64748b" stroke-width="10"/>
+<circle cx="933.8944444444444" cy="672" r="11" fill="#64748b"/>
+<text x="1418" y="678" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" fill="#64748b" text-anchor="start">-0.026</text>
+<rect x="664" y="760" width="792" height="86" rx="20" fill="#ffffff" stroke="#e5e7eb" opacity="1.0"/>
+<text x="688" y="796" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="800" fill="#7c3aed" text-anchor="start">Most stable result</text>
+<text x="688" y="826" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="500" fill="#142033" text-anchor="start">Explicit contracts stay positive under every task-omission and language-omission cut.</text>
+<text x="72" y="924" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="500" fill="#58647a" text-anchor="start">Source: results/elixir_quick_robustness/robustness.json</text>
+</svg>

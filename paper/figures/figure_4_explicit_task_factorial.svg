@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1540" height="1040" viewBox="0 0 1540 1040">
+
+<defs>
+  <linearGradient id="bggrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#fbfbff"/>
+    <stop offset="100%" stop-color="#eef2ff"/>
+  </linearGradient>
+  <linearGradient id="elixirgrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#7c3aed"/>
+    <stop offset="100%" stop-color="#a78bfa"/>
+  </linearGradient>
+  <linearGradient id="accentgrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#f97316"/>
+    <stop offset="100%" stop-color="#fb7185"/>
+  </linearGradient>
+  <linearGradient id="bluegrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#2563eb"/>
+    <stop offset="100%" stop-color="#60a5fa"/>
+  </linearGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#8b9ab7" flood-opacity="0.18"/>
+  </filter>
+</defs>
+
+<rect x="0" y="0" width="1540" height="1040" rx="0" fill="url(#bggrad)" stroke="none" opacity="1.0"/>
+<rect x="34" y="34" width="1472" height="972" rx="34" fill="#ffffff" stroke="#e4e8f1" opacity="1.0"/>
+<text x="72" y="96" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" fill="#7c3aed" text-anchor="start">Figure 4</text>
+<text x="72" y="146" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="38" font-weight="800" fill="#142033" text-anchor="start"><tspan x="72" dy="0">Small factorial study: explicit contracts are the clearest</tspan><tspan x="72" dy="42">portable gain</tspan></text>
+<text x="72" y="238" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="500" fill="#58647a" text-anchor="start"><tspan x="72" dy="0">Eight-condition fractional factorial on 16 exact tasks x 3 languages. Contract wording survives Holm correction; examples</tspan><tspan x="72" dy="26">remain directional.</tspan></text>
+<line x1="200" y1="746.0" x2="730" y2="746.0" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="186" y="751.0" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="end">0%</text>
+<line x1="200" y1="662.0" x2="730" y2="662.0" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="186" y="667.0" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="end">20%</text>
+<line x1="200" y1="578.0" x2="730" y2="578.0" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="186" y="583.0" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="end">40%</text>
+<line x1="200" y1="494.0" x2="730" y2="494.0" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="186" y="499.0" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="end">60%</text>
+<line x1="200" y1="410.0" x2="730" y2="410.0" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="186" y="415.0" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="end">80%</text>
+<line x1="200" y1="326.0" x2="730" y2="326.0" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="186" y="331.0" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="end">100%</text>
+<text x="90" y="298" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="24" font-weight="800" fill="#142033" text-anchor="start">Condition pass rates</text>
+<rect x="210" y="667.04" width="58" height="78.96" rx="18" fill="#c7d2fe" stroke="none" opacity="1.0"/>
+<text x="239.0" y="772" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#58647a" text-anchor="middle">0000</text>
+<text x="239.0" y="653.04" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" fill="#142033" text-anchor="middle">18.8%</text>
+<rect x="286" y="474.68000000000006" width="58" height="271.31999999999994" rx="18" fill="url(#accentgrad)" stroke="none" opacity="1.0"/>
+<text x="315.0" y="772" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#58647a" text-anchor="middle">0011</text>
+<text x="315.0" y="460.68000000000006" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" fill="#142033" text-anchor="middle">64.6%</text>
+<rect x="362" y="562.04" width="58" height="183.96" rx="18" fill="url(#accentgrad)" stroke="none" opacity="1.0"/>
+<text x="391.0" y="772" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#58647a" text-anchor="middle">0101</text>
+<text x="391.0" y="548.04" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" fill="#142033" text-anchor="middle">43.8%</text>
+<rect x="438" y="413.36" width="58" height="332.64" rx="18" fill="url(#accentgrad)" stroke="none" opacity="1.0"/>
+<text x="467.0" y="772" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#58647a" text-anchor="middle">0110</text>
+<text x="467.0" y="399.36" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" fill="#142033" text-anchor="middle">79.2%</text>
+<rect x="514" y="641.0" width="58" height="105.0" rx="18" fill="url(#elixirgrad)" stroke="none" opacity="1.0"/>
+<text x="543.0" y="772" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#58647a" text-anchor="middle">1001</text>
+<text x="543.0" y="627.0" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" fill="#142033" text-anchor="middle">25.0%</text>
+<rect x="590" y="465.86" width="58" height="280.14" rx="18" fill="url(#elixirgrad)" stroke="none" opacity="1.0"/>
+<text x="619.0" y="772" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#58647a" text-anchor="middle">1010</text>
+<text x="619.0" y="451.86" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" fill="#142033" text-anchor="middle">66.7%</text>
+<rect x="666" y="509.96000000000004" width="58" height="236.04" rx="18" fill="url(#elixirgrad)" stroke="none" opacity="1.0"/>
+<text x="695.0" y="772" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#58647a" text-anchor="middle">1100</text>
+<text x="695.0" y="495.96000000000004" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" fill="#142033" text-anchor="middle">56.2%</text>
+<rect x="742" y="422.18000000000006" width="58" height="323.81999999999994" rx="18" fill="url(#elixirgrad)" stroke="none" opacity="1.0"/>
+<text x="771.0" y="772" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#58647a" text-anchor="middle">1111</text>
+<text x="771.0" y="408.18000000000006" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" fill="#142033" text-anchor="middle">77.1%</text>
+<rect x="90" y="814" width="18" height="18" rx="6" fill="#c7d2fe" stroke="none" opacity="1.0"/>
+<text x="118" y="828" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="500" fill="#58647a" text-anchor="start">first bit = docs</text>
+<rect x="300" y="814" width="18" height="18" rx="6" fill="#f97316" stroke="none" opacity="1.0"/>
+<text x="328" y="828" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="500" fill="#58647a" text-anchor="start">examples / contracts bits</text>
+<rect x="510" y="814" width="18" height="18" rx="6" fill="#7c3aed" stroke="none" opacity="1.0"/>
+<text x="538" y="828" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="500" fill="#58647a" text-anchor="start">higher-order rich conditions</text>
+<text x="860" y="232" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="24" font-weight="800" fill="#142033" text-anchor="start">Matched main effects</text>
+<line x1="1040" y1="320" x2="1040" y2="550" stroke="#dde1ea" stroke-width="2"/>
+<line x1="970" y1="482.0" x2="1320" y2="482.0" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="956" y="487.0" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="end">-0.3</text>
+<line x1="970" y1="434.0" x2="1320" y2="434.0" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="956" y="439.0" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="end">-0.1</text>
+<line x1="970" y1="410.0" x2="1320" y2="410.0" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="956" y="415.0" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="end">0</text>
+<line x1="970" y1="386.0" x2="1320" y2="386.0" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="956" y="391.0" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="end">0.1</text>
+<line x1="970" y1="338.0" x2="1320" y2="338.0" stroke="#dde1ea" stroke-width="1.0" stroke-dasharray="4 8"/>
+<text x="956" y="343.0" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#58647a" text-anchor="end">0.3</text>
+<line x1="1005" y1="410" x2="1005" y2="398.72" stroke="#cbd5e1" stroke-width="4"/>
+<circle cx="1005" cy="398.72" r="16" fill="url(#bluegrad)"/>
+<text x="1005" y="448" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="800" fill="#142033" text-anchor="middle">Docs</text>
+<text x="1005" y="378.72" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="800" fill="#142033" text-anchor="middle">+0.047</text>
+<text x="1005" y="432.72" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="500" fill="#58647a" text-anchor="middle">p=0.548828</text>
+<line x1="1085" y1="410" x2="1085" y2="361.28" stroke="#cbd5e1" stroke-width="4"/>
+<circle cx="1085" cy="361.28" r="16" fill="url(#bluegrad)"/>
+<text x="1085" y="448" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="800" fill="#142033" text-anchor="middle">Examples</text>
+<text x="1085" y="341.28" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="800" fill="#142033" text-anchor="middle">+0.203</text>
+<text x="1085" y="395.28" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="500" fill="#58647a" text-anchor="middle">p=0.038574</text>
+<line x1="1165" y1="410" x2="1165" y2="323.84000000000003" stroke="#cbd5e1" stroke-width="4"/>
+<circle cx="1165" cy="323.84000000000003" r="16" fill="url(#bluegrad)"/>
+<text x="1165" y="448" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="800" fill="#142033" text-anchor="middle">Contracts</text>
+<text x="1165" y="303.84000000000003" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="800" fill="#142033" text-anchor="middle">+0.359</text>
+<text x="1165" y="357.84000000000003" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="500" fill="#58647a" text-anchor="middle">p=0.007385</text>
+<line x1="1245" y1="410" x2="1245" y2="416.24" stroke="#cbd5e1" stroke-width="4"/>
+<circle cx="1245" cy="416.24" r="16" fill="url(#bluegrad)"/>
+<text x="1245" y="448" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="800" fill="#142033" text-anchor="middle">State flow</text>
+<text x="1245" y="396.24" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="800" fill="#142033" text-anchor="middle">-0.026</text>
+<text x="1245" y="450.24" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="500" fill="#58647a" text-anchor="middle">p=0.726562</text>
+<text x="830" y="536" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="24" font-weight="800" fill="#142033" text-anchor="start">Per-language matched deltas</text>
+<text x="830" y="572" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" fill="#142033" text-anchor="start">Language</text>
+<text x="1000" y="572" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" fill="#142033" text-anchor="start">Docs</text>
+<text x="1120" y="572" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" fill="#142033" text-anchor="start">Examples</text>
+<text x="1260" y="572" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" fill="#142033" text-anchor="start">Contracts</text>
+<text x="1410" y="572" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" fill="#142033" text-anchor="start">State flow</text>
+<rect x="820" y="590" width="640" height="46" rx="14" fill="#f8fafc" stroke="#e5e7eb" opacity="1.0"/>
+<text x="830" y="618" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="800" fill="#7c3aed" text-anchor="start">Elixir</text>
+<rect x="988" y="599" width="92" height="26" rx="10" fill="#dcfce7" stroke="none" opacity="1.0"/>
+<text x="1034" y="618" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="800" fill="#142033" text-anchor="middle">+0.062</text>
+<rect x="1108" y="599" width="92" height="26" rx="10" fill="#dcfce7" stroke="none" opacity="1.0"/>
+<text x="1154" y="618" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="800" fill="#142033" text-anchor="middle">+0.281</text>
+<rect x="1248" y="599" width="92" height="26" rx="10" fill="#dcfce7" stroke="none" opacity="1.0"/>
+<text x="1294" y="618" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="800" fill="#142033" text-anchor="middle">+0.156</text>
+<rect x="1398" y="599" width="92" height="26" rx="10" fill="#e2e8f0" stroke="none" opacity="1.0"/>
+<text x="1444" y="618" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="800" fill="#142033" text-anchor="middle">+0.000</text>
+<rect x="820" y="654" width="640" height="46" rx="14" fill="#f8fafc" stroke="#e5e7eb" opacity="1.0"/>
+<text x="830" y="682" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="800" fill="#2563eb" text-anchor="start">Python</text>
+<rect x="988" y="663" width="92" height="26" rx="10" fill="#dcfce7" stroke="none" opacity="1.0"/>
+<text x="1034" y="682" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="800" fill="#142033" text-anchor="middle">+0.031</text>
+<rect x="1108" y="663" width="92" height="26" rx="10" fill="#dcfce7" stroke="none" opacity="1.0"/>
+<text x="1154" y="682" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="800" fill="#142033" text-anchor="middle">+0.219</text>
+<rect x="1248" y="663" width="92" height="26" rx="10" fill="#dcfce7" stroke="none" opacity="1.0"/>
+<text x="1294" y="682" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="800" fill="#142033" text-anchor="middle">+0.469</text>
+<rect x="1398" y="663" width="92" height="26" rx="10" fill="#fee2e2" stroke="none" opacity="1.0"/>
+<text x="1444" y="682" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="800" fill="#142033" text-anchor="middle">-0.031</text>
+<rect x="820" y="718" width="640" height="46" rx="14" fill="#f8fafc" stroke="#e5e7eb" opacity="1.0"/>
+<text x="830" y="746" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="800" fill="#f97316" text-anchor="start">Typescript</text>
+<rect x="988" y="727" width="92" height="26" rx="10" fill="#dcfce7" stroke="none" opacity="1.0"/>
+<text x="1034" y="746" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="800" fill="#142033" text-anchor="middle">+0.047</text>
+<rect x="1108" y="727" width="92" height="26" rx="10" fill="#dcfce7" stroke="none" opacity="1.0"/>
+<text x="1154" y="746" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="800" fill="#142033" text-anchor="middle">+0.109</text>
+<rect x="1248" y="727" width="92" height="26" rx="10" fill="#dcfce7" stroke="none" opacity="1.0"/>
+<text x="1294" y="746" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="800" fill="#142033" text-anchor="middle">+0.453</text>
+<rect x="1398" y="727" width="92" height="26" rx="10" fill="#fee2e2" stroke="none" opacity="1.0"/>
+<text x="1444" y="746" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="800" fill="#142033" text-anchor="middle">-0.047</text>
+<text x="72" y="984" font-family="'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="500" fill="#58647a" text-anchor="start">Source: results/explicit_task_factorial/factorial_stats.json</text>
+</svg>

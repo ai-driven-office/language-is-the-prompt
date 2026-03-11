@@ -1,0 +1,17 @@
+omitted,title,delta
+acct_balance_rollup,Account Balance Rollup,0.1111111111111111
+bracket_balance_report,Bracket Balance Report,0.1111111111111111
+csv_split_quoted,CSV Split With Quotes,0.1111111111111111
+dense_rankings,Dense Rankings,0.08888888888888889
+dependency_batches,Dependency Batches,0.1111111111111111
+inventory_reconcile,Inventory Reconcile,0.1111111111111111
+merge_intervals,Merge Touching Intervals,0.1111111111111111
+normalize_phone_book,Normalize Phone Book,0.15555555555555556
+queue_wait_times,Queue Wait Times,0.1111111111111111
+rule_based_discount,Rule Based Discount,0.06666666666666667
+session_durations,Session Durations,0.044444444444444446
+stable_group_runs,Stable Group Runs,0.08888888888888889
+threshold_bursts,Threshold Bursts,0.1111111111111111
+token_bucket_decisions,Token Bucket Decisions,0.1111111111111111
+top_k_frequencies,Top K Frequencies,0.1111111111111111
+window_majority,Sliding Window Majority,0.1111111111111111

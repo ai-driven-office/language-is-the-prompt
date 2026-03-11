@@ -1,0 +1,4 @@
+alias_pair,matched_mean_delta,wins,losses,ties,unit_count,sign_test_p
+docs_rich*examples == contracts_explicit*state_guidance,0.005,10,9,29,48,1.0
+docs_rich*contracts_explicit == examples*state_guidance,-0.047,7,14,27,48,0.189247
+docs_rich*state_guidance == examples*contracts_explicit,-0.078,9,18,21,48,0.122078

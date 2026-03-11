@@ -4,7 +4,7 @@
 
 ## Abstract
 
-Large language models (LLMs) exhibit substantial performance variation across programming languages on code generation benchmarks, yet the relationship between language design and generation quality remains poorly understood. We report a controlled reproduction of AutoCodeBench (ACB) using GPT-5.4 in which Elixir, a low-resource functional language running on the BEAM VM, achieves 87.4% Pass@1 across 198 benchmark problems, exceeding the 20-language mean of 53.3% by 34.1 percentage points and outperforming the next-best language (Kotlin, 76.5%) by 10.9 points. Elixir also leads the hard-problem bucket at 86.3%, well above the runner-up (C#, 54.3%). We then conduct a nine-suite analysis program combining benchmark-artifact controls, cross-language proxy analysis, full-scale paired ablations over the 198-task Elixir slice, a recurring-task fixed-effects sanity check, a formal first-failure taxonomy, and an auxiliary exact-task multilingual panel with 144 executable rows (16 tasks, 3 languages, 3 framing conditions). The results show that Elixir's ACB advantage (a) survives normalization for difficulty and problem length (+42.7 points above expected), (b) is most strongly explained within Elixir by documentation and task-framing explicitness (`84.3%` with full docs, `84.3%` with examples removed, `46.0%` with minimal docs, `42.9%` with signatures only), but (c) does not replicate as a universal language lead on the matched panel, where Elixir scores 64.6% versus Python 81.2% and TypeScript 83.3%. Richer contract wording alone does not change matched-panel performance, while concrete examples improve the panel overall only directionally (`83.3%` vs `72.9%`, `7` improvements and `2` degradations, exact sign `p=0.179688`). The resulting interpretation is narrower than a feature-by-feature account: Elixir appears unusually model-friendly on ACB because language-level explicitness and benchmark task framing reinforce one another, while the most portable design lesson is broader, namely that task intent, API contracts, and executable examples should be made locally legible.
+Large language models (LLMs) exhibit substantial performance variation across programming languages on code generation benchmarks, yet the relationship between language design and generation quality remains poorly understood. We report a controlled reproduction of AutoCodeBench (ACB) using GPT-5.4 in which Elixir, a low-resource functional language running on the BEAM VM, achieves 87.4% Pass@1 across 198 benchmark problems, exceeding the 20-language mean of 53.3% by 34.1 percentage points and outperforming the next-best language (Kotlin, 76.5%) by 10.9 points. Elixir also leads the hard-problem bucket at 86.3%, well above the runner-up (C#, 54.3%). We then conduct a multi-part analysis program combining benchmark-artifact controls, cross-language proxy analysis, full-scale paired ablations over the 198-task Elixir slice, a recurring-task fixed-effects sanity check, a formal first-failure taxonomy, a 144-row exact-task multilingual panel (16 tasks, 3 languages, 3 framing conditions), and a 384-row regular fractional-factorial follow-up on the same shared tasks (16 tasks, 3 languages, 8 conditions, 4 prompt-side factors). The results show that Elixir's ACB advantage (a) survives normalization for difficulty and problem length (+42.7 points above expected), (b) is most strongly explained within Elixir by documentation and task-framing structure (`84.3%` with full docs, `84.3%` with examples removed, `46.0%` with minimal docs, `42.9%` with signatures only), but (c) does not replicate as a universal language lead under exact-task matching, where Elixir scores 64.6% on the original matched panel versus Python 81.2% and TypeScript 83.3%. In the subsequent fractional-factorial study, the only main effect that survives Holm correction is explicit contract wording across the matched tasks (matched mean delta `+0.359` on the 0-1 pass scale, adjusted `p=0.02954`), while concrete examples are positive but only directional (matched mean delta `+0.203`, adjusted `p=0.115722`), and a smaller edge-case-style documentation enrichment factor is not established. The resulting interpretation is narrower and more mechanistic than a feature-by-feature story: Elixir appears unusually model-friendly on ACB because rich documentation structure matters strongly within Elixir, while the most portable prompt-side gains on tightly matched tasks come from making contracts and examples locally legible.
 
 **Keywords:** code generation, programming language design, LLM benchmark, Elixir, documentation, task framing, pattern matching, immutability, AutoCodeBench, predictive burden, information density, agent-centric design
 
@@ -30,8 +30,8 @@ We argue that the answer lies not in data volume or paradigm purity, but in a sp
 We test this hypothesis through:
 
 - A full-scale reproduction of ACB across 20 languages with GPT-5.4 (N=3,920)
-- A nine-suite research program spanning active ablations, proxy analyses, artifact controls, and repo-scale scaffolding
-- A new exact-task auxiliary panel across Elixir, Python, and TypeScript to partially overcome ACB's missing shared task identifiers
+- A multi-part research program spanning active ablations, proxy analyses, artifact controls, exact-task auxiliaries, and repo-scale scaffolding
+- A new exact-task auxiliary program across Elixir, Python, and TypeScript to partially overcome ACB's missing shared task identifiers
 - Proxy metric analysis correlating design properties with Pass@1 across all 20 languages
 - Active intervention experiments that modify Elixir task framing and code style to remove or alter specific properties
 
@@ -39,9 +39,9 @@ We test this hypothesis through:
 
 1. **Empirical confirmation** that Elixir's benchmark advantage on ACB is real, not a benchmark artifact, surviving normalization for difficulty, problem length, and test complexity (+42.7 points above expected, §5).
 2. **Full-scale active-ablation evidence** that the strongest currently supported within-Elixir causal signal is documentation and task framing, not examples alone, with large and statistically durable drops when documentation structure is removed (§6).
-3. **A strengthened same-task follow-up design** via a canonically validated explicit-task panel (144 executable rows) showing that Elixir's leaderboard dominance does not automatically persist once tasks are tightly matched, while concrete examples rescue a small subset of tasks and lift the panel overall without a decisive paired-significance result (§4, §6).
-4. **A stronger statistical methodology** for studying language effects in code generation, including paired ablations with exact McNemar tests and Holm correction, a recurring-task fixed-effects sanity check, an explicit-task matched panel, and a formal first-failure taxonomy with confidence intervals and exact tests (§4-§6).
-5. **A refined design thesis** for human-AI programming languages: prioritize legibility of tasks, public contracts, concrete examples, state flow, and local reasoning, while treating broader claims about pattern matching or tagged tuples as suggestive rather than settled (§7-§8).
+3. **A strengthened same-task follow-up program** via a canonically validated explicit-task panel (144 executable rows) plus a 384-row fractional-factorial study, showing that Elixir's leaderboard dominance does not automatically persist once tasks are tightly matched, and that prompt-side contract explicitness is the clearest portable gain in the small controlled design (§4, §6).
+4. **A stronger statistical methodology** for studying language effects in code generation, including paired ablations with exact McNemar tests and Holm correction, a recurring-task fixed-effects sanity check, an explicit-task matched panel, a fractional-factorial follow-up with matched main-effect estimators, and a formal first-failure taxonomy with confidence intervals and exact tests (§4-§6).
+5. **A refined design thesis** for human-AI programming languages: distinguish between (i) full documentation/task structure that appears especially important within Elixir and (ii) smaller portable prompt-side gains from explicit public contracts and concrete examples, while treating broader claims about pattern matching or tagged tuples as suggestive rather than settled (§7-§8).
 
 ---
 
@@ -211,6 +211,13 @@ $$\bar{\Delta}_{c_1,c_0} = \frac{1}{|L||T|}\sum_{l \in L}\sum_{t \in T}(y_{l,t,c
 
 along with discordant win/loss counts. This panel remains small and statistically underpowered; we use it as a methodological strengthening experiment, not as a replacement leaderboard.
 
+**Explicit-task fractional-factorial follow-up.**
+We then run a regular $2^{(4-1)}$ fractional-factorial study on the same 16 tasks and 3 languages, for 384 executable rows total. The four manipulated prompt-side factors are: a small documentation-richness factor (`docs_rich`), concrete examples, explicit contract wording, and explicit state-flow guidance. Importantly, the `docs_rich` factor in this study does **not** recreate the full Suite A intervention: it adds edge-case detail and slightly richer prose, rather than the full source-adjacent documentation structure used in the Elixir-only ablation. Let $x_f(c) \in \{0,1\}$ indicate whether condition $c$ turns factor $f$ on. Our matched main-effect estimator is
+
+$$\bar{\Delta}_f = \frac{1}{|L||T|}\sum_{l \in L}\sum_{t \in T}\Bigg(\frac{1}{|C_f^+|}\sum_{c \in C_f^+} y_{l,t,c} - \frac{1}{|C_f^-|}\sum_{c \in C_f^-} y_{l,t,c}\Bigg)$$
+
+where $C_f^+$ and $C_f^-$ are the high and low conditions for factor $f$. We report discordant win/loss counts with exact sign tests and Holm correction across the four main effects. Because the design is fractional, selected two-factor interactions remain aliased; we report those contrasts descriptively and do not treat them as primary causal evidence.
+
 ### 4.6 Claim Evaluation Criteria
 
 Because this paper mixes benchmark-wide observational results with matched within-language interventions, we classify claims using a simple reporting rule rather than treating every positive correlation as equally probative:
@@ -232,6 +239,8 @@ This classification is used explicitly in §6-§7 so that the paper's narrative 
 | Documentation structure materially drives Elixir performance | Suite A | Paired delta vs `full_docs` | `minimal_docs -38.4`, `signature_only -41.4` | **Strong** |
 | Examples alone explain Elixir's advantage | Suite A | `reference_no_examples` vs `full_docs` | `0.0` point delta | **Not established** |
 | Concrete examples directionally help the matched panel, but not uniformly by language | Explicit-task panel | Paired sign test | `7` improvements, `2` degradations, exact sign `p=0.179688` | **Directional** |
+| Prompt-side explicit contracts are the strongest portable effect in the same-task fractional study | Explicit-task factorial | Matched main effect | `+0.359`, Holm-adjusted `p=0.02954` | **Strong (scoped)** |
+| A small edge-case-style docs enrichment is itself a strong portable factor | Explicit-task factorial | Matched main effect | `+0.047`, Holm-adjusted `p=1.0` | **Not established** |
 | Elixir universally dominates once tasks are tightly matched | Explicit-task panel | Per-language pass rate | Elixir `64.6%`, Python `81.2%`, TypeScript `83.3%` | **Not established** |
 | Control flow is the primary isolated driver | Suite D + leave-one-out proxies | Paired deltas and sensitivity analysis | all deltas within `±3` points | **Not established** |
 | Explicit contracts and explicit state flow are helpful secondary contributors | Suites E and F | Paired deltas vs baseline | contracts `+3.0`; state-flow `+5.1` to `+5.6` | **Directional** |
@@ -245,13 +254,13 @@ We distinguish the main validity risks explicitly so that causal claims are matc
 The main construct in this paper is "explicitness," which mixes language-level properties with prompt-level task legibility. Suite A and the explicit-task panel show clearly that task framing is part of the effect, but they do not imply that all explicitness comes from the language alone. We therefore avoid treating task framing, documentation culture, and syntax as interchangeable.
 
 **Internal validity.**
-The strongest internal-validity risk is accidental benchmark or runtime bias. We mitigate this through corrected local execution, canonical validation of the explicit-task panel, paired within-task ablations, missing-as-failure accounting, and formal failure-taxonomy checks. But the explicit-task panel remains hand-authored, so its design choices are still a possible intervention source.
+The strongest internal-validity risk is accidental benchmark or runtime bias. We mitigate this through corrected local execution, canonical validation of the explicit-task panel and the explicit-task factorial study, paired within-task ablations, missing-as-failure accounting, and formal failure-taxonomy checks. But the auxiliary same-task studies remain hand-authored, so their design choices are still a possible intervention source.
 
 **External validity.**
 The main benchmark evidence comes from isolated function/class tasks, and the explicit-task panel covers only Elixir, Python, and TypeScript. So the study does not yet establish that the same causal ordering holds in large repositories, in framework-heavy code, or across the full ecosystem of programming languages.
 
 **Statistical conclusion validity.**
-The full-scale Elixir ablations are reasonably powered, but the matched multilingual panel is not. Its exact-task result is valuable because it provides cleaner task alignment, not because it is large. We therefore treat its example effect as directional (`p=0.179688`) and do not overstate null or reversal results from that panel.
+The full-scale Elixir ablations are reasonably powered, but the matched multilingual panel and the 16-task fractional-factorial follow-up are not substitutes for a large fixed-effects benchmark. The panel is valuable because it provides cleaner task alignment, not because it is large. The factorial helps decompose four prompt-side factors more directly, but it aliases selected interactions by design and therefore supports clean main-effect estimation more than interaction claims. We therefore treat the panel's example effect as directional (`p=0.179688`) and scope the factorial's contract result to this small same-task setting rather than presenting it as a final universal law.
 
 ---
 
@@ -536,7 +545,7 @@ But the completed active rerun is modest:
 | tagged_tuple_helpers | 172    | 198   | 86.9%  | 3.0               | 0.307456        | 1.0             |
 
 
-That is directionally consistent with explicit contracts helping, but it is not strong enough to support a headline causal claim.
+That is directionally consistent with explicit contracts helping inside Elixir's helper/result-style variants, but it is not strong enough to support a headline causal claim on its own. The later same-task factorial (§6.6) strengthens a **prompt-side** contract-explicitness result across languages, which is related but not identical to this Elixir-only code-style manipulation.
 
 #### 6.3.3 Explicit state flow looks more important than a simple "immutability" slogan
 
@@ -589,11 +598,51 @@ Aggregate condition totals make the same pattern visible:
 - `rich_contract`: `35/48 = 72.9%` (95% Wilson CI `59.0%` to `83.4%`)
 - `rich_contract_examples`: `40/48 = 83.3%` (95% Wilson CI `70.4%` to `91.3%`)
 
+Simple robustness checks on the same 16-task panel do not change that reading. A task-cluster bootstrap over the paired example effect yields a 95% interval from `-0.063` to `+0.292`, and leave-one-task-out deltas range only from `+0.044` to `+0.156`. Leave-one-language-out deltas range from `+0.031` to `+0.156`, with the weakest value obtained when Elixir is removed. So the example effect is consistently *directional* rather than purely one-task noise, but it is still too small and unstable at this scale to support a stronger portable claim.
+
 The contrast between `rich_contract` and `baseline_compact` is exact zero in this panel: `0` improvements and `0` degradations. So the multilingual matched-task result is not "more contract prose helps." The stronger statement is narrower: **concrete examples rescue some tasks that compact contracts do not, but the effect is selective and still low-power at this scale.** In the expanded panel, the clearest rescues are `dense_rankings`, `rule_based_discount`, `session_durations`, and `stable_group_runs`, while `normalize_phone_book` shows that examples can also hurt by overconstraining or misdirecting solutions.
 
 These matched-panel results do not negate the ACB finding. The full ACB leaderboard still shows a large Elixir lead that survives artifact controls. What the matched panel adds is a tighter interpretation: **the portable causal signal is not that Elixir syntax dominates under exact task matching, but that locally legible task semantics, especially when supported by concrete examples, benefit multiple languages, while Elixir's benchmark lead likely reflects a favorable interaction between language conventions and benchmark task presentation.**
 
 ![Figure 3. Exact-task cross-language panel. The matched panel still favors Python and TypeScript, while example-rich framing produces a selective, low-power improvement pattern rather than an Elixir-only lead.](figures/figure_3_explicit_task_panel.svg)
+
+### 6.6 Explicit-Task Fractional-Factorial Follow-Up
+
+To move one step closer to causal decomposition without rerunning ACB-Full, we ran a regular $2^{(4-1)}$ fractional-factorial study on the same 16 shared tasks and 3 languages, for 384 executable rows total. The four manipulated prompt-side factors were:
+
+1. a small documentation-richness factor (`docs_rich`)
+2. concrete examples
+3. explicit contract wording
+4. explicit state-flow guidance
+
+All 384 canonical rows pass their grading suites before model evaluation. The important scope note is that `docs_rich` here is deliberately narrower than Suite A: it adds edge-case detail and slightly richer prose, rather than recreating Elixir's full source-adjacent documentation structure. So this study asks a different question from Suite A: *which smaller prompt-side features transfer across tightly matched tasks?*
+
+**Table 11.** Explicit-task fractional-factorial main effects (16 tasks, 3 languages, 8 conditions, GPT-5.4)
+
+
+| Factor | Matched mean delta | Wins | Losses | Ties | Exact sign p | Holm-adjusted p |
+| ------ | ------------------ | ---- | ------ | ---- | ------------ | --------------- |
+| `docs_rich` | `+0.047` | 7 | 4 | 5 | `0.548828` | `1.0` |
+| `examples` | `+0.203` | 10 | 2 | 4 | `0.038574` | `0.115722` |
+| `contracts_explicit` | `+0.359` | 13 | 2 | 1 | `0.007385` | `0.02954` |
+| `state_guidance` | `-0.026` | 5 | 3 | 8 | `0.726562` | `1.0` |
+
+
+Three results matter most.
+
+1. **Explicit contracts are the only main effect that survives multiplicity correction.** In this small same-task design, contract wording is the clearest portable intervention.
+2. **Examples are positive but not decisive at this scale.** The matched mean delta is substantial (`+0.203` on the 0-1 pass scale), but the adjusted p-value remains above threshold.
+3. **The narrow `docs_rich` factor is not dominant.** This does not overturn Suite A, because the manipulation is much smaller; it shows only that edge-case enrichment alone is not the same thing as restoring Elixir's full documentation structure.
+
+The quick sensitivity checks make the same ranking more credible. For `contracts_explicit`, the task-cluster bootstrap 95% interval is `+0.198` to `+0.531`, the leave-one-task-out deltas range from `+0.317` to `+0.394`, and the leave-one-language-out deltas range from `+0.305` to `+0.461`. In other words, the contract effect stays positive under every single-task omission and every single-language omission in this design. The `examples` factor is also robustly positive under bootstrap (`+0.089` to `+0.323`) and under leave-one-task-out (`+0.172` to `+0.228`), but still fails the stricter Holm-corrected paired-test threshold, so we keep it in the directional tier rather than upgrading it to a primary claim.
+
+The by-language breakdown sharpens the interpretation. Contract wording is especially strong for Python and TypeScript (`+0.469` and `+0.453` on the 0-1 pass scale, Holm-adjusted `p=0.000976` and `p=0.003908`), while Elixir's contract effect is positive but not isolated (`+0.156`, Holm-adjusted `p=0.774414`). Examples are most directional for Elixir (`+0.281`) and Python (`+0.219`), but remain below the corrected threshold.
+
+This does not literally contradict the earlier 3-condition panel, where `rich_contract` alone was neutral. The two studies operationalize "contract help" differently. The 3-condition panel compares one specific richer-contract prompt against one compact baseline, whereas the factorial estimates the average contract effect across eight matched conditions while separately accounting for examples, edge-case enrichment, and state guidance.
+
+Condition-level pass rates show the same shape. The four contract-high conditions (`ff_0011`, `ff_0110`, `ff_1010`, `ff_1111`) all land between `64.6%` and `79.2%`, whereas the most contract-sparse conditions (`ff_0000`, `ff_1001`) collapse to `18.8%` and `25.0%`. This is still a small design and interaction aliasing remains real, so we do not treat the factorial as a final decomposition of all causes. But it does materially strengthen one portable claim: **when tasks are tightly matched, making return contracts and failure paths explicit is more consistently useful than simply adding a small amount of extra prose.**
+
+![Figure 4. Explicit-task fractional-factorial follow-up. Contract-explicit conditions dominate the same-task design, while examples are positive but smaller after correction.](figures/figure_4_explicit_task_factorial.svg)
 
 ---
 
@@ -617,15 +666,17 @@ Using the reporting rule in §4.6, the data now support a tiered interpretation 
 
 **Tier 1: strongly supported**
 
-- **Task framing and API legibility.** Full docs and reference text preserve performance; removing the documentation structure collapses it.
+- **Documentation and task/API framing within Elixir.** Full docs and reference text preserve performance; removing the documentation structure collapses it.
+- **Prompt-side contract explicitness on tightly matched tasks.** In the small fractional-factorial study, explicit contract wording is the only main effect that survives Holm correction.
 
 **Tier 2: directionally supported, not yet isolated**
 
+- **Concrete examples.** Examples help in both the 144-row panel and the 384-row factorial follow-up, but remain underpowered after correction.
 - **Control-flow explicitness.** Elixir is a clear outlier on the control-flow proxy, but the cross-language correlation is fragile once Elixir is removed, and the paired active ablations are small.
-- **Explicit state flow.** State-style interventions move in the expected direction, but do not survive multiple-testing correction.
-- **Result-shape conventions.** Tagged-contract prompting is directionally favorable, but not decisively so in the full rerun.
+- **Explicit state flow.** State-style interventions move in the expected direction in some settings, but do not survive multiple-testing correction.
+- **Result-shape conventions inside Elixir code style.** Tagged-contract prompting is directionally favorable in the Elixir-only reruns, but the stronger portable same-task signal comes from prompt-side contract wording rather than from the original Elixir-only helper variants.
 
-This evidence hierarchy matters for the paper's claims. The safest conclusion is that Elixir combines several explicitness advantages, but only one of them — task/API framing — is already supported by large within-language causal effects, and the explicit-task panel suggests that part of this effect is portable across languages rather than Elixir-exclusive.
+This evidence hierarchy matters for the paper's claims. The safest conclusion is that Elixir combines several explicitness advantages, but the presently strongest signals live at two different levels: **full documentation structure within Elixir** and **explicit contracts across tightly matched tasks.** The data do not support collapsing those into a single simplistic "docs win" or "syntax wins" explanation.
 
 ### 7.3 The Predictive Burden Framework
 
@@ -646,7 +697,7 @@ The completed evidence base gives this framework a more concrete interpretation:
 - **$B_{\text{type}}$** is the burden of satisfying constraints the model cannot locally see.
 - **$B_{\text{syntax}}$** is the burden created by ambiguous or cross-language-confusable syntax.
 
-What distinguishes Elixir in the present evidence is not that every component has already been estimated precisely, but that the observed burden-reduction signals point in the same qualitative direction on ACB: the task can be framed clearly, state is comparatively legible, and return/error handling is structurally explicit. The explicit-task panel then adds an important correction: lowering $B_{\text{task}}$ with concrete examples can benefit Python and TypeScript on some tasks as well, so $B_{\text{task}}$ should be understood as a partly language-agnostic interface variable, not a uniquely Elixir-owned advantage.
+What distinguishes Elixir in the present evidence is not that every component has already been estimated precisely, but that the observed burden-reduction signals point in the same qualitative direction on ACB: the task can be framed clearly, state is comparatively legible, and return/error handling is structurally explicit. The explicit-task panel and fractional-factorial follow-up then add two corrections. First, lowering $B_{\text{task}}$ with concrete examples can benefit Python and TypeScript on some tasks as well, so $B_{\text{task}}$ should be understood as a partly language-agnostic interface variable, not a uniquely Elixir-owned advantage. Second, the portable same-task signal is sharper for **explicit contracts** than for a small amount of extra prose, which suggests that reducing $B_{\text{return}}$ may be a more robust intervention than simply lengthening the prompt.
 
 ### 7.4 Connection to Uniform Information Density
 
@@ -654,7 +705,7 @@ The Predictive Burden framework still aligns naturally with the Uniform Informat
 
 The clearest UID-compatible result is Suite A. Collapsing a rich task description to signatures only concentrates information into a much smaller prompt surface, forcing the model to infer missing behavior from sparse cues. That creates exactly the kind of localized information-density spikes that UID predicts will hurt generation.
 
-By contrast, the control-flow and result-contract suites are better read as *candidate mechanisms* through which a language can smooth information density, not as already-proven dominant channels in this dataset.
+By contrast, the control-flow and result-contract suites are better read as *candidate mechanisms* through which a language can smooth information density. The new same-task factorial strengthens the prompt-side contract story, but it still does not prove that language-level result conventions alone are the dominant channel of Elixir's leaderboard lead.
 
 So the UID connection survives, but in a narrower form: **Elixir appears to work well when the language and the task together keep semantic information distributed and locally visible.** That is a stronger and more defensible claim than saying pattern matching or tagged tuples alone explain the benchmark.
 
@@ -667,7 +718,7 @@ So the UID connection survives, but in a narrower form: **Elixir appears to work
 Our findings suggest several principles for programming languages optimized for human–AI collaboration:
 
 **Principle 1: Make tasks and public contracts explicit.**
-The strongest result in this paper is not about syntax alone; it is about legibility. Languages and ecosystems should make API behavior, boundary conditions, and expected return shapes easy to state compactly and precisely. This reduces $B_{\text{task}}$.
+The strongest result in this paper is not about syntax alone; it is about legibility. Languages and ecosystems should make API behavior, boundary conditions, and expected return shapes easy to state compactly and precisely. Suite A suggests that rich documentation structure is especially valuable within Elixir, while the same-task factorial shows that explicit contract wording is the clearest portable prompt-side gain. Both reduce latent ambiguity, but at different scales.
 
 **Principle 2: Make control flow visible in structure, not logic.**
 Pattern matching, multi-clause functions, and structural dispatch allow the model to see *what* is being handled in the clause head rather than *how* it's being distinguished in a boolean expression. This reduces $B_{\text{cf}}$.
@@ -675,8 +726,8 @@ Pattern matching, multi-clause functions, and structural dispatch allow the mode
 **Principle 3: Make state transitions explicit.**
 Whether the surface form is immutable pipelines or stepwise state threading, the key property is that state movement is locally visible. This reduces $B_{\text{state}}$.
 
-**Principle 4: Standardize result shapes.**
-A convention like `{:ok, value}` / `{:error, reason}` (or Rust's `Result<T, E>`, or Go's `(value, error)` returns) provides a predictable structure for the model to generate. This reduces $B_{\text{return}}$. However, the convention must be *lightweight* — if the surrounding ceremony is too heavy, the gain can be canceled elsewhere.
+**Principle 4: Standardize result shapes and say them out loud.**
+A convention like `{:ok, value}` / `{:error, reason}` (or Rust's `Result<T, E>`, or Go's `(value, error)` returns) provides a predictable structure for the model to generate. This reduces $B_{\text{return}}$. The factorial follow-up suggests that explicitly stating those contracts in the local task framing is often more portable than merely adding more prose. However, the convention must be *lightweight* — if the surrounding ceremony is too heavy, the gain can be canceled elsewhere.
 
 **Principle 5: Minimize implicit complexity.**
 Dynamic typing without inference, eager evaluation, and no invisible side effects (monadic I/O, lazy evaluation) reduce $B_{\text{type}}$. The model should not need to solve a constraint-satisfaction problem to generate correct code.
@@ -718,7 +769,7 @@ If one were to design a language from scratch optimized for LLM generation, our 
 - Eager evaluation with explicit concurrency
 - Stable APIs with low churn
 
-This remains close to Elixir, which was designed (by José Valim, 2011) for human developer productivity and reliability on the BEAM VM — goals that happen to align well with LLM code generation requirements. But the new panel results imply that **task presentation and public examples are part of the language-design surface**, not merely external prompt engineering.
+This remains close to Elixir, which was designed (by José Valim, 2011) for human developer productivity and reliability on the BEAM VM — goals that happen to align well with LLM code generation requirements. But the new same-task results imply that **task presentation, contract wording, and public examples are part of the language-design surface**, not merely external prompt engineering.
 
 But Elixir also has a ceiling. It lacks static types, formal verification, and structured effect tracking — all of which could *further* reduce the predictive burden if designed correctly. Haskell and Rust demonstrate that adding these features naively *increases* $B_{\text{type}}$ and cancels the gains. The open question is whether a language can achieve Elixir's low $B_{\text{cf}}$, $B_{\text{state}}$, and $B_{\text{return}}$ while *also* lowering $B_{\text{type}}$ through a carefully graduated type system.
 
@@ -765,7 +816,7 @@ That design has three consequences relevant to this paper. First, API contracts 
 
 The distinction between documentation and comments is explicit in the official Elixir writing guide, which describes documentation as an API contract rather than as incidental inline annotation [28]. The same guide also standardizes how internal surfaces are hidden: `@doc false` and `@moduledoc false` remove items from end-user docs without changing runtime visibility [28]. That matters because it gives library authors a coarse but clear separation between public and internal APIs, which may reduce the amount of contradictory or noisy material exposed to downstream users and models.
 
-**Table 11.** Elixir documentation pipeline and its likely effect on model-facing legibility
+**Table 12.** Elixir documentation pipeline and its likely effect on model-facing legibility
 
 
 | Stage | Mechanism | Likely effect |
@@ -776,11 +827,11 @@ The distinction between documentation and comments is explicit in the official E
 | Publication | ExDoc site generation [33] | normalizes presentation of guides, APIs, and extras |
 | Distribution | HexDocs hosting/indexing [34] | creates a common ecosystem-wide documentation surface |
 
-![Figure 4. Elixir documentation pipeline: source-level metadata, executable examples, and standardized publication form a single legibility stack.](figures/figure_4_elixir_docs_pipeline.svg)
+![Figure 5. Elixir documentation pipeline: source-level metadata, executable examples, and standardized publication form a single legibility stack.](figures/figure_5_elixir_docs_pipeline.svg)
 
-The comparative point is not that other ecosystems lack documentation quality. Rather, Elixir appears unusual in how vertically integrated the documentation stack is. Table 12 contrasts the dominant documentation path in Elixir with typical Python and TypeScript practice.
+The comparative point is not that other ecosystems lack documentation quality. Rather, Elixir appears unusual in how vertically integrated the documentation stack is. Table 13 contrasts the dominant documentation path in Elixir with typical Python and TypeScript practice.
 
-**Table 12.** Documentation architecture comparison: Elixir vs. Python vs. TypeScript
+**Table 13.** Documentation architecture comparison: Elixir vs. Python vs. TypeScript
 
 
 | Language | Primary authoring surface | Built-in retrieval path | Executable examples | Common publication path | Structural implication |
@@ -790,6 +841,19 @@ The comparative point is not that other ecosystems lack documentation quality. R
 | TypeScript | JSDoc comments; TSDoc aims to standardize comment syntax [37][38] | editor/tooling and compiler-adjacent parsing of JSDoc [37] | no built-in doctest equivalent in the core toolchain | TypeDoc and related tools [39] | strong tooling, but documentation is more multi-tool and less compiler-embedded |
 
 This comparison suggests a more precise hypothesis than "Elixir has better docs." Elixir may benefit from **documentation regularity plus documentation proximity**: the public contract is written in source, recoverable as structured metadata, optionally executable as examples, and then published through a common ecosystem surface. Python shares part of this stack, especially docstrings and doctest, but its publication layer is more fragmented. TypeScript has rich comment tooling and a growing standardization effort, but the documentation path is comparatively more tool-mediated and less vertically integrated into the language/runtime artifact boundary.
+
+**Table 14.** Documentation dimensions that may affect model-facing quality
+
+
+| Dimension | Why it may matter for code generation | Elixir mechanism |
+| --------- | ------------------------------------- | ---------------- |
+| Proximity | reduces lookup ambiguity between contract and implementation | docs live in source via module attributes |
+| Structure | makes API information machine-readable rather than purely narrative | BEAM doc chunks, `Code.fetch_docs/1` |
+| Executability | aligns examples with observed behavior | ExUnit doctests |
+| Publication uniformity | increases ecosystem regularity across packages | ExDoc + HexDocs as common delivery path |
+| Public/internal separation | reduces noise from unstable internal surfaces | `@doc false` / `@moduledoc false` |
+
+This is still a hypothesis about mechanism, not a proof that documentation architecture alone explains Elixir's benchmark lead. Python already has docstrings and doctest; TypeScript already has a rich documentation-tooling layer. So the claim here is narrower: Elixir appears to combine **proximity, structure, executability, and publication regularity** unusually tightly. If future work adds the same integrated documentation conditions to other languages without changing results, this explanation would weaken. If the same conditions materially improve weaker languages, the documentation-stack account would strengthen considerably.
 
 The following minimal example shows the ecosystem pattern:
 
@@ -922,16 +986,17 @@ In aggregate, these examples suggest that Elixir's benchmark performance is not 
 
 ### 9.1 Limitations
 
-1. **No large-scale shared task id across the full leaderboard.** The ACB leaderboard is still not itself a task-fixed cross-language design. We partially address this with a 144-row explicit-task panel, but the main benchmark table remains observational at scale.
-2. **The explicit-task panel is still small and hand-authored.** It is cleaner than the recurring-title subset and useful for exact-task comparisons, but at 16 tasks and 3 languages it is still low-power and cannot replace the full benchmark.
-3. **Task framing and ecosystem effects remain entangled.** Suite A shows that rich task/API framing matters enormously within Elixir, and the explicit-task panel shows that examples can rescue some tasks while richer contract wording alone remains neutral. But this still does not fully separate benchmark prompt structure from broader ecosystem documentation conventions.
-4. **Cross-language proxy claims are fragile.** Several language-level correlations, especially the control-flow proxy, weaken substantially under leave-one-language-out diagnostics. So the proxy layer should be treated as suggestive rather than as a general structural law already established across all languages.
-5. **Snippet-level only.** All results are on isolated function/class problems. Suite I (repo-scale realism) is scaffolded but not yet executed on Phoenix, Ecto, and GenServer tasks.
-6. **Single-model causality.** All active ablations and the explicit-task panel were run on GPT-5.4 medium. Strong claims about language design in general would be more convincing if the same interventions replicated on another frontier model family.
+1. **No large-scale shared task id across the full leaderboard.** The ACB leaderboard is still not itself a task-fixed cross-language design. We partially address this with a 144-row explicit-task panel and a 384-row fractional-factorial follow-up, but the main benchmark table remains observational at scale.
+2. **The exact-task auxiliaries are still small and hand-authored.** They are cleaner than the recurring-title subset and useful for exact-task comparisons, but at 16 tasks and 3 languages they are still low-power and cannot replace a large matched benchmark.
+3. **Task framing and ecosystem effects remain entangled.** Suite A shows that rich task/API framing matters enormously within Elixir, the explicit-task panel shows that examples can rescue some shared tasks, and the factorial shows that explicit contracts are the strongest portable micro-factor in this small design. But this still does not fully separate benchmark prompt structure from broader ecosystem documentation conventions.
+4. **The factorial `docs_rich` factor is intentionally narrower than Suite A.** It adds edge-case detail and slightly richer prose, not the full source-adjacent documentation structure used in the Elixir-only ablation. So its small effect should not be read as a contradiction of Suite A.
+5. **Cross-language proxy claims are fragile.** Several language-level correlations, especially the control-flow proxy, weaken substantially under leave-one-language-out diagnostics. So the proxy layer should be treated as suggestive rather than as a general structural law already established across all languages.
+6. **Snippet-level only.** All results are on isolated function/class problems. Suite I (repo-scale realism) is scaffolded but not yet executed on Phoenix, Ecto, and GenServer tasks.
+7. **Single-model causality.** All active ablations, the explicit-task panel, and the fractional-factorial follow-up were run on GPT-5.4 medium. Strong claims about language design in general would be more convincing if the same interventions replicated on another frontier model family.
 
 ### 9.2 Future Work
 
-1. **Scale the explicit-task panel.** Expand the 16-task, 3-language panel to hundreds of tasks and more language families so exact-task fixed-effects analysis can be performed with meaningful power.
+1. **Scale the explicit-task auxiliaries.** Expand the 16-task, 3-language panel and the factorial follow-up to hundreds of tasks and more language families so exact-task fixed-effects analysis can be performed with meaningful power.
 2. **Cross-model replication.** Repeat Suites A, D, E, and F, plus the explicit-task panel, with another frontier model family to check whether the same causal ordering survives.
 3. **Repo-scale validation (Suite I).** Evaluate on real Phoenix/Ecto/GenServer codebases versus Rails/Django/Express equivalents.
 4. **Cross-language causal interventions.** Add richer task framing, executable examples, explicit state flow, or match-style control flow to weaker languages and measure whether those interventions improve performance.
@@ -943,11 +1008,11 @@ In aggregate, these examples suggest that Elixir's benchmark performance is not 
 
 We have presented evidence that Elixir's exceptional performance on the ACB leaderboard — 87.4% Pass@1, 86.3% on hard problems, +42.7 points above difficulty-adjusted expectations — is real and survives the strongest artifact controls we currently have.
 
-The completed study supports a more precise interpretation than the claim that Elixir is universally best because of syntax alone. Within Elixir, the strongest causal signal is **documentation and task/API framing explicitness**: removing examples does nothing, but removing documentation structure cuts performance roughly in half. In the expanded exact-task multilingual panel, by contrast, Elixir no longer dominates; Python and TypeScript remain ahead, richer contract wording alone remains neutral, and concrete examples lift the panel overall from `72.9%` to `83.3%` without yielding a decisive paired-significance result at current scale.
+The completed study supports a more precise interpretation than the claim that Elixir is universally best because of syntax alone. Within Elixir, the strongest causal signal is **documentation and task/API framing structure**: removing examples does nothing, but removing documentation structure cuts performance roughly in half. In the exact-task multilingual panel, Elixir no longer dominates; Python and TypeScript remain ahead, and examples help only directionally. In the subsequent 384-row fractional-factorial follow-up, the only main effect that survives Holm correction is **explicit contract wording** on the matched tasks (`+0.359` on the 0-1 pass scale), while a smaller edge-case-style documentation enrichment factor is not established.
 
-These two findings are compatible. They suggest that Elixir's ACB advantage comes from an especially favorable alignment between language-level explicitness and benchmark task framing, while the more portable design lesson is broader: *LLMs perform best when task semantics, API contracts, examples, and local program behavior are all easy to read from nearby context.*
+These findings are compatible once the manipulations are kept distinct. Suite A speaks to Elixir's unusually strong documentation/task structure inside the original benchmark setting. The small factorial follow-up speaks to portable prompt-side interventions on tightly matched tasks. Taken together, they suggest that Elixir's ACB advantage comes from an especially favorable alignment between language-level explicitness and benchmark task framing, while the more portable design lesson is broader: *LLMs perform best when task semantics, contracts, examples, and local program behavior are all easy to read from nearby context.*
 
-The broader lesson is therefore not that one feature explains everything, but that languages and ecosystems built for pragmatic human clarity, explicit contracts, locally visible state flow, structured control flow, concise examples, and stable interfaces reduce the predictive burden on code-generating models. Elixir remains the strongest benchmark case study in the present data, but the paper's most durable claim concerns legibility rather than language exceptionalism.
+The broader lesson is therefore not that one feature explains everything, but that languages and ecosystems built for pragmatic human clarity, explicit contracts, locally visible state flow, structured control flow, concise examples, and stable interfaces reduce the predictive burden on code-generating models. Elixir remains the strongest benchmark case study in the present data, but the paper's most durable claim concerns legibility and contract visibility rather than language exceptionalism.
 
 ---
 
@@ -1094,15 +1159,15 @@ The broader lesson is therefore not that one feature explains everything, but th
 
 ### C.1 Sandbox Execution
 
-All code was executed in Docker-based sandboxes with language-specific runtime environments. Elixir used Erlang/OTP 27 with Elixir 1.17. Test execution included both public (demonstration) and private (grading) test suites.
+Most code was executed in Docker-based sandboxes with language-specific runtime environments. However, the corrected Elixir reruns and the final exact-task auxiliary analyses used host-native Elixir execution because the local sandbox path produced invalid Elixir zero-pass outcomes during validation. The host runtime used for the corrected Elixir executions was Elixir 1.19.5 on Erlang/OTP 28. Test execution included both public (demonstration) and private (grading) test suites.
 
 ### C.2 Reproducibility
 
 The full benchmark suite, evaluation scripts, and result data are available at:
 `https://github.com/ai-driven-office/AutoCodeBenchmark`
 
-Scripts: `scripts/elixir_active_ablation_runner.py`, `scripts/elixir_research_suite_manager.py`, `scripts/build_elixir_research_master_summary.py`
-Additional analysis scripts: `scripts/elixir_paper_extra_measurements.py`, `scripts/elixir_common_task_fixed_effects.py`, `scripts/elixir_error_taxonomy.py`
+Scripts: `scripts/elixir_active_ablation_runner.py`, `scripts/elixir_research_suite_manager.py`, `scripts/build_elixir_research_master_summary.py`, `scripts/build_explicit_task_factorial.py`, `scripts/build_explicit_task_factorial_benchmark.py`, `scripts/summarize_explicit_task_factorial.py`
+Additional analysis scripts: `scripts/elixir_paper_extra_measurements.py`, `scripts/elixir_common_task_fixed_effects.py`, `scripts/elixir_error_taxonomy.py`, `scripts/elixir_quick_robustness_checks.py`, `scripts/generate_elixir_paper_figures.py`
 
 ### C.3 Statistical Notes
 
@@ -1147,6 +1212,52 @@ Across the 48 matched language-task pairs:
 
 This panel is not used as a replacement benchmark leaderboard. It is a targeted methodological check that partially overcomes the missing shared-task-id limitation of ACB-Full.
 
+### C.5 Explicit-Task Fractional-Factorial Follow-Up
+
+The explicit-task factorial follow-up uses the same 16 tasks and 3 languages, but expands the condition space to a regular $2^{(4-1)}$ design with 8 prompt conditions and 384 executable rows total. All 384 canonical rows pass their grading suites before model evaluation.
+
+The manipulated factors are:
+
+- `docs_rich`: adds edge-case detail and slightly richer prose
+- `examples`: adds concrete I/O examples
+- `contracts_explicit`: adds more explicit return/invalid-input contract wording
+- `state_guidance`: adds explicit state-flow guidance
+
+The main-effect results are:
+
+- `docs_rich`: matched mean delta `+0.047`, exact sign `p=0.548828`, Holm-adjusted `p=1.0`
+- `examples`: matched mean delta `+0.203`, exact sign `p=0.038574`, Holm-adjusted `p=0.115722`
+- `contracts_explicit`: matched mean delta `+0.359`, exact sign `p=0.007385`, Holm-adjusted `p=0.02954`
+- `state_guidance`: matched mean delta `-0.026`, exact sign `p=0.726562`, Holm-adjusted `p=1.0`
+
+The strongest by-language contract effects are:
+
+- Python: `+0.469`, Holm-adjusted `p=0.000976`
+- TypeScript: `+0.453`, Holm-adjusted `p=0.003908`
+- Elixir: `+0.156`, Holm-adjusted `p=0.774414`
+
+This factorial is not interpreted as a final causal decomposition. It remains small, hand-authored, and fractional, so some two-factor interactions are aliased. Its role in the paper is narrower: it sharpens the portable same-task story by showing that explicit contract wording is a cleaner intervention than a small amount of extra prose.
+
+### C.6 Quick Robustness Checks on the Matched Studies
+
+To reduce the chance that the matched-study conclusions are being driven by a single task or a single language, we ran two lightweight robustness analyses over the already-computed results:
+
+1. task-cluster bootstrap intervals
+2. leave-one-task-out and leave-one-language-out sensitivity scans
+
+For the 16-task explicit panel, the `rich_contract_examples` minus `baseline_compact` paired delta is `+0.104`. Its task-cluster bootstrap 95% interval is `-0.063` to `+0.292`; leave-one-task-out deltas range from `+0.044` to `+0.156`; and leave-one-language-out deltas range from `+0.031` to `+0.156`. This is consistent with the main text: examples are directionally helpful, but the portable effect remains modest and low-power.
+
+For the 384-row fractional-factorial follow-up, the main-effect robustness checks are:
+
+- `docs_rich`: bootstrap `-0.021` to `+0.125`; leave-one-task-out `+0.028` to `+0.061`
+- `examples`: bootstrap `+0.089` to `+0.323`; leave-one-task-out `+0.172` to `+0.228`
+- `contracts_explicit`: bootstrap `+0.198` to `+0.531`; leave-one-task-out `+0.317` to `+0.394`; leave-one-language-out `+0.305` to `+0.461`
+- `state_guidance`: bootstrap `-0.099` to `+0.031`; leave-one-task-out `-0.033` to `-0.006`
+
+These checks do not eliminate the scope limitations of the matched studies, but they do make the ranking more stable: the contract effect is not a one-task artifact, and the panel's example effect remains suggestive rather than disappearing under trivial perturbation.
+
+![Figure 6. Quick robustness visualization for the matched studies. The panel's examples effect stays modest and low-power, while the factorial contract effect remains positive under both bootstrap and leave-one-out scans.](figures/figure_6_quick_robustness.svg)
+
 ## Appendix D: Explicit-Task Panel Task Summary
 
 **Table D1.** Task-level outcome pattern in the 16-task explicit panel
@@ -1173,3 +1284,19 @@ This panel is not used as a replacement benchmark leaderboard. It is a targeted 
 
 
 The matched-panel gain is therefore concentrated rather than diffuse: nine tasks are completely unchanged, four show example-driven rescues, and three expose persistent or example-induced failure patterns. This concentration is one reason the multilingual panel is best interpreted as a targeted methodological check rather than a final causal estimate.
+
+## Appendix E: Reviewer Checklist
+
+**Table E1.** Limitation-to-mitigation map for the current paper version
+
+
+| Reviewer concern | Fast mitigation added in this paper | Where it appears | Residual status |
+| ---------------- | ----------------------------------- | ---------------- | --------------- |
+| The main ACB leaderboard is observational rather than task-fixed | difficulty/length artifact controls plus exact-task auxiliary studies | §4.1, §6.1, §6.5, Appendix C.4 | narrowed, not eliminated |
+| The exact-task panel may be too small to trust | expanded from the initial pilot to 16 tasks / 144 rows, with paired tests and task appendix | §6.5, Appendix D | still small |
+| The matched-study conclusions may be driven by one task or one language | bootstrap, leave-one-task-out, and leave-one-language-out robustness checks | §6.5, §6.6, Appendix C.6 | materially improved |
+| The factorial claim may be an artifact of the small design | fractional-factorial follow-up with Holm correction, plus robustness ranges for each factor | §6.6, Appendix C.5-C.6 | scoped, not universal |
+| Elixir's high score may reflect benchmark composition rather than a real effect | leave-one-language-out expected-rate controls and hard-bucket analysis | §4.1, §6.1 | materially improved |
+| Failure analysis may be noisy or misclassified | first-failure taxonomy with exact tests and a manual audit pack in the repository | §4.4, §6.3 | partially improved |
+| The paper may overclaim secondary mechanisms | explicit claim table separating strong, directional, and unestablished claims | §4.6, Table 0 | addressed in manuscript |
+| Local execution details may be opaque | corrected runtime disclosure for host-native Elixir reruns | Appendix C.1 | addressed in manuscript |
