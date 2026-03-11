@@ -1,0 +1,14 @@
+# Suite I: Repo-Scale Realism
+
+Repo-scale realism cannot be claimed from the snippet benchmark alone. This suite package defines the first cross-language repo tasks and the scorecard that will be used once target repos are locked.
+
+## Planned task matrix
+
+| Language | Framework | Repo Task | Acceptance | Priority | Status |
+|---|---:|---:|---:|---:|---:|
+| elixir | phoenix_live_view | Add authenticated settings flow with LiveView validation and regression tests | unit + integration tests green | highest | ready_for_repo_selection |
+| elixir | ecto | Add transactional import pipeline with clear error tuples and tests | property + integration tests green | highest | ready_for_repo_selection |
+| elixir | genserver | Implement supervised GenServer retry coordination with telemetry assertions | process + supervision tests green | high | ready_for_repo_selection |
+| python | django | Add authenticated settings form analogue with model/form validation and tests | unit + integration tests green | highest | ready_for_repo_selection |
+| javascript | express | Add authenticated settings workflow with request validation and integration tests | unit + integration tests green | highest | ready_for_repo_selection |
+| ruby | rails | Add transactional import pipeline with callback-heavy validations and tests | unit + integration tests green | high | ready_for_repo_selection |

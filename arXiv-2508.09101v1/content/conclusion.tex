@@ -1,0 +1,16 @@
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+In this paper, we introduce AutoCodeGen, an automated workflow based on LLM-Sandbox interaction, designed to generate multilingual verifiable code data without any manual annotation. Through this novel approach, we have successfully built AutoCodeBench, a large-scale, human-free code generation benchmark. AutoCodeBench contains 3,920 problems, evenly distributed across 20 programming languages, and is characterized by its high difficulty, practicality, and diversity. We also provide AutoCodeBench-Lite (a simplified version) and AutoCodeBench-Comp (a completion-based benchmark specifically designed for base models). Furthermore, we open-sourced a multilingual sandbox that supports over 20+ programming languages to enable high-concurrency evaluation and training. Our evaluation of more than 30 mainstream open-source and proprietary LLMs reveals that even the most advanced models still face challenges when confronted with the complex and diverse multilingual tasks set by AutoCodeBench, especially when handling multi-logic scenarios. We hope that the AutoCodeBench series will become a valuable resource, inspiring the community to focus on more challenging and practical multilingual code generation scenarios. In addition, our comprehensive analysis of AutoCodeGen and AutoCodeBench provides valuable insights for the future development of code generation benchmarks.
+
+
+
+
+
+
+
+
+
+
+%In this paper, we present AutoCodeBench, a fully automated, large-scale, and high-difficulty multilingual benchmark designed to evaluate the code generation capabilities of Large Language Models (LLMs). Our benchmark is built through a novel LLM-sandbox interaction workflow, enabling the end-to-end synthesis of executable programming problems and aligned test functions without any manual annotations. A key component of our workflow is a reusable multilingual sandbox that supports secure and efficient execution across languages, ensuring test correctness and enabling large-scale validation. The resulting dataset includes 3,920 problems across 20 programming languages, featuring diverse tasks, multi-logical reasoning, and balanced language distribution. Our evaluation of 30+ proprietary and open-source LLMs shows that even state-of-the-art models such as Claude 4 Opus perform moderately, and many models struggle particularly on multi-logical tasks and low-resource languages. Meanwhile, manual verification across six languages demonstrates the reliability and feasibility of our automated construction pipeline. Overall, AutoCodeBench serves as a scalable and practical resource for evaluating multilingual code generation, and we hope it lays the groundwork for future research in code benchmark automation and multilingual LLM assessment.

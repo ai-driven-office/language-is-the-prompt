@@ -1,0 +1,121 @@
+index,language,title,difficulty,variant_1,variant_2,variant_3
+82,elixir,Module Requirements:,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+49,elixir,**Problem: Revoke Security Group Access**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+156,elixir,Test case 1: One Pair vs One Pair (higher pair wins),hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+51,elixir,**Elixir GUI Layout Configuration**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+123,elixir,Test case 1: Basic rectangle creation and area calculation,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+152,elixir,**Problem: Format Difference as Plain Text**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+130,elixir,Test Case 1: Basic insertion and retrieval,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+184,elixir,Test case 1: Simple word translation,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+140,elixir,Test case 1: Valid token with user data,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+29,elixir,**Kubernetes Object Management Problem in Elixir**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+20,elixir,Implement a 1D Kalman Filter in Elixir that can track and estimate the state of a system over time. The filter should handle both prediction (based on system dynamics) and correction (based on measurements) steps.,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+133,elixir,Test case 1,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+113,elixir,**Problem: Extract Personal Information from Text**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+28,elixir,Test Case 1,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+117,elixir,**Problem: Network Interface MAC Address Processor**,easy,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+70,elixir,Test Case 1 - Valid parameters,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+84,elixir,... other element-specific properties,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+105,elixir,Expected result:,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+153,elixir,Test case 1: Text normalization,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+87,elixir,Test Case 1 - Graph1,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+73,elixir,Test count_posts,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+122,elixir,Your implementation here,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+129,elixir,**Blackjack Winner Determination in Elixir**,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+128,elixir,Functions to Implement:,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+175,elixir,**Elixir Programming Problem: Port Scanner**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+127,elixir,**Problem: Calculate Statistical Measures for Paired Data**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+137,elixir,**Elixir Programming Problem: Simulating Web Element Interactions**,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+101,elixir,Test case 1: Simple linear graph,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+191,elixir,**Programming Problem: Staircase Pattern**,easy,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+112,elixir,Module Specification:,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+18,elixir,Test Case 1,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+146,elixir,**Problem: IMAP Folder Information Retrieval in Elixir**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+19,elixir,Test case 1: Simple tier calculation,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+31,elixir,Test case 1: Both arms,easy,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+132,elixir,**Sound Message Processor**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+55,elixir,**Problem: Parse RISC-V OVPsim Execution Logs**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+37,elixir,Example 1: Basic case with country and continent,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+164,elixir,**Problem: Syllable Processing**,easy,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+33,elixir,**Problem: Decoding Ways with Wildcards**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+69,elixir,Vertical line image,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+10,elixir,**Problem: Adjust Color Luminosity**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+45,elixir,**Problem Description:**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+53,elixir,Your implementation here,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+57,elixir,**Problem: Count Digit One**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+77,elixir,**Military Enlistment Year Calculator**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+196,elixir,Initialize a board with some pieces,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+63,elixir,Test case 1: Basic configuration merge,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+118,elixir,Test case 1: Basic case,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+15,elixir,Test case 1: Simple linear graph,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+36,elixir,**Minimum Jumps to Reach the End of an Array**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+79,elixir,Test Case 1,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+138,elixir,**Problem: Finding Anagrams**,easy,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+91,elixir,**Problem: Binary Tree Level Order Traversal**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+151,elixir,Your implementation,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+188,elixir,Test case 1,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+157,elixir,Function to Implement:,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+119,elixir,**Problem: Maximum Minimum Distance**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+120,elixir,**Elixir Programming Problem: Indentation Pattern Calculation**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+198,elixir,**Programming Problem: Symbolic Differentiation**,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+17,elixir,Test case 1: Single synthetic chessboard image,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+25,elixir,**Problem: Minimum Refueling Stops**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+52,elixir,Test case 1: Simple string comparison,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+125,elixir,**Problem: Flip Lights**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+27,elixir,**Problem: Reorganize String**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+98,elixir,**Programming Problem: Insertion Sort Implementation in Elixir**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+163,elixir,Requirements:,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+126,elixir,Test case 1: Move right in open space,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+154,elixir,**Problem: Convert Decimal to Binary**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+2,elixir,**Problem: Find Insert Position in Sorted Array**,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+39,elixir,Input:,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+71,elixir,**Problem: Binary Image Feature Detection in Elixir**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+80,elixir,**Problem: Drawing a Triforce Pattern in Elixir**,easy,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+89,elixir,**Elixir Programming Problem: Options Menu Interaction**,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+178,elixir,Test case 1: Simple stack with mixed numbers,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+54,elixir,**Problem: Minimum Refueling Stops**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+102,elixir,**Problem: Categorize Machine Specifications**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+104,elixir,**Minimum Platforms Needed at a Railway Station**,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+121,elixir,**Wildcard Pattern Matching in Elixir**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+192,elixir,**Problem Description:**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+194,elixir,**Problem: Maximum Stock Profit**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+197,elixir,**Problem: Box Packaging Optimization**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+41,elixir,**Problem: Validate Magic: The Gathering Card Names in Elixir**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+23,elixir,Input Format,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+44,elixir,Function Names,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+177,elixir,**Supermarket Queue Simulation in Elixir**,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+9,elixir,"Test case 1: [2, 4, 3] + [5, 6, 4] = [7, 0, 8]",medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+21,elixir,Test case 1: Basic substitution,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+68,elixir,Test Case 1: Basic RSA workflow,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+174,elixir,**Programming Problem: Generate Username**,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+22,elixir,Functions to Implement:,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+34,elixir,**Problem: Anagram Checker**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+35,elixir,**Ball Game Simulation**,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+14,elixir,**Problem: Simulate Socket Communication Error Handling**,easy,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+141,elixir,Requirements:,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+195,elixir,**Problem: Calculate Phone Dial Time**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+56,elixir,Test case 1: Simple BST with one mode,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+85,elixir,**Problem: Count Unique Values**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+142,elixir,Test case 1: minimal definitions,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+172,elixir,**Problem: Permutation Coefficient Calculation**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+8,elixir,Test case 1: Simple binary tree with depth 2,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+108,elixir,Test case 1: Simple list of numbers with filtering,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+186,elixir,Test Case 1,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+131,elixir,**Problem: Hexadecimal Character to Decimal Conversion**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+135,elixir,**Problem: Maximizing Funded Departments**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+145,elixir,**Problem: Bin Packing in Elixir**,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+62,elixir,**Programming Problem: Reformatting Alphanumeric Strings**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+168,elixir,Test Case 1,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+72,elixir,**Problem: K-th Symbol in Grammar**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+92,elixir,**Programming Problem: Generate Odd Number Sequence**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+150,elixir,**Leap Year Checker in Elixir**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+159,elixir,Input:,medium,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+13,elixir,**Programming Problem: Alice and Bob's Number Game**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+40,elixir,Test case 1: Simple binary tree,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+100,elixir,Test case 1,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+149,elixir,Test case 1: Simple binary tree with diameter 3,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+179,elixir,**Problem: Maximum Subarray Sum**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+4,elixir,**Problem: Increasing Triplet Subsequence**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+61,elixir,Test case 1: A valid BST,easy,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+66,elixir,**Elixir Mandelbrot Set Membership Checker**,easy,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching
+74,elixir,**Problem: Counting Islands in a Grid**,hard,function_head_or_pattern_matching,case_or_with_dispatch,imperative_branching

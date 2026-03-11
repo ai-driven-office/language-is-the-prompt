@@ -1,0 +1,15 @@
+{
+  "suite_id": "suite_d",
+  "title": "Pattern matching and explicit control flow",
+  "status": "implemented_baseline",
+  "generated_files": [
+    "results/elixir_suite_d/suite_d_control_flow.csv",
+    "results/elixir_suite_d/suite_d_control_flow_task_level.csv",
+    "results/elixir_suite_d/suite_d_control_flow_matrix.csv",
+    "results/elixir_suite_d/suite_d_control_flow.md"
+  ],
+  "notes": [
+    "Control-flow legibility proxy computed from canonical solutions.",
+    "Paired control-flow intervention matrix generated for future reruns."
+  ]
+}

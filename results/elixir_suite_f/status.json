@@ -1,0 +1,15 @@
+{
+  "suite_id": "suite_f",
+  "title": "Hidden state and mutability burden",
+  "status": "implemented_baseline",
+  "generated_files": [
+    "results/elixir_suite_f/suite_f_mutability.csv",
+    "results/elixir_suite_f/suite_f_mutability_task_level.csv",
+    "results/elixir_suite_f/suite_f_mutability_matrix.csv",
+    "results/elixir_suite_f/suite_f_mutability.md"
+  ],
+  "notes": [
+    "Mutability-burden proxy computed from current artifacts.",
+    "Immutable-vs-stateful intervention matrix generated for future reruns."
+  ]
+}

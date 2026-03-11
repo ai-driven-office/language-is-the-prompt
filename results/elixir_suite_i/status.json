@@ -1,0 +1,14 @@
+{
+  "suite_id": "suite_i",
+  "title": "Repo-scale realism",
+  "status": "implemented_scaffold",
+  "generated_files": [
+    "results/elixir_suite_i/suite_i_repo_scale_task_matrix.csv",
+    "results/elixir_suite_i/suite_i_repo_scale_scorecard.csv",
+    "results/elixir_suite_i/suite_i_repo_scale.md"
+  ],
+  "notes": [
+    "Repo-scale suite scaffolded with concrete task matrix and scorecard.",
+    "Waiting on repo selection and active model runs."
+  ]
+}

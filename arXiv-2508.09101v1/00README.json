@@ -1,0 +1,41 @@
+{
+   "sources" : [
+      {
+         "usage" : "toplevel",
+         "filename" : "autocodebench.tex"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "biblio.bib"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "colm2024_conference.bst"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "figures/pie_tag.pdf"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "logo/homepage.png"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "logo/no.png"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "logo/star.png"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "logo/yes.png"
+      }
+   ],
+   "version" : 2,
+   "texlive_version" : 2023,
+   "process" : {
+      "compiler" : "pdflatex"
+   }
+}

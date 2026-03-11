@@ -1,0 +1,5 @@
+language,ecosystem,repo_focus,condition
+elixir,phoenix,docs + typespec + tests,clean_vs_degraded
+python,fastapi,docs + tests + type hints,clean_vs_degraded
+typescript,effect,schema-rich service modules,clean_vs_degraded
+ruby,rails,docs + examples + callbacks,clean_vs_degraded

@@ -1,0 +1,831 @@
+{
+  "overall": {
+    "overall_pass_rate": 53.3,
+    "languages": 20,
+    "rows": 3920
+  },
+  "language_summary": [
+    {
+      "language": "cpp",
+      "total_rows": 186,
+      "observed_pass_rate": 50.0,
+      "expected_pass_rate_difficulty_only": 52.7,
+      "delta_vs_difficulty_only": -2.7,
+      "expected_pass_rate_difficulty_and_question_len": 57.2,
+      "delta_vs_difficulty_and_question_len": -7.2,
+      "expected_pass_rate_difficulty_and_full_test_len": 49.0,
+      "delta_vs_difficulty_and_full_test_len": 1.0,
+      "hard_rows": 118,
+      "hard_pct": 63.4,
+      "median_question_chars": 3521,
+      "median_canonical_chars": 3099,
+      "median_full_test_chars": 2872,
+      "runtime_errors": 65,
+      "compilation_errors": 23,
+      "wrong_answers": 0,
+      "time_limit_exceeded": 0
+    },
+    {
+      "language": "csharp",
+      "total_rows": 199,
+      "observed_pass_rate": 72.4,
+      "expected_pass_rate_difficulty_only": 59.9,
+      "delta_vs_difficulty_only": 12.5,
+      "expected_pass_rate_difficulty_and_question_len": 61.5,
+      "delta_vs_difficulty_and_question_len": 10.8,
+      "expected_pass_rate_difficulty_and_full_test_len": 55.1,
+      "delta_vs_difficulty_and_full_test_len": 17.3,
+      "hard_rows": 92,
+      "hard_pct": 46.2,
+      "median_question_chars": 3058,
+      "median_canonical_chars": 3185,
+      "median_full_test_chars": 3887,
+      "runtime_errors": 45,
+      "compilation_errors": 0,
+      "wrong_answers": 1,
+      "time_limit_exceeded": 0
+    },
+    {
+      "language": "dart",
+      "total_rows": 200,
+      "observed_pass_rate": 56.5,
+      "expected_pass_rate_difficulty_only": 50.1,
+      "delta_vs_difficulty_only": 6.4,
+      "expected_pass_rate_difficulty_and_question_len": 50.9,
+      "delta_vs_difficulty_and_question_len": 5.6,
+      "expected_pass_rate_difficulty_and_full_test_len": 49.5,
+      "delta_vs_difficulty_and_full_test_len": 7.0,
+      "hard_rows": 136,
+      "hard_pct": 68.0,
+      "median_question_chars": 2565,
+      "median_canonical_chars": 1952,
+      "median_full_test_chars": 1963,
+      "runtime_errors": 87,
+      "compilation_errors": 0,
+      "wrong_answers": 0,
+      "time_limit_exceeded": 0
+    },
+    {
+      "language": "elixir",
+      "total_rows": 198,
+      "observed_pass_rate": 87.4,
+      "expected_pass_rate_difficulty_only": 47.0,
+      "delta_vs_difficulty_only": 40.4,
+      "expected_pass_rate_difficulty_and_question_len": 44.6,
+      "delta_vs_difficulty_and_question_len": 42.7,
+      "expected_pass_rate_difficulty_and_full_test_len": 50.5,
+      "delta_vs_difficulty_and_full_test_len": 36.8,
+      "hard_rows": 139,
+      "hard_pct": 70.2,
+      "median_question_chars": 1432,
+      "median_canonical_chars": 1018,
+      "median_full_test_chars": 1260,
+      "runtime_errors": 25,
+      "compilation_errors": 0,
+      "wrong_answers": 0,
+      "time_limit_exceeded": 0
+    },
+    {
+      "language": "go",
+      "total_rows": 191,
+      "observed_pass_rate": 42.9,
+      "expected_pass_rate_difficulty_only": 54.3,
+      "delta_vs_difficulty_only": -11.4,
+      "expected_pass_rate_difficulty_and_question_len": 53.2,
+      "delta_vs_difficulty_and_question_len": -10.3,
+      "expected_pass_rate_difficulty_and_full_test_len": 53.4,
+      "delta_vs_difficulty_and_full_test_len": -10.4,
+      "hard_rows": 117,
+      "hard_pct": 61.3,
+      "median_question_chars": 1711,
+      "median_canonical_chars": 1173,
+      "median_full_test_chars": 2412,
+      "runtime_errors": 108,
+      "compilation_errors": 0,
+      "wrong_answers": 0,
+      "time_limit_exceeded": 0
+    },
+    {
+      "language": "java",
+      "total_rows": 188,
+      "observed_pass_rate": 51.1,
+      "expected_pass_rate_difficulty_only": 56.1,
+      "delta_vs_difficulty_only": -5.0,
+      "expected_pass_rate_difficulty_and_question_len": 61.2,
+      "delta_vs_difficulty_and_question_len": -10.1,
+      "expected_pass_rate_difficulty_and_full_test_len": 52.7,
+      "delta_vs_difficulty_and_full_test_len": -1.6,
+      "hard_rows": 106,
+      "hard_pct": 56.4,
+      "median_question_chars": 3831,
+      "median_canonical_chars": 3257,
+      "median_full_test_chars": 2859,
+      "runtime_errors": 73,
+      "compilation_errors": 16,
+      "wrong_answers": 0,
+      "time_limit_exceeded": 0
+    },
+    {
+      "language": "javascript",
+      "total_rows": 184,
+      "observed_pass_rate": 42.9,
+      "expected_pass_rate_difficulty_only": 52.8,
+      "delta_vs_difficulty_only": -9.9,
+      "expected_pass_rate_difficulty_and_question_len": 52.2,
+      "delta_vs_difficulty_and_question_len": -9.3,
+      "expected_pass_rate_difficulty_and_full_test_len": 51.6,
+      "delta_vs_difficulty_and_full_test_len": -8.6,
+      "hard_rows": 118,
+      "hard_pct": 64.1,
+      "median_question_chars": 1844,
+      "median_canonical_chars": 1638,
+      "median_full_test_chars": 2312,
+      "runtime_errors": 105,
+      "compilation_errors": 0,
+      "wrong_answers": 0,
+      "time_limit_exceeded": 0
+    },
+    {
+      "language": "julia",
+      "total_rows": 200,
+      "observed_pass_rate": 57.0,
+      "expected_pass_rate_difficulty_only": 52.6,
+      "delta_vs_difficulty_only": 4.4,
+      "expected_pass_rate_difficulty_and_question_len": 50.8,
+      "delta_vs_difficulty_and_question_len": 6.2,
+      "expected_pass_rate_difficulty_and_full_test_len": 56.5,
+      "delta_vs_difficulty_and_full_test_len": 0.5,
+      "hard_rows": 125,
+      "hard_pct": 62.5,
+      "median_question_chars": 1581,
+      "median_canonical_chars": 1254,
+      "median_full_test_chars": 1306,
+      "runtime_errors": 85,
+      "compilation_errors": 0,
+      "wrong_answers": 0,
+      "time_limit_exceeded": 1
+    },
+    {
+      "language": "kotlin",
+      "total_rows": 200,
+      "observed_pass_rate": 76.5,
+      "expected_pass_rate_difficulty_only": 60.5,
+      "delta_vs_difficulty_only": 16.0,
+      "expected_pass_rate_difficulty_and_question_len": 60.7,
+      "delta_vs_difficulty_and_question_len": 15.8,
+      "expected_pass_rate_difficulty_and_full_test_len": 59.0,
+      "delta_vs_difficulty_and_full_test_len": 17.5,
+      "hard_rows": 87,
+      "hard_pct": 43.5,
+      "median_question_chars": 2356,
+      "median_canonical_chars": 2328,
+      "median_full_test_chars": 2160,
+      "runtime_errors": 47,
+      "compilation_errors": 0,
+      "wrong_answers": 0,
+      "time_limit_exceeded": 0
+    },
+    {
+      "language": "perl",
+      "total_rows": 200,
+      "observed_pass_rate": 44.5,
+      "expected_pass_rate_difficulty_only": 54.1,
+      "delta_vs_difficulty_only": -9.6,
+      "expected_pass_rate_difficulty_and_question_len": 53.2,
+      "delta_vs_difficulty_and_question_len": -8.7,
+      "expected_pass_rate_difficulty_and_full_test_len": 55.7,
+      "delta_vs_difficulty_and_full_test_len": -11.2,
+      "hard_rows": 123,
+      "hard_pct": 61.5,
+      "median_question_chars": 1346,
+      "median_canonical_chars": 866,
+      "median_full_test_chars": 1602,
+      "runtime_errors": 107,
+      "compilation_errors": 0,
+      "wrong_answers": 0,
+      "time_limit_exceeded": 0
+    },
+    {
+      "language": "php",
+      "total_rows": 199,
+      "observed_pass_rate": 35.7,
+      "expected_pass_rate_difficulty_only": 57.0,
+      "delta_vs_difficulty_only": -21.3,
+      "expected_pass_rate_difficulty_and_question_len": 57.6,
+      "delta_vs_difficulty_and_question_len": -21.9,
+      "expected_pass_rate_difficulty_and_full_test_len": 54.7,
+      "delta_vs_difficulty_and_full_test_len": -19.0,
+      "hard_rows": 111,
+      "hard_pct": 55.8,
+      "median_question_chars": 1220,
+      "median_canonical_chars": 1902,
+      "median_full_test_chars": 2455,
+      "runtime_errors": 126,
+      "compilation_errors": 0,
+      "wrong_answers": 0,
+      "time_limit_exceeded": 0
+    },
+    {
+      "language": "python",
+      "total_rows": 196,
+      "observed_pass_rate": 43.9,
+      "expected_pass_rate_difficulty_only": 51.3,
+      "delta_vs_difficulty_only": -7.4,
+      "expected_pass_rate_difficulty_and_question_len": 50.5,
+      "delta_vs_difficulty_and_question_len": -6.6,
+      "expected_pass_rate_difficulty_and_full_test_len": 52.8,
+      "delta_vs_difficulty_and_full_test_len": -9.0,
+      "hard_rows": 134,
+      "hard_pct": 68.4,
+      "median_question_chars": 1876,
+      "median_canonical_chars": 1492,
+      "median_full_test_chars": 1724,
+      "runtime_errors": 108,
+      "compilation_errors": 0,
+      "wrong_answers": 0,
+      "time_limit_exceeded": 0
+    },
+    {
+      "language": "r",
+      "total_rows": 198,
+      "observed_pass_rate": 54.5,
+      "expected_pass_rate_difficulty_only": 52.1,
+      "delta_vs_difficulty_only": 2.5,
+      "expected_pass_rate_difficulty_and_question_len": 50.7,
+      "delta_vs_difficulty_and_question_len": 3.9,
+      "expected_pass_rate_difficulty_and_full_test_len": 53.3,
+      "delta_vs_difficulty_and_full_test_len": 1.2,
+      "hard_rows": 127,
+      "hard_pct": 64.1,
+      "median_question_chars": 1646,
+      "median_canonical_chars": 1351,
+      "median_full_test_chars": 1822,
+      "runtime_errors": 90,
+      "compilation_errors": 0,
+      "wrong_answers": 0,
+      "time_limit_exceeded": 0
+    },
+    {
+      "language": "racket",
+      "total_rows": 196,
+      "observed_pass_rate": 51.0,
+      "expected_pass_rate_difficulty_only": 55.3,
+      "delta_vs_difficulty_only": -4.3,
+      "expected_pass_rate_difficulty_and_question_len": 54.2,
+      "delta_vs_difficulty_and_question_len": -3.2,
+      "expected_pass_rate_difficulty_and_full_test_len": 57.1,
+      "delta_vs_difficulty_and_full_test_len": -6.1,
+      "hard_rows": 111,
+      "hard_pct": 56.6,
+      "median_question_chars": 1590,
+      "median_canonical_chars": 1080,
+      "median_full_test_chars": 1586,
+      "runtime_errors": 95,
+      "compilation_errors": 0,
+      "wrong_answers": 0,
+      "time_limit_exceeded": 0
+    },
+    {
+      "language": "ruby",
+      "total_rows": 200,
+      "observed_pass_rate": 63.0,
+      "expected_pass_rate_difficulty_only": 56.6,
+      "delta_vs_difficulty_only": 6.4,
+      "expected_pass_rate_difficulty_and_question_len": 55.7,
+      "delta_vs_difficulty_and_question_len": 7.3,
+      "expected_pass_rate_difficulty_and_full_test_len": 57.2,
+      "delta_vs_difficulty_and_full_test_len": 5.8,
+      "hard_rows": 108,
+      "hard_pct": 54.0,
+      "median_question_chars": 1797,
+      "median_canonical_chars": 1194,
+      "median_full_test_chars": 1926,
+      "runtime_errors": 70,
+      "compilation_errors": 0,
+      "wrong_answers": 0,
+      "time_limit_exceeded": 0
+    },
+    {
+      "language": "rust",
+      "total_rows": 199,
+      "observed_pass_rate": 40.2,
+      "expected_pass_rate_difficulty_only": 46.9,
+      "delta_vs_difficulty_only": -6.7,
+      "expected_pass_rate_difficulty_and_question_len": 46.9,
+      "delta_vs_difficulty_and_question_len": -6.7,
+      "expected_pass_rate_difficulty_and_full_test_len": 44.4,
+      "delta_vs_difficulty_and_full_test_len": -4.2,
+      "hard_rows": 153,
+      "hard_pct": 76.9,
+      "median_question_chars": 2289,
+      "median_canonical_chars": 3220,
+      "median_full_test_chars": 2667,
+      "runtime_errors": 116,
+      "compilation_errors": 0,
+      "wrong_answers": 0,
+      "time_limit_exceeded": 1
+    },
+    {
+      "language": "scala",
+      "total_rows": 199,
+      "observed_pass_rate": 50.8,
+      "expected_pass_rate_difficulty_only": 50.3,
+      "delta_vs_difficulty_only": 0.5,
+      "expected_pass_rate_difficulty_and_question_len": 52.6,
+      "delta_vs_difficulty_and_question_len": -1.9,
+      "expected_pass_rate_difficulty_and_full_test_len": 49.6,
+      "delta_vs_difficulty_and_full_test_len": 1.2,
+      "hard_rows": 137,
+      "hard_pct": 68.8,
+      "median_question_chars": 2825,
+      "median_canonical_chars": 2214,
+      "median_full_test_chars": 1999,
+      "runtime_errors": 96,
+      "compilation_errors": 0,
+      "wrong_answers": 0,
+      "time_limit_exceeded": 0
+    },
+    {
+      "language": "shell",
+      "total_rows": 188,
+      "observed_pass_rate": 50.5,
+      "expected_pass_rate_difficulty_only": 53.6,
+      "delta_vs_difficulty_only": -3.0,
+      "expected_pass_rate_difficulty_and_question_len": 52.7,
+      "delta_vs_difficulty_and_question_len": -2.2,
+      "expected_pass_rate_difficulty_and_full_test_len": 57.9,
+      "delta_vs_difficulty_and_full_test_len": -7.4,
+      "hard_rows": 115,
+      "hard_pct": 61.2,
+      "median_question_chars": 1968,
+      "median_canonical_chars": 1010,
+      "median_full_test_chars": 1422,
+      "runtime_errors": 91,
+      "compilation_errors": 0,
+      "wrong_answers": 0,
+      "time_limit_exceeded": 0
+    },
+    {
+      "language": "swift",
+      "total_rows": 200,
+      "observed_pass_rate": 43.5,
+      "expected_pass_rate_difficulty_only": 54.4,
+      "delta_vs_difficulty_only": -10.9,
+      "expected_pass_rate_difficulty_and_question_len": 53.6,
+      "delta_vs_difficulty_and_question_len": -10.1,
+      "expected_pass_rate_difficulty_and_full_test_len": 58.4,
+      "delta_vs_difficulty_and_full_test_len": -14.9,
+      "hard_rows": 121,
+      "hard_pct": 60.5,
+      "median_question_chars": 1502,
+      "median_canonical_chars": 1356,
+      "median_full_test_chars": 1190,
+      "runtime_errors": 113,
+      "compilation_errors": 0,
+      "wrong_answers": 0,
+      "time_limit_exceeded": 0
+    },
+    {
+      "language": "typescript",
+      "total_rows": 199,
+      "observed_pass_rate": 49.2,
+      "expected_pass_rate_difficulty_only": 47.5,
+      "delta_vs_difficulty_only": 1.7,
+      "expected_pass_rate_difficulty_and_question_len": 46.8,
+      "delta_vs_difficulty_and_question_len": 2.5,
+      "expected_pass_rate_difficulty_and_full_test_len": 44.5,
+      "delta_vs_difficulty_and_full_test_len": 4.7,
+      "hard_rows": 150,
+      "hard_pct": 75.4,
+      "median_question_chars": 1225,
+      "median_canonical_chars": 1857,
+      "median_full_test_chars": 2696,
+      "runtime_errors": 20,
+      "compilation_errors": 0,
+      "wrong_answers": 81,
+      "time_limit_exceeded": 0
+    }
+  ],
+  "difficulty_summary": [
+    {
+      "language": "cpp",
+      "difficulty": "easy",
+      "passed": 23,
+      "total": 29,
+      "pass_rate": 79.3
+    },
+    {
+      "language": "cpp",
+      "difficulty": "medium",
+      "passed": 29,
+      "total": 39,
+      "pass_rate": 74.4
+    },
+    {
+      "language": "cpp",
+      "difficulty": "hard",
+      "passed": 41,
+      "total": 118,
+      "pass_rate": 34.7
+    },
+    {
+      "language": "csharp",
+      "difficulty": "easy",
+      "passed": 56,
+      "total": 61,
+      "pass_rate": 91.8
+    },
+    {
+      "language": "csharp",
+      "difficulty": "medium",
+      "passed": 38,
+      "total": 46,
+      "pass_rate": 82.6
+    },
+    {
+      "language": "csharp",
+      "difficulty": "hard",
+      "passed": 50,
+      "total": 92,
+      "pass_rate": 54.3
+    },
+    {
+      "language": "dart",
+      "difficulty": "easy",
+      "passed": 19,
+      "total": 21,
+      "pass_rate": 90.5
+    },
+    {
+      "language": "dart",
+      "difficulty": "medium",
+      "passed": 30,
+      "total": 43,
+      "pass_rate": 69.8
+    },
+    {
+      "language": "dart",
+      "difficulty": "hard",
+      "passed": 64,
+      "total": 136,
+      "pass_rate": 47.1
+    },
+    {
+      "language": "elixir",
+      "difficulty": "easy",
+      "passed": 13,
+      "total": 13,
+      "pass_rate": 100.0
+    },
+    {
+      "language": "elixir",
+      "difficulty": "medium",
+      "passed": 40,
+      "total": 46,
+      "pass_rate": 87.0
+    },
+    {
+      "language": "elixir",
+      "difficulty": "hard",
+      "passed": 120,
+      "total": 139,
+      "pass_rate": 86.3
+    },
+    {
+      "language": "go",
+      "difficulty": "easy",
+      "passed": 28,
+      "total": 37,
+      "pass_rate": 75.7
+    },
+    {
+      "language": "go",
+      "difficulty": "medium",
+      "passed": 26,
+      "total": 37,
+      "pass_rate": 70.3
+    },
+    {
+      "language": "go",
+      "difficulty": "hard",
+      "passed": 28,
+      "total": 117,
+      "pass_rate": 23.9
+    },
+    {
+      "language": "java",
+      "difficulty": "easy",
+      "passed": 32,
+      "total": 40,
+      "pass_rate": 80.0
+    },
+    {
+      "language": "java",
+      "difficulty": "medium",
+      "passed": 31,
+      "total": 42,
+      "pass_rate": 73.8
+    },
+    {
+      "language": "java",
+      "difficulty": "hard",
+      "passed": 33,
+      "total": 106,
+      "pass_rate": 31.1
+    },
+    {
+      "language": "javascript",
+      "difficulty": "easy",
+      "passed": 27,
+      "total": 29,
+      "pass_rate": 93.1
+    },
+    {
+      "language": "javascript",
+      "difficulty": "medium",
+      "passed": 23,
+      "total": 37,
+      "pass_rate": 62.2
+    },
+    {
+      "language": "javascript",
+      "difficulty": "hard",
+      "passed": 29,
+      "total": 118,
+      "pass_rate": 24.6
+    },
+    {
+      "language": "julia",
+      "difficulty": "easy",
+      "passed": 24,
+      "total": 27,
+      "pass_rate": 88.9
+    },
+    {
+      "language": "julia",
+      "difficulty": "medium",
+      "passed": 42,
+      "total": 48,
+      "pass_rate": 87.5
+    },
+    {
+      "language": "julia",
+      "difficulty": "hard",
+      "passed": 48,
+      "total": 125,
+      "pass_rate": 38.4
+    },
+    {
+      "language": "kotlin",
+      "difficulty": "easy",
+      "passed": 57,
+      "total": 58,
+      "pass_rate": 98.3
+    },
+    {
+      "language": "kotlin",
+      "difficulty": "medium",
+      "passed": 52,
+      "total": 55,
+      "pass_rate": 94.5
+    },
+    {
+      "language": "kotlin",
+      "difficulty": "hard",
+      "passed": 44,
+      "total": 87,
+      "pass_rate": 50.6
+    },
+    {
+      "language": "perl",
+      "difficulty": "easy",
+      "passed": 36,
+      "total": 38,
+      "pass_rate": 94.7
+    },
+    {
+      "language": "perl",
+      "difficulty": "medium",
+      "passed": 28,
+      "total": 39,
+      "pass_rate": 71.8
+    },
+    {
+      "language": "perl",
+      "difficulty": "hard",
+      "passed": 25,
+      "total": 123,
+      "pass_rate": 20.3
+    },
+    {
+      "language": "php",
+      "difficulty": "easy",
+      "passed": 25,
+      "total": 38,
+      "pass_rate": 65.8
+    },
+    {
+      "language": "php",
+      "difficulty": "medium",
+      "passed": 29,
+      "total": 50,
+      "pass_rate": 58.0
+    },
+    {
+      "language": "php",
+      "difficulty": "hard",
+      "passed": 17,
+      "total": 111,
+      "pass_rate": 15.3
+    },
+    {
+      "language": "python",
+      "difficulty": "easy",
+      "passed": 30,
+      "total": 36,
+      "pass_rate": 83.3
+    },
+    {
+      "language": "python",
+      "difficulty": "medium",
+      "passed": 20,
+      "total": 26,
+      "pass_rate": 76.9
+    },
+    {
+      "language": "python",
+      "difficulty": "hard",
+      "passed": 36,
+      "total": 134,
+      "pass_rate": 26.9
+    },
+    {
+      "language": "r",
+      "difficulty": "easy",
+      "passed": 25,
+      "total": 27,
+      "pass_rate": 92.6
+    },
+    {
+      "language": "r",
+      "difficulty": "medium",
+      "passed": 33,
+      "total": 44,
+      "pass_rate": 75.0
+    },
+    {
+      "language": "r",
+      "difficulty": "hard",
+      "passed": 50,
+      "total": 127,
+      "pass_rate": 39.4
+    },
+    {
+      "language": "racket",
+      "difficulty": "easy",
+      "passed": 14,
+      "total": 26,
+      "pass_rate": 53.8
+    },
+    {
+      "language": "racket",
+      "difficulty": "medium",
+      "passed": 40,
+      "total": 59,
+      "pass_rate": 67.8
+    },
+    {
+      "language": "racket",
+      "difficulty": "hard",
+      "passed": 46,
+      "total": 111,
+      "pass_rate": 41.4
+    },
+    {
+      "language": "ruby",
+      "difficulty": "easy",
+      "passed": 41,
+      "total": 47,
+      "pass_rate": 87.2
+    },
+    {
+      "language": "ruby",
+      "difficulty": "medium",
+      "passed": 36,
+      "total": 45,
+      "pass_rate": 80.0
+    },
+    {
+      "language": "ruby",
+      "difficulty": "hard",
+      "passed": 49,
+      "total": 108,
+      "pass_rate": 45.4
+    },
+    {
+      "language": "rust",
+      "difficulty": "easy",
+      "passed": 8,
+      "total": 8,
+      "pass_rate": 100.0
+    },
+    {
+      "language": "rust",
+      "difficulty": "medium",
+      "passed": 31,
+      "total": 38,
+      "pass_rate": 81.6
+    },
+    {
+      "language": "rust",
+      "difficulty": "hard",
+      "passed": 41,
+      "total": 153,
+      "pass_rate": 26.8
+    },
+    {
+      "language": "scala",
+      "difficulty": "easy",
+      "passed": 21,
+      "total": 26,
+      "pass_rate": 80.8
+    },
+    {
+      "language": "scala",
+      "difficulty": "medium",
+      "passed": 28,
+      "total": 36,
+      "pass_rate": 77.8
+    },
+    {
+      "language": "scala",
+      "difficulty": "hard",
+      "passed": 52,
+      "total": 137,
+      "pass_rate": 38.0
+    },
+    {
+      "language": "shell",
+      "difficulty": "easy",
+      "passed": 25,
+      "total": 28,
+      "pass_rate": 89.3
+    },
+    {
+      "language": "shell",
+      "difficulty": "medium",
+      "passed": 41,
+      "total": 45,
+      "pass_rate": 91.1
+    },
+    {
+      "language": "shell",
+      "difficulty": "hard",
+      "passed": 29,
+      "total": 115,
+      "pass_rate": 25.2
+    },
+    {
+      "language": "swift",
+      "difficulty": "easy",
+      "passed": 19,
+      "total": 34,
+      "pass_rate": 55.9
+    },
+    {
+      "language": "swift",
+      "difficulty": "medium",
+      "passed": 27,
+      "total": 45,
+      "pass_rate": 60.0
+    },
+    {
+      "language": "swift",
+      "difficulty": "hard",
+      "passed": 41,
+      "total": 121,
+      "pass_rate": 33.9
+    },
+    {
+      "language": "typescript",
+      "difficulty": "easy",
+      "passed": 20,
+      "total": 23,
+      "pass_rate": 87.0
+    },
+    {
+      "language": "typescript",
+      "difficulty": "medium",
+      "passed": 21,
+      "total": 26,
+      "pass_rate": 80.8
+    },
+    {
+      "language": "typescript",
+      "difficulty": "hard",
+      "passed": 57,
+      "total": 150,
+      "pass_rate": 38.0
+    }
+  ]
+}

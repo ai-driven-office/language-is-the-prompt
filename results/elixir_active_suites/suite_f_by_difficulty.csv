@@ -1,0 +1,13 @@
+suite_id,condition,difficulty,passed,total,pass_rate
+suite_f,baseline,easy,3,3,100.0
+suite_f,baseline,hard,3,3,100.0
+suite_f,baseline,medium,3,3,100.0
+suite_f,explicit_state_threading,easy,3,3,100.0
+suite_f,explicit_state_threading,hard,3,3,100.0
+suite_f,explicit_state_threading,medium,3,3,100.0
+suite_f,immutable_pipeline,easy,3,3,100.0
+suite_f,immutable_pipeline,hard,3,3,100.0
+suite_f,immutable_pipeline,medium,3,3,100.0
+suite_f,rebinding_stepwise,easy,3,3,100.0
+suite_f,rebinding_stepwise,hard,3,3,100.0
+suite_f,rebinding_stepwise,medium,3,3,100.0

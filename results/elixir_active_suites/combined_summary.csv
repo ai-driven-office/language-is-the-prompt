@@ -1,0 +1,16 @@
+suite_id,condition,passed,total,pass_rate,delta_vs_baseline
+suite_a,full_docs,9,9,100.0,0.0
+suite_a,minimal_docs,7,9,77.8,-22.2
+suite_a,reference_no_examples,9,9,100.0,0.0
+suite_a,signature_only,5,9,55.6,-44.4
+suite_d,baseline,9,9,100.0,0.0
+suite_d,case_with,9,9,100.0,0.0
+suite_d,cond_if,9,9,100.0,0.0
+suite_d,function_heads,9,9,100.0,0.0
+suite_e,baseline,9,9,100.0,0.0
+suite_e,sentinel_helpers,8,9,88.9,-11.1
+suite_e,tagged_tuple_helpers,9,9,100.0,0.0
+suite_f,baseline,9,9,100.0,0.0
+suite_f,explicit_state_threading,9,9,100.0,0.0
+suite_f,immutable_pipeline,9,9,100.0,0.0
+suite_f,rebinding_stepwise,9,9,100.0,0.0

@@ -1,0 +1,13 @@
+suite_id,condition,difficulty,passed,total,pass_rate
+suite_d,baseline,easy,3,3,100.0
+suite_d,baseline,hard,3,3,100.0
+suite_d,baseline,medium,3,3,100.0
+suite_d,case_with,easy,3,3,100.0
+suite_d,case_with,hard,3,3,100.0
+suite_d,case_with,medium,3,3,100.0
+suite_d,cond_if,easy,3,3,100.0
+suite_d,cond_if,hard,3,3,100.0
+suite_d,cond_if,medium,3,3,100.0
+suite_d,function_heads,easy,3,3,100.0
+suite_d,function_heads,hard,3,3,100.0
+suite_d,function_heads,medium,3,3,100.0

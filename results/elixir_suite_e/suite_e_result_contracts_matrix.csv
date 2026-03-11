@@ -1,0 +1,121 @@
+index,language,title,difficulty,variant_1,variant_2,variant_3
+82,elixir,Module Requirements:,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+49,elixir,**Problem: Revoke Security Group Access**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+44,elixir,Function Names,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+160,elixir,**Problem: Next Greater Element**,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+51,elixir,**Elixir GUI Layout Configuration**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+89,elixir,**Elixir Programming Problem: Options Menu Interaction**,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+184,elixir,Test case 1: Simple word translation,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+140,elixir,Test case 1: Valid token with user data,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+196,elixir,Initialize a board with some pieces,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+142,elixir,Test case 1: minimal definitions,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+29,elixir,**Kubernetes Object Management Problem in Elixir**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+20,elixir,Implement a 1D Kalman Filter in Elixir that can track and estimate the state of a system over time. The filter should handle both prediction (based on system dynamics) and correction (based on measurements) steps.,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+84,elixir,... other element-specific properties,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+120,elixir,**Elixir Programming Problem: Indentation Pattern Calculation**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+113,elixir,**Problem: Extract Personal Information from Text**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+105,elixir,Expected result:,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+108,elixir,Test case 1: Simple list of numbers with filtering,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+123,elixir,Test case 1: Basic rectangle creation and area calculation,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+70,elixir,Test Case 1 - Valid parameters,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+18,elixir,Test Case 1,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+146,elixir,**Problem: IMAP Folder Information Retrieval in Elixir**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+87,elixir,Test Case 1 - Graph1,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+156,elixir,Test case 1: One Pair vs One Pair (higher pair wins),hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+130,elixir,Test Case 1: Basic insertion and retrieval,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+101,elixir,Test case 1: Simple linear graph,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+152,elixir,**Problem: Format Difference as Plain Text**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+132,elixir,**Sound Message Processor**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+14,elixir,**Problem: Simulate Socket Communication Error Handling**,easy,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+17,elixir,Test case 1: Single synthetic chessboard image,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+37,elixir,Example 1: Basic case with country and continent,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+112,elixir,Module Specification:,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+198,elixir,**Programming Problem: Symbolic Differentiation**,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+41,elixir,**Problem: Validate Magic: The Gathering Card Names in Elixir**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+73,elixir,Test count_posts,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+133,elixir,Test case 1,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+77,elixir,**Military Enlistment Year Calculator**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+127,elixir,**Problem: Calculate Statistical Measures for Paired Data**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+143,elixir,**Problem Description:**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+172,elixir,**Problem: Permutation Coefficient Calculation**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+71,elixir,**Problem: Binary Image Feature Detection in Elixir**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+99,elixir,**Programming Problem: Counting Chessboard Squares**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+164,elixir,**Problem: Syllable Processing**,easy,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+19,elixir,Test case 1: Simple tier calculation,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+21,elixir,Test case 1: Basic substitution,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+23,elixir,Input Format,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+153,elixir,Test case 1: Text normalization,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+155,elixir,**Problem: Find Two Numbers That Sum to Target**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+175,elixir,**Elixir Programming Problem: Port Scanner**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+76,elixir,**Problem: Counting 'p's and 'y's in a String**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+55,elixir,**Problem: Parse RISC-V OVPsim Execution Logs**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+137,elixir,**Elixir Programming Problem: Simulating Web Element Interactions**,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+121,elixir,**Wildcard Pattern Matching in Elixir**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+128,elixir,Functions to Implement:,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+15,elixir,Test case 1: Simple linear graph,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+26,elixir,Test Case 1: Small memory with sequential access,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+27,elixir,**Problem: Reorganize String**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+33,elixir,**Problem: Decoding Ways with Wildcards**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+35,elixir,**Ball Game Simulation**,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+36,elixir,**Minimum Jumps to Reach the End of an Array**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+39,elixir,Input:,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+45,elixir,**Problem Description:**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+56,elixir,Test case 1: Simple BST with one mode,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+63,elixir,Test case 1: Basic configuration merge,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+79,elixir,Test Case 1,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+90,elixir,**Problem Description:**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+100,elixir,Test case 1,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+102,elixir,**Problem: Categorize Machine Specifications**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+103,elixir,Test case 1: Simple BST,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+118,elixir,Test case 1: Basic case,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+138,elixir,**Problem: Finding Anagrams**,easy,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+141,elixir,Requirements:,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+145,elixir,**Problem: Bin Packing in Elixir**,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+186,elixir,Test Case 1,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+53,elixir,Your implementation here,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+116,elixir,Test case 1: No exception raised,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+195,elixir,**Problem: Calculate Phone Dial Time**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+9,elixir,"Test case 1: [2, 4, 3] + [5, 6, 4] = [7, 0, 8]",medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+22,elixir,Functions to Implement:,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+157,elixir,Function to Implement:,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+1,elixir,**Problem: Generate MD5 Hash of a String**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+2,elixir,**Problem: Find Insert Position in Sorted Array**,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+3,elixir,**Knight's Possible Moves on a Chessboard**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+5,elixir,**Problem: Find the Single Non-Duplicate Element in a Sorted Array**,easy,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+6,elixir,**Excel Column Title Conversion in Elixir**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+7,elixir,Test case 1,easy,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+8,elixir,Test case 1: Simple binary tree with depth 2,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+10,elixir,**Problem: Adjust Color Luminosity**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+11,elixir,**Problem: Counting Integer Partitions**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+12,elixir,**Problem Description:**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+13,elixir,**Programming Problem: Alice and Bob's Number Game**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+16,elixir,**Problem: Counting Bipartite Graphs**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+24,elixir,**Problem Description:**,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+25,elixir,**Problem: Minimum Refueling Stops**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+28,elixir,Test Case 1,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+30,elixir,Your implementation here,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+32,elixir,Your implementation here,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+38,elixir,Test case where the API call fails due to network/resolution error,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+40,elixir,Test case 1: Simple binary tree,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+42,elixir,**Problem: Count Unique Modulo Results**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+43,elixir,**Problem Description:**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+46,elixir,**Problem: Count Fair and Square Numbers**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+48,elixir,**Problem: Transform 3D Coordinates**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+50,elixir,Test Case 1,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+54,elixir,**Problem: Minimum Refueling Stops**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+58,elixir,**Problem: Handling URL Metadata Fetching in Elixir**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+64,elixir,**Problem: Sum Numbers in a String**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+65,elixir,**Problem: Generate All Permutations of a String or List**,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+67,elixir,Test case 1: Small domain with 5 points,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+68,elixir,Test Case 1: Basic RSA workflow,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+72,elixir,**Problem: K-th Symbol in Grammar**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+74,elixir,**Problem: Counting Islands in a Grid**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+75,elixir,**Problem: Simulating User Input in Elixir**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+78,elixir,**Programming Problem: Homework Due Date Formatter**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+80,elixir,**Problem: Drawing a Triforce Pattern in Elixir**,easy,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+81,elixir,Your implementation here,medium,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+83,elixir,**Problem: Largest Rectangle in a Histogram**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+86,elixir,Your implementation,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+88,elixir,**Problem: Check Sum Parity**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+91,elixir,**Problem: Binary Tree Level Order Traversal**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract
+92,elixir,**Programming Problem: Generate Odd Number Sequence**,hard,explicit_tagged_result_contract,typed_result_wrapper,implicit_boolean_or_nil_contract

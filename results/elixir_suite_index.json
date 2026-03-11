@@ -1,0 +1,55 @@
+{
+  "suite_a": [
+    "results/elixir_suite_a/suite_a_docs_quality.csv",
+    "results/elixir_suite_a/suite_a_docs_quality_task_level.csv",
+    "results/elixir_suite_a/suite_a_docs_experiment_matrix.csv",
+    "results/elixir_suite_a/suite_a_docs_quality.md"
+  ],
+  "suite_b": [
+    "results/elixir_suite_b/suite_b_corpus_quality.csv",
+    "results/elixir_suite_b/suite_b_corpus_quality_task_level.csv",
+    "results/elixir_suite_b/suite_b_corpus_study_matrix.csv",
+    "results/elixir_suite_b/suite_b_corpus_quality.md"
+  ],
+  "suite_c": [
+    "results/elixir_suite_c/suite_c_stylistic_entropy.csv",
+    "results/elixir_suite_c/suite_c_stylistic_entropy_task_level.csv",
+    "results/elixir_suite_c/suite_c_stylistic_entropy_matrix.csv",
+    "results/elixir_suite_c/suite_c_stylistic_entropy.md"
+  ],
+  "suite_d": [
+    "results/elixir_suite_d/suite_d_control_flow.csv",
+    "results/elixir_suite_d/suite_d_control_flow_task_level.csv",
+    "results/elixir_suite_d/suite_d_control_flow_matrix.csv",
+    "results/elixir_suite_d/suite_d_control_flow.md"
+  ],
+  "suite_e": [
+    "results/elixir_suite_e/suite_e_result_contracts.csv",
+    "results/elixir_suite_e/suite_e_result_contracts_task_level.csv",
+    "results/elixir_suite_e/suite_e_result_contracts_matrix.csv",
+    "results/elixir_suite_e/suite_e_result_contracts.md"
+  ],
+  "suite_f": [
+    "results/elixir_suite_f/suite_f_mutability.csv",
+    "results/elixir_suite_f/suite_f_mutability_task_level.csv",
+    "results/elixir_suite_f/suite_f_mutability_matrix.csv",
+    "results/elixir_suite_f/suite_f_mutability.md"
+  ],
+  "suite_g": [
+    "results/elixir_suite_g/suite_g_alignment.csv",
+    "results/elixir_suite_g/suite_g_alignment_task_level.csv",
+    "results/elixir_suite_g/suite_g_alignment_matrix.csv",
+    "results/elixir_suite_g/suite_g_alignment.md"
+  ],
+  "suite_h": [
+    "results/elixir_suite_h/suite_h_artifact_controls.csv",
+    "results/elixir_suite_h/suite_h_artifact_controls_by_difficulty.csv",
+    "results/elixir_suite_h/suite_h_artifact_controls.json",
+    "results/elixir_suite_h/suite_h_artifact_controls.md"
+  ],
+  "suite_i": [
+    "results/elixir_suite_i/suite_i_repo_scale_task_matrix.csv",
+    "results/elixir_suite_i/suite_i_repo_scale_scorecard.csv",
+    "results/elixir_suite_i/suite_i_repo_scale.md"
+  ]
+}

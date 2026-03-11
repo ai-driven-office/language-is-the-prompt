@@ -1,0 +1,164 @@
+suites:
+  - id: suite_a_docs_quality
+    title: Documentation quality
+    theory: Elixir performs well because its libraries are documented more consistently and more model-usable than peer languages.
+    null_hypothesis: Documentation quality has no meaningful effect on model success once task semantics are fixed.
+    priority: high
+    status: implemented_baseline
+    deliverable: suite_a_docs_quality.csv
+    runner: scripts/run_elixir_research_suite.sh suite_a
+    outputs:
+      - results/elixir_suite_a/suite_a_docs_quality.csv
+      - results/elixir_suite_a/suite_a_docs_quality_task_level.csv
+      - results/elixir_suite_a/suite_a_docs_experiment_matrix.csv
+      - results/elixir_suite_a/suite_a_docs_quality.md
+    metrics:
+      - pass_at_1
+      - compile_success_rate
+      - wrong_api_call_rate
+      - hallucinated_function_rate
+      - repair_count
+  - id: suite_b_corpus_quality
+    title: Code quality and corpus cleanliness
+    theory: Elixir performs well because public Elixir code is cleaner and more idiomatic than peer-language corpora.
+    null_hypothesis: Corpus cleanliness does not explain Elixir's advantage.
+    priority: medium
+    status: implemented_baseline
+    deliverable: suite_b_corpus_quality.csv
+    runner: scripts/run_elixir_research_suite.sh suite_b
+    outputs:
+      - results/elixir_suite_b/suite_b_corpus_quality.csv
+      - results/elixir_suite_b/suite_b_corpus_quality_task_level.csv
+      - results/elixir_suite_b/suite_b_corpus_study_matrix.csv
+      - results/elixir_suite_b/suite_b_corpus_quality.md
+    metrics:
+      - pass_at_1
+      - corpus_quality_score
+      - lint_violations_per_kloc
+      - test_density
+      - docs_density
+  - id: suite_c_stylistic_entropy
+    title: Stylistic entropy and formatter strength
+    theory: Elixir wins because formatter-driven conventions reduce continuation ambiguity for models.
+    null_hypothesis: Reducing stylistic entropy has no material effect on model success.
+    priority: high
+    status: implemented_baseline
+    deliverable: suite_c_stylistic_entropy.csv
+    runner: scripts/run_elixir_research_suite.sh suite_c
+    outputs:
+      - results/elixir_suite_c/suite_c_stylistic_entropy.csv
+      - results/elixir_suite_c/suite_c_stylistic_entropy_task_level.csv
+      - results/elixir_suite_c/suite_c_stylistic_entropy_matrix.csv
+      - results/elixir_suite_c/suite_c_stylistic_entropy.md
+    metrics:
+      - pass_at_1
+      - syntax_error_rate
+      - wrong_name_or_arity_rate
+      - token_efficiency
+  - id: suite_d_control_flow
+    title: Pattern matching and explicit control flow
+    theory: Elixir wins because pattern matching and explicit dispatch make intent more legible than imperative branching.
+    null_hypothesis: Pattern matching does not materially improve model correctness.
+    priority: highest
+    status: implemented_baseline
+    deliverable: suite_d_control_flow.csv
+    runner: scripts/run_elixir_research_suite.sh suite_d
+    outputs:
+      - results/elixir_suite_d/suite_d_control_flow.csv
+      - results/elixir_suite_d/suite_d_control_flow_task_level.csv
+      - results/elixir_suite_d/suite_d_control_flow_matrix.csv
+      - results/elixir_suite_d/suite_d_control_flow.md
+    metrics:
+      - pass_at_1
+      - logical_bug_rate
+      - missing_branch_rate
+      - impossible_state_rate
+  - id: suite_e_result_contracts
+    title: Result contracts and tagged tuples
+    theory: Elixir wins because standard result shapes reduce ambiguity and improve return-shape correctness.
+    null_hypothesis: Explicit result contracts do not materially improve model success.
+    priority: highest
+    status: implemented_baseline
+    deliverable: suite_e_result_contracts.csv
+    runner: scripts/run_elixir_research_suite.sh suite_e
+    outputs:
+      - results/elixir_suite_e/suite_e_result_contracts.csv
+      - results/elixir_suite_e/suite_e_result_contracts_task_level.csv
+      - results/elixir_suite_e/suite_e_result_contracts_matrix.csv
+      - results/elixir_suite_e/suite_e_result_contracts.md
+    metrics:
+      - pass_at_1
+      - contract_shape_mismatch_rate
+      - error_branch_correctness
+      - malformed_return_rate
+  - id: suite_f_mutability
+    title: Hidden state and mutability burden
+    theory: Elixir wins because immutable defaults reduce hidden state reasoning.
+    null_hypothesis: Mutability burden does not meaningfully affect success.
+    priority: high
+    status: implemented_baseline
+    deliverable: suite_f_mutability.csv
+    runner: scripts/run_elixir_research_suite.sh suite_f
+    outputs:
+      - results/elixir_suite_f/suite_f_mutability.csv
+      - results/elixir_suite_f/suite_f_mutability_task_level.csv
+      - results/elixir_suite_f/suite_f_mutability_matrix.csv
+      - results/elixir_suite_f/suite_f_mutability.md
+    metrics:
+      - pass_at_1
+      - stale_state_bug_rate
+      - incorrect_update_order_rate
+      - repair_count
+  - id: suite_g_alignment
+    title: Documentation, test, and code alignment
+    theory: Elixir wins because docs, examples, doctests, and tests are unusually aligned.
+    null_hypothesis: Alignment between docs, examples, and tests does not materially affect success.
+    priority: medium
+    status: implemented_baseline
+    deliverable: suite_g_alignment.csv
+    runner: scripts/run_elixir_research_suite.sh suite_g
+    outputs:
+      - results/elixir_suite_g/suite_g_alignment.csv
+      - results/elixir_suite_g/suite_g_alignment_task_level.csv
+      - results/elixir_suite_g/suite_g_alignment_matrix.csv
+      - results/elixir_suite_g/suite_g_alignment.md
+    metrics:
+      - pass_at_1
+      - example_following_error_rate
+      - test_contradiction_rate
+      - hallucinated_behavior_rate
+  - id: suite_h_artifact_controls
+    title: Benchmark artifact controls
+    theory: Elixir's lead is mostly a benchmark-composition artifact.
+    null_hypothesis: Elixir's advantage survives benchmark normalization.
+    priority: highest
+    status: initial_run_completed
+    deliverable: suite_h_artifact_controls.csv
+    runner: scripts/run_elixir_research_suite.sh suite_h
+    outputs:
+      - results/elixir_suite_h/suite_h_artifact_controls.csv
+      - results/elixir_suite_h/suite_h_artifact_controls_by_difficulty.csv
+      - results/elixir_suite_h/suite_h_artifact_controls.json
+      - results/elixir_suite_h/suite_h_artifact_controls.md
+    metrics:
+      - pass_at_1_before_normalization
+      - pass_at_1_after_normalization
+      - rank_change_by_language
+  - id: suite_i_repo_scale
+    title: Repo-scale realism
+    theory: Elixir's advantage survives outside snippet benchmarks and extends into real framework tasks.
+    null_hypothesis: Elixir's advantage disappears on realistic repo tasks.
+    priority: medium
+    status: implemented_scaffold
+    deliverable: suite_i_repo_scale.csv
+    runner: scripts/run_elixir_research_suite.sh suite_i
+    outputs:
+      - results/elixir_suite_i/suite_i_repo_scale_task_matrix.csv
+      - results/elixir_suite_i/suite_i_repo_scale_scorecard.csv
+      - results/elixir_suite_i/suite_i_repo_scale.md
+    metrics:
+      - task_completion_rate
+      - edit_correctness
+      - test_pass_rate
+      - regression_rate
+      - time_to_fix

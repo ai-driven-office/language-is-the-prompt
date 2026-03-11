@@ -1,0 +1,4 @@
+suite_id,condition,passed,total,pass_rate,delta_vs_baseline
+suite_e,baseline,9,9,100.0,0.0
+suite_e,sentinel_helpers,8,9,88.9,-11.1
+suite_e,tagged_tuple_helpers,9,9,100.0,0.0

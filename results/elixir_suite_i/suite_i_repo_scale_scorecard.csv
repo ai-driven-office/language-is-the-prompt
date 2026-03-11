@@ -1,0 +1,6 @@
+metric,definition
+task_completion_rate,Share of repo tasks completed without manual repair
+edit_correctness,Review judgment on changed files
+test_pass_rate,Share of tasks finishing green
+regression_rate,Share of tasks introducing failing unrelated tests
+time_to_fix,Wall-clock to first passing fix

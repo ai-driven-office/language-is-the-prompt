@@ -1,0 +1,121 @@
+index,language,title,difficulty,condition_1,condition_2,condition_3
+739,javascript,Implement an inventory management system in JavaScript that can handle shopping cart operations. The system should be able to:,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+213,go,Write a Go function to parse an RSS feed and return a list of articles.,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+711,javascript,JavaScript Variable Scope Demonstration,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+6,racket,**Problem: Location Details Lookup in Racket**,easy,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+1837,julia,**Problem: Game Text Management System in Julia**,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+1027,shell,Full cleanup sequence,easy,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+2416,php,Write a PHP function `authenticateUser` to implement user authentication and password change functionality. The function should handle the following cases:,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+2015,kotlin,Payment Transaction Analysis System,easy,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+275,go,Please implement two functions in Go:,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+3759,typescript,Write a TypeScript function `checkLanguageFamily` that determines whether a given programming language or technology belongs to the JavaScript family and returns classification information.,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+1492,dart,Weather Clothing Advisor (Dart Version),hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+212,go,Write a Go function `GitBranchManager` that generates corresponding Git commands based on different Git branch operations. The function needs to handle the following operations:,medium,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+1794,julia,**Game Navigator Implementation in Julia**,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+3800,typescript,Implement a NotesManager class in TypeScript that supports the following functionalities:,medium,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+3783,typescript,Implement a `NewsManager` class in TypeScript with the following functionality:,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+857,python,**Python Function: Bangazon Logout Message**,easy,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+592,javascript,Write a JavaScript function `handleEvent` that can handle different types of events and return the corresponding response object. The function should accept two parameters: `eventType` (a string) and `eventData` (an object).,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+2802,r,Test case 1: Discrete probability distribution,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+701,javascript,**JavaScript Programming Problem: Ice Cream Eating Simulator**,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+654,javascript,Implement a simple product database class `ProductDatabase` that supports the following operations:,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+375,go,Write a Go function to implement multi-size image scaling functionality.,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+972,shell,Test Case 1: All settings secure,easy,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+1233,csharp,User Validation System,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+2444,php,"Write a PHP function `colorGuessingGame` to implement a color guessing game. The function takes two string parameters: `$targetColor` (the target color) and `$guess` (the player's guessed color), and returns an associative array containing the game result.",easy,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+740,javascript,Implement a job application system in JavaScript that allows candidates to apply for jobs and withdraw applications. The system should handle various scenarios including authorization checks and error cases.,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+2772,r,Requirements:,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+3515,scala,Class Requirements,easy,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+985,shell,Test 1: Default setup,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+2517,php,"Write a PHP function `evaluateSelectionScore` that evaluates and compares attribute values between two categories (""Local Hero"" and ""White Professional""). The function should return an object containing the comparison results.",hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+3770,typescript,Write a TypeScript function named `mathOperations` that performs various mathematical operations based on the specified operation type. The function should:,medium,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+841,python,Test case 1: Correct exception with matching message,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+3766,typescript,"Write a TypeScript function `classifyAge` that categorizes a person's age into different life stages based on the input. The input can be a number or a non-numeric value, and the function should handle various edge cases and invalid inputs.",medium,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+71,racket,**Treasure Island Game**,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+669,javascript,Write a JavaScript function `validateUserRegistration` to validate user registration information. The function should accept an object with the following properties as a parameter:,easy,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+713,javascript,Please implement a `LocationManager` class in JavaScript for managing geographical location markers. The class should provide the following functionalities:,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+1312,csharp,Event Message Handler Implementation in C#,easy,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+2339,php,Write a PHP function `combineImages` that merges two images (a background image and an avatar) into a new composite image. The function should handle various input scenarios and return appropriate results.,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+377,go,"Write a Go function `ParseSystemRecord` to parse the state records of the Go scheduler. The function needs to process four parts of input data: the main scheduling record, processor (P) records, machine (M) records, and goroutine (G) records, and parse them into a structured `Record` object.",hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+638,javascript,"Write a JavaScript function `processRequest` to handle HTTP requests and return corresponding responses. The function should return different response content based on the request's path and method, and handle various edge cases.",hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+1985,kotlin,Android Educational App Navigation System (Kotlin Version),medium,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+235,go,Write a Go function `ValidateChainPropertiesUpdate` to validate the legality of a blockchain properties update operation. The function takes a parameter of type `VersionedChainPropertiesUpdateOperation` and returns a boolean value (indicating whether the validation passed) and a string (containing the validation result message).,medium,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+672,javascript,Implement a Student Grade Management System,medium,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+727,javascript,Implement a User class in JavaScript that validates user information and manages account activation. The class should meet the following requirements:,medium,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+286,go,"Implement a game command processor system using Go language. The system should be capable of parsing and executing game commands in JSON format, and returning corresponding results.",hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+708,javascript,Implement a TodoManager class to manage a to-do list. The class should support the following functionalities:,medium,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+1319,csharp,Role-Based Access Control System Implementation in C#,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+2367,php,Write a PHP function `simulateServerErrorHandling` that simulates different server error handling scenarios. The function should return the server's state and error information based on different error types.,easy,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+702,javascript,Write a JavaScript function `processClickAction` that handles user click actions and returns the operation result. The function must meet the following requirements:,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+698,javascript,"Write a JavaScript function `processCommand` to handle the parsing and execution validation of chat commands. This function needs to validate and parse commands based on input parameters, returning the corresponding result object.",easy,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+3778,typescript,"Write a TypeScript function `handleHttpRequest` to process HTTP requests and return appropriate responses. The function should return different responses based on the request method, path, and headers.",medium,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+284,go,Implement a Go program to handle user authentication and authorization. The program should include the following functionalities:,medium,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+813,python,Test case 1: Basic calculation,easy,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+245,go,Write a Go function `LoadDocument` that accepts variadic arguments and returns a `DocumentConfig` struct or an error. The function should configure document loading settings based on the input parameters.,medium,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+2376,php,Implement a WebGL wrapper simulator class called GLWrapperSimulator with the following functionalities:,medium,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+410,java,Position Management System,medium,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+2952,ruby,**Problem: Cricket Match Data Extractor**,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+754,python,Test Case 1: User role,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+305,go,Please implement a simple HTTP request handler function `HandleRequest` in Go that processes different types of HTTP requests and returns appropriate responses.,medium,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+334,go,"Implement a user session logout manager using the Go programming language. This manager should be capable of adding user sessions, logging out sessions, and retrieving the count of currently active sessions.",hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+723,javascript,Implement a PreferenceManager class in JavaScript that allows users to track their preferences for brands and articles. The class should support the following operations:,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+2918,r,Function Specification:,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+710,javascript,JavaScript Programming Problem: Implement a Book Database Class,medium,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+741,javascript,Implement a brand management system by writing a BrandManager class in JavaScript with the following functionalities:,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+374,go,Write a Go function to analyze network traffic statistics.,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+607,javascript,"Implement a vehicle prototype hierarchy, requiring the creation of the following constructors and objects using JavaScript:",easy,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+1407,dart,Security Token Service (STS) Simulator (Dart Implementation),hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+2441,php,Implement a music library manager in PHP that can perform the following operations:,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+2845,r,Test Case 1: Initial game state,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+952,shell,Example 1,medium,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+1191,csharp,Game Board Statistics Analyzer (C# Implementation),easy,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+3736,typescript,Write a TypeScript program to implement a type checking system. The system should include the following two functions:,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+2046,kotlin,Error Handling System Implementation in Kotlin,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+692,javascript,Write a JavaScript function `createHamsterObject` that creates a formatted hamster object based on the input hamster data and database ID.,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+2197,perl,**Perl Git Operations Simulator**,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+597,javascript,Write a JavaScript function `startServer` that starts a specified type of server and returns the operation result. The function must meet the following requirements:,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+674,javascript,Write a JavaScript function named `numberOperations` that performs three different numerical operations based on the specified operation type:,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+122,racket,**Racket Programming Problem: Switch Controller Simulation**,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+668,javascript,Implement a Redux-style reducer function `appReducer` to manage application state. The function should handle the following action types:,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+3919,typescript,Implement a game state management system in TypeScript that tracks and manipulates the state of a game. The system should be implemented as a class called `GameStateManager` with the following methods:,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+3445,scala,SMS Processing System,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+1451,dart,Cargo Management System Implementation in Dart,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+680,javascript,Implement a Car Management System,medium,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+758,javascript,Write a JavaScript function `simulateShellExecution` that simulates executing a shell script file and returns the command execution results.,medium,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+3757,typescript,Create a TypeScript class `TransportationSchedule` to simulate the operational status of a transportation schedule. The class needs to implement the following functionality:,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+2903,r,Test case 1: Rotation around x-axis,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+1371,dart,PACE Protocol Information Analyzer in Dart,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+724,javascript,"Write a JavaScript function `processPayment` to handle payment transactions. The function needs to calculate change based on different payment methods and amounts, and validate the transaction's legitimacy.",hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+655,javascript,Implement a simple user authentication system by writing an `AuthenticationSystem` class in JavaScript. The class should support the following functionalities:,easy,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+3898,typescript,Implement a form validation utility with the following validation functions:,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+1488,dart,Navigation System Implementation in Dart,medium,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+1077,shell,**Programming Problem: Amateur Radio Callsign Lookup**,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+3746,typescript,Implement an object property handling utility with the following functions:,medium,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+7,racket,**RFID UID Action Processor**,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+2230,perl,Requirements:,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+603,javascript,Write a JavaScript function `handleInputEvents` that can process various input events and return normalized event data. The function needs to support the following event types:,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+3149,rust,Animal Kingdom Polymorphism in Rust,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+2069,kotlin,Department Information Retrieval System (Kotlin Version),medium,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+540,java,Server Configuration Approval System,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+609,javascript,Implement a user service in JavaScript that provides the following functionality:,easy,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+2402,php,"Write a PHP function `generateExcuse` that generates a specific excuse string based on four index parameters. The excuse string is composed by combining four parts: ""who"", ""action"", ""what"", and ""when"".",medium,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+640,javascript,JavaScript Event Handler Implementation,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+2060,kotlin,Announcement Ban Validation System (Kotlin Implementation),easy,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+154,racket,**Problem: Audio Transcription Service**,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+633,javascript,"Write a JavaScript function `validateAndProcessVariable` to validate whether a variable name is valid and process the variable information. The function should accept 2-3 parameters: the variable name, the initial value, and an optional reassigned value.",hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+3888,typescript,Write a TypeScript function `validateLoginInputs` to validate user login inputs for email and password according to specified requirements.,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+709,javascript,Implement a movie database API with the following two functions:,medium,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+3224,rust,LED Controller System,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+1322,csharp,Character Management System in C#,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+764,python,Test number guessing game,medium,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+705,javascript,"Implement an Employee Management System in JavaScript that can handle departments, job titles, and employees with the following functionality:",hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+632,javascript,Write a JavaScript function named `validateObject` that can validate an object based on given rules. The function should return an object containing the validation results.,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+1501,dart,Rock-Paper-Scissors Game Implementation in Dart,medium,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+2504,php,"Write a PHP function `ticTacToeSimulator` that determines the current state of a Tic-Tac-Toe game. The function takes an array of 9 elements representing a 3x3 game board. Each element can be 'X', 'O', or an empty string (representing an empty space).",easy,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+3706,swift,**Swift Programming Problem: Election Announcement Generator**,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+1518,dart,Game Configuration Manager (Dart Implementation),medium,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+258,go,"Write a Go function `ControlFlowDemo` that takes three integer parameters: `startValue`, `iterations`, and `switchCase`, and returns a map containing multiple key-value pairs and an error string.",hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+3843,typescript,Write a TypeScript class `Person` that implements the following functionality:,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+3747,typescript,Implement a TypeScript class `QueryBuilder` that provides SQL query building functionality with the following methods:,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+866,python,**Python Variable Name Validator**,hard,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests
+2410,php,Implement a user authentication service class AuthService with the following functionality:,easy,aligned_docs_examples_tests,docs_without_examples,misaligned_examples_or_tests

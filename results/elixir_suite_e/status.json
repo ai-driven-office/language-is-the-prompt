@@ -1,0 +1,15 @@
+{
+  "suite_id": "suite_e",
+  "title": "Result contracts and tagged tuples",
+  "status": "implemented_baseline",
+  "generated_files": [
+    "results/elixir_suite_e/suite_e_result_contracts.csv",
+    "results/elixir_suite_e/suite_e_result_contracts_task_level.csv",
+    "results/elixir_suite_e/suite_e_result_contracts_matrix.csv",
+    "results/elixir_suite_e/suite_e_result_contracts.md"
+  ],
+  "notes": [
+    "Return-contract proxy computed from canonical solutions.",
+    "Contract-ablation intervention matrix generated for future reruns."
+  ]
+}

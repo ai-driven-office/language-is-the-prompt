@@ -1,0 +1,15 @@
+{
+  "suite_id": "suite_g",
+  "title": "Documentation, test, and code alignment",
+  "status": "implemented_baseline",
+  "generated_files": [
+    "results/elixir_suite_g/suite_g_alignment.csv",
+    "results/elixir_suite_g/suite_g_alignment_task_level.csv",
+    "results/elixir_suite_g/suite_g_alignment_matrix.csv",
+    "results/elixir_suite_g/suite_g_alignment.md"
+  ],
+  "notes": [
+    "Local alignment proxy computed from prompts, canonical solutions, and tests.",
+    "Alignment-ablation matrix generated for future reruns."
+  ]
+}

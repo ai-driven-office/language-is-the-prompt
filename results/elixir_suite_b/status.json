@@ -1,0 +1,15 @@
+{
+  "suite_id": "suite_b",
+  "title": "Code quality and corpus cleanliness",
+  "status": "implemented_baseline",
+  "generated_files": [
+    "results/elixir_suite_b/suite_b_corpus_quality.csv",
+    "results/elixir_suite_b/suite_b_corpus_quality_task_level.csv",
+    "results/elixir_suite_b/suite_b_corpus_study_matrix.csv",
+    "results/elixir_suite_b/suite_b_corpus_quality.md"
+  ],
+  "notes": [
+    "Local cleanliness proxy computed from canonical solutions.",
+    "Real-corpus repo matrix emitted for future clean-vs-degraded benchmark runs."
+  ]
+}

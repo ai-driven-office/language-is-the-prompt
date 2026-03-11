@@ -1,0 +1,5 @@
+suite_id,condition,passed,total,pass_rate,delta_vs_baseline
+suite_d,baseline,9,9,100.0,0.0
+suite_d,case_with,9,9,100.0,0.0
+suite_d,cond_if,9,9,100.0,0.0
+suite_d,function_heads,9,9,100.0,0.0

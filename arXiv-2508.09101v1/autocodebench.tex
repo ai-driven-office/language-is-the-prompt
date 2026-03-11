@@ -1,0 +1,167 @@
+\documentclass[table]{article}
+\PassOptionsToPackage{table}{xcolor}
+
+\usepackage{colm2024_conference}
+% \usepackage{ArtifactsBench}
+
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{enumitem}
+\usepackage{wrapfig}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{multicol}
+\usepackage{hyperref}   % 这个包用于插入超链接
+\usepackage{xcolor}
+
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{colortbl}
+\usepackage[utf8]{inputenc}
+\definecolor{lightgray}{rgb}{0.9,0.9,0.9}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage{tabularx}
+\usepackage{blindtext}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18} 
+\usepackage{tikz}
+\usetikzlibrary{er,positioning,bayesnet}
+\usepackage{makecell}
+\usepackage{tipa}
+\usepackage{siunitx}
+\usepackage{nicefrac}
+\usepackage{tocloft}
+\usepackage{listings}
+\usepackage[raster,skins]{tcolorbox} %
+\usepackage{xltabular}
+\usepackage{adjustbox}
+\usepackage{xurl}
+\usepackage{setspace}
+
+\usepackage{lipsum}
+\usepackage{ulem}
+
+
+\usepackage{arydshln} % For \cdashline
+\usepackage[table]{xcolor}
+\usepackage{varwidth}
+
+
+\input{math_commands.tex}
+
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+
+\title{AutoCodeBench: Large Language Models are Automatic Code Benchmark Generators}
+
+\newcommand*\samethanks[1][\value{footnote}]{\footnotemark[#1]}
+
+\author{
+    \textbf{Jason Chou}\thanks{Equal Contributions.}
+    \quad
+    \textbf{Ao Liu}\samethanks
+    \quad
+    \textbf{Yuchi Deng}
+    \quad
+    \textbf{Zhiying Zeng}
+    \quad
+    \textbf{Tao Zhang}
+    \quad
+    \textbf{Haotian Zhu}
+    \quad
+    \textbf{Jianwei Cai}
+    \quad
+    \textbf{Yue Mao}
+    \quad
+    \textbf{Chenchen Zhang}
+    \quad
+    \textbf{Lingyun Tan}
+    \quad
+    \textbf{Ziyan Xu}
+    \quad
+    \textbf{Bohui Zhai}
+    \quad
+    \textbf{Hengyi Liu}
+    \quad
+    \textbf{Speed Zhu}
+    \quad
+    \textbf{Wiggin Zhou}~\thanks{Corresponding Authors.}
+    \quad
+    \textbf{Fengzong Lian}~\samethanks
+    \quad
+    \vspace{.5em}\\
+    Hunyuan Team, Tencent
+    \vspace{.5em}\\
+    \texttt{\{wigginzhou,faxonlian\}@tencent.com}
+    \vspace{.5em}\\
+    \includegraphics[width=0.35cm]{logo/home.png} \ \ 
+    \textcolor{blue!60!black}{\href{https://autocodebench.github.io/}{Homepage}}
+}
+
+
+
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Large Language Models (LLMs) have demonstrated remarkable capabilities across various domains, with code generation emerging as a key area of focus. While numerous benchmarks have been proposed to evaluate their code generation abilities, these benchmarks face several critical limitations. First, they often rely on manual annotations, which are time-consuming and difficult to scale across different programming languages and problem complexities. Second, most existing benchmarks focus primarily on Python, while the few multilingual benchmarks suffer from limited difficulty and uneven language distribution.
+To address these challenges, we propose \textbf{AutoCodeGen}, an automated method for generating high-difficulty multilingual code generation datasets without manual annotations. AutoCodeGen ensures the correctness and completeness of test cases by generating test inputs with LLMs and obtaining test outputs through a multilingual sandbox, while achieving high data quality through reverse-order problem generation and multiple filtering steps.
+Using this novel method, we introduce \textbf{AutoCodeBench}, a large-scale code generation benchmark comprising 3,920 problems evenly distributed across 20 programming languages. It is specifically designed to evaluate LLMs on challenging, diverse, and practical multilingual tasks. We evaluate over 30 leading open-source and proprietary LLMs on AutoCodeBench and its simplified version \textbf{AutoCodeBench-Lite}. The results show that even the most advanced LLMs struggle with the complexity, diversity, and multilingual nature of these tasks. Besides, we introduce \textbf{AutoCodeBench-Complete}, specifically designed for base models to assess their few-shot code generation capabilities. We hope the AutoCodeBench series will serve as a valuable resource and inspire the community to focus on more challenging and practical multilingual code generation scenarios.
+
+
+
+
+ 
+
+%With the advancement of LLMs across various domains, code generation has become a critical area of model evaluation. Previous code benchmarks rely on manual annotations, which are not only costly and slow but also struggle to generate complex and diverse programming problems. In this paper, we propose a novel automated workflow for constructing code benchmarks, using cutting-edge open-source LLMs. 
+
+
+
+
+\end{abstract}
+
+
+
+% \vfill
+
+% \begin{figure}[hbp]
+%     \centering
+%     \includegraphics[width=0.99\textwidth]{figures/Intro_P1.png}
+%     \caption{Benchmark performance of Hunyuan-TurboS.}
+%     \label{fig:intro}
+% \end{figure}
+
+% \vfill
+
+
+
+
+
+
+\input{content/intro.tex}
+% \input{content/pretraining}
+% \input{content/posttrain}
+\input{content/experiments.tex}
+\input{content/related_work}
+\input{content/conclusion.tex}
+\input{content/authors.tex}
+
+\clearpage
+\bibliography{biblio}
+\bibliographystyle{colm2024_conference}
+
+\clearpage
+\appendix
+\input{content/appendix.tex}
+
+\end{document}

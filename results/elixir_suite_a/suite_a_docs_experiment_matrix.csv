@@ -1,0 +1,121 @@
+index,language,title,difficulty,condition_1,condition_2,condition_3,condition_4
+23,cpp,Bus Schedule Optimization Problem,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+181,cpp,Palindrome Analysis Problem,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+49,cpp,Problem: String Analysis for Longest Unique Substrings,medium,no_docs,signature_only,reference_no_examples,reference_with_examples
+3,cpp,Role-Based Person Management System,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+91,cpp,Multi-Dimensional Range Counting Problem,medium,no_docs,signature_only,reference_no_examples,reference_with_examples
+179,cpp,Advanced Media Player System,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+26,cpp,Nunchuk Controller Implementation,easy,no_docs,signature_only,reference_no_examples,reference_with_examples
+117,cpp,Bit Manipulation Analyzer,easy,no_docs,signature_only,reference_no_examples,reference_with_examples
+9,cpp,Train Composition Problem,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+20,cpp,String Manipulation Library,easy,no_docs,signature_only,reference_no_examples,reference_with_examples
+74,cpp,Problem: String Pattern Analyzer,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+27,cpp,String Analysis and Manipulation,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+6,cpp,Robot Motion Planner with Obstacle Avoidance,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+107,cpp,Hotel Stay Planner in Weighted Graphs,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+144,cpp,String Pattern Matching Analyzer,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+153,cpp,String Rotation Checker,medium,no_docs,signature_only,reference_no_examples,reference_with_examples
+110,cpp,Number Range Analyzer,medium,no_docs,signature_only,reference_no_examples,reference_with_examples
+2,cpp,Problem: Number Property Analyzer,easy,no_docs,signature_only,reference_no_examples,reference_with_examples
+13,cpp,Image Rendering System,medium,no_docs,signature_only,reference_no_examples,reference_with_examples
+16,cpp,Air Travel Route Planner,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+17,cpp,Advanced String Analysis Problem,easy,no_docs,signature_only,reference_no_examples,reference_with_examples
+38,cpp,Graphics Effects Simulation System,easy,no_docs,signature_only,reference_no_examples,reference_with_examples
+41,cpp,2D Collision Detection System,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+48,cpp,Advanced Text Tokenizer Problem,easy,no_docs,signature_only,reference_no_examples,reference_with_examples
+50,cpp,Trend Analysis Calculator,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+57,cpp,Logger System Implementation,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+59,cpp,Game Entity Management System,medium,no_docs,signature_only,reference_no_examples,reference_with_examples
+68,cpp,Robot PID Controller Simulation,medium,no_docs,signature_only,reference_no_examples,reference_with_examples
+79,cpp,Smart Pointers and Resource Management Problem,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+85,cpp,RPG Equipment and Enchantment System,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+88,cpp,Stepper Motor Controller Simulation,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+93,cpp,Game Collision System Implementation,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+103,cpp,Atmospheric Calculations Problem,easy,no_docs,signature_only,reference_no_examples,reference_with_examples
+106,cpp,Binary Tree Analysis Problem,medium,no_docs,signature_only,reference_no_examples,reference_with_examples
+111,cpp,3D Transformation and Camera Projection System,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+114,cpp,3D Camera System Implementation,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+115,cpp,Sphere Mesh Generator,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+118,cpp,Armor Class Implementation,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+120,cpp,Burrows-Wheeler Transform Implementation,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+126,cpp,Observer Pattern Implementation for News Distribution System,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+132,cpp,Terrain Model Generation,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+136,cpp,Couple Matching and Happiness Calculation System,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+147,cpp,Planning System for Character Actions,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+162,cpp,Unit Sorting System,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+168,cpp,Student Classification and Ranking System,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+53,cpp,Minimum Spanning Tree (MST) Implementation,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+142,cpp,Ladder Game Problem,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+140,cpp,Flower Bloom Counter with Segment Tree,medium,no_docs,signature_only,reference_no_examples,reference_with_examples
+78,cpp,2D Platformer Physics Simulation,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+182,cpp,String Analysis Utility,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+84,cpp,Grid Path Finder Problem,medium,no_docs,signature_only,reference_no_examples,reference_with_examples
+58,cpp,Steering Behaviors Implementation,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+86,cpp,String Analysis Problem,easy,no_docs,signature_only,reference_no_examples,reference_with_examples
+75,cpp,String Matching and Similarity Problem,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+172,cpp,Binary Tree Analysis Problem,medium,no_docs,signature_only,reference_no_examples,reference_with_examples
+11,cpp,Error Management System,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+82,cpp,Error Message Generator System,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+135,cpp,Programming Problem: Symbol Resolver for Performance Maps,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+52,cpp,Password Strength Analyzer and Modifier,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+141,cpp,3D Player Movement Simulation,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+64,cpp,String Processing and Analysis,easy,no_docs,signature_only,reference_no_examples,reference_with_examples
+12,cpp,Problem: Advanced Mathematical Operations Calculator,medium,no_docs,signature_only,reference_no_examples,reference_with_examples
+121,cpp,Largest Independent Set in Binary Trees,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+4,cpp,User Management System,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+19,cpp,Physics Simulation: Ball and Trap System,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+29,cpp,3D Cube Operations Problem,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+32,cpp,Drama Movie Inventory Management System,easy,no_docs,signature_only,reference_no_examples,reference_with_examples
+44,cpp,Database Connection Manager Problem,medium,no_docs,signature_only,reference_no_examples,reference_with_examples
+46,cpp,Button Input System Implementation,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+47,cpp,Color Lookup Filter Implementation,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+55,cpp,Multi-Cloud Computing (MCC) Message Handling System,medium,no_docs,signature_only,reference_no_examples,reference_with_examples
+67,cpp,Robot Localization using Extended Kalman Filter,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+83,cpp,Physics Simulation Problem,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+98,cpp,Word Frequency Tracker using AVL Tree,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+108,cpp,Game Character and World Simulation,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+122,cpp,Friend Circles in Social Networks,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+130,cpp,Problem: Advanced Wall Height Construction,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+165,cpp,2D Sprite Collision Detection System,medium,no_docs,signature_only,reference_no_examples,reference_with_examples
+170,cpp,Session Management System,easy,no_docs,signature_only,reference_no_examples,reference_with_examples
+42,cpp,Bit Manipulation Operations,easy,no_docs,signature_only,reference_no_examples,reference_with_examples
+28,cpp,Network Packet Builder Implementation,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+56,cpp,Item-Based Collaborative Filtering System,medium,no_docs,signature_only,reference_no_examples,reference_with_examples
+178,cpp,Sierpinski Tetrahedron Generator and Surface Area Calculator,easy,no_docs,signature_only,reference_no_examples,reference_with_examples
+72,cpp,Wizarding Money Calculator,medium,no_docs,signature_only,reference_no_examples,reference_with_examples
+180,cpp,Time Operations in C++,easy,no_docs,signature_only,reference_no_examples,reference_with_examples
+45,cpp,Binary Number Converter,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+94,cpp,Union-Find Data Structure Implementation,medium,no_docs,signature_only,reference_no_examples,reference_with_examples
+164,cpp,Benchmarking Utility Class Implementation,medium,no_docs,signature_only,reference_no_examples,reference_with_examples
+174,cpp,Segment Tree with Range Operations,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+73,cpp,Text Processing Statistics,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+160,cpp,Series Generator and Analyzer,easy,no_docs,signature_only,reference_no_examples,reference_with_examples
+152,cpp,Pixel Color Manipulation,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+100,cpp,Problem: Longest Common Substring Finder,easy,no_docs,signature_only,reference_no_examples,reference_with_examples
+129,cpp,Maximum and Minimum Subarray Problem,medium,no_docs,signature_only,reference_no_examples,reference_with_examples
+201,cpp,Wiggle Sequence Analysis,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+14,cpp,Status Effects System Implementation,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+161,cpp,Binary Number Constraints Counter,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+177,cpp,Bridge Crossing Optimization Problem,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+151,cpp,<problem_description>,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+128,cpp,String Processing Function,medium,no_docs,signature_only,reference_no_examples,reference_with_examples
+77,cpp,Permutation Statistics Generator,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+10,cpp,Advanced String Utility Class Implementation,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+18,cpp,Accelerometer Data Processing Problem,easy,no_docs,signature_only,reference_no_examples,reference_with_examples
+30,cpp,2D Side-Scrolling Game Renderer Simulation,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+34,cpp,Advanced 2D Game Player System,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+65,cpp,Texture Management System,medium,no_docs,signature_only,reference_no_examples,reference_with_examples
+76,cpp,Position Operations in 2D Space,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+96,cpp,3D Cone Modeling and Analysis,medium,no_docs,signature_only,reference_no_examples,reference_with_examples
+97,cpp,Progress Bar Visualization,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+99,cpp,Advanced Timer Implementation,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+101,cpp,Problem: Enhanced Virtual Machine Simulator,medium,no_docs,signature_only,reference_no_examples,reference_with_examples
+131,cpp,Quaternion Operations in 3D Space,medium,no_docs,signature_only,reference_no_examples,reference_with_examples
+137,cpp,Binary Tree Spiral Traversal and Analysis,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+138,cpp,Problem: Graph Implementation and Algorithms,medium,no_docs,signature_only,reference_no_examples,reference_with_examples
+146,cpp,Quaternion Rotation Operations,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+154,cpp,3D Affine Transformations Matrix Problem,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+157,cpp,TrieMap Implementation Problem,hard,no_docs,signature_only,reference_no_examples,reference_with_examples
+189,cpp,2D Mesh Triangle Generator,medium,no_docs,signature_only,reference_no_examples,reference_with_examples
+119,cpp,Time Class Implementation,easy,no_docs,signature_only,reference_no_examples,reference_with_examples
+176,cpp,Player Movement Simulator Problem,hard,no_docs,signature_only,reference_no_examples,reference_with_examples

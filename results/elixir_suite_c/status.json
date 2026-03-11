@@ -1,0 +1,15 @@
+{
+  "suite_id": "suite_c",
+  "title": "Stylistic entropy and formatter strength",
+  "status": "implemented_baseline",
+  "generated_files": [
+    "results/elixir_suite_c/suite_c_stylistic_entropy.csv",
+    "results/elixir_suite_c/suite_c_stylistic_entropy_task_level.csv",
+    "results/elixir_suite_c/suite_c_stylistic_entropy_matrix.csv",
+    "results/elixir_suite_c/suite_c_stylistic_entropy.md"
+  ],
+  "notes": [
+    "Style and formatting proxies computed from current canonical solutions.",
+    "Perturbation matrix generated for normalized-vs-noisy reruns."
+  ]
+}

@@ -1,0 +1,337 @@
+\begin{thebibliography}{63}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Ahmad et~al.(2025)Ahmad, Ficek, Samadi, Huang, Noroozi, Majumdar, and Ginsburg]{ahmad2025opencodeinstructlargescaleinstructiontuning}
+Wasi~Uddin Ahmad, Aleksander Ficek, Mehrzad Samadi, Jocelyn Huang, Vahid Noroozi, Somshubra Majumdar, and Boris Ginsburg.
+\newblock Opencodeinstruct: A large-scale instruction tuning dataset for code llms, 2025.
+\newblock URL \url{https://arxiv.org/abs/2504.04030}.
+
+\bibitem[Allal et~al.(2025)Allal, Lozhkov, Bakouch, Blázquez, Penedo, Tunstall, Marafioti, Kydlíček, Lajarín, Srivastav, Lochner, Fahlgren, Nguyen, Fourrier, Burtenshaw, Larcher, Zhao, Zakka, Morlon, Raffel, von Werra, and Wolf]{allal2025smollm2smolgoesbig}
+Loubna~Ben Allal, Anton Lozhkov, Elie Bakouch, Gabriel~Martín Blázquez, Guilherme Penedo, Lewis Tunstall, Andrés Marafioti, Hynek Kydlíček, Agustín~Piqueres Lajarín, Vaibhav Srivastav, Joshua Lochner, Caleb Fahlgren, Xuan-Son Nguyen, Clémentine Fourrier, Ben Burtenshaw, Hugo Larcher, Haojun Zhao, Cyril Zakka, Mathieu Morlon, Colin Raffel, Leandro von Werra, and Thomas Wolf.
+\newblock Smollm2: When smol goes big -- data-centric training of a small language model, 2025.
+\newblock URL \url{https://arxiv.org/abs/2502.02737}.
+
+\bibitem[Anthropic(2025)]{claude4}
+Anthropic.
+\newblock Introducing claude 4, 2025.
+\newblock URL \url{https://www.anthropic.com/news/claude-4}.
+
+\bibitem[Austin et~al.(2021)Austin, Odena, Nye, Bosma, Michalewski, Dohan, Jiang, Cai, Terry, Le, and Sutton]{austin2021programsynthesislargelanguage}
+Jacob Austin, Augustus Odena, Maxwell Nye, Maarten Bosma, Henryk Michalewski, David Dohan, Ellen Jiang, Carrie Cai, Michael Terry, Quoc Le, and Charles Sutton.
+\newblock Program synthesis with large language models, 2021.
+\newblock URL \url{https://arxiv.org/abs/2108.07732}.
+
+\bibitem[{Baidu}(2025)]{erniex1}
+{Baidu}.
+\newblock Ernie-x1-turbo-32k, 2025.
+\newblock URL \url{https://cloud.baidu.com/doc/WENXINWORKSHOP/s/Wm9cvy6rl}.
+
+\bibitem[Bytedance(2025)]{fullstackbench}
+Bytedance.
+\newblock Fullstack bench: Evaluating llms as full stack coders, 2025.
+\newblock URL \url{https://arxiv.org/abs/2412.00535}.
+
+\bibitem[Cassano et~al.(2022)Cassano, Gouwar, Nguyen, Nguyen, Phipps-Costin, Pinckney, Yee, Zi, Anderson, Feldman, Guha, Greenberg, and Jangda]{cassano2022multiplescalableextensibleapproach}
+Federico Cassano, John Gouwar, Daniel Nguyen, Sydney Nguyen, Luna Phipps-Costin, Donald Pinckney, Ming-Ho Yee, Yangtian Zi, Carolyn~Jane Anderson, Molly~Q Feldman, Arjun Guha, Michael Greenberg, and Abhinav Jangda.
+\newblock Multipl-e: A scalable and extensible approach to benchmarking neural code generation, 2022.
+\newblock URL \url{https://arxiv.org/abs/2208.08227}.
+
+\bibitem[Chai et~al.(2025)Chai, Liu, Yang, Yin, JinKe, Liu, Sun, Zhang, Ren, Guo, Wang, Wang, Wu, Wang, Li, Yang, Duan, Zhang, and Li]{chai2025mceval}
+Linzheng Chai, Shukai Liu, Jian Yang, Yuwei Yin, JinKe, Jiaheng Liu, Tao Sun, Ge~Zhang, Changyu Ren, Hongcheng Guo, Noah Wang, Boyang Wang, Xianjie Wu, Bing Wang, Tongliang Li, Liqun Yang, Sufeng Duan, Zhaoxiang Zhang, and Zhoujun Li.
+\newblock Mceval: Massively multilingual code evaluation.
+\newblock In \emph{The Thirteenth International Conference on Learning Representations}, 2025.
+\newblock URL \url{https://openreview.net/forum?id=UunCPtPOlZ}.
+
+\bibitem[Chen et~al.(2021)Chen, Tworek, Jun, Yuan, de~Oliveira~Pinto, Kaplan, Edwards, Burda, Joseph, Brockman, Ray, Puri, Krueger, Petrov, Khlaaf, Sastry, Mishkin, Chan, Gray, Ryder, Pavlov, Power, Kaiser, Bavarian, Winter, Tillet, Such, Cummings, Plappert, Chantzis, Barnes, Herbert-Voss, Guss, Nichol, Paino, Tezak, Tang, Babuschkin, Balaji, Jain, Saunders, Hesse, Carr, Leike, Achiam, Misra, Morikawa, Radford, Knight, Brundage, Murati, Mayer, Welinder, McGrew, Amodei, McCandlish, Sutskever, and Zaremba]{chen2021evaluatinglargelanguagemodels}
+Mark Chen, Jerry Tworek, Heewoo Jun, Qiming Yuan, Henrique~Ponde de~Oliveira~Pinto, Jared Kaplan, Harri Edwards, Yuri Burda, Nicholas Joseph, Greg Brockman, Alex Ray, Raul Puri, Gretchen Krueger, Michael Petrov, Heidy Khlaaf, Girish Sastry, Pamela Mishkin, Brooke Chan, Scott Gray, Nick Ryder, Mikhail Pavlov, Alethea Power, Lukasz Kaiser, Mohammad Bavarian, Clemens Winter, Philippe Tillet, Felipe~Petroski Such, Dave Cummings, Matthias Plappert, Fotios Chantzis, Elizabeth Barnes, Ariel Herbert-Voss, William~Hebgen Guss, Alex Nichol, Alex Paino, Nikolas Tezak, Jie Tang, Igor Babuschkin, Suchir Balaji, Shantanu Jain, William Saunders, Christopher Hesse, Andrew~N. Carr, Jan Leike, Josh Achiam, Vedant Misra, Evan Morikawa, Alec Radford, Matthew Knight, Miles Brundage, Mira Murati, Katie Mayer, Peter Welinder, Bob McGrew, Dario Amodei, Sam McCandlish, Ilya Sutskever, and Wojciech Zaremba.
+\newblock Evaluating large language models trained on code, 2021.
+\newblock URL \url{https://arxiv.org/abs/2107.03374}.
+
+\bibitem[Chen et~al.(2025{\natexlab{a}})Chen, Wei, Zhu, Feng, and Meng]{chen2025llmevaluatorspreferreason}
+Wei-Lin Chen, Zhepei Wei, Xinyu Zhu, Shi Feng, and Yu~Meng.
+\newblock Do llm evaluators prefer themselves for a reason?, 2025{\natexlab{a}}.
+\newblock URL \url{https://arxiv.org/abs/2504.03846}.
+
+\bibitem[Chen et~al.(2025{\natexlab{b}})Chen, Tao, Zhang, Zhou, Zhang, Gu, He, Zhang, Cai, Zhao, and Jin]{chen-etal-2025-revisit}
+Xiancai Chen, Zhengwei Tao, Kechi Zhang, Changzhi Zhou, Xinyu Zhang, Wanli Gu, Yuanpeng He, Mengdi Zhang, Xunliang Cai, Haiyan Zhao, and Zhi Jin.
+\newblock Revisit self-debugging with self-generated tests for code generation.
+\newblock In Wanxiang Che, Joyce Nabende, Ekaterina Shutova, and Mohammad~Taher Pilehvar (eds.), \emph{Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)}, pp.\  18003--18023, Vienna, Austria, July 2025{\natexlab{b}}. Association for Computational Linguistics.
+\newblock ISBN 979-8-89176-251-0.
+\newblock URL \url{https://aclanthology.org/2025.acl-long.881/}.
+
+\bibitem[{Cursor}(2025)]{Cursor}
+{Cursor}.
+\newblock The ai code editor, 2025.
+\newblock URL \url{https://cursor.com/en}.
+
+\bibitem[DeepSeek-AI(2025{\natexlab{a}})]{deepseek_v3}
+DeepSeek-AI.
+\newblock Deepseek-v3 technical report, 2025{\natexlab{a}}.
+\newblock URL \url{https://arxiv.org/abs/2412.19437}.
+
+\bibitem[DeepSeek-AI(2025{\natexlab{b}})]{deepseekai2025deepseekr1}
+DeepSeek-AI.
+\newblock Deepseek-r1: Incentivizing reasoning capability in llms via reinforcement learning, 2025{\natexlab{b}}.
+\newblock URL \url{https://arxiv.org/abs/2501.12948}.
+
+\bibitem[DeepSeek-AI et~al.(2024)DeepSeek-AI, Zhu, Guo, Shao, Yang, Wang, Xu, Wu, Li, Gao, Ma, Zeng, Bi, Gu, Xu, Dai, Dong, Zhang, Piao, Gou, Xie, Hao, Wang, Song, Chen, Xie, Guan, You, Liu, Du, Gao, Lu, Chen, Wang, Deng, Li, Zhao, Ruan, Luo, and Liang]{deepseekai2024deepseekcoderv2}
+DeepSeek-AI, Qihao Zhu, Daya Guo, Zhihong Shao, Dejian Yang, Peiyi Wang, Runxin Xu, Y.~Wu, Yukun Li, Huazuo Gao, Shirong Ma, Wangding Zeng, Xiao Bi, Zihui Gu, Hanwei Xu, Damai Dai, Kai Dong, Liyue Zhang, Yishi Piao, Zhibin Gou, Zhenda Xie, Zhewen Hao, Bingxuan Wang, Junxiao Song, Deli Chen, Xin Xie, Kang Guan, Yuxiang You, Aixin Liu, Qiushi Du, Wenjun Gao, Xuan Lu, Qinyu Chen, Yaohui Wang, Chengqi Deng, Jiashi Li, Chenggang Zhao, Chong Ruan, Fuli Luo, and Wenfeng Liang.
+\newblock Deepseek-coder-v2: Breaking the barrier of closed-source models in code intelligence, 2024.
+\newblock URL \url{https://arxiv.org/abs/2406.11931}.
+
+\bibitem[Gemini(2025)]{gemini2.5}
+Gemini.
+\newblock Gemini 2.5: Pushing the frontier with advanced reasoning, multimodality, long context, and next generation agentic capabilities, 2025.
+\newblock URL \url{https://arxiv.org/abs/2507.06261}.
+
+\bibitem[Guo et~al.(2024)Guo, Zhu, Yang, Xie, Dong, Zhang, Chen, Bi, Wu, Li, Luo, Xiong, and Liang]{guo2024deepseekcoder}
+Daya Guo, Qihao Zhu, Dejian Yang, Zhenda Xie, Kai Dong, Wentao Zhang, Guanting Chen, Xiao Bi, Y.~Wu, Y.~K. Li, Fuli Luo, Yingfei Xiong, and Wenfeng Liang.
+\newblock Deepseek-coder: When the large language model meets programming -- the rise of code intelligence, 2024.
+\newblock URL \url{https://arxiv.org/abs/2401.14196}.
+
+\bibitem[Guo et~al.(2025)Guo, Li, Liu, Ma, Zheng, Yu, Pan, LI, Liu, Wang, Guo, Qu, Yue, Zhang, Chen, and Fu]{guo2025codeeditorbenchevaluatingcodeediting}
+Jiawei Guo, Ziming Li, Xueling Liu, Kaijing Ma, Tianyu Zheng, Zhouliang Yu, Ding Pan, Yizhi LI, Ruibo Liu, Yue Wang, Shuyue Guo, Xingwei Qu, Xiang Yue, Ge~Zhang, Wenhu Chen, and Jie Fu.
+\newblock Codeeditorbench: Evaluating code editing capability of large language models, 2025.
+\newblock URL \url{https://arxiv.org/abs/2404.03543}.
+
+\bibitem[Hendrycks et~al.(2021)Hendrycks, Basart, Kadavath, Mazeika, Arora, Guo, Burns, Puranik, He, Song, et~al.]{hendrycks2021measuring}
+Dan Hendrycks, Steven Basart, Saurav Kadavath, Mantas Mazeika, Akul Arora, Ethan Guo, Collin Burns, Samir Puranik, Horace He, Dawn Song, et~al.
+\newblock Measuring coding challenge competence with apps.
+\newblock \emph{arXiv preprint arXiv:2105.09938}, 2021.
+
+\bibitem[Huang et~al.(2025)Huang, Cheng, Liu, Hao, Song, Xu, Yang, Liu, Zhang, Chai, Yuan, Zhang, Fu, Liu, Zhang, Wang, Qi, Xu, and Chu]{huang2025opencoderopencookbooktoptier}
+Siming Huang, Tianhao Cheng, J.~K. Liu, Jiaran Hao, Liuyihan Song, Yang Xu, J.~Yang, Jiaheng Liu, Chenchen Zhang, Linzheng Chai, Ruifeng Yuan, Zhaoxiang Zhang, Jie Fu, Qian Liu, Ge~Zhang, Zili Wang, Yuan Qi, Yinghui Xu, and Wei Chu.
+\newblock Opencoder: The open cookbook for top-tier code large language models, 2025.
+\newblock URL \url{https://arxiv.org/abs/2411.04905}.
+
+\bibitem[Hui et~al.(2024{\natexlab{a}})Hui, Yang, Cui, Yang, Liu, Zhang, Liu, Zhang, Yu, Lu, Dang, Fan, Zhang, Yang, Men, Huang, Zheng, Miao, Quan, Feng, Ren, Ren, Zhou, and Lin]{hui2024qwen25codertechnicalreport}
+Binyuan Hui, Jian Yang, Zeyu Cui, Jiaxi Yang, Dayiheng Liu, Lei Zhang, Tianyu Liu, Jiajun Zhang, Bowen Yu, Keming Lu, Kai Dang, Yang Fan, Yichang Zhang, An~Yang, Rui Men, Fei Huang, Bo~Zheng, Yibo Miao, Shanghaoran Quan, Yunlong Feng, Xingzhang Ren, Xuancheng Ren, Jingren Zhou, and Junyang Lin.
+\newblock Qwen2.5-coder technical report, 2024{\natexlab{a}}.
+\newblock URL \url{https://arxiv.org/abs/2409.12186}.
+
+\bibitem[Hui et~al.(2024{\natexlab{b}})Hui, Yang, Cui, Yang, Liu, Zhang, Liu, Zhang, Yu, Lu, et~al.]{hui2024qwen2}
+Binyuan Hui, Jian Yang, Zeyu Cui, Jiaxi Yang, Dayiheng Liu, Lei Zhang, Tianyu Liu, Jiajun Zhang, Bowen Yu, Keming Lu, et~al.
+\newblock Qwen2. 5-coder technical report.
+\newblock \emph{arXiv preprint arXiv:2409.12186}, 2024{\natexlab{b}}.
+
+\bibitem[Jain et~al.(2025)Jain, Han, Gu, Li, Yan, Zhang, Wang, Solar-Lezama, Sen, and Stoica]{jain2025livecodebench}
+Naman Jain, King Han, Alex Gu, Wen-Ding Li, Fanjia Yan, Tianjun Zhang, Sida Wang, Armando Solar-Lezama, Koushik Sen, and Ion Stoica.
+\newblock Livecodebench: Holistic and contamination free evaluation of large language models for code.
+\newblock In \emph{The Thirteenth International Conference on Learning Representations}, 2025.
+\newblock URL \url{https://openreview.net/forum?id=chfJJYC3iL}.
+
+\bibitem[Jiang et~al.(2024)Jiang, Wang, Shen, Kim, and Kim]{jiang2024surveylargelanguagemodels}
+Juyong Jiang, Fan Wang, Jiasi Shen, Sungju Kim, and Sunghun Kim.
+\newblock A survey on large language models for code generation, 2024.
+\newblock URL \url{https://arxiv.org/abs/2406.00515}.
+
+\bibitem[Jimenez et~al.(2024)Jimenez, Yang, Wettig, Yao, Pei, Press, and Narasimhan]{jimenez2024swebench}
+Carlos~E. Jimenez, John Yang, Alexander Wettig, Shunyu Yao, Kexin Pei, Ofir Press, and Karthik Narasimhan.
+\newblock Swe-bench: Can language models resolve real-world github issues?, 2024.
+\newblock URL \url{https://arxiv.org/abs/2310.06770}.
+
+\bibitem[Kimi-Team(2025)]{kimiteam2025kimik2openagentic}
+Kimi-Team.
+\newblock Kimi k2: Open agentic intelligence, 2025.
+\newblock URL \url{https://arxiv.org/abs/2507.20534}.
+
+\bibitem[Kwon et~al.(2023)Kwon, Li, Zhuang, Sheng, Zheng, Yu, Gonzalez, Zhang, and Stoica]{kwon2023efficient}
+Woosuk Kwon, Zhuohan Li, Siyuan Zhuang, Ying Sheng, Lianmin Zheng, Cody~Hao Yu, Joseph~E. Gonzalez, Hao Zhang, and Ion Stoica.
+\newblock Efficient memory management for large language model serving with pagedattention.
+\newblock In \emph{Proceedings of the ACM SIGOPS 29th Symposium on Operating Systems Principles}, 2023.
+
+\bibitem[Li et~al.(2025)Li, Guo, Yang, Xu, Wu, and He]{li2025codeio}
+Junlong Li, Daya Guo, Dejian Yang, Runxin Xu, Yu~Wu, and Junxian He.
+\newblock Code{IO}: Condensing reasoning patterns via code input-output prediction.
+\newblock In \emph{Forty-second International Conference on Machine Learning}, 2025.
+\newblock URL \url{https://openreview.net/forum?id=feIaF6vYFl}.
+
+\bibitem[Li et~al.(2022)Li, Choi, Chung, Kushman, Schrittwieser, Leblond, Eccles, Keeling, Gimeno, Dal~Lago, Hubert, Choy, de~Masson~d’Autume, Babuschkin, Chen, Huang, Welbl, Gowal, Cherepanov, Molloy, Mankowitz, Sutherland~Robson, Kohli, de~Freitas, Kavukcuoglu, and Vinyals]{Li_2022}
+Yujia Li, David Choi, Junyoung Chung, Nate Kushman, Julian Schrittwieser, Rémi Leblond, Tom Eccles, James Keeling, Felix Gimeno, Agustin Dal~Lago, Thomas Hubert, Peter Choy, Cyprien de~Masson~d’Autume, Igor Babuschkin, Xinyun Chen, Po-Sen Huang, Johannes Welbl, Sven Gowal, Alexey Cherepanov, James Molloy, Daniel~J. Mankowitz, Esme Sutherland~Robson, Pushmeet Kohli, Nando de~Freitas, Koray Kavukcuoglu, and Oriol Vinyals.
+\newblock Competition-level code generation with alphacode.
+\newblock \emph{Science}, 378\penalty0 (6624):\penalty0 1092–1097, December 2022.
+\newblock ISSN 1095-9203.
+\newblock \doi{10.1126/science.abq1158}.
+\newblock URL \url{http://dx.doi.org/10.1126/science.abq1158}.
+
+\bibitem[Lozhkov et~al.(2024)Lozhkov, Li, Allal, Cassano, Lamy-Poirier, Tazi, Tang, Pykhtar, Liu, Wei, Liu, Tian, Kocetkov, Zucker, Belkada, Wang, Liu, Abulkhanov, Paul, Li, Li, Risdal, Li, Zhu, Zhuo, Zheltonozhskii, Dade, Yu, Krauß, Jain, Su, He, Dey, Abati, Chai, Muennighoff, Tang, Oblokulov, Akiki, Marone, Mou, Mishra, Gu, Hui, Dao, Zebaze, Dehaene, Patry, Xu, McAuley, Hu, Scholak, Paquet, Robinson, Anderson, Chapados, Patwary, Tajbakhsh, Jernite, Ferrandis, Zhang, Hughes, Wolf, Guha, von Werra, and de~Vries]{lozhkov2024starcoder}
+Anton Lozhkov, Raymond Li, Loubna~Ben Allal, Federico Cassano, Joel Lamy-Poirier, Nouamane Tazi, Ao~Tang, Dmytro Pykhtar, Jiawei Liu, Yuxiang Wei, Tianyang Liu, Max Tian, Denis Kocetkov, Arthur Zucker, Younes Belkada, Zijian Wang, Qian Liu, Dmitry Abulkhanov, Indraneil Paul, Zhuang Li, Wen-Ding Li, Megan Risdal, Jia Li, Jian Zhu, Terry~Yue Zhuo, Evgenii Zheltonozhskii, Nii Osae~Osae Dade, Wenhao Yu, Lucas Krauß, Naman Jain, Yixuan Su, Xuanli He, Manan Dey, Edoardo Abati, Yekun Chai, Niklas Muennighoff, Xiangru Tang, Muhtasham Oblokulov, Christopher Akiki, Marc Marone, Chenghao Mou, Mayank Mishra, Alex Gu, Binyuan Hui, Tri Dao, Armel Zebaze, Olivier Dehaene, Nicolas Patry, Canwen Xu, Julian McAuley, Han Hu, Torsten Scholak, Sebastien Paquet, Jennifer Robinson, Carolyn~Jane Anderson, Nicolas Chapados, Mostofa Patwary, Nima Tajbakhsh, Yacine Jernite, Carlos~Muñoz Ferrandis, Lingming Zhang, Sean Hughes, Thomas Wolf, Arjun Guha, Leandro von Werra, and Harm de~Vries.
+\newblock Starcoder 2 and the stack v2: The next generation, 2024.
+
+\bibitem[Luo et~al.(2024)Luo, Xu, Zhao, Sun, Geng, Hu, Tao, Ma, Lin, and Jiang]{luo2024wizardcoder}
+Ziyang Luo, Can Xu, Pu~Zhao, Qingfeng Sun, Xiubo Geng, Wenxiang Hu, Chongyang Tao, Jing Ma, Qingwei Lin, and Daxin Jiang.
+\newblock Wizardcoder: Empowering code large language models with evol-instruct.
+\newblock In \emph{The Twelfth International Conference on Learning Representations}, 2024.
+\newblock URL \url{https://openreview.net/forum?id=UnUwSIgK5W}.
+
+\bibitem[{OpenAI}(2024)]{gpt4o}
+{OpenAI}.
+\newblock Hello {GPT-4o}, 2024.
+\newblock URL \url{https://openai.com/index/hello-gpt-4o/}.
+
+\bibitem[{OpenAI}(2025)]{GPT-4.1}
+{OpenAI}.
+\newblock Introducing gpt-4.1 in the api, 2025.
+\newblock URL \url{https://openai.com/index/gpt-4-1/}.
+
+\bibitem[OpenAI(2025)]{o3}
+OpenAI.
+\newblock Introducing openai o3 and o4-mini, 2025.
+\newblock URL \url{https://openai.com/index/introducing-o3-and-o4-mini/}.
+
+\bibitem[Panickssery et~al.(2024)Panickssery, Bowman, and Feng]{panickssery2024llm}
+Arjun Panickssery, Samuel~R. Bowman, and Shi Feng.
+\newblock {LLM} evaluators recognize and favor their own generations.
+\newblock In \emph{The Thirty-eighth Annual Conference on Neural Information Processing Systems}, 2024.
+\newblock URL \url{https://openreview.net/forum?id=4NJBV6Wp0h}.
+
+\bibitem[Peng et~al.(2024)Peng, Chai, and Li]{peng2024humanevalxlmultilingualcodegeneration}
+Qiwei Peng, Yekun Chai, and Xuhong Li.
+\newblock Humaneval-xl: A multilingual code generation benchmark for cross-lingual natural language generalization, 2024.
+\newblock URL \url{https://arxiv.org/abs/2402.16694}.
+
+\bibitem[Quan et~al.(2025)Quan, Yang, Yu, Zheng, Liu, Yang, Ren, Gao, Miao, Feng, Wang, Yang, Cui, Fan, Zhang, Hui, and Lin]{quan2025codeelobenchmarkingcompetitionlevelcode}
+Shanghaoran Quan, Jiaxi Yang, Bowen Yu, Bo~Zheng, Dayiheng Liu, An~Yang, Xuancheng Ren, Bofei Gao, Yibo Miao, Yunlong Feng, Zekun Wang, Jian Yang, Zeyu Cui, Yang Fan, Yichang Zhang, Binyuan Hui, and Junyang Lin.
+\newblock Codeelo: Benchmarking competition-level code generation of llms with human-comparable elo ratings, 2025.
+\newblock URL \url{https://arxiv.org/abs/2501.01257}.
+
+\bibitem[{Qwen}(2025)]{qwen3coder}
+{Qwen}.
+\newblock Qwen3-coder: Agentic coding in the world, 2025.
+\newblock URL \url{https://qwenlm.github.io/blog/qwen3-coder/}.
+
+\bibitem[Qwen et~al.(2025)Qwen, :, Yang, Yang, Zhang, Hui, Zheng, Yu, Li, Liu, Huang, Wei, Lin, Yang, Tu, Zhang, Yang, Yang, Zhou, Lin, Dang, Lu, Bao, Yang, Yu, Li, Xue, Zhang, Zhu, Men, Lin, Li, Tang, Xia, Ren, Ren, Fan, Su, Zhang, Wan, Liu, Cui, Zhang, and Qiu]{qwen2025qwen25technicalreport}
+Qwen, :, An~Yang, Baosong Yang, Beichen Zhang, Binyuan Hui, Bo~Zheng, Bowen Yu, Chengyuan Li, Dayiheng Liu, Fei Huang, Haoran Wei, Huan Lin, Jian Yang, Jianhong Tu, Jianwei Zhang, Jianxin Yang, Jiaxi Yang, Jingren Zhou, Junyang Lin, Kai Dang, Keming Lu, Keqin Bao, Kexin Yang, Le~Yu, Mei Li, Mingfeng Xue, Pei Zhang, Qin Zhu, Rui Men, Runji Lin, Tianhao Li, Tianyi Tang, Tingyu Xia, Xingzhang Ren, Xuancheng Ren, Yang Fan, Yang Su, Yichang Zhang, Yu~Wan, Yuqiong Liu, Zeyu Cui, Zhenru Zhang, and Zihan Qiu.
+\newblock Qwen2.5 technical report, 2025.
+\newblock URL \url{https://arxiv.org/abs/2412.15115}.
+
+\bibitem[Roziere et~al.(2023)Roziere, Gehring, Gloeckle, Sootla, Gat, Tan, Adi, Liu, Sauvestre, Remez, et~al.]{roziere2023code}
+Baptiste Roziere, Jonas Gehring, Fabian Gloeckle, Sten Sootla, Itai Gat, Xiaoqing~Ellen Tan, Yossi Adi, Jingyu Liu, Romain Sauvestre, Tal Remez, et~al.
+\newblock Code llama: Open foundation models for code.
+\newblock \emph{arXiv preprint arXiv:2308.12950}, 2023.
+
+\bibitem[{Seed}(2025)]{seed1.6}
+{Seed}.
+\newblock Introduction to techniques used in seed1.6, 2025.
+\newblock URL \url{https://seed.bytedance.com/en/seed1_6}.
+
+\bibitem[Seed et~al.(2025)Seed, Zhang, Su, Sun, Xi, Xiao, Zheng, Zhang, Liu, Zan, Sun, Zhu, Xin, Huang, Bai, Dong, Li, Chen, Zhou, Huang, Ning, Song, Chen, Liu, Shen, Xiang, and Wu]{seed2025seedcoderletcodemodel}
+ByteDance Seed, Yuyu Zhang, Jing Su, Yifan Sun, Chenguang Xi, Xia Xiao, Shen Zheng, Anxiang Zhang, Kaibo Liu, Daoguang Zan, Tao Sun, Jinhua Zhu, Shulin Xin, Dong Huang, Yetao Bai, Lixin Dong, Chao Li, Jianchong Chen, Hanzhi Zhou, Yifan Huang, Guanghan Ning, Xierui Song, Jiaze Chen, Siyao Liu, Kai Shen, Liang Xiang, and Yonghui Wu.
+\newblock Seed-coder: Let the code model curate data for itself, 2025.
+\newblock URL \url{https://arxiv.org/abs/2506.03524}.
+
+\bibitem[Tencent(2025)]{tencenthunyuanteam2025hunyuanturbos}
+Tencent.
+\newblock Hunyuan-turbos: Advancing large language models through mamba-transformer synergy and adaptive chain-of-thought, 2025.
+\newblock URL \url{https://arxiv.org/abs/2505.15431}.
+
+\bibitem[Wang et~al.(2025{\natexlab{a}})Wang, Li, Zhang, Wang, Sun, Liu, and Shi]{wang2025softwaredevelopmentlifecycle}
+Kaixin Wang, Tianlin Li, Xiaoyu Zhang, Chong Wang, Weisong Sun, Yang Liu, and Bin Shi.
+\newblock Software development life cycle perspective: A survey of benchmarks for code large language models and agents, 2025{\natexlab{a}}.
+\newblock URL \url{https://arxiv.org/abs/2505.05283}.
+
+\bibitem[Wang et~al.(2025{\natexlab{b}})Wang, Liu, Wang, He, Gao, Diao, Chen, Fu, Sung, Yang, et~al.]{wang2025ojbench}
+Zhexu Wang, Yiping Liu, Yejie Wang, Wenyang He, Bofei Gao, Muxi Diao, Yanxu Chen, Kelin Fu, Flood Sung, Zhilin Yang, et~al.
+\newblock Ojbench: A competition level code benchmark for large language models.
+\newblock \emph{arXiv preprint arXiv:2506.16395}, 2025{\natexlab{b}}.
+
+\bibitem[Wei et~al.(2024{\natexlab{a}})Wei, Cassano, Liu, Ding, Jain, Mueller, de~Vries, von Werra, Guha, and Zhang]{NEURIPS2024selfcodealign}
+Yuxiang Wei, Federico Cassano, Jiawei Liu, Yifeng Ding, Naman Jain, Zachary Mueller, Harm de~Vries, Leandro von Werra, Arjun Guha, and Lingming Zhang.
+\newblock Selfcodealign: Self-alignment for code generation.
+\newblock In A.~Globerson, L.~Mackey, D.~Belgrave, A.~Fan, U.~Paquet, J.~Tomczak, and C.~Zhang (eds.), \emph{Advances in Neural Information Processing Systems}, volume~37, pp.\  62787--62874. Curran Associates, Inc., 2024{\natexlab{a}}.
+\newblock URL \url{https://proceedings.neurips.cc/paper_files/paper/2024/file/72da102da91a8042a0b2aa968429a9f9-Paper-Conference.pdf}.
+
+\bibitem[Wei et~al.(2024{\natexlab{b}})Wei, Wang, Liu, Ding, and Zhang]{magicoder}
+Yuxiang Wei, Zhe Wang, Jiawei Liu, Yifeng Ding, and Lingming Zhang.
+\newblock Magicoder: Empowering code generation with {OSS}-instruct.
+\newblock In \emph{Proceedings of the 41st International Conference on Machine Learning}, volume 235 of \emph{Proceedings of Machine Learning Research}, pp.\  52632--52657. PMLR, 21--27 Jul 2024{\natexlab{b}}.
+\newblock URL \url{https://proceedings.mlr.press/v235/wei24h.html}.
+
+\bibitem[Wu et~al.(2024{\natexlab{a}})Wu, Huang, Shi, Wang, Gao, Liu, Nan, Yuan, Zhang, Zhang, Du, Guo, Pu, Yin, Hu, and Chen]{wu2024inversecoder}
+Yutong Wu, Di~Huang, Wenxuan Shi, Wei Wang, Lingzhe Gao, Shihao Liu, Ziyuan Nan, Kaizhao Yuan, Rui Zhang, Xishan Zhang, Zidong Du, Qi~Guo, Yewen Pu, Dawei Yin, Xing Hu, and Yunji Chen.
+\newblock Inversecoder: Self-improving instruction-tuned code llms with inverse-instruct, 2024{\natexlab{a}}.
+\newblock URL \url{https://arxiv.org/abs/2407.05700}.
+
+\bibitem[Wu et~al.(2024{\natexlab{b}})Wu, Huang, Shi, Wang, Gao, Liu, Nan, Yuan, Zhang, Zhang, Du, Guo, Pu, Yin, Hu, and Chen]{wu2024inversecoderselfimprovinginstructiontunedcode}
+Yutong Wu, Di~Huang, Wenxuan Shi, Wei Wang, Lingzhe Gao, Shihao Liu, Ziyuan Nan, Kaizhao Yuan, Rui Zhang, Xishan Zhang, Zidong Du, Qi~Guo, Yewen Pu, Dawei Yin, Xing Hu, and Yunji Chen.
+\newblock Inversecoder: Self-improving instruction-tuned code llms with inverse-instruct, 2024{\natexlab{b}}.
+\newblock URL \url{https://arxiv.org/abs/2407.05700}.
+
+\bibitem[Xu et~al.(2025)Xu, Liu, Yin, Zhou, and Poovendran]{xu2025kodcode}
+Zhangchen Xu, Yang Liu, Yueqin Yin, Mingyuan Zhou, and Radha Poovendran.
+\newblock Kodcode: A diverse, challenging, and verifiable synthetic dataset for coding, 2025.
+\newblock URL \url{https://arxiv.org/abs/2503.02951}.
+
+\bibitem[Yang et~al.(2025)Yang, Li, Yang, Zhang, Hui, Zheng, Yu, Gao, Huang, Lv, et~al.]{yang2025qwen3}
+An~Yang, Anfeng Li, Baosong Yang, Beichen Zhang, Binyuan Hui, Bo~Zheng, Bowen Yu, Chang Gao, Chengen Huang, Chenxu Lv, et~al.
+\newblock Qwen3 technical report.
+\newblock \emph{arXiv preprint arXiv:2505.09388}, 2025.
+
+\bibitem[Yu et~al.(2024)Yu, Zhang, Shang, Huang, Xu, Zhao, Hu, and Yin]{yu2024wavecoderwidespreadversatileenhancement}
+Zhaojian Yu, Xin Zhang, Ning Shang, Yangyu Huang, Can Xu, Yishujie Zhao, Wenxiang Hu, and Qiufeng Yin.
+\newblock Wavecoder: Widespread and versatile enhancement for code large language models by instruction tuning, 2024.
+\newblock URL \url{https://arxiv.org/abs/2312.14187}.
+
+\bibitem[Zan et~al.(2025)Zan, Huang, Liu, Chen, Zhang, Xin, Chen, Liu, Zhong, Li, Liu, Xiao, Chen, Zhang, Su, Liu, Long, Shen, and Xiang]{zan2025multiswebenchmultilingualbenchmarkissue}
+Daoguang Zan, Zhirong Huang, Wei Liu, Hanwu Chen, Linhao Zhang, Shulin Xin, Lu~Chen, Qi~Liu, Xiaojian Zhong, Aoyan Li, Siyao Liu, Yongsheng Xiao, Liangqiang Chen, Yuyu Zhang, Jing Su, Tianyu Liu, Rui Long, Kai Shen, and Liang Xiang.
+\newblock Multi-swe-bench: A multilingual benchmark for issue resolving, 2025.
+\newblock URL \url{https://arxiv.org/abs/2504.02605}.
+
+\bibitem[Zhang et~al.(2025{\natexlab{a}})Zhang, Dong, Liu, Zhang, Wang, Yang, Zhang, Liu, Peng, Tan, Zhang, Wang, Wang, He, Deng, Zhou, Huang, and Zhang]{zhang2025codecriticbenchholisticcodecritique}
+Alexander Zhang, Marcus Dong, Jiaheng Liu, Wei Zhang, Yejie Wang, Jian Yang, Ge~Zhang, Tianyu Liu, Zhongyuan Peng, Yingshui Tan, Yuanxing Zhang, Zhexu Wang, Weixun Wang, Yancheng He, Ken Deng, Wangchunshu Zhou, Wenhao Huang, and Zhaoxiang Zhang.
+\newblock Codecriticbench: A holistic code critique benchmark for large language models, 2025{\natexlab{a}}.
+\newblock URL \url{https://arxiv.org/abs/2502.16614}.
+
+\bibitem[Zhang et~al.(2025{\natexlab{b}})Zhang, Li, Xu, Liu, Liu, Hu, Wu, Huang, Li, Yi, Xiong, Zhu, Zhang, Jiang, Zhang, Xu, Zhai, He, Li, Zhao, Zhang, Tan, Guo, Pang, Ruan, Zhang, Wang, Xu, Yin, Zhou, Zhou, and Lian]{zhang2025artifactsbench}
+Chenchen Zhang, Yuhang Li, Can Xu, Jiaheng Liu, Ao~Liu, Shihui Hu, Dengpeng Wu, Guanhua Huang, Kejiao Li, Qi~Yi, Ruibin Xiong, Haotian Zhu, Yuanxing Zhang, Yuhao Jiang, Yue Zhang, Zenan Xu, Bohui Zhai, Guoxiang He, Hebin Li, Jie Zhao, Le~Zhang, Lingyun Tan, Pengyu Guo, Xianshu Pang, Yang Ruan, Zhifeng Zhang, Zhonghu Wang, Ziyan Xu, Zuopu Yin, Wiggin Zhou, Chayse Zhou, and Fengzong Lian.
+\newblock Artifactsbench: Bridging the visual-interactive gap in llm code generation evaluation, 2025{\natexlab{b}}.
+\newblock URL \url{https://arxiv.org/abs/2507.04952}.
+
+\bibitem[Zhang et~al.(2024)Zhang, Zhao, Liu, Zheng, Qi, Gu, Zhang, Dong, and Tang]{zhang2024naturalcodebenchexaminingcodingperformance}
+Shudan Zhang, Hanlin Zhao, Xiao Liu, Qinkai Zheng, Zehan Qi, Xiaotao Gu, Xiaohan Zhang, Yuxiao Dong, and Jie Tang.
+\newblock Naturalcodebench: Examining coding performance mismatch on humaneval and natural user prompts, 2024.
+\newblock URL \url{https://arxiv.org/abs/2405.04520}.
+
+\bibitem[Zheng et~al.(2024)Zheng, Zhang, Shen, Liu, Lin, Fu, Chen, and Yue]{zheng-etal-2024-opencodeinterpreter}
+Tianyu Zheng, Ge~Zhang, Tianhao Shen, Xueling Liu, Bill~Yuchen Lin, Jie Fu, Wenhu Chen, and Xiang Yue.
+\newblock {O}pen{C}ode{I}nterpreter: Integrating code generation with execution and refinement.
+\newblock In Lun-Wei Ku, Andre Martins, and Vivek Srikumar (eds.), \emph{Findings of the Association for Computational Linguistics: ACL 2024}, pp.\  12834--12859, Bangkok, Thailand, August 2024. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/2024.findings-acl.762}.
+\newblock URL \url{https://aclanthology.org/2024.findings-acl.762/}.
+
+\bibitem[Zheng et~al.(2025)Zheng, Cheng, Shen, Zhou, Liu, He, Li, Wei, Hao, Yao, Sheng, Wang, Chai, Korolova, Henderson, Arora, Viswanath, Shang, and Xie]{zheng2025livecodebenchproolympiadmedalists}
+Zihan Zheng, Zerui Cheng, Zeyu Shen, Shang Zhou, Kaiyuan Liu, Hansen He, Dongruixuan Li, Stanley Wei, Hangyi Hao, Jianzhu Yao, Peiyao Sheng, Zixuan Wang, Wenhao Chai, Aleksandra Korolova, Peter Henderson, Sanjeev Arora, Pramod Viswanath, Jingbo Shang, and Saining Xie.
+\newblock Livecodebench pro: How do olympiad medalists judge llms in competitive programming?, 2025.
+\newblock URL \url{https://arxiv.org/abs/2506.11928}.
+
+\bibitem[{Zhipu}(2025)]{glm4p5}
+{Zhipu}.
+\newblock Glm-4.5: Reasoning, coding, and agentic abililties, 2025.
+\newblock URL \url{https://z.ai/blog/glm-4.5}.
+
+\bibitem[Zhou et~al.(2025)Zhou, Zhang, Song, Chen, Gu, Ma, Tian, Zhang, and Hu]{zhou2025refinecoderiterativeimprovinglarge}
+Changzhi Zhou, Xinyu Zhang, Dandan Song, Xiancai Chen, Wanli Gu, Huipeng Ma, Yuhang Tian, Mengdi Zhang, and Linmei Hu.
+\newblock Refinecoder: Iterative improving of large language models via adaptive critique refinement for code generation, 2025.
+\newblock URL \url{https://arxiv.org/abs/2502.09183}.
+
+\bibitem[Zhu et~al.(2024)Zhu, Guo, Shao, Yang, Wang, Xu, Wu, Li, Gao, Ma, et~al.]{zhu2024deepseek}
+Qihao Zhu, Daya Guo, Zhihong Shao, Dejian Yang, Peiyi Wang, Runxin Xu, Y~Wu, Yukun Li, Huazuo Gao, Shirong Ma, et~al.
+\newblock Deepseek-coder-v2: Breaking the barrier of closed-source models in code intelligence.
+\newblock \emph{arXiv preprint arXiv:2406.11931}, 2024.
+
+\bibitem[Zhu et~al.(2025)Zhu, Wang, Li, Qiu, Wang, Xu, Cao, Wei, Wang, Cai, and Ma]{zhu2025oibenchbenchmarkingstrongreasoning}
+Yaoming Zhu, Junxin Wang, Yiyang Li, Lin Qiu, ZongYu Wang, Jun Xu, Xuezhi Cao, Yuhuai Wei, Mingshi Wang, Xunliang Cai, and Rong Ma.
+\newblock Oibench: Benchmarking strong reasoning models with olympiad in informatics, 2025.
+\newblock URL \url{https://arxiv.org/abs/2506.10481}.
+
+\bibitem[Zhuo et~al.(2025)Zhuo, Chien, Chim, Hu, Yu, Widyasari, Yusuf, Zhan, He, Paul, Brunner, GONG, Hoang, Zebaze, Hong, Li, Kaddour, Xu, Zhang, Yadav, Jain, Gu, Cheng, Liu, Liu, Wang, Lo, Hui, Muennighoff, Fried, Du, de~Vries, and Werra]{zhuo2025bigcodebench}
+Terry~Yue Zhuo, Vu~Minh Chien, Jenny Chim, Han Hu, Wenhao Yu, Ratnadira Widyasari, Imam Nur~Bani Yusuf, Haolan Zhan, Junda He, Indraneil Paul, Simon Brunner, Chen GONG, James Hoang, Armel~Randy Zebaze, Xiaoheng Hong, Wen-Ding Li, Jean Kaddour, Ming Xu, Zhihan Zhang, Prateek Yadav, Naman Jain, Alex Gu, Zhoujun Cheng, Jiawei Liu, Qian Liu, Zijian Wang, David Lo, Binyuan Hui, Niklas Muennighoff, Daniel Fried, Xiaoning Du, Harm de~Vries, and Leandro~Von Werra.
+\newblock Bigcodebench: Benchmarking code generation with diverse function calls and complex instructions.
+\newblock In \emph{The Thirteenth International Conference on Learning Representations}, 2025.
+\newblock URL \url{https://openreview.net/forum?id=YrycTjllL0}.
+
+\end{thebibliography}

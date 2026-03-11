@@ -1,0 +1,121 @@
+index,language,title,difficulty,condition_1,condition_2,condition_3
+2378,php,Implement a PopulationCRUD class in PHP to manage city population data with CRUD operations. The class should support:,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+179,cpp,Advanced Media Player System,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+114,cpp,3D Camera System Implementation,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+55,cpp,Multi-Cloud Computing (MCC) Message Handling System,medium,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+1294,csharp,Distance Vector Routing Protocol Implementation in C#,medium,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+1250,csharp,Stack State Capture and Reconstruction Problem in C#,medium,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+135,cpp,Programming Problem: Symbol Resolver for Performance Maps,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+143,cpp,<problem_description>,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3451,scala,Game State Management System,medium,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+151,cpp,<problem_description>,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+170,cpp,Session Management System,easy,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3215,rust,Stack-Based Queue Implementation in Rust,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+177,cpp,Bridge Crossing Optimization Problem,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+98,cpp,Word Frequency Tracker using AVL Tree,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+2363,php,Implement an Artist Management System using PHP. The system should be implemented as a class `ArtistManager` with the following functionality:,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+508,java,Deterministic Finite Automaton (DFA) Implementation,easy,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+2383,php,Implement an array operations manager function `arrayOperationsManager` that can perform various operations on an array based on different operation types and return a detailed object containing the operation results.,medium,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+1146,csharp,Cryptocurrency Balance Simulator (C# Implementation),easy,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+1382,dart,Inventory Management System in Dart,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+189,cpp,2D Mesh Triangle Generator,medium,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+150,cpp,<problem_description>,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+2334,php,Implement a ToDoManager class in PHP that manages a collection of tasks with the following functionality:,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+2352,php,"Implement a document management system that can create, retrieve, update, and delete documents while handling document version conflicts.",hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+164,cpp,Benchmarking Utility Class Implementation,medium,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+154,cpp,3D Affine Transformations Matrix Problem,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+134,cpp,Stack Operations Processor,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+118,cpp,Armor Class Implementation,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+2875,r,**Population Data Analysis in R**,easy,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3179,rust,State Machine Implementation in Rust,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+82,cpp,Error Message Generator System,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+691,javascript,Implement a user management system with the following functionalities:,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3278,rust,Maze Solver and Analyzer in Rust,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+2472,php,Write a PHP function `processStateData` that processes U.S. state data and returns processed results with statistics.,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+67,cpp,Robot Localization using Extended Kalman Filter,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+113,cpp,Basketball Scoreboard System,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+40,cpp,<problem_description>,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3138,rust,Problem: Mathematical Expression Evaluator in Rust,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+377,go,"Write a Go function `ParseSystemRecord` to parse the state records of the Go scheduler. The function needs to process four parts of input data: the main scheduling record, processor (P) records, machine (M) records, and goroutine (G) records, and parse them into a structured `Record` object.",hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+1755,julia,Struct Requirements:,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3302,rust,Binary Search Tree Implementation in Rust,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+2351,php,Implement a TokenSimulator class to simulate basic token operations. The class needs to support the following functionality:,medium,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+2428,php,Implement a Company Employee Management System in PHP,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+138,cpp,Problem: Graph Implementation and Algorithms,medium,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+533,java,Enhanced Queue Implementation,medium,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+28,cpp,Network Packet Builder Implementation,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+2123,kotlin,Multi-Level Caching User Service Implementation in Kotlin,easy,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3383,scala,Game State Management System,easy,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+1353,dart,Android Activity Lifecycle Simulator (Dart Version),hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+2927,ruby,Functions to Implement:,medium,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3378,scala,Logging Configuration Validator,medium,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+719,javascript,Implement a Bug Tracker system in JavaScript that can manage software bugs. The system should be implemented as a class called `BugTracker` with the following functionality:,medium,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+85,cpp,RPG Equipment and Enchantment System,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+146,cpp,Quaternion Rotation Operations,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+452,java,Enhanced Thread-Safe Blocking Queue Implementation,easy,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+1486,dart,Version Manager System (Dart Implementation),hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+1263,csharp,Generic Expression Cache Implementation in C#,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3549,swift,**Pendulum Magnet Simulation in Swift**,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+894,python,Test Case 1: Simple insertion,easy,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+662,javascript,Write a JavaScript function `airplanePathSimulation` to simulate the flight state of an airplane along a predefined path. The function should return an object containing methods to update the airplane's position and retrieve its current state.,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+345,go,Please implement a function in Go to compute the SM3 hash value.,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3249,rust,3D Transformation and Camera Projection System in Rust,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+1216,csharp,"Implement an enhanced singly linked list data structure in C# that supports various operations including adding elements to the front and back, removing elements from both ends, removing specific values, reversing the list, and accessing elements by index. The implementation should be efficient and handle edge cases appropriately.",easy,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+2979,ruby,Test Case 1: Basic state transition with listeners,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+2145,perl,Write a Perl function called `configure_firewall` that generates iptables commands to configure a Linux firewall based on specified parameters. The function should produce the exact output shown in the test cases when executed with the given arguments.,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+1357,dart,Enhanced Fenwick Tree Implementation in Dart,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3509,scala,XML Structure Analyzer,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3640,swift,**Problem: Implement Three Stacks in a Single Array**,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+2198,perl,Input Format,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+111,cpp,3D Transformation and Camera Projection System,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+106,cpp,Binary Tree Analysis Problem,medium,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+2948,ruby,**Problem: Calculate Genomic Flanking Regions**,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+2523,php,Implement an employee management system using PHP. The system should be implemented as a class called `EmployeeSystem` with the following functionalities:,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3124,rust,JSON String Escaping and Unescaping in Rust,easy,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3170,rust,Implement two functions that analyze the binary representation and properties of floating-point numbers according to the IEEE 754 standard in Rust. The functions should work for both single-precision (32-bit) and double-precision (64-bit) floating-point numbers.,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+858,python,Test case 1: Basic movement,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+1201,csharp,Edit Distance Calculator Problem (C# Version),easy,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+163,cpp,2D Game Entity System Implementation,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+765,python,Test case 1: Basic append and prepend,easy,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+88,cpp,Stepper Motor Controller Simulation,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3354,scala,Problem Description,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3478,scala,Profile Update Manager,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+59,cpp,Game Entity Management System,medium,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+83,cpp,Physics Simulation Problem,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3408,scala,Requirements,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3251,rust,Playfair Cipher Implementation in Rust,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+398,java,Class Structure Analyzer,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+1401,dart,Enhanced Queue Implementation in Dart,easy,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+752,python,Test case 1,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3144,rust,Database Cursor Navigation System (Rust Implementation),hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+2478,php,Implement a conference scheduling system that manages conference days and activities. The system needs to support the following functions:,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3733,typescript,Implement a TypeScript function called `createSendFlowState` that creates a state manager object for managing cryptocurrency transfer states. The state manager should provide the following methods:,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+440,java,<problem_title>Celestial Body Simulation</problem_title>,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+558,java,<problem_title>Dual-Action Mechanism Controller</problem_title>,medium,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+115,cpp,Sphere Mesh Generator,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+1206,csharp,Job Queue Management System in C#,medium,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+1280,csharp,Image Search Service Implementation in C#,easy,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+2895,r,**Problem: Translate RNA to Protein**,medium,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+2401,php,Implement a User Authentication System in PHP,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+855,python,Problem Description,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+1487,dart,Wishlist Management System in Dart,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3577,swift,**Maximum Bandwidth Path in a Graph (Swift Version)**,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+602,javascript,Implement a LinkedList class in JavaScript with the following methods:,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3165,rust,Advanced Vigenère Cipher Implementation in Rust,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+1241,csharp,Distributed Configuration Store Implementation in C#,easy,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+575,javascript,Implement a queue data structure using stacks in JavaScript. Your implementation should include the following methods:,easy,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3186,rust,Telescope Location and Distance Calculation in Rust,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3385,scala,Advanced Game Controller Input Handler,medium,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+543,java,Doubly Linked List Implementation,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+1245,csharp,User Management System with Caching in C#,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+836,python,Requirements:,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+2003,kotlin,OTA Update Manager Implementation in Kotlin,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3523,scala,Class Requirements,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+431,java,Polling Queue Implementation,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3295,rust,Requirements,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3287,rust,Number Properties Analyzer in Rust,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3906,typescript,Write two TypeScript functions to handle game player scores and statistics:,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3332,scala,Window Position Calculator,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+3231,rust,"Implement an enhanced priority queue data structure in Rust that supports standard priority queue operations along with additional features like priority updates, merging queues, and validity checking. The priority queue should maintain elements according to a given comparison function (defaulting to min-heap behavior).",hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+1137,csharp,HTTP Request Parser Implementation in C#,easy,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution
+778,python,**Holiday Checker for Curaçao**,hard,immutable_reference_solution,controlled_mutable_solution,stateful_incremental_solution

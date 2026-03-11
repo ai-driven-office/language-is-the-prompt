@@ -1,0 +1,15 @@
+{
+  "suite_id": "suite_a",
+  "title": "Documentation quality",
+  "status": "implemented_baseline",
+  "generated_files": [
+    "results/elixir_suite_a/suite_a_docs_quality.csv",
+    "results/elixir_suite_a/suite_a_docs_quality_task_level.csv",
+    "results/elixir_suite_a/suite_a_docs_experiment_matrix.csv",
+    "results/elixir_suite_a/suite_a_docs_quality.md"
+  ],
+  "notes": [
+    "Baseline metrics computed from current benchmark prompts.",
+    "Experiment matrix generated for doc-ablation reruns."
+  ]
+}
