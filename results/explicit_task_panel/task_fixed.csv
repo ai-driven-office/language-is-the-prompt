@@ -1,0 +1,10 @@
+language,comparison,mean_task_delta,left_only_wins,right_only_wins,tied_pass,tied_fail,task_count,discordant_n,sign_test_p
+elixir,rich_contract_vs_baseline_compact,0.0,0,0,9,7,16,0,1.0
+elixir,rich_contract_examples_vs_baseline_compact,0.25,4,0,9,3,16,4,0.125
+elixir,rich_contract_examples_vs_rich_contract,0.25,4,0,9,3,16,4,0.125
+python,rich_contract_vs_baseline_compact,0.0,0,0,13,3,16,0,1.0
+python,rich_contract_examples_vs_baseline_compact,0.0,1,1,12,2,16,2,1.0
+python,rich_contract_examples_vs_rich_contract,0.0,1,1,12,2,16,2,1.0
+typescript,rich_contract_vs_baseline_compact,0.0,0,0,13,3,16,0,1.0
+typescript,rich_contract_examples_vs_baseline_compact,0.062,2,1,12,1,16,3,1.0
+typescript,rich_contract_examples_vs_rich_contract,0.062,2,1,12,1,16,3,1.0

@@ -1,0 +1,12 @@
+suite_id,condition,n_shared,baseline_only_wins,condition_only_wins,observed_delta_points,discordance_rate,estimated_current_power,n_for_80_power_same_effect
+suite_a,minimal_docs,198,85,9,-38.38,47.47,1.0,198
+suite_a,reference_no_examples,198,10,10,0.0,10.1,0.029,>2000
+suite_a,signature_only,198,89,7,-41.41,48.48,1.0,198
+suite_d,case_with,198,15,9,-3.03,12.12,0.166,1200
+suite_d,cond_if,198,10,15,2.53,12.63,0.112,1600
+suite_d,function_heads,198,17,14,-1.52,15.66,0.059,>2000
+suite_e,sentinel_helpers,198,12,12,0.0,12.12,0.035,>2000
+suite_e,tagged_tuple_helpers,198,9,15,3.03,12.12,0.169,1200
+suite_f,explicit_state_threading,198,8,18,5.05,13.13,0.43,480
+suite_f,immutable_pipeline,198,17,17,0.0,17.17,0.036,>2000
+suite_f,rebinding_stepwise,198,9,20,5.56,14.65,0.456,480

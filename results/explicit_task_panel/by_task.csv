@@ -1,0 +1,49 @@
+task_id,title,condition_id,passed,total,pass_rate,ci_low,ci_high
+acct_balance_rollup,Account Balance Rollup,baseline_compact,2,3,66.7,20.8,93.9
+acct_balance_rollup,Account Balance Rollup,rich_contract,2,3,66.7,20.8,93.9
+acct_balance_rollup,Account Balance Rollup,rich_contract_examples,2,3,66.7,20.8,93.9
+bracket_balance_report,Bracket Balance Report,baseline_compact,3,3,100.0,43.8,100.0
+bracket_balance_report,Bracket Balance Report,rich_contract,3,3,100.0,43.8,100.0
+bracket_balance_report,Bracket Balance Report,rich_contract_examples,3,3,100.0,43.8,100.0
+csv_split_quoted,CSV Split With Quotes,baseline_compact,3,3,100.0,43.8,100.0
+csv_split_quoted,CSV Split With Quotes,rich_contract,3,3,100.0,43.8,100.0
+csv_split_quoted,CSV Split With Quotes,rich_contract_examples,3,3,100.0,43.8,100.0
+dense_rankings,Dense Rankings,baseline_compact,2,3,66.7,20.8,93.9
+dense_rankings,Dense Rankings,rich_contract,2,3,66.7,20.8,93.9
+dense_rankings,Dense Rankings,rich_contract_examples,3,3,100.0,43.8,100.0
+dependency_batches,Dependency Batches,baseline_compact,3,3,100.0,43.8,100.0
+dependency_batches,Dependency Batches,rich_contract,3,3,100.0,43.8,100.0
+dependency_batches,Dependency Batches,rich_contract_examples,3,3,100.0,43.8,100.0
+inventory_reconcile,Inventory Reconcile,baseline_compact,3,3,100.0,43.8,100.0
+inventory_reconcile,Inventory Reconcile,rich_contract,3,3,100.0,43.8,100.0
+inventory_reconcile,Inventory Reconcile,rich_contract_examples,3,3,100.0,43.8,100.0
+merge_intervals,Merge Touching Intervals,baseline_compact,3,3,100.0,43.8,100.0
+merge_intervals,Merge Touching Intervals,rich_contract,3,3,100.0,43.8,100.0
+merge_intervals,Merge Touching Intervals,rich_contract_examples,3,3,100.0,43.8,100.0
+normalize_phone_book,Normalize Phone Book,baseline_compact,2,3,66.7,20.8,93.9
+normalize_phone_book,Normalize Phone Book,rich_contract,2,3,66.7,20.8,93.9
+normalize_phone_book,Normalize Phone Book,rich_contract_examples,0,3,0.0,0.0,56.2
+queue_wait_times,Queue Wait Times,baseline_compact,3,3,100.0,43.8,100.0
+queue_wait_times,Queue Wait Times,rich_contract,3,3,100.0,43.8,100.0
+queue_wait_times,Queue Wait Times,rich_contract_examples,3,3,100.0,43.8,100.0
+rule_based_discount,Rule Based Discount,baseline_compact,0,3,0.0,0.0,56.2
+rule_based_discount,Rule Based Discount,rich_contract,0,3,0.0,0.0,56.2
+rule_based_discount,Rule Based Discount,rich_contract_examples,2,3,66.7,20.8,93.9
+session_durations,Session Durations,baseline_compact,0,3,0.0,0.0,56.2
+session_durations,Session Durations,rich_contract,0,3,0.0,0.0,56.2
+session_durations,Session Durations,rich_contract_examples,3,3,100.0,43.8,100.0
+stable_group_runs,Stable Group Runs,baseline_compact,2,3,66.7,20.8,93.9
+stable_group_runs,Stable Group Runs,rich_contract,2,3,66.7,20.8,93.9
+stable_group_runs,Stable Group Runs,rich_contract_examples,3,3,100.0,43.8,100.0
+threshold_bursts,Threshold Bursts,baseline_compact,3,3,100.0,43.8,100.0
+threshold_bursts,Threshold Bursts,rich_contract,3,3,100.0,43.8,100.0
+threshold_bursts,Threshold Bursts,rich_contract_examples,3,3,100.0,43.8,100.0
+token_bucket_decisions,Token Bucket Decisions,baseline_compact,0,3,0.0,0.0,56.2
+token_bucket_decisions,Token Bucket Decisions,rich_contract,0,3,0.0,0.0,56.2
+token_bucket_decisions,Token Bucket Decisions,rich_contract_examples,0,3,0.0,0.0,56.2
+top_k_frequencies,Top K Frequencies,baseline_compact,3,3,100.0,43.8,100.0
+top_k_frequencies,Top K Frequencies,rich_contract,3,3,100.0,43.8,100.0
+top_k_frequencies,Top K Frequencies,rich_contract_examples,3,3,100.0,43.8,100.0
+window_majority,Sliding Window Majority,baseline_compact,3,3,100.0,43.8,100.0
+window_majority,Sliding Window Majority,rich_contract,3,3,100.0,43.8,100.0
+window_majority,Sliding Window Majority,rich_contract_examples,3,3,100.0,43.8,100.0

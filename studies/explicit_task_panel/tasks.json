@@ -1,0 +1,574 @@
+[
+  {
+    "id": "acct_balance_rollup",
+    "title": "Account Balance Rollup",
+    "focus_dimensions": ["task_framing", "result_contracts"],
+    "hypothesis_tags": ["docs", "contracts"],
+    "summary": "Given a list of ledger events, return the final balance per account. Ignore malformed events, but record whether any malformed event was skipped.",
+    "required_behavior": [
+      "Accept a list of events where each event may or may not have the shape {account, delta}.",
+      "Apply deltas in order and accumulate balances by account string.",
+      "Ignore malformed events without crashing.",
+      "Return both the balance map and a boolean indicating whether malformed events were seen."
+    ],
+    "contract_details": [
+      "Valid events contain a non-empty account string and an integer delta.",
+      "Malformed events do not contribute to balances.",
+      "Return shape must always include balances and malformed_seen."
+    ],
+    "edge_cases": [
+      "An empty input list returns an empty balance map and malformed_seen=false.",
+      "Multiple updates to the same account must accumulate.",
+      "Null, missing keys, wrong types, and blank account names are malformed."
+    ],
+    "function_signatures": {
+      "elixir": "rollup_balances(events)",
+      "python": "rollup_balances(events)",
+      "typescript": "rollupBalances(events)"
+    },
+    "examples": [
+      {
+        "input": [{"account": "cash", "delta": 5}, {"account": "cash", "delta": -2}, {"oops": true}],
+        "expected": {"balances": {"cash": 3}, "malformed_seen": true}
+      },
+      {
+        "input": [],
+        "expected": {"balances": {}, "malformed_seen": false}
+      }
+    ]
+  },
+  {
+    "id": "threshold_bursts",
+    "title": "Threshold Bursts",
+    "focus_dimensions": ["task_framing", "state_flow"],
+    "hypothesis_tags": ["docs", "state"],
+    "summary": "Given numeric readings and a threshold, return the start and end indexes of contiguous bursts where readings stay strictly above the threshold.",
+    "required_behavior": [
+      "Return a list of inclusive index pairs.",
+      "Single-reading bursts are valid.",
+      "Readings equal to the threshold are not inside a burst."
+    ],
+    "contract_details": [
+      "Indexes are zero-based.",
+      "Output order must match the input scan order.",
+      "If no bursts exist, return an empty list."
+    ],
+    "edge_cases": [
+      "Handle empty input cleanly.",
+      "Handle bursts at the beginning or end of the sequence.",
+      "Do not merge bursts separated by at least one non-qualifying reading."
+    ],
+    "function_signatures": {
+      "elixir": "find_bursts(readings, threshold)",
+      "python": "find_bursts(readings, threshold)",
+      "typescript": "findBursts(readings, threshold)"
+    },
+    "examples": [
+      {
+        "input": {"readings": [1, 5, 6, 2, 7], "threshold": 4},
+        "expected": [[1, 2], [4, 4]]
+      }
+    ]
+  },
+  {
+    "id": "csv_split_quoted",
+    "title": "CSV Split With Quotes",
+    "focus_dimensions": ["state_flow", "task_framing"],
+    "hypothesis_tags": ["state", "docs"],
+    "summary": "Split a single CSV line into fields, where commas inside double-quoted sections do not split fields and doubled quotes inside quoted fields resolve to a single quote character.",
+    "required_behavior": [
+      "Return a list of parsed field strings.",
+      "Treat doubled double-quotes inside a quoted field as an escaped quote.",
+      "Preserve empty fields."
+    ],
+    "contract_details": [
+      "The input is one line, not a full file.",
+      "Leading and trailing spaces are preserved as part of field content.",
+      "The parser may assume quotes are balanced."
+    ],
+    "edge_cases": [
+      "Handle an empty line as one empty field.",
+      "Handle consecutive commas as empty fields.",
+      "Handle quoted empty strings."
+    ],
+    "function_signatures": {
+      "elixir": "split_csv_line(line)",
+      "python": "split_csv_line(line)",
+      "typescript": "splitCsvLine(line)"
+    },
+    "examples": [
+      {
+        "input": "\"a,b\",c,\"d\"\"e\"",
+        "expected": ["a,b", "c", "d\"e"]
+      }
+    ]
+  },
+  {
+    "id": "dependency_batches",
+    "title": "Dependency Batches",
+    "focus_dimensions": ["result_contracts", "task_framing"],
+    "hypothesis_tags": ["contracts", "docs"],
+    "summary": "Given tasks and dependency edges, return execution batches where each batch can run in parallel. If a cycle exists, return an error result instead of batches.",
+    "required_behavior": [
+      "Each batch contains tasks whose prerequisites were satisfied by earlier batches.",
+      "Tasks within a batch must be sorted lexicographically.",
+      "If the graph contains a cycle, return an error contract."
+    ],
+    "contract_details": [
+      "All tasks mentioned either explicitly or inside edges must appear in the output or error handling.",
+      "The success result contains ordered batches.",
+      "The error result identifies that a cycle was detected."
+    ],
+    "edge_cases": [
+      "Disconnected components are valid.",
+      "Duplicate edges should not duplicate work.",
+      "An empty task list returns an empty batch list."
+    ],
+    "function_signatures": {
+      "elixir": "build_batches(tasks, edges)",
+      "python": "build_batches(tasks, edges)",
+      "typescript": "buildBatches(tasks, edges)"
+    },
+    "examples": [
+      {
+        "input": {"tasks": ["a", "b", "c"], "edges": [["a", "c"], ["b", "c"]]},
+        "expected": {"status": "ok", "batches": [["a", "b"], ["c"]]}
+      }
+    ]
+  },
+  {
+    "id": "inventory_reconcile",
+    "title": "Inventory Reconcile",
+    "focus_dimensions": ["result_contracts", "state_flow"],
+    "hypothesis_tags": ["contracts", "state"],
+    "summary": "Apply inventory operations to a stock map. Restock adds units, reserve removes units only if enough stock exists, and invalid operations must be reported.",
+    "required_behavior": [
+      "Process operations in order.",
+      "Return final stock and a list of rejected operation indexes.",
+      "Do not let stock counts go negative."
+    ],
+    "contract_details": [
+      "Each operation has kind, sku, and qty.",
+      "Unknown kinds, invalid quantities, or over-reserve attempts are rejected.",
+      "Rejected operations do not mutate stock."
+    ],
+    "edge_cases": [
+      "Missing SKUs begin at zero stock.",
+      "Zero quantity is invalid.",
+      "An entirely invalid operation stream still returns a valid output structure."
+    ],
+    "function_signatures": {
+      "elixir": "reconcile_inventory(initial_stock, operations)",
+      "python": "reconcile_inventory(initial_stock, operations)",
+      "typescript": "reconcileInventory(initialStock, operations)"
+    },
+    "examples": [
+      {
+        "input": {
+          "initial_stock": {"pen": 3},
+          "operations": [{"kind": "reserve", "sku": "pen", "qty": 2}, {"kind": "reserve", "sku": "pen", "qty": 5}]
+        },
+        "expected": {"stock": {"pen": 1}, "rejected_indexes": [1]}
+      }
+    ]
+  },
+  {
+    "id": "session_durations",
+    "title": "Session Durations",
+    "focus_dimensions": ["state_flow", "task_framing"],
+    "hypothesis_tags": ["state", "docs"],
+    "summary": "Given timestamped login/logout events sorted by timestamp, compute the total active duration per user while ignoring unmatched logout events.",
+    "required_behavior": [
+      "Track active login state per user.",
+      "A logout without a prior active login is ignored.",
+      "If a user is still logged in at the end, do not count an open session."
+    ],
+    "contract_details": [
+      "Timestamps are integer seconds and the input is sorted ascending.",
+      "Repeated login while already active resets the session start to the new login time.",
+      "Return a map from user to total active seconds."
+    ],
+    "edge_cases": [
+      "Empty event list returns an empty map.",
+      "Multiple users may interleave.",
+      "Unmatched final login contributes no duration."
+    ],
+    "function_signatures": {
+      "elixir": "session_durations(events)",
+      "python": "session_durations(events)",
+      "typescript": "sessionDurations(events)"
+    },
+    "examples": [
+      {
+        "input": [
+          {"user": "ana", "kind": "login", "ts": 10},
+          {"user": "ana", "kind": "logout", "ts": 13},
+          {"user": "ana", "kind": "logout", "ts": 20}
+        ],
+        "expected": {"ana": 3}
+      }
+    ]
+  },
+  {
+    "id": "window_majority",
+    "title": "Sliding Window Majority",
+    "focus_dimensions": ["task_framing", "result_contracts"],
+    "hypothesis_tags": ["docs", "contracts"],
+    "summary": "For every contiguous window of size k, return the element that appears strictly more than half the time, or null if no majority exists.",
+    "required_behavior": [
+      "Return one output per valid window in input order.",
+      "Use null-like output only when no strict majority exists.",
+      "If k is invalid, return an error contract."
+    ],
+    "contract_details": [
+      "k must be at least 1 and at most the length of the input list.",
+      "A strict majority means count > floor(k / 2).",
+      "The success result contains a list named values."
+    ],
+    "edge_cases": [
+      "A single-element window always has a majority.",
+      "Repeated values may overlap across windows.",
+      "An invalid k must not throw."
+    ],
+    "function_signatures": {
+      "elixir": "window_majorities(values, k)",
+      "python": "window_majorities(values, k)",
+      "typescript": "windowMajorities(values, k)"
+    },
+    "examples": [
+      {
+        "input": {"values": [1, 1, 2, 2, 2], "k": 3},
+        "expected": {"status": "ok", "values": [1, 2, 2]}
+      }
+    ]
+  },
+  {
+    "id": "rule_based_discount",
+    "title": "Rule Based Discount",
+    "focus_dimensions": ["result_contracts", "task_framing"],
+    "hypothesis_tags": ["contracts", "docs"],
+    "summary": "Evaluate an order against ordered discount rules and return the first matching rule plus the discounted total. If no rule matches, return the original total with a no-match marker.",
+    "required_behavior": [
+      "Rules are evaluated in the given order.",
+      "Each rule may inspect total, item count, and customer tier.",
+      "Return the chosen rule id or a no-match marker."
+    ],
+    "contract_details": [
+      "Only the first matching rule applies.",
+      "Discount is a percentage integer and must be applied exactly once.",
+      "Return both applied_rule and final_total."
+    ],
+    "edge_cases": [
+      "An empty rule list should still return a valid no-match output.",
+      "A 0% rule is still a valid applied rule.",
+      "Customer tier may be null."
+    ],
+    "function_signatures": {
+      "elixir": "apply_discount(order, rules)",
+      "python": "apply_discount(order, rules)",
+      "typescript": "applyDiscount(order, rules)"
+    },
+    "examples": [
+      {
+        "input": {
+          "order": {"total": 120, "item_count": 3, "tier": "gold"},
+          "rules": [
+            {"id": "gold10", "min_total": 100, "tier": "gold", "discount_pct": 10}
+          ]
+        },
+        "expected": {"applied_rule": "gold10", "final_total": 108}
+      }
+    ]
+  },
+  {
+    "id": "merge_intervals",
+    "title": "Merge Touching Intervals",
+    "focus_dimensions": ["state_flow", "task_framing"],
+    "hypothesis_tags": ["state", "docs"],
+    "summary": "Normalize and merge integer intervals. Intervals that overlap or touch should collapse into one merged interval.",
+    "required_behavior": [
+      "Return merged inclusive intervals sorted by start value.",
+      "Treat touching intervals as mergeable.",
+      "Ignore malformed interval entries without crashing."
+    ],
+    "contract_details": [
+      "Each valid interval has exactly two integer endpoints.",
+      "If an interval is reversed, normalize it before merging.",
+      "Return a list of [start, end] pairs."
+    ],
+    "edge_cases": [
+      "An empty input list returns an empty list.",
+      "Single-point intervals are valid.",
+      "Malformed entries do not contribute to the result."
+    ],
+    "function_signatures": {
+      "elixir": "merge_intervals(intervals)",
+      "python": "merge_intervals(intervals)",
+      "typescript": "mergeIntervals(intervals)"
+    },
+    "examples": [
+      {
+        "input": [[1, 3], [2, 4], [6, 6]],
+        "expected": [[1, 4], [6, 6]]
+      }
+    ]
+  },
+  {
+    "id": "top_k_frequencies",
+    "title": "Top K Frequencies",
+    "focus_dimensions": ["result_contracts", "task_framing"],
+    "hypothesis_tags": ["contracts", "docs"],
+    "summary": "Given string values and an integer k, return the k most frequent values. Ties are broken lexicographically.",
+    "required_behavior": [
+      "Return values sorted by frequency descending, then lexicographically ascending.",
+      "If k exceeds the number of unique values, return all unique values in ranked order.",
+      "If k is invalid, return an error contract."
+    ],
+    "contract_details": [
+      "Only string values participate in frequency counting.",
+      "The success result contains a list named items.",
+      "The error result must use reason=invalid_k."
+    ],
+    "edge_cases": [
+      "A single-value input is valid.",
+      "Repeated ties must still sort deterministically.",
+      "k less than 1 is invalid."
+    ],
+    "function_signatures": {
+      "elixir": "top_k_frequencies(values, k)",
+      "python": "top_k_frequencies(values, k)",
+      "typescript": "topKFrequencies(values, k)"
+    },
+    "examples": [
+      {
+        "input": {"values": ["a", "b", "a", "c", "b", "a"], "k": 2},
+        "expected": {"status": "ok", "items": ["a", "b"]}
+      }
+    ]
+  },
+  {
+    "id": "queue_wait_times",
+    "title": "Queue Wait Times",
+    "focus_dimensions": ["state_flow", "task_framing"],
+    "hypothesis_tags": ["state", "docs"],
+    "summary": "Simulate a single-server FIFO queue and return the wait time for each valid job.",
+    "required_behavior": [
+      "Process jobs in the input order.",
+      "Return one output row per valid job with its wait time.",
+      "Ignore malformed jobs without crashing."
+    ],
+    "contract_details": [
+      "Each valid job has id, arrive, and duration.",
+      "The server is idle when no job has arrived yet.",
+      "Return a list of {id, wait} rows in the same order as the valid input jobs."
+    ],
+    "edge_cases": [
+      "An empty input list returns an empty list.",
+      "Simultaneous arrivals preserve input order.",
+      "A zero-duration job is valid."
+    ],
+    "function_signatures": {
+      "elixir": "compute_waits(jobs)",
+      "python": "compute_waits(jobs)",
+      "typescript": "computeWaits(jobs)"
+    },
+    "examples": [
+      {
+        "input": [
+          {"id": "a", "arrive": 0, "duration": 3},
+          {"id": "b", "arrive": 1, "duration": 2},
+          {"id": "c", "arrive": 5, "duration": 1}
+        ],
+        "expected": [
+          {"id": "a", "wait": 0},
+          {"id": "b", "wait": 2},
+          {"id": "c", "wait": 0}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "normalize_phone_book",
+    "title": "Normalize Phone Book",
+    "focus_dimensions": ["result_contracts", "task_framing"],
+    "hypothesis_tags": ["contracts", "docs"],
+    "summary": "Normalize contact phone numbers to digits, discard invalid entries, and merge duplicate numbers by collecting unique names.",
+    "required_behavior": [
+      "Strip all non-digit characters from phone strings.",
+      "Keep only numbers with exactly 10 digits.",
+      "Return phone groups sorted by normalized phone value."
+    ],
+    "contract_details": [
+      "Each output row contains phone and names.",
+      "Names within a phone group must be unique and lexicographically sorted.",
+      "Malformed entries do not appear in the output."
+    ],
+    "edge_cases": [
+      "Duplicate names for the same phone should appear once.",
+      "Invalid phone lengths are ignored.",
+      "An empty input list returns an empty list."
+    ],
+    "function_signatures": {
+      "elixir": "normalize_phone_book(entries)",
+      "python": "normalize_phone_book(entries)",
+      "typescript": "normalizePhoneBook(entries)"
+    },
+    "examples": [
+      {
+        "input": [
+          {"name": "Ana", "phone": "(555) 111-2222"},
+          {"name": "Bob", "phone": "5551112222"},
+          {"name": "Cara", "phone": "5553334444"}
+        ],
+        "expected": [
+          {"phone": "5551112222", "names": ["Ana", "Bob"]},
+          {"phone": "5553334444", "names": ["Cara"]}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "stable_group_runs",
+    "title": "Stable Group Runs",
+    "focus_dimensions": ["state_flow", "task_framing"],
+    "hypothesis_tags": ["state", "docs"],
+    "summary": "Compress consecutive equal string values into run-length records while preserving the scan order.",
+    "required_behavior": [
+      "Return one output row per consecutive run.",
+      "Separated runs with the same value must stay separate.",
+      "Ignore non-string values without crashing."
+    ],
+    "contract_details": [
+      "Each output row contains value and count.",
+      "Counts are positive integers.",
+      "Return an empty list when no valid string values exist."
+    ],
+    "edge_cases": [
+      "A single value yields one run with count 1.",
+      "An empty input list yields an empty list.",
+      "Non-string values do not merge neighboring runs."
+    ],
+    "function_signatures": {
+      "elixir": "group_runs(values)",
+      "python": "group_runs(values)",
+      "typescript": "groupRuns(values)"
+    },
+    "examples": [
+      {
+        "input": ["a", "a", "b", "b", "b", "a"],
+        "expected": [
+          {"value": "a", "count": 2},
+          {"value": "b", "count": 3},
+          {"value": "a", "count": 1}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "token_bucket_decisions",
+    "title": "Token Bucket Decisions",
+    "focus_dimensions": ["state_flow", "result_contracts"],
+    "hypothesis_tags": ["state", "contracts"],
+    "summary": "Simulate a token bucket rate limiter across discrete ticks and return how many requests were allowed at each tick.",
+    "required_behavior": [
+      "Start with a full bucket.",
+      "After each tick except the last, refill before the next tick.",
+      "Return an error contract for invalid configuration or invalid requests."
+    ],
+    "contract_details": [
+      "capacity must be at least 1 and refill must be non-negative.",
+      "requests must be a list of non-negative integers.",
+      "The success result contains allowed and remaining."
+    ],
+    "edge_cases": [
+      "A zero refill rate is valid.",
+      "A request may exceed the current token count.",
+      "An empty request list returns an empty allowed list."
+    ],
+    "function_signatures": {
+      "elixir": "apply_token_bucket(capacity, refill, requests)",
+      "python": "apply_token_bucket(capacity, refill, requests)",
+      "typescript": "applyTokenBucket(capacity, refill, requests)"
+    },
+    "examples": [
+      {
+        "input": {"capacity": 3, "refill": 2, "requests": [2, 2, 2]},
+        "expected": {"status": "ok", "allowed": [2, 2, 2], "remaining": 1}
+      }
+    ]
+  },
+  {
+    "id": "dense_rankings",
+    "title": "Dense Rankings",
+    "focus_dimensions": ["result_contracts", "task_framing"],
+    "hypothesis_tags": ["contracts", "docs"],
+    "summary": "Sort score entries descending and assign dense ranks so equal scores share a rank and the next distinct score increments by one.",
+    "required_behavior": [
+      "Sort by score descending, then by name ascending.",
+      "Equal scores share the same rank.",
+      "Ignore malformed entries without crashing."
+    ],
+    "contract_details": [
+      "Each valid input row has name and score.",
+      "Each output row contains name and rank.",
+      "Return the ranked rows in sorted output order."
+    ],
+    "edge_cases": [
+      "An empty input list returns an empty list.",
+      "Multiple ties may appear.",
+      "A single valid row receives rank 1."
+    ],
+    "function_signatures": {
+      "elixir": "dense_ranks(entries)",
+      "python": "dense_ranks(entries)",
+      "typescript": "denseRanks(entries)"
+    },
+    "examples": [
+      {
+        "input": [
+          {"name": "Ana", "score": 9},
+          {"name": "Bo", "score": 9},
+          {"name": "Cid", "score": 7}
+        ],
+        "expected": [
+          {"name": "Ana", "rank": 1},
+          {"name": "Bo", "rank": 1},
+          {"name": "Cid", "rank": 2}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bracket_balance_report",
+    "title": "Bracket Balance Report",
+    "focus_dimensions": ["result_contracts", "task_framing"],
+    "hypothesis_tags": ["contracts", "docs"],
+    "summary": "Check whether brackets are balanced and return the index of the first error when they are not.",
+    "required_behavior": [
+      "Support (), [], and {} pairs.",
+      "Ignore non-bracket characters.",
+      "If the string ends with unmatched open brackets, report the string length as the first error index."
+    ],
+    "contract_details": [
+      "A balanced result returns balanced=true and first_error_index=null-like.",
+      "An early mismatched or extra closing bracket returns its zero-based index.",
+      "Return the same output shape for every input."
+    ],
+    "edge_cases": [
+      "An empty string is balanced.",
+      "A closing bracket at index 0 is an immediate error.",
+      "Nested brackets are valid when properly matched."
+    ],
+    "function_signatures": {
+      "elixir": "check_brackets(text)",
+      "python": "check_brackets(text)",
+      "typescript": "checkBrackets(text)"
+    },
+    "examples": [
+      {
+        "input": "(]",
+        "expected": {"balanced": false, "first_error_index": 1}
+      }
+    ]
+  }
+]

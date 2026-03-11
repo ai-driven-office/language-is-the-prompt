@@ -1,0 +1,10 @@
+language,condition_id,passed,total,pass_rate,ci_low,ci_high
+elixir,baseline_compact,9,16,56.2,33.2,76.9
+elixir,rich_contract,9,16,56.2,33.2,76.9
+elixir,rich_contract_examples,13,16,81.2,57.0,93.4
+python,baseline_compact,13,16,81.2,57.0,93.4
+python,rich_contract,13,16,81.2,57.0,93.4
+python,rich_contract_examples,13,16,81.2,57.0,93.4
+typescript,baseline_compact,13,16,81.2,57.0,93.4
+typescript,rich_contract,13,16,81.2,57.0,93.4
+typescript,rich_contract_examples,14,16,87.5,64.0,96.5

@@ -1,0 +1,4 @@
+scope,comparison,mean_task_delta,left_only_wins,right_only_wins,tied_pass,tied_fail,pair_count,discordant_n,sign_test_p
+all_languages,rich_contract_vs_baseline_compact,0.0,0,0,35,13,48,0,1.0
+all_languages,rich_contract_examples_vs_baseline_compact,0.104,7,2,33,6,48,9,0.179688
+all_languages,rich_contract_examples_vs_rich_contract,0.104,7,2,33,6,48,9,0.179688

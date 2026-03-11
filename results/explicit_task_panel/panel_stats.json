@@ -1,0 +1,664 @@
+{
+  "overall": [
+    {
+      "language": "elixir",
+      "condition_id": "baseline_compact",
+      "passed": 9,
+      "total": 16,
+      "pass_rate": 56.2,
+      "ci_low": 33.2,
+      "ci_high": 76.9
+    },
+    {
+      "language": "elixir",
+      "condition_id": "rich_contract",
+      "passed": 9,
+      "total": 16,
+      "pass_rate": 56.2,
+      "ci_low": 33.2,
+      "ci_high": 76.9
+    },
+    {
+      "language": "elixir",
+      "condition_id": "rich_contract_examples",
+      "passed": 13,
+      "total": 16,
+      "pass_rate": 81.2,
+      "ci_low": 57.0,
+      "ci_high": 93.4
+    },
+    {
+      "language": "python",
+      "condition_id": "baseline_compact",
+      "passed": 13,
+      "total": 16,
+      "pass_rate": 81.2,
+      "ci_low": 57.0,
+      "ci_high": 93.4
+    },
+    {
+      "language": "python",
+      "condition_id": "rich_contract",
+      "passed": 13,
+      "total": 16,
+      "pass_rate": 81.2,
+      "ci_low": 57.0,
+      "ci_high": 93.4
+    },
+    {
+      "language": "python",
+      "condition_id": "rich_contract_examples",
+      "passed": 13,
+      "total": 16,
+      "pass_rate": 81.2,
+      "ci_low": 57.0,
+      "ci_high": 93.4
+    },
+    {
+      "language": "typescript",
+      "condition_id": "baseline_compact",
+      "passed": 13,
+      "total": 16,
+      "pass_rate": 81.2,
+      "ci_low": 57.0,
+      "ci_high": 93.4
+    },
+    {
+      "language": "typescript",
+      "condition_id": "rich_contract",
+      "passed": 13,
+      "total": 16,
+      "pass_rate": 81.2,
+      "ci_low": 57.0,
+      "ci_high": 93.4
+    },
+    {
+      "language": "typescript",
+      "condition_id": "rich_contract_examples",
+      "passed": 14,
+      "total": 16,
+      "pass_rate": 87.5,
+      "ci_low": 64.0,
+      "ci_high": 96.5
+    }
+  ],
+  "aggregate_conditions": [
+    {
+      "condition_id": "baseline_compact",
+      "passed": 35,
+      "total": 48,
+      "pass_rate": 72.9,
+      "ci_low": 59.0,
+      "ci_high": 83.4
+    },
+    {
+      "condition_id": "rich_contract",
+      "passed": 35,
+      "total": 48,
+      "pass_rate": 72.9,
+      "ci_low": 59.0,
+      "ci_high": 83.4
+    },
+    {
+      "condition_id": "rich_contract_examples",
+      "passed": 40,
+      "total": 48,
+      "pass_rate": 83.3,
+      "ci_low": 70.4,
+      "ci_high": 91.3
+    }
+  ],
+  "paired": [
+    {
+      "scope": "all_languages",
+      "comparison": "rich_contract_vs_baseline_compact",
+      "mean_task_delta": 0.0,
+      "left_only_wins": 0,
+      "right_only_wins": 0,
+      "tied_pass": 35,
+      "tied_fail": 13,
+      "pair_count": 48,
+      "discordant_n": 0,
+      "sign_test_p": 1.0
+    },
+    {
+      "scope": "all_languages",
+      "comparison": "rich_contract_examples_vs_baseline_compact",
+      "mean_task_delta": 0.104,
+      "left_only_wins": 7,
+      "right_only_wins": 2,
+      "tied_pass": 33,
+      "tied_fail": 6,
+      "pair_count": 48,
+      "discordant_n": 9,
+      "sign_test_p": 0.179688
+    },
+    {
+      "scope": "all_languages",
+      "comparison": "rich_contract_examples_vs_rich_contract",
+      "mean_task_delta": 0.104,
+      "left_only_wins": 7,
+      "right_only_wins": 2,
+      "tied_pass": 33,
+      "tied_fail": 6,
+      "pair_count": 48,
+      "discordant_n": 9,
+      "sign_test_p": 0.179688
+    }
+  ],
+  "by_task": [
+    {
+      "task_id": "acct_balance_rollup",
+      "title": "Account Balance Rollup",
+      "condition_id": "baseline_compact",
+      "passed": 2,
+      "total": 3,
+      "pass_rate": 66.7,
+      "ci_low": 20.8,
+      "ci_high": 93.9
+    },
+    {
+      "task_id": "acct_balance_rollup",
+      "title": "Account Balance Rollup",
+      "condition_id": "rich_contract",
+      "passed": 2,
+      "total": 3,
+      "pass_rate": 66.7,
+      "ci_low": 20.8,
+      "ci_high": 93.9
+    },
+    {
+      "task_id": "acct_balance_rollup",
+      "title": "Account Balance Rollup",
+      "condition_id": "rich_contract_examples",
+      "passed": 2,
+      "total": 3,
+      "pass_rate": 66.7,
+      "ci_low": 20.8,
+      "ci_high": 93.9
+    },
+    {
+      "task_id": "bracket_balance_report",
+      "title": "Bracket Balance Report",
+      "condition_id": "baseline_compact",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "bracket_balance_report",
+      "title": "Bracket Balance Report",
+      "condition_id": "rich_contract",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "bracket_balance_report",
+      "title": "Bracket Balance Report",
+      "condition_id": "rich_contract_examples",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "csv_split_quoted",
+      "title": "CSV Split With Quotes",
+      "condition_id": "baseline_compact",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "csv_split_quoted",
+      "title": "CSV Split With Quotes",
+      "condition_id": "rich_contract",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "csv_split_quoted",
+      "title": "CSV Split With Quotes",
+      "condition_id": "rich_contract_examples",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "dense_rankings",
+      "title": "Dense Rankings",
+      "condition_id": "baseline_compact",
+      "passed": 2,
+      "total": 3,
+      "pass_rate": 66.7,
+      "ci_low": 20.8,
+      "ci_high": 93.9
+    },
+    {
+      "task_id": "dense_rankings",
+      "title": "Dense Rankings",
+      "condition_id": "rich_contract",
+      "passed": 2,
+      "total": 3,
+      "pass_rate": 66.7,
+      "ci_low": 20.8,
+      "ci_high": 93.9
+    },
+    {
+      "task_id": "dense_rankings",
+      "title": "Dense Rankings",
+      "condition_id": "rich_contract_examples",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "dependency_batches",
+      "title": "Dependency Batches",
+      "condition_id": "baseline_compact",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "dependency_batches",
+      "title": "Dependency Batches",
+      "condition_id": "rich_contract",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "dependency_batches",
+      "title": "Dependency Batches",
+      "condition_id": "rich_contract_examples",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "inventory_reconcile",
+      "title": "Inventory Reconcile",
+      "condition_id": "baseline_compact",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "inventory_reconcile",
+      "title": "Inventory Reconcile",
+      "condition_id": "rich_contract",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "inventory_reconcile",
+      "title": "Inventory Reconcile",
+      "condition_id": "rich_contract_examples",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "merge_intervals",
+      "title": "Merge Touching Intervals",
+      "condition_id": "baseline_compact",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "merge_intervals",
+      "title": "Merge Touching Intervals",
+      "condition_id": "rich_contract",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "merge_intervals",
+      "title": "Merge Touching Intervals",
+      "condition_id": "rich_contract_examples",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "normalize_phone_book",
+      "title": "Normalize Phone Book",
+      "condition_id": "baseline_compact",
+      "passed": 2,
+      "total": 3,
+      "pass_rate": 66.7,
+      "ci_low": 20.8,
+      "ci_high": 93.9
+    },
+    {
+      "task_id": "normalize_phone_book",
+      "title": "Normalize Phone Book",
+      "condition_id": "rich_contract",
+      "passed": 2,
+      "total": 3,
+      "pass_rate": 66.7,
+      "ci_low": 20.8,
+      "ci_high": 93.9
+    },
+    {
+      "task_id": "normalize_phone_book",
+      "title": "Normalize Phone Book",
+      "condition_id": "rich_contract_examples",
+      "passed": 0,
+      "total": 3,
+      "pass_rate": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 56.2
+    },
+    {
+      "task_id": "queue_wait_times",
+      "title": "Queue Wait Times",
+      "condition_id": "baseline_compact",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "queue_wait_times",
+      "title": "Queue Wait Times",
+      "condition_id": "rich_contract",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "queue_wait_times",
+      "title": "Queue Wait Times",
+      "condition_id": "rich_contract_examples",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "rule_based_discount",
+      "title": "Rule Based Discount",
+      "condition_id": "baseline_compact",
+      "passed": 0,
+      "total": 3,
+      "pass_rate": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 56.2
+    },
+    {
+      "task_id": "rule_based_discount",
+      "title": "Rule Based Discount",
+      "condition_id": "rich_contract",
+      "passed": 0,
+      "total": 3,
+      "pass_rate": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 56.2
+    },
+    {
+      "task_id": "rule_based_discount",
+      "title": "Rule Based Discount",
+      "condition_id": "rich_contract_examples",
+      "passed": 2,
+      "total": 3,
+      "pass_rate": 66.7,
+      "ci_low": 20.8,
+      "ci_high": 93.9
+    },
+    {
+      "task_id": "session_durations",
+      "title": "Session Durations",
+      "condition_id": "baseline_compact",
+      "passed": 0,
+      "total": 3,
+      "pass_rate": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 56.2
+    },
+    {
+      "task_id": "session_durations",
+      "title": "Session Durations",
+      "condition_id": "rich_contract",
+      "passed": 0,
+      "total": 3,
+      "pass_rate": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 56.2
+    },
+    {
+      "task_id": "session_durations",
+      "title": "Session Durations",
+      "condition_id": "rich_contract_examples",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "stable_group_runs",
+      "title": "Stable Group Runs",
+      "condition_id": "baseline_compact",
+      "passed": 2,
+      "total": 3,
+      "pass_rate": 66.7,
+      "ci_low": 20.8,
+      "ci_high": 93.9
+    },
+    {
+      "task_id": "stable_group_runs",
+      "title": "Stable Group Runs",
+      "condition_id": "rich_contract",
+      "passed": 2,
+      "total": 3,
+      "pass_rate": 66.7,
+      "ci_low": 20.8,
+      "ci_high": 93.9
+    },
+    {
+      "task_id": "stable_group_runs",
+      "title": "Stable Group Runs",
+      "condition_id": "rich_contract_examples",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "threshold_bursts",
+      "title": "Threshold Bursts",
+      "condition_id": "baseline_compact",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "threshold_bursts",
+      "title": "Threshold Bursts",
+      "condition_id": "rich_contract",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "threshold_bursts",
+      "title": "Threshold Bursts",
+      "condition_id": "rich_contract_examples",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "token_bucket_decisions",
+      "title": "Token Bucket Decisions",
+      "condition_id": "baseline_compact",
+      "passed": 0,
+      "total": 3,
+      "pass_rate": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 56.2
+    },
+    {
+      "task_id": "token_bucket_decisions",
+      "title": "Token Bucket Decisions",
+      "condition_id": "rich_contract",
+      "passed": 0,
+      "total": 3,
+      "pass_rate": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 56.2
+    },
+    {
+      "task_id": "token_bucket_decisions",
+      "title": "Token Bucket Decisions",
+      "condition_id": "rich_contract_examples",
+      "passed": 0,
+      "total": 3,
+      "pass_rate": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 56.2
+    },
+    {
+      "task_id": "top_k_frequencies",
+      "title": "Top K Frequencies",
+      "condition_id": "baseline_compact",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "top_k_frequencies",
+      "title": "Top K Frequencies",
+      "condition_id": "rich_contract",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "top_k_frequencies",
+      "title": "Top K Frequencies",
+      "condition_id": "rich_contract_examples",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "window_majority",
+      "title": "Sliding Window Majority",
+      "condition_id": "baseline_compact",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "window_majority",
+      "title": "Sliding Window Majority",
+      "condition_id": "rich_contract",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    },
+    {
+      "task_id": "window_majority",
+      "title": "Sliding Window Majority",
+      "condition_id": "rich_contract_examples",
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 100.0,
+      "ci_low": 43.8,
+      "ci_high": 100.0
+    }
+  ],
+  "example_rescues": [
+    {
+      "task_id": "dense_rankings",
+      "title": "Dense Rankings",
+      "languages": [
+        "elixir"
+      ]
+    },
+    {
+      "task_id": "rule_based_discount",
+      "title": "Rule Based Discount",
+      "languages": [
+        "elixir",
+        "typescript"
+      ]
+    },
+    {
+      "task_id": "session_durations",
+      "title": "Session Durations",
+      "languages": [
+        "elixir",
+        "python",
+        "typescript"
+      ]
+    },
+    {
+      "task_id": "stable_group_runs",
+      "title": "Stable Group Runs",
+      "languages": [
+        "elixir"
+      ]
+    }
+  ]
+}

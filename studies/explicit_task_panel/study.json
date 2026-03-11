@@ -1,0 +1,9 @@
+{
+  "study_id": "explicit-task-panel-v1",
+  "target_languages": ["elixir", "python", "typescript"],
+  "primary_hypotheses": [
+    "Rich task and API framing should improve pass rates across all languages.",
+    "The gain from richer framing should be larger in weaker baseline languages than in Elixir.",
+    "Explicit contracts and explicit edge-case coverage should reduce wrong-answer style failures."
+  ]
+}

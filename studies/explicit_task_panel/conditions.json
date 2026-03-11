@@ -1,0 +1,29 @@
+[
+  {
+    "id": "baseline_compact",
+    "include_contract": true,
+    "include_edge_cases": false,
+    "include_examples": false,
+    "extra_prompt_notes": []
+  },
+  {
+    "id": "rich_contract",
+    "include_contract": true,
+    "include_edge_cases": true,
+    "include_examples": false,
+    "extra_prompt_notes": [
+      "Preserve the exact return contract described above.",
+      "Handle invalid input paths explicitly rather than implicitly."
+    ]
+  },
+  {
+    "id": "rich_contract_examples",
+    "include_contract": true,
+    "include_edge_cases": true,
+    "include_examples": true,
+    "extra_prompt_notes": [
+      "Use the examples only as behavioral guidance, not as tests to hardcode.",
+      "Prefer a solution whose control flow makes boundary cases easy to verify."
+    ]
+  }
+]

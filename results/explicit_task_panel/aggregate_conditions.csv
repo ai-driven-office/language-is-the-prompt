@@ -1,0 +1,4 @@
+condition_id,passed,total,pass_rate,ci_low,ci_high
+baseline_compact,35,48,72.9,59.0,83.4
+rich_contract,35,48,72.9,59.0,83.4
+rich_contract_examples,40,48,83.3,70.4,91.3
