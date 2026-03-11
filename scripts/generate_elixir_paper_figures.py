@@ -247,13 +247,68 @@ def render_explicit_task_panel() -> None:
     write_svg(FIGURES_DIR / "figure_3_explicit_task_panel.svg", width, height, body)
 
 
+def render_elixir_docs_pipeline() -> None:
+    width = 1500
+    height = 900
+    body: list[str] = [
+        svg_rect(34, 34, width - 68, height - 68, CARD, radius=34, stroke="#e4e8f1"),
+        svg_text(72, 96, "Figure 4", size=22, weight="700", fill=ELIXIR),
+        svg_text(72, 146, "Elixir documentation pipeline: source metadata to ecosystem-wide legibility", size=38, weight="800"),
+        svg_text(72, 184, "The documentation system is embedded in the toolchain rather than bolted on after the fact.", size=20, fill=MUTED),
+    ]
+
+    boxes = [
+        (90, 280, 230, 140, "Source attrs", "@moduledoc, @doc,\n@typedoc near code", "#ede9fe", ELIXIR),
+        (360, 280, 230, 140, "Compiled docs", "BEAM doc chunks\nCode.fetch_docs/1", "#dbeafe", BLUE),
+        (630, 280, 230, 140, "Executable examples", "doctest ties docs\nto runnable examples", "#ffedd5", ACCENT),
+        (900, 280, 230, 140, "Published docs", "ExDoc renders guides,\nAPIs, extras, grouping", "#ccfbf1", GREEN),
+        (1170, 280, 230, 140, "Shared surface", "HexDocs gives packages\na common public format", "#f3e8ff", ELIXIR),
+    ]
+
+    for x, y, w, h, title, subtitle, fill, accent in boxes:
+        body.append(svg_rect(x, y, w, h, fill, radius=28, stroke="#d7dce7"))
+        body.append(svg_text(x + 24, y + 44, title, size=24, weight="800", fill=accent))
+        sub1, sub2 = subtitle.split("\n")
+        body.append(svg_text(x + 24, y + 84, sub1, size=18, fill=TEXT))
+        body.append(svg_text(x + 24, y + 112, sub2, size=18, fill=TEXT))
+
+    for idx in range(len(boxes) - 1):
+        x1 = boxes[idx][0] + boxes[idx][2]
+        x2 = boxes[idx + 1][0]
+        y = boxes[idx][1] + boxes[idx][3] / 2
+        body.append(svg_line(x1 + 16, y, x2 - 16, y, stroke="#94a3b8", width=4))
+        body.append(
+            f'<polygon points="{x2 - 16},{y} {x2 - 34},{y - 10} {x2 - 34},{y + 10}" fill="#94a3b8"/>'
+        )
+
+    body.append(svg_rect(90, 500, 1310, 250, "#f8fafc", radius=28, stroke="#e5e7eb"))
+    body.append(svg_text(126, 552, "Why this may matter for model-facing quality", size=28, weight="800"))
+
+    bullets = [
+        "Documentation lives next to the API surface, which reduces lookup ambiguity.",
+        "Examples can be executable, so narrative guidance is partially checked against running code.",
+        "Public and internal surfaces are deliberately separated with doc attributes rather than informal comments.",
+        "ExDoc and HexDocs standardize the presentation layer across many libraries, increasing ecosystem regularity.",
+    ]
+    y = 602
+    for bullet in bullets:
+        body.append(svg_text(138, y, "•", size=24, weight="800", fill=ELIXIR))
+        body.append(svg_text(162, y, bullet, size=20, fill=TEXT))
+        y += 42
+
+    body.append(svg_text(72, height - 56, "Sources: Elixir docs, ExUnit doctest, ExDoc, HexDocs", size=16, fill=MUTED))
+    write_svg(FIGURES_DIR / "figure_4_elixir_docs_pipeline.svg", width, height, body)
+
+
 def main() -> None:
     render_leaderboard()
     render_suite_a()
     render_explicit_task_panel()
+    render_elixir_docs_pipeline()
     print("Wrote paper/figures/figure_1_acb_leaderboard.svg")
     print("Wrote paper/figures/figure_2_suite_a_docs.svg")
     print("Wrote paper/figures/figure_3_explicit_task_panel.svg")
+    print("Wrote paper/figures/figure_4_elixir_docs_pipeline.svg")
 
 
 if __name__ == "__main__":

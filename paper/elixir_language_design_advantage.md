@@ -765,6 +765,32 @@ That design has three consequences relevant to this paper. First, API contracts 
 
 The distinction between documentation and comments is explicit in the official Elixir writing guide, which describes documentation as an API contract rather than as incidental inline annotation [28]. The same guide also standardizes how internal surfaces are hidden: `@doc false` and `@moduledoc false` remove items from end-user docs without changing runtime visibility [28]. That matters because it gives library authors a coarse but clear separation between public and internal APIs, which may reduce the amount of contradictory or noisy material exposed to downstream users and models.
 
+**Table 11.** Elixir documentation pipeline and its likely effect on model-facing legibility
+
+
+| Stage | Mechanism | Likely effect |
+| ----- | --------- | ------------- |
+| Authoring | `@moduledoc`, `@doc`, `@typedoc` in source [28][29] | places API semantics next to implementation |
+| Compilation | BEAM documentation chunks, `Code.fetch_docs/1` [30] | keeps docs machine-readable and structured |
+| Validation | `doctest/1` via ExUnit [31][32] | aligns narrative examples with executable behavior |
+| Publication | ExDoc site generation [33] | normalizes presentation of guides, APIs, and extras |
+| Distribution | HexDocs hosting/indexing [34] | creates a common ecosystem-wide documentation surface |
+
+![Figure 4. Elixir documentation pipeline: source-level metadata, executable examples, and standardized publication form a single legibility stack.](figures/figure_4_elixir_docs_pipeline.svg)
+
+The comparative point is not that other ecosystems lack documentation quality. Rather, Elixir appears unusual in how vertically integrated the documentation stack is. Table 12 contrasts the dominant documentation path in Elixir with typical Python and TypeScript practice.
+
+**Table 12.** Documentation architecture comparison: Elixir vs. Python vs. TypeScript
+
+
+| Language | Primary authoring surface | Built-in retrieval path | Executable examples | Common publication path | Structural implication |
+| -------- | ------------------------- | ----------------------- | ------------------- | ----------------------- | --------------------- |
+| Elixir | `@moduledoc`, `@doc`, `@typedoc` in source [28][29] | compiled docs via `Code.fetch_docs/1` [30] | `doctest` through ExUnit [31][32] | ExDoc + HexDocs [33][34] | vertically integrated, uniform public-doc pipeline |
+| Python | docstrings (`__doc__`) [35] | `help()` / `pydoc` [35] | `doctest` module [36] | mixed: `pydoc` plus broader external tooling | strong built-ins, but publication norms are less unified |
+| TypeScript | JSDoc comments; TSDoc aims to standardize comment syntax [37][38] | editor/tooling and compiler-adjacent parsing of JSDoc [37] | no built-in doctest equivalent in the core toolchain | TypeDoc and related tools [39] | strong tooling, but documentation is more multi-tool and less compiler-embedded |
+
+This comparison suggests a more precise hypothesis than "Elixir has better docs." Elixir may benefit from **documentation regularity plus documentation proximity**: the public contract is written in source, recoverable as structured metadata, optionally executable as examples, and then published through a common ecosystem surface. Python shares part of this stack, especially docstrings and doctest, but its publication layer is more fragmented. TypeScript has rich comment tooling and a growing standardization effort, but the documentation path is comparatively more tool-mediated and less vertically integrated into the language/runtime artifact boundary.
+
 The following minimal example shows the ecosystem pattern:
 
 ```elixir
@@ -994,6 +1020,16 @@ The broader lesson is therefore not that one feature explains everything, but th
 [33] ExDoc Documentation Team. "ExDoc." HexDocs / ExDoc documentation.
 
 [34] Hex.pm Team. "HexDocs." Hex package manager documentation.
+
+[35] Python Documentation Team. "pydoc" and built-in help/documentation support. Python standard library documentation.
+
+[36] Python Documentation Team. "doctest." Python standard library documentation.
+
+[37] TypeScript Team. "JSDoc Reference." Official TypeScript documentation.
+
+[38] TSDoc Project. "TSDoc Overview." tsdoc.org specification and documentation.
+
+[39] TypeDoc Team. "TypeDoc Documentation." typedoc.org.
 
 ---
 
