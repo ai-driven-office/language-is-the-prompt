@@ -9,3 +9,24 @@ logs/
 unified_processor.log
 __pycache__/
 tmp/
+
+# OS artifacts
+.DS_Store
+**/.DS_Store
+
+# LaTeX / paper build outputs
+paper/main.pdf
+paper/figures/*.pdf
+paper/*.aux
+paper/*.bbl
+paper/*.bcf
+paper/*.blg
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.log
+paper/*.nav
+paper/*.out
+paper/*.run.xml
+paper/*.snm
+paper/*.synctex.gz
+paper/*.toc
