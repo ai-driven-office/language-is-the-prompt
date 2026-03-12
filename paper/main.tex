@@ -88,6 +88,7 @@
   pdftitle={The Language Is the Prompt},
   pdfauthor={G{\"u}nther Brunner}
 }
+\urlstyle{same}   % URLs in body font, not disruptive monospace
 
 % ── Spacing & layout ────────────────────────────────────────────────
 \setlength{\parskip}{0.4em}
@@ -210,6 +211,9 @@ This paper makes six concrete contributions.
   \item \textbf{A reframing of language design.} We argue that \emph{LLM-friendliness} is becoming a real design axis, and we identify documentation architecture as a first-class part of that axis rather than an afterthought.
   \item \textbf{Platform-level implications.} We connect the explicitness story to the BEAM virtual machine's actor model and discuss how the same design philosophy that makes \elixir{} legible for code generation may also align with agentic AI deployment requirements.
 \end{enumerate}
+
+\paragraph{Outline.}
+Section~2 reviews related work. Section~3 details the benchmark reproduction and artifact controls. Section~4 outlines our experimental design, and Section~5 maps the language design space. Section~6 presents causal evidence from active ablations; Section~7 reports exact-task multilingual studies. Sections~8--10 unpack architectural and platform-level implications, and Section~11 concludes.
 
 \section{Related work}
 
@@ -733,6 +737,13 @@ This paper is strong on one point and deliberately modest on several others.
 
 Future work should therefore do three things: scale the exact-task multilingual panels, replicate the active-ablation ordering on other frontier model families, and move beyond benchmark snippets into repo-scale comparisons among production frameworks (for example, Phoenix or Ecto versus comparable Django, Rails, or Express codebases).
 
+\paragraph{Implications for new language design.}
+Perhaps the most consequential implication of this study is what it suggests about languages that do not yet exist. The conventional assumption in \acro{LLM}-assisted programming has been that \emph{corpus size determines generation quality}: models perform best in languages with the most training data \cite{lowresource}. \elixir{}'s result challenges that assumption directly. A language with tiny market share nearly doubles the score of the most represented language in public code corpora --- not because models memorized more \elixir{}, but because \elixir{}'s design makes intent recoverable from local context.
+
+If the binding constraint is structural legibility rather than corpus volume, then the design space for new programming languages is wider than previously believed. A language engineered from first principles around the traits identified in this paper --- explicit contracts, pattern-driven control flow, structured documentation as a first-class artifact, pipeline-oriented data transformation, and immutable-by-default semantics --- could in principle match or exceed \elixir{}'s \acro{LLM} legibility without inheriting its ecosystem size limitations. The \acro{BEAM} platform story (Section~\ref{sec:beam}) adds a further dimension: pairing these generation-friendly design choices with an agent-native runtime may compound the advantage.
+
+One such effort is DreamLang,\footnote{\url{https://dreamlang.dev}} a language design project by the first author that takes the findings of this study as explicit design constraints. Whether purpose-built \acro{LLM}-legible languages ultimately outperform evolved ecosystems is an empirical question this paper cannot answer, but the data presented here suggest that the question is now worth asking seriously.
+
 \section{Conclusion}
 
 We began with a striking result: \elixir{} scores 87.4\% on \acb{}, while \pythonlang{} scores 43.9\%.
@@ -749,6 +760,15 @@ In that sense, the future language wars may not be decided only by speed, safety
 \begin{center}
 $\ast\quad\ast\quad\ast$
 \end{center}
+
+\section*{Data and Code Availability}
+All task-generation scripts, prompt templates, execution harnesses, raw evaluation logs, and the manual audit pack referenced in this study are available at:
+
+\begin{center}
+\url{https://github.com/gunta/AutoCodeBenchmark}
+\end{center}
+
+\noindent The repository includes the fractional-factorial design matrices, per-task pass/fail CSVs, and the figure-generation code needed to reproduce every table and plot in this paper.
 
 \clearpage
 \appendix
