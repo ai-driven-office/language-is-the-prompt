@@ -9,6 +9,11 @@ set -euo pipefail
 #   ./build.sh overleaf     # package Overleaf zip only (skip compile)
 #   ./build.sh arxiv        # compile with pdfLaTeX-compatible path + package arXiv zip
 #   ./build.sh clean        # remove all generated artifacts
+#
+# Japanese version:
+#   ./build.sh figures-ja   # regenerate Japanese figures only
+#   ./build.sh compile-ja   # compile main_ja.tex with tectonic (XeTeX)
+#   ./build.sh all-ja       # figures-ja + compile-ja
 
 PAPER_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$PAPER_DIR"
@@ -193,10 +198,49 @@ build_arxiv() {
     echo ""
 }
 
+# ── Japanese: Generate figures ─────────────────────────────────────────
+build_figures_ja() {
+    log "Generating Japanese figures..."
+    local py
+    py="$(find_python)"
+
+    if ! "$py" -c "import matplotlib" 2>/dev/null; then
+        fail "matplotlib not found. Install: pip install matplotlib numpy"
+    fi
+
+    "$py" figures/generate_figures_ja.py
+
+    local count
+    count=$(ls figures/*_ja.pdf 2>/dev/null | wc -l | tr -d ' ')
+    ok "Generated ${count} Japanese figure PDFs + PNGs"
+}
+
+# ── Japanese: Compile PDF ─────────────────────────────────────────────
+build_pdf_ja() {
+    log "Compiling main_ja.tex (XeTeX/tectonic)..."
+
+    if ! command -v tectonic &>/dev/null; then
+        fail "tectonic not found. Install tectonic for XeTeX-based Japanese compilation."
+    fi
+
+    tectonic main_ja.tex 2>&1 | tail -10
+
+    if [[ -f main_ja.pdf ]]; then
+        local size
+        size=$(du -h main_ja.pdf | cut -f1 | tr -d ' ')
+        local pages
+        pages=$( (pdfinfo main_ja.pdf 2>/dev/null || echo "Pages: ?") | grep Pages | awk '{print $2}')
+        ok "main_ja.pdf — ${pages} pages, ${size}"
+    else
+        fail "Compilation failed — no main_ja.pdf produced"
+    fi
+}
+
 # ── Clean ───────────────────────────────────────────────────────────────
 clean() {
     log "Cleaning build artifacts..."
     rm -f main.pdf main.aux main.log main.out main.bbl main.blg main.fls main.fdb_latexmk main.synctex.gz
+    rm -f main_ja.pdf main_ja.aux main_ja.log main_ja.out main_ja.bbl main_ja.blg main_ja.fls main_ja.fdb_latexmk main_ja.synctex.gz
     rm -f figures/*.pdf figures/*.png
     rm -f paper_overleaf.zip
     rm -f arxiv_source.zip
@@ -225,6 +269,17 @@ main() {
             echo ""
             build_arxiv
             ;;
+        figures-ja)
+            build_figures_ja
+            ;;
+        compile-ja|pdf-ja)
+            build_pdf_ja
+            ;;
+        all-ja)
+            build_figures_ja
+            echo ""
+            build_pdf_ja
+            ;;
         clean)
             clean
             ;;
@@ -238,7 +293,7 @@ main() {
             build_arxiv
             ;;
         *)
-            echo "Usage: ./build.sh [figures|compile|overleaf|arxiv|clean|all]"
+            echo "Usage: ./build.sh [figures|compile|overleaf|arxiv|figures-ja|compile-ja|all-ja|clean|all]"
             exit 1
             ;;
     esac
