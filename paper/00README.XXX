@@ -1,0 +1,6 @@
+Top-level source file: main.tex
+Preferred compiler: pdfLaTeX
+
+This source bundle is intended for arXiv submission.
+All required figure assets are included under figures/ as PDF files.
+The bibliography is embedded directly in main.tex; there is no external .bib or .bbl dependency.

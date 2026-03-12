@@ -3,10 +3,11 @@ set -euo pipefail
 
 # ── The Language Is the Prompt — Build Script ────────────────────────────
 # Usage:
-#   ./build.sh              # full build: figures → compile → overleaf zip
+#   ./build.sh              # full build: figures → compile → overleaf zip → arXiv zip
 #   ./build.sh figures      # regenerate figures only
 #   ./build.sh compile      # compile PDF only (skip figures)
 #   ./build.sh overleaf     # package Overleaf zip only (skip compile)
+#   ./build.sh arxiv        # compile with pdfLaTeX-compatible path + package arXiv zip
 #   ./build.sh clean        # remove all generated artifacts
 
 PAPER_DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -25,12 +26,12 @@ fail() { echo -e "${RED}✗${NC} $*" >&2; exit 1; }
 
 # ── Detect tools ────────────────────────────────────────────────────────
 find_latex_engine() {
-    if command -v tectonic &>/dev/null; then
-        echo "tectonic"
-    elif command -v latexmk &>/dev/null; then
+    if command -v latexmk &>/dev/null; then
         echo "latexmk"
     elif command -v pdflatex &>/dev/null; then
         echo "pdflatex"
+    elif command -v tectonic &>/dev/null; then
+        echo "tectonic"
     else
         fail "No LaTeX engine found. Install tectonic, latexmk, or pdflatex."
     fi
@@ -71,12 +72,8 @@ build_pdf() {
     engine="$(find_latex_engine)"
 
     case "$engine" in
-        tectonic)
-            log "Using tectonic (XeTeX)"
-            tectonic main.tex 2>&1 | tail -5
-            ;;
         latexmk)
-            log "Using latexmk (pdfLaTeX)"
+            log "Using latexmk (pdfLaTeX-compatible / arXiv-safe path)"
             latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
             ;;
         pdflatex)
@@ -84,6 +81,10 @@ build_pdf() {
             pdflatex -interaction=nonstopmode main.tex
             pdflatex -interaction=nonstopmode main.tex
             pdflatex -interaction=nonstopmode main.tex
+            ;;
+        tectonic)
+            log "Using tectonic fallback"
+            tectonic main.tex 2>&1 | tail -5
             ;;
     esac
 
@@ -145,12 +146,50 @@ build_overleaf() {
     echo ""
 }
 
+# ── Step 4: Package for arXiv ────────────────────────────────────────────
+build_arxiv() {
+    log "Packaging arXiv source zip..."
+
+    local zipfile="${PAPER_DIR}/arxiv_source.zip"
+    rm -f "$zipfile"
+
+    local staging
+    staging=$(mktemp -d)
+    trap "rm -rf '$staging'" EXIT
+
+    cp main.tex "$staging/"
+
+    if [[ -f 00README.XXX ]]; then
+        cp 00README.XXX "$staging/"
+    fi
+
+    mkdir -p "$staging/figures"
+    for f in figures/*.pdf; do
+        [[ -f "$f" ]] && cp "$f" "$staging/figures/"
+    done
+
+    (cd "$staging" && zip -r "$zipfile" . -x ".*") >/dev/null
+
+    local size
+    size=$(du -h "$zipfile" | cut -f1 | tr -d ' ')
+    local count
+    count=$(unzip -l "$zipfile" 2>/dev/null | tail -1 | awk '{print $2}')
+    ok "arxiv_source.zip — ${size}, ${count} files"
+    echo ""
+    echo -e "  ${BOLD}arXiv upload instructions:${NC}"
+    echo "  1. Upload arxiv_source.zip (not the repository root)"
+    echo "  2. Keep main.tex at the archive root"
+    echo "  3. Compile with pdfLaTeX on arXiv unless you have a reason not to"
+    echo ""
+}
+
 # ── Clean ───────────────────────────────────────────────────────────────
 clean() {
     log "Cleaning build artifacts..."
     rm -f main.pdf main.aux main.log main.out main.bbl main.blg main.fls main.fdb_latexmk main.synctex.gz
     rm -f figures/*.pdf figures/*.png
     rm -f paper_overleaf.zip
+    rm -f arxiv_source.zip
     ok "Cleaned"
 }
 
@@ -171,6 +210,11 @@ main() {
         overleaf|zip)
             build_overleaf
             ;;
+        arxiv)
+            build_pdf
+            echo ""
+            build_arxiv
+            ;;
         clean)
             clean
             ;;
@@ -180,9 +224,11 @@ main() {
             build_pdf
             echo ""
             build_overleaf
+            echo ""
+            build_arxiv
             ;;
         *)
-            echo "Usage: ./build.sh [figures|compile|overleaf|clean|all]"
+            echo "Usage: ./build.sh [figures|compile|overleaf|arxiv|clean|all]"
             exit 1
             ;;
     esac

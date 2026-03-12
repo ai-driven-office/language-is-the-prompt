@@ -1,45 +1,43 @@
 # Elixir arXiv paper - editable source bundle
 
-This bundle gives you editable source files for the paper instead of only the compiled PDFs.
+This directory contains the editable manuscript source and the generated figure assets used for submission packaging.
 
-Important note: the exact original figure-generation scripts were **not** present in the saved artifact bundle that remained in this workspace. The surviving files were:
-
-- `main.tex`
-- compiled figure PDFs
-
-Because of that, the figure source in this bundle is a **faithful reconstructed source package** built from the paper tables, captions, and figure contents. It is fully editable and reproducible, but it is not guaranteed to be byte-for-byte identical to the lost original plotting scripts.
+Important note: the exact original plotting scripts were not preserved in the older saved artifact bundle. The current figure script is a reconstructed, editable source package built from the paper tables, captions, and rendered figure contents. It is reproducible for this repository state, but it is not guaranteed to be byte-for-byte identical to any earlier private plotting code.
 
 ## What is included
 
-- `main.tex` - the paper source
-- `figures/generate_figures.py` - rebuilds all figure PDFs from editable data
-- `data/*.csv` - plot data used by the figure script
-- `Makefile` - one-command rebuild targets
+- `main.tex` - the manuscript source
+- `build.sh` - build/package entrypoint
+- `figures/generate_figures.py` - regenerates the figure PDFs and PNGs used by the paper
+- `figures/*.pdf` - compiled figure assets referenced by `main.tex`
+- `00README.XXX` - arXiv submission note included in the arXiv source zip
 
-## Rebuild
+## Build
+
+Preferred local build:
 
 ```bash
-make figures
-make paper
+./build.sh compile
 ```
 
-Or manually:
+Full rebuild:
 
 ```bash
-python3 figures/generate_figures.py
-latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
+./build.sh
+```
+
+That runs figure generation, compiles the manuscript, creates `paper_overleaf.zip`, and creates `arxiv_source.zip`.
+
+To generate only the arXiv-ready source bundle:
+
+```bash
+./build.sh arxiv
 ```
 
 ## Outputs
 
-Running the figure script will create these files under `figures/`:
+- `main.pdf` - compiled manuscript
+- `paper_overleaf.zip` - editable upload bundle for Overleaf
+- `arxiv_source.zip` - minimal arXiv upload bundle with `main.tex`, `00README.XXX`, and the referenced figure PDFs
 
-- `figure_1_leaderboard.pdf`
-- `figure_2_design_space.pdf`
-- `figure_3_difficulty_resilience.pdf`
-- `figure_4_suite_a_ablation.pdf`
-- `figure_5_factorial_effects.pdf`
-- `figure_6_docs_pipeline.pdf`
-- `figure_A1_robustness.pdf`
-
-The compiled PDFs are intentionally **not** pre-bundled here so that the package stays source-first.
+For arXiv, upload `arxiv_source.zip`, not the repository root.
