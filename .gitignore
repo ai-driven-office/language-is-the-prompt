@@ -15,8 +15,6 @@ tmp/
 **/.DS_Store
 
 # LaTeX / paper build outputs
-paper/main.pdf
-paper/figures/*.pdf
 paper/*.aux
 paper/*.bbl
 paper/*.bcf
