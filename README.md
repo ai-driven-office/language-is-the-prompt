@@ -1,304 +1,188 @@
 
 <div align="center">
 
-# AutoCodeBench: Large Language Models are Automatic Code Benchmark Generators
+<img src="paper/assets/logos/elixir-devicon-original.svg" width="80" alt="Elixir">
 
-**Hunyuan Team, Tencent**
+# The Language Is the Prompt
+
+**How Elixir Achieves Top-Tier Code Generation on AutoCodeBench**
+
+*Gunther Schulz — CyberAgent, Inc.*
 
 </div>
 
-
 <p align="center">
-    <a href="https://arxiv.org/abs/2508.09101">📖 Paper</a> •
-    <a href="https://autocodebench.github.io/">🏠 Home Page</a> •
-    <a href="https://huggingface.co/datasets/tencent/AutoCodeBenchmark">💻 Data </a> •
-    <a href="https://autocodebench.github.io/leaderboard.html">🏆 Leaderboard</a> •
-    <a href="./reports/fork_update_gpt_5_4_medium.md">🧪 Fork Update Report</a> •
-    <a href="#citation">📜 Citation</a>
+  <a href="./paper/main.pdf">📄 Paper (EN)</a> •
+  <a href="./paper/main_ja.pdf">📄 論文 (日本語)</a> •
+  <a href="./paper/data/">📊 Data</a> •
+  <a href="./results/">🧪 Full Results</a> •
+  <a href="#key-findings">🔬 Key Findings</a> •
+  <a href="#citation">📜 Citation</a>
 </p>
 
 <p align="center">
-  <img alt="Fork update" src="https://img.shields.io/badge/Fork%20Update-March%202026-0f766e?style=for-the-badge">
-  <img alt="GPT-5.4 Medium ACB-Full" src="https://img.shields.io/badge/GPT--5.4%20Medium-53.3%25%20on%20ACB--Full-2563eb?style=for-the-badge">
-  <img alt="Gleam validated slice" src="https://img.shields.io/badge/Gleam-20.5%25%20validated-d97706?style=for-the-badge">
-  <img alt="Lean4 validated slice" src="https://img.shields.io/badge/Lean4-28.8%25%20validated-7c3aed?style=for-the-badge">
-  <img alt="All languages in one view" src="https://img.shields.io/badge/23%20Language%20Tracks-One%20Unified%20Leaderboard-111827?style=for-the-badge">
+  <img alt="Elixir Pass@1" src="https://img.shields.io/badge/Elixir-87.4%25%20Pass%401-6B4F9E?style=for-the-badge">
+  <img alt="Elixir rank" src="https://img.shields.io/badge/%231%20on%20AutoCodeBench-Suite%20B-4F46E5?style=for-the-badge">
+  <img alt="Hard tasks" src="https://img.shields.io/badge/Hard%20Tasks-86.3%25%20vs%2031.6%25%20Python-0f766e?style=for-the-badge">
+  <img alt="Languages" src="https://img.shields.io/badge/10%20Languages-Controlled%20Comparison-111827?style=for-the-badge">
 </p>
 
 <div align="center">
-  <img src="figures/fork_leaderboard_share_gpt_5_4_medium.svg" width="96%">
+  <img src="paper/figures/figure_1_leaderboard.png" width="92%" alt="AutoCodeBench Leaderboard">
 </div>
-
-
-## 📰 News
-
-- **2026.03.11** 🧪 - This fork adds a local `gpt-5.4` `medium` reasoning run on the latest benchmark assets available in this repository snapshot, plus extension-language evaluations for `gleam`, `lean4`, and `typescript_effect`. See the [fork update report](./reports/fork_update_gpt_5_4_medium.md).
-- **2025.12.04** 🚀 - We released ***AutoCodeBench-V2***, built on the original dataset and iteratively refined through top proprietary models and a sandbox to produce 1,000 higher-quality problems! The **leaderboard and evaluation tutorial** are available in [AutoCodeBench-V2](./AutoCodeBench-V2/)!
-- **2025.12.04** 📚 - We released ***AutoCodeInstruct***, a large-scale multilingual dataset equipped with golden answers distilled from DeepSeek-V3-0324, and filtered using Qwen2.5-Coder-7B/32B-Instruct to create two versions suitable for RL and SFT training! The dataset is available at [autocodeinstruct_v3answer_qwen32b.jsonl](https://huggingface.co/datasets/tencent/AutoCodeBenchmark/blob/main/autocodeinstruct_v3answer_qwen32b.jsonl) and [autocodeinstruct_v3answer_qwen7b.jsonl](https://huggingface.co/datasets/tencent/AutoCodeBenchmark/blob/main/autocodeinstruct_v3answer_qwen7b.jsonl). Experimental results can be found in the AutoCodeInstruct section below.
-- **2025.08.15** 🎉 - We released AutoCodeGen, AutoCodeBench series, and Multi-lingual Sandbox!
-- **2025.08.13** 📄 - We published our [arXiv paper](https://arxiv.org/abs/2411.02906)!
-
-
-
-## Contents
-
-- [Introduction](#introduction)
-- [Data Resources](#data-resources)
-- [AutoCodeGen](#autocodegen)
-- [AutoCodeBench](#autocodebench)
-- [AutoCodeInstruct](#autocodeinstruct)
-- [Experimental Results](#experimental-results)
-- [Quick Evaluation](#evaluation)
-- [Citation](#citation)
-- [License](#license)
 
 ---
 
-## Introduction
+## Abstract
 
-**AutoCodeGen**: An innovative automated workflow leveraging LLM-Sandbox Interaction, where *LLMs dynamically generate test inputs and obtain corresponding test outputs through the sandbox environment*, enabling the creation of high-quality, scalable code generation datasets.
+Elixir achieves **87.4% Pass@1** on the AutoCodeBench Suite B evaluation, outperforming every other language in the benchmark including Python (53.1%), Kotlin (76.5%), and C# (72.4%). On hard tasks specifically, Elixir reaches **86.3%** where Python scores **31.6%** — a **55-point gap**.
 
-**AutoCodeBench Series**: 
-- **ACB-Full**: A comprehensive, large-scale code generation benchmark comprising 3,920 carefully curated problems, featuring balanced distribution across 20 programming languages. This benchmark is characterized by its high difficulty levels, practical relevance, and linguistic diversity.
-- **ACB-Lite**: Derived from extensive evaluation of over 40 models on ACL-Full, this refined subset contains 1,586 problems that demonstrate consistent solvability, having been successfully addressed by at least two different models.
-- **ACB-Complete**: Constructed from 1,000 selected problems from ACB-Lite, this benchmark employs 3-shot prompting to create a completion-style code generation assessment framework specifically designed to evaluate the performance capabilities of base models.
+This repository contains the full paper, experimental data, analysis scripts, and figures for our study investigating *why* certain programming languages are dramatically easier for LLMs to generate correct code in. The central finding: **language design choices act as implicit prompts** that guide or constrain LLM generation. Elixir's explicit design — immutability, pattern matching, pipeline operators, and design-by-contract via typespecs — provides structural information that functions like a built-in prompt engineering layer.
 
+## Key Findings
 
-**AutoCodeInstruct**: A training dataset derived from the same pipeline as AutoCodeBench, consisting of problems with DeepSeek-V3-0324 pass rates between 0.4-0.8, covering 20 programming languages. We further filtered out problems with pass rates above 0.6 using Qwen2.5-Coder-7B/32B-Instruct models, creating two customized versions.
+**1. Language design is the strongest predictor of code generation success.**
+Across 10 languages and 196 tasks (Suite B), Elixir leads by 11 points over the second-place language. The gap widens on harder tasks.
 
+**2. Explicit contracts drive the largest factorial effect.**
+A 2⁴ factorial analysis identifies `contracts_explicit` (typespecs + guards) as the largest main effect (Δ = +0.359, p = 0.007), larger than documentation quality, examples, or state guidance.
 
+**3. Documentation quality is the second lever — but only a certain kind.**
+Rich module docs with embedded examples boost Elixir from 42.9% (signature-only) to 84.3% (full docs) — a **+41.4 point** lift. Removing examples alone has no effect; removing the prose documentation drops performance sharply.
 
-**MultiLanguageSandbox**: A robust, secure, and high-performance multi-language code execution sandbox service that provides comprehensive support for compilation and execution across more than 30 programming languages.
+**4. Hard-task resilience is Elixir's defining trait.**
+While all languages degrade on hard tasks, Elixir degrades the least (−10.3 pp from easy to hard). Python degrades by −50.4 pp over the same range.
 
-
-
-
-## Data Resources
-
-<div align="center">
-
-| **Dataset** |  **Download** |
-| :------------: | :------------: |
-| AutoCodeBench-Full  | [🤗 HuggingFace](https://huggingface.co/datasets/tencent/AutoCodeBenchmark/blob/main/autocodebench.jsonl)   |
-| AutoCodeBench-Lite  | [🤗 HuggingFace](https://huggingface.co/datasets/tencent/AutoCodeBenchmark/blob/main/autocodebench_lite.jsonl)    |
-| AutoCodeBench-Complete  | [🤗 HuggingFace](https://huggingface.co/datasets/tencent/AutoCodeBenchmark/blob/main/autocodebench_completion_3shot.jsonl)    |
-
-</div>
-
-
-
-
-## AutoCodeGen
-<div align="center">
-  <img src="figures/autocodegen.png" width="85%">
-</div>
-
-## AutoCodeBench
-<div align="center">
-  <img src="figures/bench_comp.png" width="85%">
-</div>
-
-Previous benchmarks mainly focused on Python, with multilingual benchmarks like Fullstackbench and McEval suffering from imbalanced language and category distributions, and overly simple difficulty. In contrast, AutoCodeBench is a high-difficulty multilingual benchmark with balanced language and category distributions to better assess models' multilingual capabilities.
+**5. Results are robust across bootstrap, leave-one-out, and cross-validation checks.**
+The contract effect holds at p < 0.05 under Holm correction across all robustness checks.
 
 <div align="center">
-  <img src="figures/distribution_comp.png" width="85%">
+  <img src="paper/figures/figure_5_factorial_effects.png" width="75%" alt="Factorial Main Effects">
 </div>
 
+## Repository Structure
 
-<div align="center">
-  <img src="figures/acb.png" width="85%">
-</div>
-
-Field Descriptions:
-- question: The programming problem.
-- canonical_solution: The code solution.
-- demo_test_func: Public test function containing a few basic test cases.
-- full_test_func: Private test function containing a large number of comprehensive test cases.
-- language: The programming language used.
-- difficulty: easy/medium/hard
-
-
-
-
-
-## AutoCodeInstruct
-
-Results of two-stage GRPO and SFT with AutoCodeInstruct.
-
-<div align="center">
-  <img src="figures/aci.png" width="85%">
-</div>
-
-
-
-
-
-## Leaderboard
-
-<div align="center">
-  <img src="figures/leaderboard_acb-lite.png" width="85%">
-</div>
-
-
-
-## Experimental Results
-
-### Fork Update: GPT-5.4 Medium + Added Languages
-
-This fork adds a local `gpt-5.4` run with `medium` reasoning over `ACB-Full`, using the latest benchmark assets available in this repository snapshot on **March 11, 2026**.
-
-It also adds three extra language tracks:
-
-- `gleam`
-- `lean4`
-- `typescript_effect`
-
-The new visuals fold those added languages into the same leaderboard view as the original benchmark languages. The basis stays explicit through tags:
-
-- `FULL`: original `ACB-Full` language
-- `VALIDATED`: translated slice that passed canonical validation before scoring
-- `SLICE`: translated slice without that validation gate
-
-Quick takeaway:
-
-- Use `elixir` or `kotlin` first if you want the strongest verified GPT-5.4 Medium performance in this fork.
-- `csharp`, `ruby`, and `julia` are also strong choices.
-- `typescript_effect` is already competitive in the combined chart.
-- `lean4` and `gleam` are present in the same visual, but their tags show they are still measured on translated subsets.
-
-<div align="center">
-  <img src="figures/fork_results_overview_gpt_5_4_medium.svg" width="92%">
-</div>
-
-#### Model-language guidance
-
-If you want a quick answer for what to use right now:
-
-- Best current choices: `elixir`, `kotlin`, `csharp`, `ruby`, `julia`
-- Next tier: `dart`, `r`, `typescript_effect`, `java`, `racket`, `scala`, `shell`, `cpp`
-- Added-language caveat: `lean4` and `gleam` stay in the same chart, but keep their `VALIDATED` tags because they are not on the exact same basis as `FULL`
-
-<div align="center">
-  <img src="figures/fork_model_language_guide.svg" width="92%">
-</div>
-
-#### Unified leaderboard view
-
-This chart now includes every language currently tracked in this fork.
-
-| Model | Benchmark | Passed | Total | Pass Rate | Notes |
-|---|---|---:|---:|---:|---|
-| GPT-5.4 Medium | ACB-Full | 2088 | 3920 | 53.3% | Corrected local runtime paths for `elixir` and `racket` |
-
-<div align="center">
-  <img src="figures/fork_acb_full_gpt_5_4_medium.svg" width="92%">
-</div>
-
-#### Added languages in this fork
-
-| Model | Slice | Validated Rows | Passed | Pass Rate | Notes |
-|---|---|---:|---:|---:|---|
-| GPT-5.4 Medium | `gleam` | 122 | 25 | 20.5% | Validated translated subset from 196 Python-source rows |
-| GPT-5.4 Medium | `lean4` | 125 | 36 | 28.8% | Validated translated subset from 196 Python-source rows |
-| GPT-5.4 Medium | `typescript_effect` | 196 | 105 | 53.6% | Earlier extension run without canonical-validation gate |
-
-Full tables and methodology notes are in [RESULTS.md](./RESULTS.md) and the [fork update report](./reports/fork_update_gpt_5_4_medium.md).
-Machine-readable summaries are available in `json`, `csv`, and `yaml` under [results](./results/), including `all_languages.yaml` and `model_guidance.yaml`.
-
-<div align="center">
-  <img src="figures/exp_acb.png" width="85%">
-</div>
-<div align="center">
-  <img src="figures/exp_acb-lite.png" width="85%">
-</div>
-<div align="center">
-  <img src="figures/exp_acb-comp.png" width="85%">
-</div>
-
-
-## Evaluation
-
-### 1. Prepare a file `model_output.jsonl`
-You can use your model to perform inference based on the "question" field in the `autocodebench.jsonl` file and the system prompt, and save the model's output in the "output" field.
-
-An example of using VLLM==0.8.5 for infernece can be found in the folder `Inference`.
-
-> **System Prompt**: `You are an expert programmer. Your task is to provide a code solution within a single Markdown code block for the given programming problem. Do not include any direct execution commands, test cases, or usage examples within the code block.`
-
-> **ACB-Complete Evaluation**: For the evaluation of Autocodebench_completion_3shot.jsonl, we used the following prompt: `system_prompt + "\n\n" + question + "\n\n[Code Solution]\n"`
-
-
-### 2. Pull the sandbox image
-```bash
-docker pull hunyuansandbox/multi-language-sandbox:v1
+```
+.
+├── paper/                      # The paper (primary content)
+│   ├── main.tex                #   English LaTeX source
+│   ├── main.pdf                #   Compiled English PDF
+│   ├── main_ja.tex             #   Japanese LaTeX source (culturally adapted)
+│   ├── main_ja.pdf             #   Compiled Japanese PDF
+│   ├── build.sh                #   Build script (figures + compile + package)
+│   ├── data/                   #   CSV data files used by figures
+│   │   ├── leaderboard.csv
+│   │   ├── difficulty_buckets.csv
+│   │   ├── factorial_main_effects.csv
+│   │   ├── contract_effect_by_language.csv
+│   │   ├── suite_a.csv
+│   │   └── robustness.csv
+│   ├── figures/                #   Generated figure PDFs + PNGs
+│   │   ├── generate_figures.py
+│   │   └── generate_figures_ja.py
+│   └── assets/                 #   Logos and cover art
+├── results/                    # Extended analysis results
+│   ├── elixir_error_taxonomy*.csv
+│   ├── elixir_paper_*.csv
+│   ├── elixir_common_task_*.csv
+│   └── ...
+├── scripts/                    # Analysis and evaluation scripts
+├── AutoCodeBench/              # Original benchmark data (from upstream)
+├── AutoCodeBench-V2/           # V2 benchmark data (from upstream)
+└── arXiv-2508.09101v1/         # Original AutoCodeBench paper source
 ```
 
-### 3. Start the sandbox service
-```bash
-cd MultiLanguageSandbox
-```
-```bash
-docker run -d \
-  --name sandbox-service \
-  -p 8080:8080 \
-  --cap-add=NET_ADMIN \
-  hunyuansandbox/multi-language-sandbox:v1
-```
+## Building the Paper
 
-### 4. Verify the service
-```bash
-# Check container status
-docker ps | grep sandbox
-```
-```bash
-# Test service health status. If the response contains `"exec_outcome": "PASSED"` in the JSON, it indicates the service is running normally.
-curl -X POST http://localhost:8080/submit \
-  -H "Content-Type: application/json" \
-  -d '{"src_uid": "test-001", "lang": "python", "source_code": "print(\"Hello World\")"}'
-```
+Requirements: `tectonic` (or `latexmk`/`pdflatex`), Python 3 with `matplotlib` and `numpy`.
 
 ```bash
-# Verify canonical_solution, expected result pass@1=100%
-python3 call_sandbox.py \
-  --input_file AutoCodeBench/autocodebench.jsonl \
-  --output autocodebench.exec.jsonl \
-  --server_ip localhost \
-  --server_port 8080 \
-  --concurrency 32 \
-  --solution_key canonical_solution
+cd paper
+
+# Full build: figures → PDF → Overleaf zip → arXiv zip
+./build.sh
+
+# Individual steps
+./build.sh figures       # Regenerate figures only
+./build.sh compile       # Compile English PDF only
+./build.sh overleaf      # Package for Overleaf upload
+./build.sh arxiv         # Package for arXiv submission
+
+# Japanese version
+./build.sh figures-ja    # Regenerate Japanese figures
+./build.sh compile-ja    # Compile Japanese PDF (requires tectonic + CJK fonts)
+./build.sh all-ja        # Both steps
 ```
 
+## Data
 
-### 5. Calculate pass@1
-```python
-python3 call_sandbox.py \
-  --input_file model_output.jsonl \
-  --output model_output.exec.jsonl \
-  --server_ip localhost \
-  --server_port 8080 \
-  --concurrency 32 \
-  --solution_key output
-```
+All experimental data is in `paper/data/` as CSV files. Key tables:
 
+| File | Description |
+|------|-------------|
+| `leaderboard.csv` | Pass@1 scores for all 10 languages + feature metrics |
+| `difficulty_buckets.csv` | Performance by difficulty tier (easy/medium/hard) |
+| `factorial_main_effects.csv` | 2⁴ factorial design: effect sizes and p-values |
+| `contract_effect_by_language.csv` | Contract presence effect per language |
+| `suite_a.csv` | Documentation ablation conditions (Suite A) |
+| `robustness.csv` | Bootstrap, leave-one-out, cross-validation intervals |
+
+Extended analysis outputs (error taxonomies, cross-language correlations, failure audits) are in `results/`.
+
+## Figures
+
+Seven main figures, each available as PDF and PNG in both English and Japanese:
+
+| # | Figure | Key Insight |
+|---|--------|------------|
+| 1 | Leaderboard | Elixir leads at 87.4% overall |
+| 2 | Design space | Multi-metric language comparison |
+| 3 | Difficulty resilience | Elixir's hard-task advantage |
+| 4 | Suite A ablation | Documentation impact (+41.4 pp) |
+| 5 | Factorial effects | Contracts = largest effect |
+| 6 | Docs pipeline | Documentation quality analysis |
+| A1 | Robustness | Cross-validation stability |
+
+## Upstream Benchmark
+
+This repository is a fork of [Tencent-Hunyuan/AutoCodeBenchmark](https://github.com/Tencent-Hunyuan/AutoCodeBenchmark), which provides the AutoCodeBench benchmark suite, sandbox evaluation infrastructure, and original leaderboard data. The benchmark evaluation tools in `AutoCodeBench/`, `AutoCodeBench-V2/`, `MultiLanguageSandbox/`, and `Inference/` come from the upstream project.
+
+Our fork extends the benchmark with:
+- A GPT-5.4 Medium evaluation run across all languages
+- Extension language tracks (Gleam, Lean4, TypeScript Effect)
+- The Elixir language-design study (this paper)
+
+See [RESULTS.md](./RESULTS.md) for the full fork evaluation results.
 
 ## Citation
 
-If you find our project helpful, please cite:
+If you use our paper, data, or findings, please cite:
 
 ```bibtex
-@misc{chou2025autocodebenchlargelanguagemodels,
-      title={AutoCodeBench: Large Language Models are Automatic Code Benchmark Generators}, 
-      author={Jason Chou and Ao Liu and Yuchi Deng and Zhiying Zeng and Tao Zhang and Haotian Zhu and Jianwei Cai and Yue Mao and Chenchen Zhang and Lingyun Tan and Ziyan Xu and Bohui Zhai and Hengyi Liu and Speed Zhu and Wiggin Zhou and Fengzong Lian},
-      year={2025},
-      eprint={2508.09101},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2508.09101}, 
+@article{schulz2026language,
+  title={The Language Is the Prompt: How Elixir Achieves Top-Tier
+         Code Generation on {AutoCodeBench}},
+  author={Schulz, Gunther},
+  year={2026},
+  note={CyberAgent, Inc.}
 }
 ```
 
+If you use the AutoCodeBench benchmark itself, please also cite the original work:
 
-
+```bibtex
+@misc{chou2025autocodebenchlargelanguagemodels,
+  title={AutoCodeBench: Large Language Models are Automatic Code Benchmark Generators},
+  author={Jason Chou and Ao Liu and Yuchi Deng and Zhiying Zeng and Tao Zhang and
+          Haotian Zhu and Jianwei Cai and Yue Mao and Chenchen Zhang and Lingyun Tan and
+          Ziyan Xu and Bohui Zhai and Hengyi Liu and Speed Zhu and Wiggin Zhou and Fengzong Lian},
+  year={2025},
+  eprint={2508.09101},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2508.09101},
+}
+```
 
 ## License
 
