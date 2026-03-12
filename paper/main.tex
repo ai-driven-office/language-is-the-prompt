@@ -213,7 +213,7 @@ This paper makes six concrete contributions.
 \end{enumerate}
 
 \paragraph{Outline.}
-Section~2 reviews related work. Section~3 details the benchmark reproduction and artifact controls. Section~4 outlines our experimental design, and Section~5 maps the language design space. Section~6 presents causal evidence from active ablations; Section~7 reports exact-task multilingual studies. Sections~8--10 unpack architectural and platform-level implications, and Section~11 concludes.
+Section~2 reviews related work. Section~3 details the benchmark reproduction and artifact controls. Section~4 outlines our experimental design, and Section~5 maps the language design space. Section~6 presents causal evidence from active ablations; Section~7 reports exact-task multilingual studies. Sections~8--12 develop the interpretive framework, documentation-architecture comparison, practical implications, and platform-level discussion, and Section~13 concludes.
 
 \section{Related work}
 
@@ -241,9 +241,11 @@ Independent of the benchmark story, recent work has noted structural parallels b
 
 Table~\ref{tab:topbottom} shows the top and bottom of the reproduced 20-language leaderboard. Figure~\ref{fig:leaderboard} presents the full ranking.
 
+Unless otherwise noted, leaderboard numbers in this paper refer to the March 11, 2026 local fork reproduction with corrected host-native scoring paths. That snapshot retains 3{,}920 total rows but has slightly uneven per-language totals rather than a uniform 196 tasks. Elixir's reproduced slice contains 198 tasks; the active-ablation suites later in the paper reuse that same 198-task Elixir slice.
+
 \begin{table}[H]
 \centering
-\caption{Top 5 and bottom 5 languages by \passatone{} on \acb{} (196 tasks/language).}
+\caption{Top 5 and bottom 5 languages by \passatone{} on the March 11, 2026 local \acb{} reproduction.}
 \label{tab:topbottom}
 \begin{tabular}{llrr}
 \toprule
@@ -274,7 +276,7 @@ Rank & Language & \passatone{} & Hard\% \\
 The first important point is simply that this is not a narrow win. \elixir{} leads second-place Kotlin by 10.9 \pp{} and \pythonlang{} by 43.5 \pp{}. The second important point is that this lead does not come from receiving unusually easy problems: \elixir{}'s hard-task share is above the benchmark median.
 
 \paragraph{The Go comparison.}
-A particularly illuminating qualitative contrast is with Go. Both languages target concurrent, server-side workloads; both emphasize explicit error handling (Go via multiple returns, \elixir{} via tagged tuples); both are strongly typed with relatively simple syntax. Yet Go scores 42.9\% --- identical to JavaScript and 44.5 \pp{} behind \elixir{}. This paper does not directly measure Go's documentation architecture, so we treat the comparison as a hypothesis rather than a result: the Go--\elixir{} gap is consistent with the idea that explicitness at the \emph{individual-function} level is necessary but not sufficient, and that architectural integration of contracts, documentation, and examples may matter more than any single feature.
+A particularly illuminating qualitative contrast is with Go. Both languages target concurrent, server-side workloads; both emphasize explicit error handling (Go via multiple returns, \elixir{} via tagged tuples); both favor relatively small core syntaxes and straightforward operational models. Yet Go scores 42.9\% --- identical to JavaScript and 44.5 \pp{} behind \elixir{}. This paper does not directly measure Go's documentation architecture, so we treat the comparison as a hypothesis rather than a result: the Go--\elixir{} gap is consistent with the idea that explicitness at the \emph{individual-function} level is necessary but not sufficient, and that architectural integration of contracts, documentation, and examples may matter more than any single feature.
 
 \subsection{Difficulty resilience}
 
@@ -346,6 +348,8 @@ I & Repo-scale ecosystem effects & Full-project evaluation & Future work \\
 
 Suites A, D, E, and F cover 792 suite-task slots and 2{,}970 condition-level evaluations in total. Suite H is the core artifact control. Suites B, C, and G provide descriptive context rather than causal claims.
 
+The active-ablation suites operate on a fixed 198-task Elixir slice drawn from the same local fork snapshot used for the leaderboard reproduction. That matched-slice design is intentional: all within-suite deltas compare conditions on identical tasks, but the resulting \texttt{full\_docs} baseline (84.3\%) should not be read as a second estimate of the 87.4\% full-benchmark score.
+
 \subsection{Proxy metrics}
 
 We use three summary metrics to compare the 20 languages.
@@ -366,6 +370,8 @@ where assignments, updates, and writes all contribute to hidden state that the m
 
 \textbf{First-failure taxonomy}
 Each failed generation is classified by its first non-passed state: syntax or compilation error, runtime exception, wrong output, timeout, or other runtime failure. Wilson intervals and Fisher exact tests are used for rate comparisons.
+
+For Suites A, D, E, and F, condition effects are estimated from matched task outcomes and tested with two-sided exact McNemar tests, with Holm correction across all non-baseline intervention contrasts. For the 384-row factorial, each main effect is summarized as a matched mean delta and tested with a two-sided exact sign test on win/loss counts after excluding ties, with Holm correction across the four main effects.
 
 \subsection{Claim tiers}
 
@@ -413,6 +419,7 @@ The proxy analysis does not establish causality, but it does suggest a more prec
 \subsection{Suite A: documentation structure is the dominant driver}
 
 The strongest result in the paper is Suite A, shown in Table~\ref{tab:suitea} and Figure~\ref{fig:suitea}.
+Because Suite A uses the fixed 198-task Elixir ablation slice described above, its \texttt{full\_docs} baseline is the matched-slice baseline rather than the 87.4\% full-benchmark figure.
 
 \begin{table}[H]
 \centering
@@ -444,6 +451,8 @@ Three points deserve emphasis.
   \item \textbf{Structure is everything.} Removing structured documentation cuts performance by about 40 \pp{}.
   \item \textbf{Volume is not the key variable.} The gap between \texttt{minimal\_docs} and \texttt{signature\_only} is small. A little unstructured prose is not enough. What matters is a locally complete specification.
 \end{enumerate}
+
+Both large drops remain Holm-significant under the matched McNemar analysis across all active-ablation contrasts.
 
 That pattern is the central causal result of the paper. It reframes the \elixir{} question from ``what syntax does the model like?'' to ``what information can the model recover without searching elsewhere?''
 
@@ -486,7 +495,7 @@ Second, examples become directionally helpful in this exact-task setting: 7 matc
 
 \subsection{384-row fractional-factorial follow-up}
 
-The most informative same-task result comes from the 384-row regular $2^{(4-1)}$ fractional-factorial design, which varies four prompt-side factors: richer prose, examples, explicit contracts, and state-flow guidance.
+The most informative same-task result comes from the 384-row regular $2^{(4-1)}$ fractional-factorial design, which varies four prompt-side factors: richer prose, examples, explicit contracts, and state-flow guidance. Main effects are estimated as matched deltas and tested with two-sided exact sign tests over win/loss counts, excluding ties, with Holm correction across the four factors.
 
 \begin{figure}[H]
 \centering
@@ -501,7 +510,7 @@ The most informative same-task result comes from the 384-row regular $2^{(4-1)}$
 \label{tab:factorial}
 \begin{tabular}{lrrr}
 \toprule
-Factor & Matched $\Delta$ & Exact $p$ & Holm-adjusted $p$ \\
+Factor & Matched $\Delta$ & Exact sign $p$ & Holm-adjusted $p$ \\
 \midrule
 docs\_rich & +0.047 & 0.549 & 1.000 \\
 examples & +0.203 & 0.039 & 0.116 \\
@@ -608,8 +617,8 @@ This matters empirically. \elixir{} already begins with strong local contract vi
 \toprule
 Mechanism & Within-Elixir evidence & Cross-language evidence & Verdict \\
 \midrule
-Documentation structure & +38 to +41 \pp{}, Holm-significant & Not tested portably & \textbf{Dominant driver} \\
-Contract explicitness & Baseline already high & +0.359, Holm-significant & \textbf{Portable intervention} \\
+Documentation structure & +38 to +41 \pp{}, Holm-significant in matched McNemar tests & Not tested portably & \textbf{Dominant driver} \\
+Contract explicitness & Baseline already high & +0.359, Holm-significant exact-sign effect & \textbf{Portable intervention} \\
 Control-flow style & $\leq 3$ \pp{}, null & Not isolated & Not a primary driver \\
 Error-handling style & $\leq 3$ \pp{}, null & Not isolated & Not a primary driver \\
 State-flow style & +5.1 to +5.6 \pp{}, non-significant & Not isolated & Suggestive only \\
@@ -741,8 +750,7 @@ Future work should therefore do three things: scale the exact-task multilingual 
 Perhaps the most consequential implication of this study is what it suggests about languages that do not yet exist. The conventional assumption in \acro{LLM}-assisted programming has been that \emph{corpus size determines generation quality}: models perform best in languages with the most training data \cite{lowresource}. \elixir{}'s result challenges that assumption directly. A language with tiny market share nearly doubles the score of the most represented language in public code corpora --- not because models memorized more \elixir{}, but because \elixir{}'s design makes intent recoverable from local context.
 
 If the binding constraint is structural legibility rather than corpus volume, then the design space for new programming languages is wider than previously believed. A language engineered from first principles around the traits identified in this paper --- explicit contracts, pattern-driven control flow, structured documentation as a first-class artifact, pipeline-oriented data transformation, and immutable-by-default semantics --- could in principle match or exceed \elixir{}'s \acro{LLM} legibility without inheriting its ecosystem size limitations. The \acro{BEAM} platform story (Section~\ref{sec:beam}) adds a further dimension: pairing these generation-friendly design choices with an agent-native runtime may compound the advantage.
-
-One such effort is DreamLang,\footnote{\url{https://dreamlang.dev}} a language design project by the first author that takes the findings of this study as explicit design constraints. Whether purpose-built \acro{LLM}-legible languages ultimately outperform evolved ecosystems is an empirical question this paper cannot answer, but the data presented here suggest that the question is now worth asking seriously.
+The possibility has already motivated exploratory language-design work beyond the scope of this paper.\footnote{The author is separately exploring some of these design questions in DreamLang (\url{https://dreamlang.dev}). This note is included as a disclosure of relevant ongoing work, not as an evaluated artifact in the present study.} Whether purpose-built \acro{LLM}-legible languages ultimately outperform evolved ecosystems is an empirical question this paper cannot answer, but the data presented here suggest that the question is now worth asking seriously.
 
 \section{Conclusion}
 
@@ -901,7 +909,7 @@ Sliding Window Majority & Invariant across all three conditions \\
 \caption{Reviewer-concern map.}
 \label{tab:reviewer}
 \small
-\begin{tabularx}{\textwidth}{X X X}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X}
 \toprule
 Reviewer concern & Mitigation in this version & Residual status \\
 \midrule
@@ -933,21 +941,6 @@ Nguyet-Anh H. Lang, Eric Lang, Thanh Le-Cong, Bach Le, and Quyet-Thang Huynh.
 Sathvik Joel, Jie JW Wu, and Fatemeh H. Fard.
 \newblock A Survey on LLM-based Code Generation for Low-Resource and Domain-Specific Programming Languages.
 \newblock \emph{arXiv preprint arXiv:2410.03981}, 2024.
-
-\bibitem{codexeval}
-Mark Chen, Jerry Tworek, Heewoo Jun, et al.
-\newblock Evaluating Large Language Models Trained on Code.
-\newblock \emph{arXiv preprint arXiv:2107.03374}, 2021.
-
-\bibitem{programsynthesis}
-Jacob Austin, Augustus Odena, Maxwell Nye, et al.
-\newblock Program Synthesis with Large Language Models.
-\newblock \emph{arXiv preprint arXiv:2108.07732}, 2021.
-
-\bibitem{multipl}
-Federico Cassano, John Gouwar, Daniel Nguyen, et al.
-\newblock MultiPL-E: A Scalable and Polyglot Approach to Benchmarking Neural Code Generation.
-\newblock \emph{IEEE Transactions on Software Engineering}, 49(7):3675--3692, 2023.
 
 \bibitem{plconfusion}
 Micheline B\'en\'edicte Moumoula, Serge Lionel Nikiema, Abdoul Kader Kabore, Jacques Klein, and Tegawend\'e F. Bissyande.
@@ -1028,18 +1021,6 @@ TypeDoc Team.
 \newblock Overview.
 \newblock TypeDoc documentation.
 \newblock \url{https://typedoc.org/documents/Overview.html}.
-
-\bibitem{phoenixliveview}
-Phoenix LiveView Documentation Team.
-\newblock Phoenix.LiveView.
-\newblock HexDocs.
-\newblock \url{https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.html}.
-
-\bibitem{ectochangeset}
-Ecto Documentation Team.
-\newblock Ecto.Changeset.
-\newblock HexDocs.
-\newblock \url{https://hexdocs.pm/ecto/Ecto.Changeset.html}.
 
 \bibitem{guimaraes}
 George Guimar\~{a}es.

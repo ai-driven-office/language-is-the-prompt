@@ -138,7 +138,7 @@ def fig_leaderboard() -> None:
     ax2.set_xlim(0, 82)
     ax.set_xlabel("Pass@1 (%)", fontweight="medium")
     ax2.set_xlabel("Hard-task share (%)", fontweight="medium", color=COLORS["neutral_dk"])
-    ax.set_title("AutoCodeBench leaderboard reproduced with GPT-5.4\n(196 tasks per language)",
+    ax.set_title("AutoCodeBench leaderboard reproduced with GPT-5.4\n(March 11, 2026 fork snapshot)",
                  pad=18)
 
     ax.grid(axis="x", color=COLORS["grid"], linewidth=0.6, alpha=0.8, zorder=0)
