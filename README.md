@@ -12,8 +12,8 @@
 </div>
 
 <p align="center">
-  <a href="./paper/main.pdf">📄 Paper (EN)</a> •
-  <a href="./paper/main_ja.pdf">📄 論文 (日本語)</a> •
+  <a href="https://github.com/ai-driven-office/language-is-the-prompt/blob/main/paper/main.pdf">📄 Paper (EN)</a> •
+  <a href="https://github.com/ai-driven-office/language-is-the-prompt/blob/main/paper/main_ja.pdf">📄 論文 (日本語)</a> •
   <a href="./paper/data/">📊 Data</a> •
   <a href="./results/">🧪 Full Results</a> •
   <a href="#key-findings">🔬 Key Findings</a> •
