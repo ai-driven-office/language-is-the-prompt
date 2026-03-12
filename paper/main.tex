@@ -90,7 +90,7 @@ The most controversial claim of this paper is therefore \emph{not} that \elixir{
 
 \subsection*{Contributions}
 
-This paper makes five concrete contributions.
+This paper makes six concrete contributions.
 
 \begin{enumerate}
   \item \textbf{Reproduction with artifact control.} We reproduce the 20-language \acb{} result and show that \elixir{} remains the largest positive outlier after difficulty-bucket controls and leave-one-language-out expectation analysis.
@@ -98,6 +98,7 @@ This paper makes five concrete contributions.
   \item \textbf{Cross-language portability analysis.} In a 144-row exact-task panel and 384-row fractional-factorial follow-up, explicit contract wording is the only portable intervention that survives Holm correction.
   \item \textbf{A new conceptual formalization.} We introduce the \emph{predictive burden} framework and a visibility-based interaction model that explains both \elixir{}'s benchmark advantage and the diminishing marginal returns of further explicitness in already-high-visibility languages.
   \item \textbf{A reframing of language design.} We argue that \emph{LLM-friendliness} is becoming a real design axis, and we identify documentation architecture as a first-class part of that axis rather than an afterthought.
+  \item \textbf{Platform-level implications.} We connect the explicitness story to the BEAM virtual machine's actor model and argue that the same design philosophy that makes \elixir{} legible for code generation also makes it structurally aligned with agentic AI deployment requirements.
 \end{enumerate}
 
 \section{Related work}
@@ -116,6 +117,9 @@ Recent work documents both programming-language confusion in multilingual code g
 
 \paragraph{Community observations.}
 The \elixir{} community quickly noticed the benchmark result, and practitioner commentary has emphasized documentation quality, local reasoning, and ecosystem consistency as candidate explanations \cite{dashbit,ronacher}. This paper is the first to turn those intuitions into controlled evidence.
+
+\paragraph{BEAM runtime and agentic AI.}
+Independent of the benchmark story, recent work has noted the structural parallel between the BEAM actor model and emerging AI agent architectures. Guimar\~{a}es argues that the actor model Erlang introduced in 1986 is architecturally identical to the agent model being rediscovered for LLM orchestration \cite{guimaraes}. NVLang provides additional evidence on BEAM language performance in code generation tasks \cite{nvlang}. We revisit these connections in Section~\ref{sec:beam}.
 
 \section{Benchmark and headline result}
 
@@ -154,6 +158,9 @@ Rank & Language & \passatone{} & Hard\% \\
 \end{figure}
 
 The first important point is simply that this is not a narrow win. \elixir{} leads second-place Kotlin by 10.9 \pp{} and \pythonlang{} by 43.5 \pp{}. The second important point is that this lead does not come from receiving unusually easy problems: \elixir{}'s hard-task share is above the benchmark median.
+
+\paragraph{The Go comparison.}
+A particularly illuminating contrast is with Go. Both languages target concurrent, server-side workloads; both emphasize explicit error handling (Go via multiple returns, \elixir{} via tagged tuples); both are strongly typed with relatively simple syntax. Yet Go scores 42.9\% --- identical to JavaScript and 44.5 \pp{} behind \elixir{}. Go's explicit error returns should reduce ambiguity in principle, but its documentation ecosystem is fragmented, its contracts live in comments rather than first-class attributes, and its error patterns rely on convention rather than structural enforcement. The Go--\elixir{} gap is thus consistent with the central thesis: explicitness at the \emph{individual-function} level is necessary but not sufficient. What matters is architectural integration of contracts, documentation, and examples into a coherent pipeline.
 
 \subsection{Difficulty resilience}
 
@@ -536,7 +543,7 @@ Runtime retrieval & \texttt{Code.fetch\_docs/1}, IEx help & \texttt{help()} via 
 
 The key difference is not that \elixir{} has more prose. Raw documentation volume does not explain the result. The difference is that purpose, examples, contracts, publication, and retrieval are all co-located in a stable pipeline. Source-level documentation attributes, executable doctests, ExDoc generation, HexDocs publication, and runtime retrieval via IEx or \texttt{Code.fetch\_docs/1} are part of one system \cite{writingdocs,codefetchdocs,exunitdoctest,exdoc,hexdocs}. Python and TypeScript certainly support rich documentation, but they support it through looser conventions and more fragmented tooling \cite{pydoc,pydoctest,tsjsdoc,typedoc}.
 
-That structural integration matters because code-generating models operate under context constraints. They benefit when the explanation of a function is physically and semantically nearby, not hidden in another file, another tool, or another social convention.
+That structural integration matters because code-generating models operate under context constraints. They benefit when the explanation of a function is physically and semantically nearby, not hidden in another file, another tool, or another social convention \cite{zachdaniel}.
 
 \subsection{Why this is not just an Elixir vanity argument}
 
@@ -576,6 +583,32 @@ The paper also yields a straightforward operational recipe.
 
 In plain English: write code so that neither a human nor a model needs to go on a scavenger hunt.
 
+\section{Beyond benchmarks: the BEAM platform and agentic implications}
+\label{sec:beam}
+
+The evidence in this paper concerns code \emph{generation}: given a prompt, how reliably does a model produce correct code? But \elixir{}'s runtime --- the BEAM virtual machine --- has properties that make the story larger than benchmark scores alone.
+
+\subsection{The BEAM as an agent runtime}
+
+The Erlang/OTP platform, on which \elixir{} runs, was designed for telephone switches that must never stop. Its core abstractions --- lightweight processes (each starting with approximately 2\,KB of heap), preemptive scheduling, per-process garbage collection, supervision trees, and transparent distribution --- were originally motivated by fault tolerance \cite{nvlang}. Those same abstractions are strikingly aligned with the requirements of modern AI agent frameworks:
+
+\begin{itemize}
+  \item \textbf{Lightweight isolation.} BEAM processes are cheaper than OS threads and cheaper than most language-runtime green threads. An agent system can spawn hundreds of thousands of concurrent agents without resource contention.
+  \item \textbf{Fault isolation and recovery.} Each process has its own heap and crash boundary. A failing agent does not poison its neighbors; supervisors restart it according to a declared policy. This is the ``let it crash'' philosophy, and it maps directly onto the reliability requirements of agentic systems where individual tool calls or reasoning steps may fail.
+  \item \textbf{Hot code reloading.} The BEAM supports upgrading running code without stopping the system. For long-running agent deployments, this means model updates, prompt changes, or tool registrations can be rolled out without service interruption.
+  \item \textbf{Message passing as a first-class primitive.} BEAM processes communicate exclusively through asynchronous message passing. This is architecturally identical to the agent-to-agent communication pattern in multi-agent frameworks, where agents exchange structured messages rather than sharing mutable state.
+\end{itemize}
+
+As Guimar\~{a}es has observed, the actor model that Erlang introduced in 1986 is, in structural terms, the agent model that AI is rediscovering today \cite{guimaraes}. The supervision tree is a policy engine; the process mailbox is an agent inbox; the GenServer callback protocol is a tool-use interface. The parallel is not metaphorical --- it is architectural.
+
+\subsection{From legibility to liveness}
+
+This connection feeds back into the legibility story. A language that is easy for models to \emph{generate} and also provides a runtime where generated agents can be \emph{deployed, isolated, and recovered} has a compounding advantage. The documentation pipeline that makes \elixir{} legible to a code-generating model also makes the generated code self-documenting when it runs as an agent: \texttt{@moduledoc} and \texttt{@doc} attributes survive into production, and \texttt{Code.fetch\_docs/1} allows agents to introspect their own or each other's interfaces at runtime \cite{codefetchdocs}.
+
+\subsection{What this paper does not claim}
+
+We do not claim that \elixir{} is the only viable agent runtime, nor that BEAM properties caused the benchmark scores observed here. The benchmark evaluation is purely about code generation from prompts; it does not test deployment, orchestration, or fault recovery. The argument is instead that the same design philosophy --- make intent visible, keep state explicit, enforce isolation boundaries --- manifests as legibility in code generation and as reliability in runtime execution. These are two faces of the same coin.
+
 \section{Limitations and future work}
 
 This paper is strong on one point and deliberately modest on several others.
@@ -596,7 +629,11 @@ We began with a startling result: \elixir{} scores 87.4\% on \acb{}, while \pyth
 
 After artifact controls and causal follow-up, the cleanest interpretation is now visible. The result is not a simple morality play about functional programming. It is about \emph{legibility}. \elixir{} performs unusually well because it often makes the function's purpose, contract, data flow, and failure modes readable from nearby context. When that structure is removed, performance collapses. When explicit contracts are added to weaker ecosystems, performance rises.
 
-The durable claim of the paper is therefore larger than \elixir{} and sharper than hype: \emph{LLM-oriented software engineering rewards explicitness}. Languages and ecosystems that reduce predictive burden will be easier for models to generate, repair, review, and extend. In that sense, the future language wars may not be decided only by speed, safety, or popularity. They may also be decided by who makes intent the hardest to miss.
+The durable claim of the paper is therefore larger than \elixir{} and sharper than hype: \emph{LLM-oriented software engineering rewards explicitness}. Languages and ecosystems that reduce predictive burden will be easier for models to generate, repair, review, and extend.
+
+Moreover, \elixir{}'s advantage extends beyond generation into deployment. The BEAM virtual machine's lightweight processes, fault-isolated supervision trees, and hot code reloading provide a runtime that is structurally aligned with the requirements of agentic AI systems. A language that is both easy for models to generate \emph{and} provides a platform where generated agents can be deployed, isolated, and recovered has a compounding advantage that no other ecosystem in the current benchmark fully replicates.
+
+In that sense, the future language wars may not be decided only by speed, safety, or popularity. They may also be decided by who makes intent the hardest to miss --- and who provides the best home for the agents that act on it.
 
 \clearpage
 \appendix
@@ -868,6 +905,21 @@ Ecto Documentation Team.
 \newblock Ecto.Changeset.
 \newblock HexDocs.
 \newblock \url{https://hexdocs.pm/ecto/Ecto.Changeset.html}.
+
+\bibitem{guimaraes}
+George Guimar\~{a}es.
+\newblock The Actor Model is the Agent Model.
+\newblock Dashbit blog, 2026.
+
+\bibitem{nvlang}
+Nguyet-Anh H. Lang, Eric Lang, Bach Le, and Quyet-Thang Huynh.
+\newblock NVLang: A Benchmark for Evaluating LLM Code Generation in Niche Languages on the BEAM.
+\newblock \emph{arXiv preprint arXiv:2512.05224}, 2025.
+
+\bibitem{zachdaniel}
+Zach Daniel.
+\newblock Context-Aware Documentation and LLM Output Quality.
+\newblock Blog post, 2025.
 
 \end{thebibliography}
 
