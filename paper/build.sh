@@ -114,6 +114,11 @@ build_overleaf() {
     # main.tex
     cp main.tex "$staging/"
 
+    # Cover/logo assets
+    if [[ -d assets ]]; then
+        cp -R assets "$staging/"
+    fi
+
     # Figure PDFs
     mkdir -p "$staging/figures"
     for f in figures/*.pdf; do
@@ -158,6 +163,11 @@ build_arxiv() {
     trap "rm -rf '$staging'" EXIT
 
     cp main.tex "$staging/"
+
+    # Cover/logo assets
+    if [[ -d assets ]]; then
+        cp -R assets "$staging/"
+    fi
 
     if [[ -f 00README.XXX ]]; then
         cp 00README.XXX "$staging/"
