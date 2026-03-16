@@ -1,0 +1,4 @@
+generated/
+logs/
+.matplotlib-cache/
+.pycache/
